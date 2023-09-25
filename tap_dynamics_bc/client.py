@@ -1,10 +1,11 @@
 """REST client handling, including dynamics-bcStream base class."""
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, cast
 
 import requests
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.streams import RESTStream
+from requests_ntlm import HttpNtlmAuth
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
 
@@ -64,3 +65,40 @@ class dynamicsBcStream(RESTStream):
         if self.expand:
             params["$expand"] = self.expand
         return params
+
+
+    def prepare_request(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> requests.PreparedRequest:
+        http_method = self.rest_method
+        url: str = self.get_url(context)
+        params: dict = self.get_url_params(context, next_page_token)
+        request_data = self.prepare_request_payload(context, next_page_token)
+        headers = self.http_headers
+
+        authenticator = self.authenticator
+        auth = None
+
+        if self.config.get("client_id") and authenticator:
+            headers.update(authenticator.auth_headers or {})
+            params.update(authenticator.auth_params or {})
+        
+        elif self.config.get("username"):
+            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
+
+        request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method=http_method,
+                    url=url,
+                    params=params,
+                    headers=headers,
+                    json=request_data,
+                    auth=auth
+                ),
+            ),
+        )
+        return request
+
+
