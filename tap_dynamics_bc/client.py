@@ -8,6 +8,7 @@ from singer_sdk.streams import RESTStream
 from requests_ntlm import HttpNtlmAuth
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
+from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 
 
 class dynamicsBcStream(RESTStream):
@@ -105,3 +106,18 @@ class dynamicsBcStream(RESTStream):
         return request
 
 
+    def validate_response(self, response: requests.Response) -> None:
+        self.logger.debug(f"response: {response.json()}")
+        if 400 <= response.status_code < 500:
+            msg = (
+                f"{response.status_code} Client Error: "
+                f"{response.reason} for path: {self.path}"
+            )
+            raise FatalAPIError(msg)
+
+        elif 500 <= response.status_code < 600:
+            msg = (
+                f"{response.status_code} Server Error: "
+                f"{response.reason} for path: {self.path}"
+            )
+            raise RetriableAPIError(msg)

@@ -51,11 +51,20 @@ class CompaniesStream(dynamicsBcStream):
 
         try:
             resp = decorated_request(prepared_request, context)
-            return {"company_id": record["id"]}
+            context = {"company_id": record["id"]}
         except FatalAPIError:
             self.logger.warning(
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
+            context = None
+        
+        return context
+    
+    def _sync_children(self, child_context: dict) -> None:
+        for child_stream in self.child_streams:
+            if child_stream.selected or child_stream.has_selected_descendents:
+                if child_context is not None:
+                    child_stream.sync(context=child_context)
 
 
 class CompanyInformationStream(dynamicsBcStream):
