@@ -68,7 +68,7 @@ class TapdynamicsBc(Tap):
         th.Property(
             "environment_name",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "username",
