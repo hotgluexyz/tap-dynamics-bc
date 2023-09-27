@@ -36,16 +36,15 @@ class CompaniesStream(dynamicsBcStream):
 
         print("GET CHILD CONTEXT FOR COMPANIES")
         url = f"{self.url_base}/companies({record['id']})/companyInformation"
-        authenticator = self.authenticator
+        headers = None
         auth = None
-        if self.config.get("client_id") and authenticator:
+        if self.config.get("client_id") and self.authenticator:
+            print("USING OUATH FOR COMPANYINFORMATION")
             headers = self.http_headers
             headers.update(self.authenticator.auth_headers or {})
         elif self.config.get("username"):
+            print("USING NTLM FOR COMPANYINFORMATION")
             auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))            
-
-        if auth:
-            print(f"USING NTLM AUTHENTICATION")
 
         print("REQUESTING COMPANY INFORMATION DATA")
         resp = requests.get(url=url, auth=auth, headers=headers)
