@@ -74,6 +74,7 @@ class dynamicsBcStream(RESTStream):
             params["$filter"] = f"{self.replication_key} gt {date}"
         if self.expand:
             params["$expand"] = self.expand
+        self.logger.info(f"PARAMS {params}")
         return params
 
 
@@ -111,14 +112,20 @@ class dynamicsBcStream(RESTStream):
         )
         return request
 
-    def validate_response(self, response: requests.Response) -> None:
+    def _request(
+        self, prepared_request: requests.PreparedRequest, context: Optional[dict]
+    ) -> requests.Response:
+        response = self.requests_session.send(prepared_request, timeout=self.timeout)
         self.logger.info(f"RESPONSE: {response.text}")
-        if (
-            response.status_code in self.extra_retry_statuses
-            or 500 <= response.status_code < 600
-        ):
-            msg = self.response_error_message(response)
-            raise RetriableAPIError(msg, response)
-        elif 400 <= response.status_code < 500:
-            msg = self.response_error_message(response)
-            raise FatalAPIError(msg)
+        if self._LOG_REQUEST_METRICS:
+            extra_tags = {}
+            if self._LOG_REQUEST_METRIC_URLS:
+                extra_tags["url"] = prepared_request.path_url
+            self._write_request_duration_log(
+                endpoint=self.path,
+                response=response,
+                context=context,
+                extra_tags=extra_tags,
+            )
+        self.validate_response(response)
+        return response
