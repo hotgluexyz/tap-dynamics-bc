@@ -34,30 +34,22 @@ class CompaniesStream(dynamicsBcStream):
         # decorated_request = self.request_decorator(self._request)
         context = {"company_id": record["id"]}
 
-        # url = f"{self.url_base}/companies({record['id']})/companyInformation"
-        # headers = self.http_headers
-        # headers.update(self.authenticator.auth_headers or {})
+        url = f"{self.url_base}/companies({record['id']})/companyInformation"
+        headers = self.http_headers
+        headers.update(self.authenticator.auth_headers or {})
 
-        # prepared_request = cast(
-        #     requests.PreparedRequest,
-        #     self.requests_session.prepare_request(
-        #         requests.Request(
-        #             method="GET",
-        #             url=url,
-        #             params=self.get_url_params(context, None),
-        #             headers=headers,
-        #         ),
-        #     ),
-        # )
+        print(f"HEADER FOR COMPANYINFORMATION: {headers}")
 
-        # try:
-        #     resp = decorated_request(prepared_request, context)
-        #     context = {"company_id": record["id"]}
-        # except FatalAPIError:
-        #     self.logger.warning(
-        #         f"Company unacessible: '{record['name']}' ({record['id']})."
-        #     )
-        #     context = None
+        response = requests.get(url=url, headers=headers)
+
+        try:
+            self.validate_response(response)
+            context = {"company_id": record["id"]}
+        except FatalAPIError:
+            self.logger.warning(
+                f"Company unacessible: '{record['name']}' ({record['id']})."
+            )
+            context = None
         
         return context
     
