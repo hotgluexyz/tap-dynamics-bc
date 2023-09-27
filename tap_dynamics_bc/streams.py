@@ -7,6 +7,7 @@ from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
 
 from tap_dynamics_bc.client import dynamicsBcStream
+from requests_ntlm import HttpNtlmAuth
 
 
 class CompaniesStream(dynamicsBcStream):
@@ -31,26 +32,42 @@ class CompaniesStream(dynamicsBcStream):
 
     def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
         """Return a context dictionary for child streams."""
-        # decorated_request = self.request_decorator(self._request)
-        context = {"company_id": record["id"]}
+        decorated_request = self.request_decorator(self._request)
 
+        print("GET CHILD CONTEXT FOR COMPANIES")
         url = f"{self.url_base}/companies({record['id']})/companyInformation"
-        print(f"URL: {url}")
-        headers = self.http_headers
-        headers.update(self.authenticator.auth_headers or {})
+        authenticator = self.authenticator
+        auth = None
+        if self.config.get("client_id") and authenticator:
+            headers = self.http_headers
+            headers.update(self.authenticator.auth_headers or {})
+        elif self.config.get("username"):
+            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))            
 
-        print(f"HEADERS: {str(headers)}")
+        if auth:
+            print(f"USING NTLM AUTHENTICATION")
+
+        print("REQUESTING COMPANY INFORMATION DATA")
+        resp = requests.get(url=url, auth=auth, headers=headers)
+        print(f"RESP: {resp.text}")
+
+        prepared_request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method="GET",
+                    url=url,
+                    params=self.get_url_params(context, None),
+                    headers=headers,
+                    auth=auth
+                ),
+            ),
+        )
 
         try:
-            response = requests.get(url=url, headers=headers)
-            print("GOT RESPONSE FROM COMPANY INFORMATION")
-            print(f"RESPONSEE COMPANY INFORMATION: {str(response)}")
-        except:
-            print("FAILED PARSING RESPONSE")
-            
-        if response.status_code in [200, 201, 204]:
+            resp = decorated_request(prepared_request, context)
             context = {"company_id": record["id"]}
-        else:
+        except FatalAPIError:
             self.logger.warning(
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
