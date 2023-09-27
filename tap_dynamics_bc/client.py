@@ -105,19 +105,30 @@ class dynamicsBcStream(RESTStream):
         )
         return request
 
+    def _request(
+        self, prepared_request: requests.PreparedRequest, context: Optional[dict]
+    ) -> requests.Response:
+        """TODO.
 
-    def validate_response(self, response: requests.Response) -> None:
-        self.logger.debug(f"response: {response.json()}")
-        if 400 <= response.status_code < 500:
-            msg = (
-                f"{response.status_code} Client Error: "
-                f"{response.reason} for path: {self.path}"
-            )
-            raise FatalAPIError(msg)
+        Args:
+            prepared_request: TODO
+            context: Stream partition or context dictionary.
 
-        elif 500 <= response.status_code < 600:
-            msg = (
-                f"{response.status_code} Server Error: "
-                f"{response.reason} for path: {self.path}"
+        Returns:
+            TODO
+        """
+        response = self.requests_session.send(prepared_request, timeout=self.timeout)
+        self.logger.debug(f"url:{prepared_request.url} headers:{prepared_request.headers} response: {response.text}")
+        if self._LOG_REQUEST_METRICS:
+            extra_tags = {}
+            if self._LOG_REQUEST_METRIC_URLS:
+                extra_tags["url"] = prepared_request.path_url
+            self._write_request_duration_log(
+                endpoint=self.path,
+                response=response,
+                context=context,
+                extra_tags=extra_tags,
             )
-            raise RetriableAPIError(msg)
+        self.validate_response(response)
+        self.logger.debug("Response received successfully.")
+        return response
