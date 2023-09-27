@@ -13,6 +13,12 @@ from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 
 class dynamicsBcStream(RESTStream):
     """dynamics-bc stream class."""
+    @property
+    def auth_type(self) -> str:
+        if self.config.get("client_id"):
+            return "OAuth"
+        elif self.config.get("username"):
+            return "Ntlm"
 
     @property
     def url_base(self) -> str:

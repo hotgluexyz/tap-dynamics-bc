@@ -34,7 +34,6 @@ class CompaniesStream(dynamicsBcStream):
         """Return a context dictionary for child streams."""
         decorated_request = self.request_decorator(self._request)
 
-        print("GET CHILD CONTEXT FOR COMPANIES")
         url = f"{self.url_base}/companies({record['id']})/companyInformation"
         headers = None
         auth = None
@@ -44,11 +43,9 @@ class CompaniesStream(dynamicsBcStream):
             headers.update(self.authenticator.auth_headers or {})
         elif self.config.get("username"):
             print("USING NTLM FOR COMPANYINFORMATION")
-            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))            
+            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
 
-        print("REQUESTING COMPANY INFORMATION DATA")
-        resp = requests.get(url=url, auth=auth, headers=headers)
-        print(f"RESP: {resp.text}")
+        self.logger.info(f"HEADERS {headers}")            
 
         prepared_request = cast(
             requests.PreparedRequest,
@@ -72,6 +69,7 @@ class CompaniesStream(dynamicsBcStream):
             )
             context = None
         
+        print(f"COMPANY: {context}")
         return context
     
     def _sync_children(self, child_context: dict) -> None:
@@ -120,7 +118,11 @@ class ItemsStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
-    expand = "itemCategory,picture"
+
+    @property
+    def expand(self):
+        if self.auth_type == "OAuth":
+            return "itemCategory,picture"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
