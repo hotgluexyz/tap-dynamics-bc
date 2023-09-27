@@ -38,11 +38,9 @@ class CompaniesStream(dynamicsBcStream):
         headers = None
         auth = None
         if self.config.get("client_id") and self.authenticator:
-            print("USING OUATH FOR COMPANYINFORMATION")
             headers = self.http_headers
             headers.update(self.authenticator.auth_headers or {})
         elif self.config.get("username"):
-            print("USING NTLM FOR COMPANYINFORMATION")
             auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
 
         prepared_request = cast(
