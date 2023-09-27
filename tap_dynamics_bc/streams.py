@@ -35,17 +35,22 @@ class CompaniesStream(dynamicsBcStream):
         context = {"company_id": record["id"]}
 
         url = f"{self.url_base}/companies({record['id']})/companyInformation"
+        print(f"URL: {url}")
         headers = self.http_headers
         headers.update(self.authenticator.auth_headers or {})
 
-        print(f"HEADER FOR COMPANYINFORMATION: {headers}")
-
-        response = requests.get(url=url, headers=headers)
+        print(f"HEADERS: {str(headers)}")
 
         try:
-            self.validate_response(response)
+            response = requests.get(url=url, headers=headers)
+            print("GOT RESPONSE FROM COMPANY INFORMATION")
+            print(f"RESPONSEE COMPANY INFORMATION: {str(response)}")
+        except:
+            print("FAILED PARSING RESPONSE")
+            
+        if response.status_code in [200, 201, 204]:
             context = {"company_id": record["id"]}
-        except FatalAPIError:
+        else:
             self.logger.warning(
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
