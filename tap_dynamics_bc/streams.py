@@ -31,33 +31,33 @@ class CompaniesStream(dynamicsBcStream):
 
     def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
         """Return a context dictionary for child streams."""
-        decorated_request = self.request_decorator(self._request)
+        # decorated_request = self.request_decorator(self._request)
+        context = {"company_id": record["id"]}
 
-        url = f"{self.url_base}/companies({record['id']})/companyInformation"
-        headers = self.http_headers
-        headers.update(self.authenticator.auth_headers or {})
+        # url = f"{self.url_base}/companies({record['id']})/companyInformation"
+        # headers = self.http_headers
+        # headers.update(self.authenticator.auth_headers or {})
 
-        prepared_request = cast(
-            requests.PreparedRequest,
-            self.requests_session.prepare_request(
-                requests.Request(
-                    method="GET",
-                    url=url,
-                    params=self.get_url_params(context, None),
-                    headers=headers,
-                ),
-            ),
-        )
+        # prepared_request = cast(
+        #     requests.PreparedRequest,
+        #     self.requests_session.prepare_request(
+        #         requests.Request(
+        #             method="GET",
+        #             url=url,
+        #             params=self.get_url_params(context, None),
+        #             headers=headers,
+        #         ),
+        #     ),
+        # )
 
-        try:
-            resp = decorated_request(prepared_request, context)
-            print(f"RESPONSE: {resp}")
-            context = {"company_id": record["id"]}
-        except FatalAPIError:
-            self.logger.warning(
-                f"Company unacessible: '{record['name']}' ({record['id']})."
-            )
-            context = None
+        # try:
+        #     resp = decorated_request(prepared_request, context)
+        #     context = {"company_id": record["id"]}
+        # except FatalAPIError:
+        #     self.logger.warning(
+        #         f"Company unacessible: '{record['name']}' ({record['id']})."
+        #     )
+        #     context = None
         
         return context
     

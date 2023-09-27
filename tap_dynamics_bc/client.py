@@ -105,31 +105,14 @@ class dynamicsBcStream(RESTStream):
         )
         return request
 
-    def _request(
-        self, prepared_request: requests.PreparedRequest, context: Optional[dict]
-    ) -> requests.Response:
-        """TODO.
-
-        Args:
-            prepared_request: TODO
-            context: Stream partition or context dictionary.
-
-        Returns:
-            TODO
-        """
-        print("Making request")
-        response = self.requests_session.send(prepared_request, timeout=self.timeout)
-        print(f"RESPONSE: {response.text}")
-        if self._LOG_REQUEST_METRICS:
-            extra_tags = {}
-            if self._LOG_REQUEST_METRIC_URLS:
-                extra_tags["url"] = prepared_request.path_url
-            self._write_request_duration_log(
-                endpoint=self.path,
-                response=response,
-                context=context,
-                extra_tags=extra_tags,
-            )
-        self.validate_response(response)
-        self.logger.debug("Response received successfully.")
-        return response
+    def validate_response(self, response: requests.Response) -> None:
+        print(f"RESPONSEEEE: {response.text}")
+        if (
+            response.status_code in self.extra_retry_statuses
+            or 500 <= response.status_code < 600
+        ):
+            msg = self.response_error_message(response)
+            raise RetriableAPIError(msg, response)
+        elif 400 <= response.status_code < 500:
+            msg = self.response_error_message(response)
+            raise FatalAPIError(msg)
