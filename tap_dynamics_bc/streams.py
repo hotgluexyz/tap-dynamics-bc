@@ -127,7 +127,7 @@ class ItemsStream(dynamicsBcStream):
         th.Property("itemCategoryCode", th.StringType),
         th.Property("blocked", th.BooleanType),
         th.Property("gtin", th.StringType),
-        th.Property("inventory", th.IntegerType),
+        th.Property("inventory", th.NumberType),
         th.Property("unitPrice", th.NumberType),
         th.Property("priceIncludesTax", th.BooleanType),
         th.Property("unitCost", th.NumberType),

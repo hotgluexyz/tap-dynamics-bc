@@ -129,3 +129,20 @@ class dynamicsBcStream(RESTStream):
             )
         self.validate_response(response)
         return response
+    
+    def validate_response(self, response: requests.Response) -> None:
+        if response.status_code in [404]:
+            self.logger.info(f"record was not found - response: {response.text}")
+        elif 400 <= response.status_code < 500 and response.status_code not in [404]:
+            msg = (
+                f"{response.status_code} Client Error: "
+                f"{response.reason} for path: {self.path}"
+            )
+            raise FatalAPIError(msg)
+
+        elif 500 <= response.status_code < 600:
+            msg = (
+                f"{response.status_code} Server Error: "
+                f"{response.reason} for path: {self.path}"
+            )
+            raise RetriableAPIError(msg)
