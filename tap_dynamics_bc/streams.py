@@ -51,7 +51,7 @@ class CompaniesStream(dynamicsBcStream):
 
         try:
             resp = decorated_request(prepared_request, context)
-            print(f"url:{prepared_request.url} headers:{prepared_request.headers} response: {resp.text}")
+            print(f"RESPONSE: {resp.text}")
             context = {"company_id": record["id"]}
         except FatalAPIError:
             self.logger.warning(

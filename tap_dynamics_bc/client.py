@@ -119,7 +119,7 @@ class dynamicsBcStream(RESTStream):
         """
         print("Making request")
         response = self.requests_session.send(prepared_request, timeout=self.timeout)
-        print(f"url:{prepared_request.url} headers:{prepared_request.headers} response: {response.text}")
+        print(f"RESPONSE: {response.text}")
         if self._LOG_REQUEST_METRICS:
             extra_tags = {}
             if self._LOG_REQUEST_METRIC_URLS:
