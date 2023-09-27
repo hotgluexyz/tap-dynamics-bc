@@ -45,8 +45,6 @@ class CompaniesStream(dynamicsBcStream):
             print("USING NTLM FOR COMPANYINFORMATION")
             auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
 
-        self.logger.info(f"HEADERS {headers}")            
-
         prepared_request = cast(
             requests.PreparedRequest,
             self.requests_session.prepare_request(
@@ -68,8 +66,6 @@ class CompaniesStream(dynamicsBcStream):
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
             context = None
-        
-        print(f"COMPANY: {context}")
         return context
     
     def _sync_children(self, child_context: dict) -> None:
