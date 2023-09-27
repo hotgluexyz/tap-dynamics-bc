@@ -106,7 +106,6 @@ class dynamicsBcStream(RESTStream):
         return request
 
     def validate_response(self, response: requests.Response) -> None:
-        print(f"RESPONSEEEE: {response.text}")
         if (
             response.status_code in self.extra_retry_statuses
             or 500 <= response.status_code < 600
