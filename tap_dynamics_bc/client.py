@@ -1,12 +1,13 @@
 """REST client handling, including dynamics-bcStream base class."""
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, cast
 
 import requests
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.streams import RESTStream
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
+from singer_sdk.authenticators import BasicAuthenticator
 
 
 class dynamicsBcStream(RESTStream):
@@ -15,17 +16,33 @@ class dynamicsBcStream(RESTStream):
     @property
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
-        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
-        return url_template.format(self.config.get("environment_name", "production"))
+        if self.config.get("refresh_token"):
+            url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
+            return url_template.format(self.config.get("environment_name", "production"))
+        else:
+            return self.config.get("base_url")
 
     records_jsonpath = "$.value[*]"
     next_page_token_jsonpath = "$.next_page"
     expand = None
 
     @property
-    def authenticator(self) -> TapDynamicsBCAuth:
+    def oauth_authenticator(self) -> TapDynamicsBCAuth:
         """Return a new authenticator object."""
         return TapDynamicsBCAuth.create_for_stream(self)
+    
+    @property
+    def basic_authenticator(self) -> BasicAuthenticator:
+        """Return a new authenticator object.
+
+        Returns:
+            An authenticator instance.
+        """
+        return BasicAuthenticator.create_for_stream(
+            self,
+            username=self.config.get("username"),
+            password=self.config.get("password"),
+        )
 
     @property
     def http_headers(self) -> dict:
@@ -64,3 +81,37 @@ class dynamicsBcStream(RESTStream):
         if self.expand:
             params["$expand"] = self.expand
         return params
+
+    def prepare_request(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> requests.PreparedRequest:
+        http_method = self.rest_method
+        url: str = self.get_url(context)
+        params: dict = self.get_url_params(context, next_page_token)
+        request_data = self.prepare_request_payload(context, next_page_token)
+        headers = self.http_headers
+
+        if self.config.get("refresh_token"):
+            authenticator = self.oauth_authenticator
+            if authenticator:
+                headers.update(authenticator.auth_headers or {})
+                params.update(authenticator.auth_params or {})
+        else:
+            authenticator = self.basic_authenticator
+            if authenticator:
+                headers.update(authenticator.auth_headers or {})
+                params.update(authenticator.auth_params or {})
+
+        request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method=http_method,
+                    url=url,
+                    params=params,
+                    headers=headers,
+                    json=request_data,
+                ),
+            ),
+        )
+        return request
