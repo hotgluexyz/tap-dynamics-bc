@@ -38,14 +38,14 @@ class dynamicsBcStream(RESTStream):
             # for company in companies:
             #     items_response = requests.get(f"{url}Company('{company}')/workflowItems?$format=json", auth=(self.config.get("username"), self.config.get("password")))
             #     self.logger.info(f"Vendors Response for company {company} is {items_response.text}")
-            self.logger.info("Making get request to vendors per company")
-            for company in companies:
-                items_response = requests.get(f"{url}Company('{company}')/workflowVendors?$format=json", auth=(self.config.get("username"), self.config.get("password")))
-                self.logger.info(f"Vendors Response for company {company} is {items_response.text}")
+            # self.logger.info("Making get request to vendors per company")
+            # for company in companies:
+            #     items_response = requests.get(f"{url}Company('{company}')/workflowVendors?$format=json", auth=(self.config.get("username"), self.config.get("password")))
+            #     self.logger.info(f"Vendors Response for company {company} is {items_response.text}")
             self.logger.info("Making get request to accounts per company")
             for company in companies:
                 items_response = requests.get(f"{url}Company('{company}')/Chart_of_Accounts?$format=json", auth=(self.config.get("username"), self.config.get("password")))
-                self.logger.info(f"Vendors Response for company {company} is {items_response.text}")
+                self.logger.info(f"Accounts Response for company {company} is {items_response.text}")
             return url
 
 
