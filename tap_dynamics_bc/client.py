@@ -23,7 +23,7 @@ class dynamicsBcStream(RESTStream):
     @property
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
-        if self.odata_endpoints:
+        if not self.odata_endpoints:
             url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
             return url_template.format(self.config.get("environment_name", "production"))
         else:
