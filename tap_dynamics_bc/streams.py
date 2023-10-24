@@ -13,7 +13,13 @@ class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
 
     name = "companies"
-    path = "/companies"
+
+    @property
+    def path(self):
+        if self.odata_endpoints:
+            return "Company"
+        else:
+            return "/companies"
     primary_keys = ["id"]
     replication_key = None
 
@@ -345,7 +351,14 @@ class VendorsStream(dynamicsBcStream):
     """Define custom stream."""
 
     name = "vendors"
-    path = "/companies({company_id})/vendors"
+    
+    @property
+    def path(self):
+        if self.odata_endpoints:
+            return "Company('{company_id}')/workflowVendors"
+        else:
+            return "/companies({company_id})/vendors"
+
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream

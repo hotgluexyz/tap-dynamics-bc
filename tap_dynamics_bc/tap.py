@@ -47,17 +47,17 @@ class TapdynamicsBc(Tap):
         th.Property(
             "refresh_token",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "client_secret",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "client_id",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "start_date",
@@ -68,7 +68,7 @@ class TapdynamicsBc(Tap):
         th.Property(
             "environment_name",
             th.StringType,
-            required=True,
+            required=False,
         ),
     ).to_dict()
 
