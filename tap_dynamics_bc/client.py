@@ -27,7 +27,19 @@ class dynamicsBcStream(RESTStream):
             url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
             return url_template.format(self.config.get("environment_name", "production"))
         else:
-            return self.config.get("base_url")
+            url = self.config.get("base_url")
+            self.logger.info("Making get request to companies")
+            response = requests.get(f"{url}Company?$format=json", auth=(self.config.get("username"), self.config.get("password")))
+            self.logger.info(f"response from companies {response.text}")
+            companies= response.json()["value"]
+            companies = [c["Id"] for c in companies]
+            self.logger.info(f"Available companies {companies}")
+            self.logger.info("Making get request to vendors per company")
+            for company in companies:
+                items_response = requests.get(f"{url}Company('{company}')/workflowItems?$format=json", auth=(self.config.get("username"), self.config.get("password")))
+                self.logger.info(f"Vendors Response for company {company} is {items_response.text}")
+            return url
+
 
     records_jsonpath = "$.value[*]"
     next_page_token_jsonpath = "$.next_page"
