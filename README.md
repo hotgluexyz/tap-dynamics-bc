@@ -16,7 +16,17 @@ pipx install tap-dynamics-bc
 
 ### Accepted Config Options
 
-- [ ] `Developer TODO:` Provide a list of config options accepted by the tap.
+| Setting             | Required | Default | Description |
+|:--------------------|:--------:|:-------:|:------------|
+| client_secret       | True     | None    | The client secret of the application you registered to access Dynamics Business Central. |
+| client_id           | True     | None    | The client id of the application you registered to access Dynamics Business Central. |
+| tenant              | True     | None    | Your Tenant ID (also known as a Directory ID). |
+| start_date          | True     | None    | The earliest record date to sync |
+| environment_name    | True     | production | The name of the environment you wish to access in Dynamics Business Central. You can view your environments at https://businesscentral.dynamics.com/YOUR_TENANT_ID/admin |
+| stream_maps         | False    | None    | Config object for stream maps capability. |
+| stream_map_config   | False    | None    | User-defined config values to be used within map expressions. |
+| flattening_enabled  | False    | None    | 'True' to enable schema flattening and automatically expand nested properties. |
+| flattening_max_depth| False    | None    | The max depth to flatten schemas. |
 
 A full list of supported settings and capabilities for this
 tap is available by running:
@@ -27,7 +37,24 @@ tap-dynamics-bc --about
 
 ### Source Authentication and Authorization
 
-- [ ] `Developer TODO:` If your tap requires special access on the source system, or any special authentication requirements, provide those here.
+#### Setting Up OAuth 2.0
+
+To use tap-dynamics-bc with OAuth, complete the following steps:
+1. Go to https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade and click "New Registration".
+1. Enter a name of your choice, select "Single tenant", and enter a "Web" redirect URI of `https://businesscentral.dynamics.com/OAuthLanding.htm`. Click "Register". 
+1. You will be taken to an Overview page for your new application. Note the Client ID and Tenant ID you are presented with. These are supplied to the tap through the `client_id` and `tenant` configuration options.
+1. In the left menu, select "API Permissions". Click "Add a Permission", then "Dynamics 365 Business Central", then "Application permissions".
+1. Select the "API.ReadWrite.All" permission and click "Add permissions".
+1. Click the "Grant admin consent button". If prompted, confirm your grant of admin consent.
+1. In the left menu, select "Certificates & Secrets". If the "Client secrets" tab is not selected, select it.
+1. Click "New client secret". Enter a name and expiry date of your choice, then click "Add".
+1. Note down the string of text provided in the "Value" column for your new secret. This is your Client Secret, and is supplied to the tap through the `client_secret` configuration option. You will not be able to view this value again once you navigate away from this page, so be sure you have it stored securly before moving on.
+1. Go to https://businesscentral.dynamics.com/ and click on the search icon in the upper right. Search for "Entra" and select "Microsoft Entra Applications".
+1. Click "New", then paste in your Client ID and a description of your choice. Switch "State" to Enabled.
+1. Add a new permission and select "D365 READ".
+1. In the upper left, click "Grant Consent" and follow the prompts in the pop-up window to grant consent to the application you created earlier.
+1. You're done! Make sure that you have provided the tap with an appropriate `client_id`, `tenant`, and `client_secret`, then run the tap.
+
 
 ## Usage
 

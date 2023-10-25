@@ -10,15 +10,13 @@ plugins:
     - state
     - catalog
     - discover
-    config:
-      start_date: '2010-01-01T00:00:00Z'
     settings:
-    # TODO: To configure using Meltano, declare settings and their types here:
-    - name: username
-    - name: password
-      kind: password
+    - name: client_secret
+    - name: client_id
+    - name: tenant
     - name: start_date
-      value: '2010-01-01T00:00:00Z'
+    - name: environment_name
+    config:
   loaders:
   - name: target-jsonl
     variant: andyh1203

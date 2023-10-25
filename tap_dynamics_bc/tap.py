@@ -37,27 +37,32 @@ class TapdynamicsBc(Tap):
 
     name = "tap-dynamics-bc"
 
-    # TODO: Update this section with the actual config values you expect:
     config_jsonschema = th.PropertiesList(
-        th.Property(
-            "access_token",
-            th.StringType,
-            required=False,
-        ),
-        th.Property(
-            "refresh_token",
-            th.StringType,
-            required=True,
-        ),
         th.Property(
             "client_secret",
             th.StringType,
             required=True,
+            description=(
+                "The client secret of the application you registered to access "
+                "Dynamics Business Central."
+            ),
         ),
         th.Property(
             "client_id",
             th.StringType,
             required=True,
+            description=(
+                "The client id of the application you registered to access Dynamics "
+                "Business Central."
+            ),
+        ),
+        th.Property(
+            "tenant",
+            th.StringType,
+            required=True,
+            description=(
+                "Your Tenant ID (also known as a Directory ID)."
+            ),
         ),
         th.Property(
             "start_date",
@@ -69,6 +74,12 @@ class TapdynamicsBc(Tap):
             "environment_name",
             th.StringType,
             required=True,
+            default="production",
+            description=(
+                "The name of the environment you wish to access in Dynamics Business "
+                "Central. You can view your environments at "
+                "https://businesscentral.dynamics.com/YOUR_TENANT_ID/admin"
+            ),
         ),
     ).to_dict()
 
