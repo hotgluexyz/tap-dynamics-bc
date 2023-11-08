@@ -161,6 +161,7 @@ class ItemsStream(dynamicsBcStream):
                 th.Property("lastModifiedDateTime", th.DateType),
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -262,6 +263,7 @@ class SalesInvoicesStream(dynamicsBcStream):
                 )
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -357,6 +359,7 @@ class PurchaseInvoicesStream(dynamicsBcStream):
                 )
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -392,6 +395,7 @@ class VendorsStream(dynamicsBcStream):
         th.Property("blocked", th.StringType),
         th.Property("balance", th.NumberType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -410,6 +414,7 @@ class VendorPurchases(dynamicsBcStream):
         th.Property("name", th.StringType),
         th.Property("totalPurchaseAmount", th.NumberType),
         th.Property("dateFilter_FilterOnly", th.StringType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -432,6 +437,7 @@ class AccountsStream(dynamicsBcStream):
         th.Property("accountType", th.StringType),
         th.Property("directPosting", th.BooleanType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -458,6 +464,7 @@ class LocationsStream(dynamicsBcStream):
         th.Property("phoneNumber", th.StringType),
         th.Property("email", th.StringType),
         th.Property("website", th.StringType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 class SalesOrdersStream(dynamicsBcStream):
@@ -556,7 +563,7 @@ class SalesOrdersStream(dynamicsBcStream):
                 )
             ),
         ),
-   
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 class PurchaseOrdersStream(dynamicsBcStream):
@@ -592,4 +599,5 @@ class PurchaseOrdersStream(dynamicsBcStream):
             )
         )),
         th.Property("Buy_from_Vendor_NoLink", th.CustomType({"type": ["object", "string"]})),
+        th.Property("company_id", th.StringType),
     ).to_dict()
