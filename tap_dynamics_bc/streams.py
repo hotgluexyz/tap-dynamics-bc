@@ -567,6 +567,7 @@ class PurchaseOrdersStream(dynamicsBcStream):
     primary_keys = ["Id"]
     replication_key = None
     parent_stream_type = CompaniesStream
+    expand = "wsiPurchaseOrderLines"
 
     schema = th.PropertiesList(
         th.Property("Id", th.StringType),
