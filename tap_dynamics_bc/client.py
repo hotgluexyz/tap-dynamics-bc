@@ -116,6 +116,7 @@ class dynamicsBcStream(RESTStream):
         self, prepared_request: requests.PreparedRequest, context: Optional[dict]
     ) -> requests.Response:
         response = self.requests_session.send(prepared_request, timeout=self.timeout)
+        self.logger.info(f"request to url {prepared_request.url} with response: {response.text}")
         if self._LOG_REQUEST_METRICS:
             extra_tags = {}
             if self._LOG_REQUEST_METRIC_URLS:
@@ -128,6 +129,7 @@ class dynamicsBcStream(RESTStream):
             )
         if response.status_code in [404]:
             self.logger.info(f"invalid endpoint for url {prepared_request.url} with response: {response.text}")
+        self.logger.info(f"succesful request to url {prepared_request.url} with response: {response.text}")
         self.validate_response(response)
         return response
     
