@@ -558,3 +558,75 @@ class SalesOrdersStream(dynamicsBcStream):
         ),
    
     ).to_dict()
+
+class PurchaseOrdersStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "purchase_orders"
+    path = "/companies({company_id})/wsiPurchaseOrder"
+    primary_keys = ["Id"]
+    replication_key = None
+    parent_stream_type = CompaniesStream
+    expand = "salesOrderLines"
+
+    schema = th.PropertiesList(
+        th.Property("Id", th.StringType),
+        th.Property("Document_Type", th.StringType),
+        th.Property("No", th.StringType),
+        th.Property("Buy_from_Vendor_No", th.DateType),
+        th.Property("Your_Reference", th.DateType),
+        th.Property("Vendor_Invoice_No", th.StringType),
+        th.Property("Vendor_Order_No", th.StringType),
+        th.Property("Expected_Receipt_Date", th.StringType),
+        th.Property("No_Series", th.StringType),
+        th.Property("wsiPurchaseOrderLines", th.ArrayType(
+            th.ObjectType(
+                th.Property("Document_Type", th.StringType),
+                th.Property("Document_No", th.StringType),
+                th.Property("LineNo", th.StringType),
+                th.Property("Type", th.StringType),
+                th.Property("No", th.StringType),
+                th.Property("Quantity", th.StringType),
+                th.Property("Direct_Unit_Cost", th.StringType),
+                th.Property("Document_NoLink", th.StringType),
+            )
+        )),
+        th.Property("Buy_from_Vendor_NoLink", th.CustomType({"type": ["object", "string"]})),
+        th.Property("shipToName", th.StringType),
+        th.Property("shipToContact", th.StringType),
+        th.Property("sellToAddressLine1", th.StringType),
+        th.Property("sellToAddressLine2", th.StringType),
+        th.Property("sellToCity", th.StringType),
+        th.Property("sellToCountry", th.StringType),
+        th.Property("sellToState", th.StringType),
+        th.Property("sellToPostCode", th.StringType),
+        th.Property("billToAddressLine1", th.StringType),
+        th.Property("billToAddressLine2", th.StringType),
+        th.Property("billToCity", th.StringType),
+        th.Property("billToCountry", th.StringType),
+        th.Property("billToState", th.StringType),
+        th.Property("billToPostCode", th.StringType),
+        th.Property("shipToAddressLine1", th.StringType),
+        th.Property("shipToAddressLine2", th.StringType),
+        th.Property("shipToCity", th.StringType),
+        th.Property("shipToCountry", th.StringType),
+        th.Property("shipToState", th.StringType),
+        th.Property("shipToPostCode", th.StringType),
+        th.Property("shortcutDimension1Code", th.StringType),
+        th.Property("shortcutDimension2Code", th.StringType),
+        th.Property("currencyId", th.StringType),
+        th.Property("currencyCode", th.StringType),
+        th.Property("pricesIncludeTax", th.BooleanType),
+        th.Property("paymentTermsId", th.StringType),
+        th.Property("shipmentMethodId", th.StringType),
+        th.Property("salesperson", th.StringType),
+        th.Property("partialShipping", th.BooleanType),
+        th.Property("requestedDeliveryDate", th.DateType),
+        th.Property("discountAmount", th.NumberType),
+        th.Property("discountAppliedBeforeTax", th.BooleanType),
+        th.Property("totalAmountExcludingTax", th.NumberType),
+        th.Property("totalTaxAmount", th.NumberType),
+        th.Property("totalAmountIncludingTax", th.NumberType),
+        th.Property("fullyShipped", th.BooleanType),
+        th.Property("status", th.CustomType({"type": ["object", "string"]})),
+    ).to_dict()
