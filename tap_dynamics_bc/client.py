@@ -95,7 +95,10 @@ class dynamicsBcStream(RESTStream):
             params.update(authenticator.auth_params or {})
         
         elif self.config.get("username"):
-            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
+            if self.config.get("basic_auth"):
+                auth = (self.config.get("username"), self.config.get("password"))
+            else:
+                auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
 
         request = cast(
             requests.PreparedRequest,
