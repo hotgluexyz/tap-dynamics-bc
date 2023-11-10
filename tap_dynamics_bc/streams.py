@@ -41,7 +41,13 @@ class CompaniesStream(dynamicsBcStream):
             headers = self.http_headers
             headers.update(self.authenticator.auth_headers or {})
         elif self.config.get("username"):
-            auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
+            if self.config.get("basic_auth"):
+                self.logger.info("using basic auth")
+                auth = (self.config.get("username"), self.config.get("password"))
+            else:
+                self.logger.info("using Ntlm auth")
+                auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
+
 
         prepared_request = cast(
             requests.PreparedRequest,
