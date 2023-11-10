@@ -96,8 +96,10 @@ class dynamicsBcStream(RESTStream):
         
         elif self.config.get("username"):
             if self.config.get("basic_auth"):
+                self.logger.info("using basic auth")
                 auth = (self.config.get("username"), self.config.get("password"))
             else:
+                self.logger.info("using Ntlm auth")
                 auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
 
         request = cast(
