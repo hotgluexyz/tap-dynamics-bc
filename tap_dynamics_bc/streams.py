@@ -15,7 +15,7 @@ class MetadataStream(dynamicsBcStream):
     """Define custom stream."""
 
     name = "metadata"
-    path = "data"
+    path = "$metadata"
     replication_key = None
     primary_keys = ["EntityType"]
     records_jsonpath = "$.Schema.EntityType[*]"
