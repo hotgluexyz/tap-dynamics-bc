@@ -28,7 +28,8 @@ class MetadataStream(dynamicsBcStream):
     ).to_dict()
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
-        return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response))
+        self.logger.info(f"METADATA {response.text}")
+        return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response.text))
 
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
         output = {}
