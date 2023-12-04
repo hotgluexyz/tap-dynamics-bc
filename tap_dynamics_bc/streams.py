@@ -11,42 +11,42 @@ from requests_ntlm import HttpNtlmAuth
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 import xmltodict
 
-class MetadataStream(dynamicsBcStream):
-    """Define custom stream."""
+# class MetadataStream(dynamicsBcStream):
+#     """Define custom stream."""
 
-    name = "metadata"
-    path = "$metadata"
-    replication_key = None
-    primary_keys = ["EntityType"]
-    records_jsonpath = "$.Schema.EntityType[*]"
+#     name = "metadata"
+#     path = "$metadata"
+#     replication_key = None
+#     primary_keys = ["EntityType"]
+#     records_jsonpath = "$.Schema.EntityType[*]"
 
-    schema = th.PropertiesList(
-        th.Property("EntityType", th.StringType),
-        th.Property("Key", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-        th.Property("Properties", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-        th.Property("Annotations", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-    ).to_dict()
+#     schema = th.PropertiesList(
+#         th.Property("EntityType", th.StringType),
+#         th.Property("Key", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#         th.Property("Properties", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#         th.Property("Annotations", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#     ).to_dict()
 
-    def parse_response(self, response: requests.Response) -> Iterable[dict]:
-        self.logger.info(f"METADATA {response.text}")
-        return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response.text))
+#     def parse_response(self, response: requests.Response) -> Iterable[dict]:
+#         self.logger.info(f"METADATA {response.text}")
+#         return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response.text))
 
-    def post_process(self, row: dict, context: Optional[dict]) -> dict:
-        output = {}
-        #parse properties
-        properties = {}
-        [properties.update({prop.get("@Name"): {"type": prop.get("@Type"), "nullable": prop.get("@Nullable"), "annotations": prop.get("Annotation")}}) for prop in row.get("Property", [])]
-        #parse keys
-        keys = row.get("Key", {}).get("PropertyRef", [])
-        if isinstance(keys, dict):
-            keys = [keys]
-        pks = [key["@Name"] for key in keys]
-        #output each endpoint data
-        output["EntityType"] = row.get("@Name")
-        output["Keys"] =  pks
-        output["Properties"] =  properties
-        output["Annotations"] = row.get("Annotation")
-        return output
+#     def post_process(self, row: dict, context: Optional[dict]) -> dict:
+#         output = {}
+#         #parse properties
+#         properties = {}
+#         [properties.update({prop.get("@Name"): {"type": prop.get("@Type"), "nullable": prop.get("@Nullable"), "annotations": prop.get("Annotation")}}) for prop in row.get("Property", [])]
+#         #parse keys
+#         keys = row.get("Key", {}).get("PropertyRef", [])
+#         if isinstance(keys, dict):
+#             keys = [keys]
+#         pks = [key["@Name"] for key in keys]
+#         #output each endpoint data
+#         output["EntityType"] = row.get("@Name")
+#         output["Keys"] =  pks
+#         output["Properties"] =  properties
+#         output["Annotations"] = row.get("Annotation")
+#         return output
 
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
