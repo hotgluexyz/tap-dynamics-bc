@@ -16,6 +16,7 @@ from tap_dynamics_bc.streams import (
     VendorPurchases,
     VendorsStream,
     SalesOrdersStream,
+    PurchaseOrdersStream,
 )
 
 STREAM_TYPES = [
@@ -29,6 +30,7 @@ STREAM_TYPES = [
     AccountsStream,
     LocationsStream,
     SalesOrdersStream,
+    PurchaseOrdersStream,
 ]
 
 
@@ -47,28 +49,38 @@ class TapdynamicsBc(Tap):
         th.Property(
             "refresh_token",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "client_secret",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "client_id",
             th.StringType,
-            required=True,
+            required=False,
         ),
         th.Property(
             "start_date",
             th.DateTimeType,
-            required=True,
+            required=False,
             description="The earliest record date to sync",
         ),
         th.Property(
             "environment_name",
             th.StringType,
-            required=True,
+            required=False,
+        ),
+        th.Property(
+            "username",
+            th.StringType,
+            required=False,
+        ),
+        th.Property(
+            "password",
+            th.StringType,
+            required=False,
         ),
     ).to_dict()
 

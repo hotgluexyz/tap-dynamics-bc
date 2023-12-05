@@ -1,13 +1,52 @@
 """Stream type classes for tap-dynamics-bc."""
 
-from typing import Optional, cast
+from typing import Optional, cast, Iterable
 
 import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
 
 from tap_dynamics_bc.client import dynamicsBcStream
+from requests_ntlm import HttpNtlmAuth
+from singer_sdk.helpers.jsonpath import extract_jsonpath
+import xmltodict
 
+# class MetadataStream(dynamicsBcStream):
+#     """Define custom stream."""
+
+#     name = "metadata"
+#     path = "$metadata"
+#     replication_key = None
+#     primary_keys = ["EntityType"]
+#     records_jsonpath = "$.Schema.EntityType[*]"
+
+#     schema = th.PropertiesList(
+#         th.Property("EntityType", th.StringType),
+#         th.Property("Key", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#         th.Property("Properties", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#         th.Property("Annotations", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+#     ).to_dict()
+
+#     def parse_response(self, response: requests.Response) -> Iterable[dict]:
+#         self.logger.info(f"METADATA {response.text}")
+#         return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response.text))
+
+#     def post_process(self, row: dict, context: Optional[dict]) -> dict:
+#         output = {}
+#         #parse properties
+#         properties = {}
+#         [properties.update({prop.get("@Name"): {"type": prop.get("@Type"), "nullable": prop.get("@Nullable"), "annotations": prop.get("Annotation")}}) for prop in row.get("Property", [])]
+#         #parse keys
+#         keys = row.get("Key", {}).get("PropertyRef", [])
+#         if isinstance(keys, dict):
+#             keys = [keys]
+#         pks = [key["@Name"] for key in keys]
+#         #output each endpoint data
+#         output["EntityType"] = row.get("@Name")
+#         output["Keys"] =  pks
+#         output["Properties"] =  properties
+#         output["Annotations"] = row.get("Annotation")
+#         return output
 
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
@@ -34,8 +73,19 @@ class CompaniesStream(dynamicsBcStream):
         decorated_request = self.request_decorator(self._request)
 
         url = f"{self.url_base}/companies({record['id']})/companyInformation"
-        headers = self.http_headers
-        headers.update(self.authenticator.auth_headers or {})
+        headers = None
+        auth = None
+        if self.config.get("client_id") and self.authenticator:
+            headers = self.http_headers
+            headers.update(self.authenticator.auth_headers or {})
+        elif self.config.get("username"):
+            if self.config.get("basic_auth"):
+                self.logger.info("using basic auth")
+                auth = (self.config.get("username"), self.config.get("password"))
+            else:
+                self.logger.info("using Ntlm auth")
+                auth = HttpNtlmAuth(self.config.get("username"), self.config.get("password"))
+
 
         prepared_request = cast(
             requests.PreparedRequest,
@@ -45,17 +95,26 @@ class CompaniesStream(dynamicsBcStream):
                     url=url,
                     params=self.get_url_params(context, None),
                     headers=headers,
+                    auth=auth
                 ),
             ),
         )
 
         try:
             resp = decorated_request(prepared_request, context)
-            return {"company_id": record["id"]}
+            context = {"company_id": record["id"]}
         except FatalAPIError:
             self.logger.warning(
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
+            context = None
+        return context
+    
+    def _sync_children(self, child_context: dict) -> None:
+        for child_stream in self.child_streams:
+            if child_stream.selected or child_stream.has_selected_descendents:
+                if child_context is not None:
+                    child_stream.sync(context=child_context)
 
 
 class CompanyInformationStream(dynamicsBcStream):
@@ -97,7 +156,11 @@ class ItemsStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
-    expand = "itemCategory,picture"
+
+    @property
+    def expand(self):
+        if self.auth_type == "OAuth":
+            return "itemCategory,picture"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -108,7 +171,7 @@ class ItemsStream(dynamicsBcStream):
         th.Property("itemCategoryCode", th.StringType),
         th.Property("blocked", th.BooleanType),
         th.Property("gtin", th.StringType),
-        th.Property("inventory", th.IntegerType),
+        th.Property("inventory", th.NumberType),
         th.Property("unitPrice", th.NumberType),
         th.Property("priceIncludesTax", th.BooleanType),
         th.Property("unitCost", th.NumberType),
@@ -142,6 +205,7 @@ class ItemsStream(dynamicsBcStream):
                 th.Property("lastModifiedDateTime", th.DateType),
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -243,6 +307,7 @@ class SalesInvoicesStream(dynamicsBcStream):
                 )
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -338,6 +403,7 @@ class PurchaseInvoicesStream(dynamicsBcStream):
                 )
             ),
         ),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -373,6 +439,7 @@ class VendorsStream(dynamicsBcStream):
         th.Property("blocked", th.StringType),
         th.Property("balance", th.NumberType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -391,6 +458,7 @@ class VendorPurchases(dynamicsBcStream):
         th.Property("name", th.StringType),
         th.Property("totalPurchaseAmount", th.NumberType),
         th.Property("dateFilter_FilterOnly", th.StringType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -413,6 +481,7 @@ class AccountsStream(dynamicsBcStream):
         th.Property("accountType", th.StringType),
         th.Property("directPosting", th.BooleanType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 
@@ -439,6 +508,7 @@ class LocationsStream(dynamicsBcStream):
         th.Property("phoneNumber", th.StringType),
         th.Property("email", th.StringType),
         th.Property("website", th.StringType),
+        th.Property("company_id", th.StringType),
     ).to_dict()
 
 class SalesOrdersStream(dynamicsBcStream):
@@ -537,5 +607,41 @@ class SalesOrdersStream(dynamicsBcStream):
                 )
             ),
         ),
-   
+        th.Property("company_id", th.StringType),
+    ).to_dict()
+
+class PurchaseOrdersStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "purchase_orders"
+    path = "/companies({company_id})/wsiPurchaseOrders"
+    primary_keys = ["Id"]
+    replication_key = None
+    parent_stream_type = CompaniesStream
+    expand = "wsiPurchaseOrderLines"
+
+    schema = th.PropertiesList(
+        th.Property("Id", th.StringType),
+        th.Property("Document_Type", th.StringType),
+        th.Property("No", th.StringType),
+        th.Property("Buy_from_Vendor_No", th.DateType),
+        th.Property("Your_Reference", th.DateType),
+        th.Property("Vendor_Invoice_No", th.StringType),
+        th.Property("Vendor_Order_No", th.StringType),
+        th.Property("Expected_Receipt_Date", th.StringType),
+        th.Property("No_Series", th.StringType),
+        th.Property("wsiPurchaseOrderLines", th.ArrayType(
+            th.ObjectType(
+                th.Property("Document_Type", th.StringType),
+                th.Property("Document_No", th.StringType),
+                th.Property("LineNo", th.StringType),
+                th.Property("Type", th.StringType),
+                th.Property("No", th.StringType),
+                th.Property("Quantity", th.StringType),
+                th.Property("Direct_Unit_Cost", th.StringType),
+                th.Property("Document_NoLink", th.StringType),
+            )
+        )),
+        th.Property("Buy_from_Vendor_NoLink", th.CustomType({"type": ["object", "string"]})),
+        th.Property("company_id", th.StringType),
     ).to_dict()

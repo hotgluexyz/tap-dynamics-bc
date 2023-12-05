@@ -11,6 +11,15 @@ class TapDynamicsBCAuth(OAuthAuthenticator, metaclass=SingletonMeta):
     """Authenticator class for TapDynamicsFinance."""
 
     @property
+    def auth_headers(self) -> dict:
+        if self.config.get("client_id"):
+            if not self.is_token_valid():
+                self.update_access_token()
+            result = super().auth_headers
+            result["Authorization"] = f"Bearer {self.access_token}"  
+            return result
+    
+    @property
     def oauth_request_body(self) -> dict:
         """Define the OAuth request body for the TapDynamicsFinance API."""
         # TODO: Define the request body needed for the API.
