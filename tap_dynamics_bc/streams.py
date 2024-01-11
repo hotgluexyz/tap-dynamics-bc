@@ -1,6 +1,6 @@
 """Stream type classes for tap-dynamics-bc."""
 
-from typing import Optional, cast, Iterable
+from typing import Optional, cast, Iterable, Any
 
 import requests
 from singer_sdk import typing as th
@@ -10,43 +10,43 @@ from tap_dynamics_bc.client import dynamicsBcStream
 from requests_ntlm import HttpNtlmAuth
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 import xmltodict
+import os
 
-# class MetadataStream(dynamicsBcStream):
-#     """Define custom stream."""
+class MetadataStream(dynamicsBcStream):
+    """Define custom stream."""
 
-#     name = "metadata"
-#     path = "$metadata"
-#     replication_key = None
-#     primary_keys = ["EntityType"]
-#     records_jsonpath = "$.Schema.EntityType[*]"
+    name = "metadata"
+    path = "/$metadata"
+    replication_key = None
+    records_jsonpath = "$.value[*]"
 
-#     schema = th.PropertiesList(
-#         th.Property("EntityType", th.StringType),
-#         th.Property("Key", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-#         th.Property("Properties", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-#         th.Property("Annotations", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
-#     ).to_dict()
+    schema = th.PropertiesList(
+        th.Property("Name", th.StringType),
+        th.Property("Kind", th.StringType),
+        th.Property("Key", th.ArrayType(th.CustomType({"type": ["object", "string"]}))),
+        th.Property("Properties", th.CustomType({"type": ["object", "string"]})),
+    ).to_dict()
 
-#     def parse_response(self, response: requests.Response) -> Iterable[dict]:
-#         self.logger.info(f"METADATA {response.text}")
-#         return extract_jsonpath(self.records_jsonpath, input=xmltodict.parse(response.text))
+    def get_next_page_token(
+        self, response: requests.Response, previous_token: Optional[Any]
+    ) -> Optional[Any]:
+        """Return a token for identifying next page or None if no more pages."""
+        return None
 
-#     def post_process(self, row: dict, context: Optional[dict]) -> dict:
-#         output = {}
-#         #parse properties
-#         properties = {}
-#         [properties.update({prop.get("@Name"): {"type": prop.get("@Type"), "nullable": prop.get("@Nullable"), "annotations": prop.get("Annotation")}}) for prop in row.get("Property", [])]
-#         #parse keys
-#         keys = row.get("Key", {}).get("PropertyRef", [])
-#         if isinstance(keys, dict):
-#             keys = [keys]
-#         pks = [key["@Name"] for key in keys]
-#         #output each endpoint data
-#         output["EntityType"] = row.get("@Name")
-#         output["Keys"] =  pks
-#         output["Properties"] =  properties
-#         output["Annotations"] = row.get("Annotation")
-#         return output
+    def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        content_type = response.headers.get("Content-Type")
+        if "xml" in content_type:
+            type = "xml"
+        elif "json" in content_type:
+            type = "json"
+        
+        #output metadata file
+        job_id = os.environ.get("JOB_ID")
+        self.logger.info("Writing metadata file")
+        xml_file = open(f"/home/hotglue/{job_id}/sync-output/metadata.{type}", "w")
+        n = xml_file.write(response.text)
+        xml_file.close()
+        return []
 
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
