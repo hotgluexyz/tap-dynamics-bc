@@ -209,6 +209,37 @@ class ItemsStream(dynamicsBcStream):
     ).to_dict()
 
 
+class DimensionsStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "dimensions"
+    path = "/companies({company_id})/dimensions"
+    primary_keys = ["id", "lastModifiedDateTime"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    @property
+    def expand(self):
+        return "dimensionValues"
+    
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("code", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("dimensionValues", th.ArrayType(
+            th.ObjectType(
+                th.Property("id", th.StringType),
+                th.Property("code", th.StringType),
+                th.Property("dimensionId", th.StringType),
+                th.Property("displayName", th.StringType), 
+                th.Property("lastModifiedDateTime", th.DateTimeType), 
+            )
+        )),
+        th.Property("company_id", th.StringType),
+    ).to_dict()
+
+
 class SalesInvoicesStream(dynamicsBcStream):
     """Define custom stream."""
 
