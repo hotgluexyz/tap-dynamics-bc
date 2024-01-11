@@ -132,8 +132,6 @@ class dynamicsBcStream(RESTStream):
                 context=context,
                 extra_tags=extra_tags,
             )
-        if self.name == "items":
-            self.logger.info(f"ITEMS RESPONSEEEEEEEE, {response.text}")
         if response.status_code in [404]:
             self.logger.info(f"invalid endpoint for url {prepared_request.url} with response: {response.text}")
         self.logger.info(f"succesful request to url {prepared_request.url} with response: {response.text}")
