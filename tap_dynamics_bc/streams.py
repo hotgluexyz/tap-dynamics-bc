@@ -676,3 +676,22 @@ class PurchaseOrdersStream(dynamicsBcStream):
         th.Property("Buy_from_Vendor_NoLink", th.CustomType({"type": ["object", "string"]})),
         th.Property("company_id", th.StringType),
     ).to_dict()
+
+
+class UnitsOfMeasureStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "unit_of_measure"
+    path = "/companies({company_id})/unitsOfMeasure"
+    primary_keys = ["id"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("code", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("internationalStandardCode", th.StringType),
+        th.Property("symbol", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+    ).to_dict()
