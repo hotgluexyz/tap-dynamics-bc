@@ -9,6 +9,7 @@ from requests_ntlm import HttpNtlmAuth
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
 from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
+import re
 
 
 class dynamicsBcStream(RESTStream):
@@ -50,16 +51,10 @@ class dynamicsBcStream(RESTStream):
         self, response: requests.Response, previous_token: Optional[Any]
     ) -> Optional[Any]:
         """Return a token for identifying next page or None if no more pages."""
-        if self.next_page_token_jsonpath:
-            all_matches = extract_jsonpath(
-                self.next_page_token_jsonpath, response.json()
-            )
-            first_match = next(iter(all_matches), None)
-            next_page_token = first_match
-        else:
-            next_page_token = response.headers.get("X-Next-Page", None)
-
-        return next_page_token
+        next_link = response.json().get("@odata.nextLink")
+        if next_link:
+            skiptoken_match = re.search(r'\$skiptoken=([^&]+)', next_link)
+            return skiptoken_match.group(1)
 
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
@@ -67,7 +62,7 @@ class dynamicsBcStream(RESTStream):
         """Return a dictionary of values to be used in URL parameterization."""
         params: dict = {}
         if next_page_token:
-            params["page"] = next_page_token
+            params["$skiptoken"] = next_page_token
         if self.replication_key:
             start_date = self.get_starting_timestamp(context)
             date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
