@@ -43,6 +43,17 @@ STREAM_TYPES = [
 class TapdynamicsBc(Tap):
     """dynamics-bc tap class."""
 
+    def __init__(
+        self,
+        config=None,
+        catalog=None,
+        state=None,
+        parse_env_config=False,
+        validate_config=True,
+    ) -> None:
+        self.config_file = config[0]
+        super().__init__(config, catalog, state, parse_env_config, validate_config)
+
     name = "tap-dynamics-bc"
 
     # TODO: Update this section with the actual config values you expect:
