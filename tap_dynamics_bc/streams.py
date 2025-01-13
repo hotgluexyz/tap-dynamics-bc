@@ -638,6 +638,11 @@ class GLEntriesDimensionsStream(dynamicsBcStream):
         th.Property("gl_entry_id", th.StringType),
     ).to_dict()
 
+    def validate_response(self, response: requests.Response) -> None:
+        if response.status_code == 404:
+            self.logger.info(f"Not able to fetch dimensions for url: '{response.url}'. Error: {response.json().get('error', {}).get('message')}")
+        else:
+            super().validate_response(response)
 
 class DimensionsStream(dynamicsBcStream):
     """Define custom stream."""
