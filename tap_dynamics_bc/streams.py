@@ -721,6 +721,8 @@ class TrialBalanceStream(dynamicsBcStream):
         th.Property("balanceAtDateDebit", th.StringType),
         th.Property("balanceAtDateCredit", th.StringType),
         th.Property("dateFilter", th.DateType),
+        th.Property("company_id", th.StringType),        
+        th.Property("company_name", th.StringType),
     ).to_dict()
 
     """Overriding due to complex nature of calculating start and end of the year"""
@@ -789,3 +791,6 @@ class TrialBalanceStream(dynamicsBcStream):
 
             # Move to next year
             year += 1
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
