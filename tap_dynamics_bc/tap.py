@@ -19,7 +19,8 @@ from tap_dynamics_bc.streams import (
     GeneralLedgerEntriesStream,
     GLEntriesDimensionsStream,
     DimensionsStream,
-    DimensionValuesStream
+    DimensionValuesStream,
+    TrialBalanceStream,
 )
 
 STREAM_TYPES = [
@@ -36,7 +37,8 @@ STREAM_TYPES = [
     GeneralLedgerEntriesStream,
     GLEntriesDimensionsStream,
     DimensionsStream,
-    DimensionValuesStream
+    DimensionValuesStream,
+    TrialBalanceStream,
 ]
 
 
