@@ -753,7 +753,7 @@ class TrialBalanceStream(dynamicsBcStream):
                 end_of_year = f"{year}-12-31"
         elif window_type == "full_window":
             # Full window from 2005 to current year
-            start_of_year = f"{start_date.year}-01-01"
+            start_of_year = "2005-01-01"
             end_of_year = f"{year}-12-31"
 
         params["$filter"] = f"dateFilter ge {start_of_year} and dateFilter le {end_of_year}"
