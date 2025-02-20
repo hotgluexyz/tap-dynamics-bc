@@ -725,8 +725,8 @@ class TrialBalanceStream(dynamicsBcStream):
         th.Property("company_id", th.StringType),        
         th.Property("company_name", th.StringType),
     ).to_dict()
-
-    """Overriding due to complex nature of calculating start and end of the year"""
+    
+    """Get URL parameters for 1 year window or full window request"""
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
     ) -> Dict[str, Any]:
@@ -739,14 +739,21 @@ class TrialBalanceStream(dynamicsBcStream):
         # Convert start_date to a proper datetime object
         start_date = dateutil.parser.parse(start_date_str).date()
         current_date = datetime.now(timezone.utc).date()
-
+        
         # Determine the year range dynamically
         year = context.get("year", start_date.year)
+        window_type = context.get("window_type", "1_year")
 
-        start_of_year = f"{year}-01-01"
-        if year == current_date.year:
-            end_of_year = current_date.strftime("%Y-%m-%dT23:59:59.999Z")
-        else:
+        if window_type == "1_year":
+            # 1 year window
+            start_of_year = f"{year}-01-01"
+            if year == current_date.year:
+                end_of_year = current_date.strftime("%Y-%m-%dT23:59:59.999Z")
+            else:
+                end_of_year = f"{year}-12-31"
+        elif window_type == "full_window":
+            # Full window from 2005 to current year
+            start_of_year = "2005-01-01"
             end_of_year = f"{year}-12-31"
 
         params["$filter"] = f"dateFilter ge {start_of_year} and dateFilter le {end_of_year}"
@@ -760,7 +767,7 @@ class TrialBalanceStream(dynamicsBcStream):
 
         return params
 
-    """Overriding to iterate over all the years from the given start_date in config"""
+    """Request records for both windows and combine them"""
     def request_records(self, context: Optional[dict]):
         """Request trial balance data year by year from start_date to the current year."""
         start_date_str = self.config.get("start_date", "2010-01-01T00:00:00.000Z")
@@ -772,23 +779,37 @@ class TrialBalanceStream(dynamicsBcStream):
         year = start_date.year
         while year <= current_date.year:
             context["year"] = year
-            next_page_token = None
-            finished = False
             decorated_request = self.request_decorator(self.make_request)
 
-            while not finished:
-                resp = decorated_request(context, next_page_token)
-                for row in self.parse_response(resp):
-                    yield row
-                
-                previous_token = next_page_token
-                next_page_token = self.get_next_page_token(resp, previous_token)
-                if next_page_token and next_page_token == previous_token:
-                    raise RuntimeError(
-                        f"Loop detected in pagination. "
-                        f"Pagination token {next_page_token} is identical to prior token."
-                    )
-                finished = not next_page_token
+            # Request for 1-year window
+            context["window_type"] = "1_year"
+            one_year_response = decorated_request(context, None)
+            one_year_data = self.parse_response(one_year_response)
+
+            # Request for full window
+            context["window_type"] = "full_window"
+            full_window_response = decorated_request(context, None)
+            full_window_data = self.parse_response(full_window_response)
+
+            # Combine records
+            for one_year_record in one_year_data:
+                # Match record from full window by account number
+                matching_full_record = next(
+                    (rec for rec in full_window_data if rec["number"] == one_year_record["number"]),
+                    {}
+                )
+ 
+                row = {
+                    "number": one_year_record.get("number"),
+                    "display": one_year_record.get("display"),
+                    "totalDebit": one_year_record.get("totalDebit"),
+                    "totalCredit": one_year_record.get("totalCredit"),
+                    "balanceAtDateDebit": matching_full_record.get("balanceAtDateDebit"),
+                    "balanceAtDateCredit": matching_full_record.get("balanceAtDateCredit"),
+                    "dateFilter": one_year_record.get("dateFilter"),
+                }
+
+                yield row
 
             # Move to next year
             year += 1
