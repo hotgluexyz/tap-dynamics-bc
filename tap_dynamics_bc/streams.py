@@ -586,6 +586,7 @@ class SalesOrdersStream(dynamicsBcStream):
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
+
 class GeneralLedgerEntriesStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -594,6 +595,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     primary_keys = ["id"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
+    expand = "dimensionSetLines"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -611,6 +613,21 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         th.Property("lastModifiedDateTime", th.DateTimeType),        
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
+        th.Property("dimensionSetLines", th.ArrayType(
+            th.ObjectType(
+                th.Property("@odata.etag", th.StringType),
+                th.Property("id", th.StringType),
+                th.Property("code", th.StringType),
+                th.Property("consolidationCode", th.StringType),
+                th.Property("parentId", th.StringType),
+                th.Property("parentType", th.StringType),
+                th.Property("displayName", th.StringType),
+                th.Property("valueId", th.StringType),
+                th.Property("valueCode", th.StringType),
+                th.Property("valueConsolidationCode", th.StringType),
+                th.Property("valueDisplayName", th.NumberType),
+            )
+        )),
     ).to_dict()
 
     def get_child_context(self, record, context):
