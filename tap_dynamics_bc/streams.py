@@ -625,7 +625,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
                 th.Property("valueId", th.StringType),
                 th.Property("valueCode", th.StringType),
                 th.Property("valueConsolidationCode", th.StringType),
-                th.Property("valueDisplayName", th.NumberType),
+                th.Property("valueDisplayName", th.StringType),
             )
         )),
     ).to_dict()
