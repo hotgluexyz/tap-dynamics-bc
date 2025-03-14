@@ -1,8 +1,6 @@
 """Stream type classes for tap-dynamics-bc."""
 
-from typing import Any, Dict, Optional, cast
-from datetime import datetime, timezone
-import dateutil.parser
+from typing import Optional, cast
 import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
@@ -718,97 +716,6 @@ class DimensionValuesStream(dynamicsBcStream):
         th.Property("company_id", th.StringType),        
         th.Property("company_name", th.StringType),
     ).to_dict()
-
-    def get_child_context(self, record, context):
-        return {"company_id": context["company_id"], "company_name": context["company_name"]}
-
-class TrialBalanceStream(dynamicsBcStream):
-    """Define custom stream."""
-
-    name = "trial_balance"
-    path = "/companies({company_id})/trialBalances"
-    replication_key = "dateFilter"
-    primary_keys = ["id"]
-    parent_stream_type = CompaniesStream
-    
-    schema = th.PropertiesList(
-        th.Property("number", th.StringType),
-        th.Property("display", th.StringType),
-        th.Property("totalDebit", th.StringType),
-        th.Property("totalCredit", th.StringType),
-        th.Property("balanceAtDateDebit", th.StringType),
-        th.Property("balanceAtDateCredit", th.StringType),
-        th.Property("dateFilter", th.DateType),
-        th.Property("company_id", th.StringType),        
-        th.Property("company_name", th.StringType),
-    ).to_dict()
-
-    """Overriding due to complex nature of calculating start and end of the year"""
-    def get_url_params(
-        self, context: Optional[dict], next_page_token: Optional[Any]
-    ) -> Dict[str, Any]:
-        """Return a dictionary of values to be used in URL parameterization."""
-
-        params: Dict[str, Any] = {}
-
-        start_date_str = self.config.get("start_date", "2025-01-01T00:00:00.000Z")
-
-        # Convert start_date to a proper datetime object
-        start_date = dateutil.parser.parse(start_date_str).date()
-        current_date = datetime.now(timezone.utc).date()
-
-        # Determine the year range dynamically
-        year = context.get("year", start_date.year)
-
-        start_of_year = f"{year}-01-01"
-        if year == current_date.year:
-            end_of_year = current_date.strftime("%Y-%m-%dT23:59:59.999Z")
-        else:
-            end_of_year = f"{year}-12-31"
-
-        params["$filter"] = f"dateFilter ge {start_of_year} and dateFilter le {end_of_year}"
-
-        if self.expand:
-            params["$expand"] = self.expand
-
-        if next_page_token:
-            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
-            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
-
-        return params
-
-    """Overriding to iterate over all the years from the given start_date in config"""
-    def request_records(self, context: Optional[dict]):
-        """Request trial balance data year by year from start_date to the current year."""
-        start_date_str = "2010-01-01T00:00:00.000Z"
-
-        # Convert ISO 8601 format to date object
-        start_date = dateutil.parser.parse(start_date_str).date()
-        current_date = datetime.now(timezone.utc).date()
-
-        year = start_date.year
-        while year <= current_date.year:
-            context["year"] = year
-            next_page_token = None
-            finished = False
-            decorated_request = self.request_decorator(self.make_request)
-
-            while not finished:
-                resp = decorated_request(context, next_page_token)
-                for row in self.parse_response(resp):
-                    yield row
-                
-                previous_token = next_page_token
-                next_page_token = self.get_next_page_token(resp, previous_token)
-                if next_page_token and next_page_token == previous_token:
-                    raise RuntimeError(
-                        f"Loop detected in pagination. "
-                        f"Pagination token {next_page_token} is identical to prior token."
-                    )
-                finished = not next_page_token
-
-            # Move to next year
-            year += 1
 
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
