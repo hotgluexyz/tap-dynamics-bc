@@ -719,3 +719,73 @@ class DimensionValuesStream(dynamicsBcStream):
 
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
+
+class CustomersStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "customers"
+    path = "/companies({company_id})/customers"
+    primary_keys = ["id", "lastModifiedDateTime"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("number", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("type", th.StringType),
+        th.Property("addressLine1", th.StringType),
+        th.Property("addressLine2", th.StringType),
+        th.Property("city", th.StringType),
+        th.Property("state", th.StringType),
+        th.Property("country", th.StringType),
+        th.Property("postalCode", th.StringType),
+        th.Property("phoneNumber", th.StringType),
+        th.Property("email", th.StringType),
+        th.Property("website", th.StringType),
+        th.Property("salespersonCode", th.StringType),
+        th.Property("balanceDue", th.NumberType),
+        th.Property("creditLimit", th.NumberType),
+        th.Property("taxLiable", th.BooleanType),
+        th.Property("taxAreaId", th.StringType),
+        th.Property("taxAreaDisplayName", th.StringType),
+        th.Property("taxRegistrationNumber", th.StringType),
+        th.Property("currencyId", th.StringType),
+        th.Property("currencyCode", th.StringType),
+        th.Property("paymentTermsId", th.StringType),
+        th.Property("shipmentMethodId", th.StringType),
+        th.Property("paymentMethodId", th.StringType),
+        th.Property("blocked", th.StringType),
+        th.Property("balance", th.NumberType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("irs1099Code", th.StringType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
+
+class CurrenciesStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "currencies"
+    path = "/companies({company_id})/currencies"
+    primary_keys = ["id"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("code", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("symbol", th.StringType),
+        th.Property("amountDecimalPlaces", th.StringType),
+        th.Property("amountRoundingPrecision", th.NumberType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
