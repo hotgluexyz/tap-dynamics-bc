@@ -368,7 +368,7 @@ class VendorsStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
-
+    expand = "defaultDimensions"
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
         th.Property("number", th.StringType),
@@ -392,6 +392,17 @@ class VendorsStream(dynamicsBcStream):
         th.Property("blocked", th.StringType),
         th.Property("balance", th.NumberType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("defaultDimensions", th.ArrayType(
+            th.ObjectType(
+                th.Property("id", th.StringType),
+                th.Property("dimensionId", th.StringType),
+                th.Property("dimensionCode", th.StringType),
+                th.Property("dimensionValueId", th.StringType),
+                th.Property("dimensionValueCode", th.StringType),
+                th.Property("lastModifiedDateTime", th.DateTimeType),
+                
+            )
+        )),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
@@ -728,6 +739,7 @@ class CustomersStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
+    expand = "defaultDimensions"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -759,6 +771,17 @@ class CustomersStream(dynamicsBcStream):
         th.Property("balance", th.NumberType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
         th.Property("irs1099Code", th.StringType),
+        th.Property("defaultDimensions", th.ArrayType(
+            th.ObjectType(
+                th.Property("id", th.StringType),
+                th.Property("dimensionId", th.StringType),
+                th.Property("dimensionCode", th.StringType),
+                th.Property("dimensionValueId", th.StringType),
+                th.Property("dimensionValueCode", th.StringType),
+                th.Property("lastModifiedDateTime", th.DateTimeType),
+                
+            )
+        )),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
