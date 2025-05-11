@@ -21,7 +21,8 @@ from tap_dynamics_bc.streams import (
     DimensionsStream,
     DimensionValuesStream,
     VendorPaymentsStream,
-    VendorPaymentJournalsStream
+    VendorPaymentJournalsStream,
+    PaymentTermsStream
 )
 
 STREAM_TYPES = [
@@ -40,7 +41,8 @@ STREAM_TYPES = [
     DimensionsStream,
     DimensionValuesStream,
     VendorPaymentsStream,
-    VendorPaymentJournalsStream
+    VendorPaymentJournalsStream,
+    PaymentTermsStream
 ]
 
 

@@ -783,3 +783,29 @@ class DimensionValuesStream(dynamicsBcStream):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
+class PaymentTermsStream(dynamicsBcStream):
+    """Define custom stream for payment terms."""
+
+    name = "payment_terms"
+    path = "/companies({company_id})/paymentTerms"
+    primary_keys = ["id"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("code", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("dueDateCalculation", th.StringType),
+        th.Property("discountDateCalculation", th.StringType),
+        th.Property("discountPercent", th.NumberType),
+        th.Property("calculateDiscountOnCreditMemos", th.BooleanType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
+
+
