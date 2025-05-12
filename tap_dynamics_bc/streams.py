@@ -805,7 +805,5 @@ class PaymentTermsStream(dynamicsBcStream):
         th.Property("company_name", th.StringType),
     ).to_dict()
 
-    def get_child_context(self, record, context):
-        return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
