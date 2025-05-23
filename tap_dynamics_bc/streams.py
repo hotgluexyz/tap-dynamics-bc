@@ -502,6 +502,7 @@ class LocationsStream(dynamicsBcStream):
         th.Property("phoneNumber", th.StringType),
         th.Property("email", th.StringType),
         th.Property("website", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
