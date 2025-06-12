@@ -452,6 +452,64 @@ class VendorPurchases(dynamicsBcStream):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
+
+class VendorPaymentJournalsStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "vendor_payment_journals"
+    path = "/companies({company_id})/vendorPaymentJournals"
+    primary_keys = ["id"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("code", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("balancingAccountId", th.StringType),
+        th.Property("balancingAccountNumber", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {
+            "company_id": context["company_id"], 
+            "journal_id": record["id"],
+        }
+
+
+
+class VendorPaymentsStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "vendor_payments"
+    path = "/companies({company_id})/vendorPaymentJournals({journal_id})/vendorPayments"
+    primary_keys = ["id", "lastModifiedDateTime"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = VendorPaymentJournalsStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("journalId", th.StringType),
+        th.Property("journalDisplayName", th.StringType),
+        th.Property("lineNumber", th.IntegerType),
+        th.Property("vendorId", th.StringType),
+        th.Property("vendorNumber", th.StringType),
+        th.Property("postingDate", th.DateType),
+        th.Property("documentNumber", th.StringType),
+        th.Property("externalDocumentNumber", th.StringType),
+        th.Property("amount", th.NumberType),
+        th.Property("appliesToInvoiceId", th.StringType),
+        th.Property("appliesToInvoiceNumber", th.StringType),
+        th.Property("description", th.StringType),
+        th.Property("comment", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
 class AccountsStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -477,7 +535,6 @@ class AccountsStream(dynamicsBcStream):
 
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
-
 
 class LocationsStream(dynamicsBcStream):
     """Define custom stream."""
@@ -811,6 +868,12 @@ class CurrenciesStream(dynamicsBcStream):
 
     name = "currencies"
     path = "/companies({company_id})/currencies"
+
+class PaymentTermsStream(dynamicsBcStream):
+    """Define custom stream for payment terms."""
+
+    name = "payment_terms"
+    path = "/companies({company_id})/paymentTerms"
     primary_keys = ["id"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
@@ -822,6 +885,10 @@ class CurrenciesStream(dynamicsBcStream):
         th.Property("symbol", th.StringType),
         th.Property("amountDecimalPlaces", th.StringType),
         th.Property("amountRoundingPrecision", th.NumberType),
+        th.Property("dueDateCalculation", th.StringType),
+        th.Property("discountDateCalculation", th.StringType),
+        th.Property("discountPercent", th.NumberType),
+        th.Property("calculateDiscountOnCreditMemos", th.BooleanType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
