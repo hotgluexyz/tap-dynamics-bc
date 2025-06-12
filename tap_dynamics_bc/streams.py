@@ -268,7 +268,7 @@ class PurchaseInvoicesStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
-    expand = "purchaseInvoiceLines"
+    expand = "purchaseInvoiceLines, dimensionSetLines, purchaseInvoiceLines($expand=dimensionSetLines)"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -352,6 +352,23 @@ class PurchaseInvoicesStream(dynamicsBcStream):
                 )
             ),
         ),
+        th.Property(
+            "dimensionSetLines",
+            th.ArrayType(
+                th.ObjectType(
+                    th.Property("id", th.StringType),
+                    th.Property("code", th.StringType),
+                    th.Property("consolidationCode", th.StringType),
+                    th.Property("parentId", th.StringType),
+                    th.Property("parentType", th.StringType),
+                    th.Property("displayName", th.StringType),
+                    th.Property("valueId", th.StringType),
+                    th.Property("valueCode", th.StringType),
+                    th.Property("valueConsolidationCode", th.StringType),
+                    th.Property("valueDisplayName", th.StringType),
+                )
+            ),
+        ),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
@@ -368,6 +385,7 @@ class VendorsStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
+    expand = "defaultDimensions"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -392,6 +410,17 @@ class VendorsStream(dynamicsBcStream):
         th.Property("blocked", th.StringType),
         th.Property("balance", th.NumberType),
         th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("defaultDimensions", th.ArrayType(
+            th.ObjectType(
+                th.Property("id", th.StringType),
+                th.Property("dimensionId", th.StringType),
+                th.Property("dimensionCode", th.StringType),
+                th.Property("dimensionValueId", th.StringType),
+                th.Property("dimensionValueCode", th.StringType),
+                th.Property("lastModifiedDateTime", th.DateTimeType),
+                
+            )
+        )),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
@@ -481,10 +510,6 @@ class VendorPaymentsStream(dynamicsBcStream):
         th.Property("company_name", th.StringType),
     ).to_dict()
 
-
-
-
-
 class AccountsStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -511,7 +536,6 @@ class AccountsStream(dynamicsBcStream):
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
-
 class LocationsStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -535,6 +559,7 @@ class LocationsStream(dynamicsBcStream):
         th.Property("phoneNumber", th.StringType),
         th.Property("email", th.StringType),
         th.Property("website", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
@@ -646,7 +671,6 @@ class SalesOrdersStream(dynamicsBcStream):
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
-
 class GeneralLedgerEntriesStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -692,7 +716,6 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
 
     def get_child_context(self, record, context):
         return {"gl_entry_id": record["id"], "company_id": context["company_id"], "company_name": context["company_name"]}
-
 
 class GLEntriesDimensionsStream(dynamicsBcStream):
     """Define custom stream."""
@@ -782,6 +805,69 @@ class DimensionValuesStream(dynamicsBcStream):
     def get_child_context(self, record, context):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
+class CustomersStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "customers"
+    path = "/companies({company_id})/customers"
+    primary_keys = ["id", "lastModifiedDateTime"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+    expand = "defaultDimensions"
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("number", th.StringType),
+        th.Property("displayName", th.StringType),
+        th.Property("type", th.StringType),
+        th.Property("addressLine1", th.StringType),
+        th.Property("addressLine2", th.StringType),
+        th.Property("city", th.StringType),
+        th.Property("state", th.StringType),
+        th.Property("country", th.StringType),
+        th.Property("postalCode", th.StringType),
+        th.Property("phoneNumber", th.StringType),
+        th.Property("email", th.StringType),
+        th.Property("website", th.StringType),
+        th.Property("salespersonCode", th.StringType),
+        th.Property("balanceDue", th.NumberType),
+        th.Property("creditLimit", th.NumberType),
+        th.Property("taxLiable", th.BooleanType),
+        th.Property("taxAreaId", th.StringType),
+        th.Property("taxAreaDisplayName", th.StringType),
+        th.Property("taxRegistrationNumber", th.StringType),
+        th.Property("currencyId", th.StringType),
+        th.Property("currencyCode", th.StringType),
+        th.Property("paymentTermsId", th.StringType),
+        th.Property("shipmentMethodId", th.StringType),
+        th.Property("paymentMethodId", th.StringType),
+        th.Property("blocked", th.StringType),
+        th.Property("balance", th.NumberType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("irs1099Code", th.StringType),
+        th.Property("defaultDimensions", th.ArrayType(
+            th.ObjectType(
+                th.Property("id", th.StringType),
+                th.Property("dimensionId", th.StringType),
+                th.Property("dimensionCode", th.StringType),
+                th.Property("dimensionValueId", th.StringType),
+                th.Property("dimensionValueCode", th.StringType),
+                th.Property("lastModifiedDateTime", th.DateTimeType),
+                
+            )
+        )),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
+
+class CurrenciesStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "currencies"
+    path = "/companies({company_id})/currencies"
 
 class PaymentTermsStream(dynamicsBcStream):
     """Define custom stream for payment terms."""
@@ -796,6 +882,9 @@ class PaymentTermsStream(dynamicsBcStream):
         th.Property("id", th.StringType),
         th.Property("code", th.StringType),
         th.Property("displayName", th.StringType),
+        th.Property("symbol", th.StringType),
+        th.Property("amountDecimalPlaces", th.StringType),
+        th.Property("amountRoundingPrecision", th.NumberType),
         th.Property("dueDateCalculation", th.StringType),
         th.Property("discountDateCalculation", th.StringType),
         th.Property("discountPercent", th.NumberType),
@@ -805,5 +894,5 @@ class PaymentTermsStream(dynamicsBcStream):
         th.Property("company_name", th.StringType),
     ).to_dict()
 
-
-
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
