@@ -826,11 +826,13 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
     """Define custom stream."""
 
     """Warning:
-    This stream requires enabling an API endpoing for Vendor Ledger Entries with path /vendorLedgerEntries
+    This stream requires enabling an API endpoing for Vendor Ledger Entries with path /VendorLedgerEntries
+    and objectID = 29
+    You can do this in Web Services Modal in Dynamics BC
     """
     
     name = "vendor_ledger_entries"
-    path = "/Company('{company_name}')/vendorLedgerEntries"
+    path = "/Company('{company_name}')/VendorLedgerEntries"
     primary_keys = ["Document_No", "company_id"]
     parent_stream_type = GeneralLedgerEntriesStream
 
