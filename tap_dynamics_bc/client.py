@@ -182,3 +182,12 @@ class dynamicsBcStream(RESTStream):
                     tap_state["bookmarks"][stream_name] = {"partitions": []}
 
         singer.write_message(StateMessage(value=tap_state))
+
+class DynamicsBCODataStream(dynamicsBcStream):
+    """Dynamics BC OData stream class."""
+
+    @cached_property
+    def url_base(self):
+        tenant_id = self.get_environments_list()['value'][0]['aadTenantId']
+        return f"https://api.businesscentral.dynamics.com/v2.0/{tenant_id}/Production/ODataV4"
+    
