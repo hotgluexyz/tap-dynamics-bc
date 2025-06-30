@@ -188,6 +188,7 @@ class DynamicsBCODataStream(dynamicsBcStream):
 
     @cached_property
     def url_base(self):
-        tenant_id = self.get_environments_list()['value'][0]['aadTenantId']
-        return f"https://api.businesscentral.dynamics.com/v2.0/{tenant_id}/Production/ODataV4"
+        environments = self.get_environments_list()['value']
+        chosen_environment = next((env for env in environments if env['name'] == self.config.get('environment_name', 'production')), None)
+        return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
     
