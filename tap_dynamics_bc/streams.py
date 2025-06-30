@@ -898,9 +898,9 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
         self, context: Optional[dict], next_page_token
     ):
         """Return a dictionary of values to be used in URL parameterization."""
-        return {
-            "$filter": f"Document_No eq '{context['gl_doc_no']}'"
-        }
+        params = super().get_url_params(context, next_page_token)
+        params.update({"$filter": f"Document_No eq '{context['gl_doc_no']}'"})
+        return params
 
     schema = th.PropertiesList(
         th.Property("Entry_No", th.IntegerType),
