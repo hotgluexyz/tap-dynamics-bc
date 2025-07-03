@@ -56,6 +56,9 @@ class CompaniesStream(dynamicsBcStream):
                 f"Company unacessible: '{record['name']}' ({record['id']})."
             )
 
+    def _sync_children(self, child_context: dict):
+        if child_context is not None:
+            super()._sync_children(child_context)
 
 class CompanyInformationStream(dynamicsBcStream):
     """Define custom stream."""
@@ -933,5 +936,3 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType)
     ).to_dict()
-
-
