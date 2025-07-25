@@ -1,9 +1,9 @@
 """Stream type classes for tap-dynamics-bc."""
 
-from typing import Optional, cast
+from typing import Optional, cast, Any, Dict, Iterable
 import requests
 from singer_sdk import typing as th
-from singer_sdk.exceptions import FatalAPIError
+from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
 
@@ -649,6 +649,8 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     parent_stream_type = CompaniesStream
     expand = "dimensionSetLines"
     synced_doc_nos = set()
+    _sync_without_dimensions = False
+    _current_company_id = None
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -683,6 +685,118 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         )),
     ).to_dict()
 
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        """Return a dictionary of values to be used in URL parameterization."""
+        params: dict = {}
+        if self.replication_key:
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+                # params["$filter"] = f"lastModifiedDateTime gt 2025-01-07T00:00:00.000Z and lastModifiedDateTime lt 2025-01-07T02:29:00.000Z"
+        if not self._sync_without_dimensions and self.expand:
+            params["$expand"] = self.expand
+        elif self._sync_without_dimensions and "$expand" in params:
+            del params["$expand"]
+        if next_page_token:
+            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
+            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
+        return params
+
+    def make_request(self, context, next_page_token):
+        """Make request with fallback logic for dimension expansion failures."""        
+        try:
+            prepared_request = self.prepare_request(
+                context, next_page_token=next_page_token
+            )
+            resp = self._request(prepared_request, context)
+            self.logger.info(f'--------------------------------')
+            self.logger.info(f'{len(resp.json()["value"])} records')
+            self.logger.info(f'--------------------------------')
+            return resp
+        except FatalAPIError as e:
+            if not self._sync_without_dimensions and "Dimension Value does not exist" in str(e):
+                self.logger.warning(
+                    f"Dimension expansion failed for {self.name}: {str(e)}. "
+                    "Retrying without dimension expansion."
+                )
+                # Set flag to disable dimension expansion for subsequent requests
+                self._sync_without_dimensions = True
+                self._current_company_id = context.get("company_id")
+                
+                # Retry the request without expand
+                prepared_request = self.prepare_request(
+                    context, next_page_token=next_page_token
+                )
+                resp = self._request(prepared_request, context)
+                self.logger.info(f'--------------------------------')
+                self.logger.info(f'{len(resp.json()["value"])} records')
+                self.logger.info(f'--------------------------------')
+                return resp
+            else:
+                # Re-raise the error if it's not dimension-related
+                raise
+
+    def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        """Parse the response and ensure dimensionSetLines is always present."""
+        for record in super().parse_response(response):
+            if "dimensionSetLines" not in record and self._current_company_id:
+                # If dimensionSetLines is not present, fetch it from the API
+                try:
+                    company_id = self._current_company_id
+                    gl_entry_id = record.get("id")
+                    
+                    if company_id and gl_entry_id:
+                        dimension_url = f"{self.url_base}/companies({company_id})/generalLedgerEntries({gl_entry_id})/dimensionSetLines"
+                        
+                        # Use proper authentication headers
+                        headers = self.http_headers
+                        headers.update(self.authenticator.auth_headers or {})
+                        # Use prepare_request for consistent authentication and retry logic
+                        prepared_request = cast(
+                            requests.PreparedRequest,
+                            self.requests_session.prepare_request(
+                                requests.Request(
+                                    method="GET",
+                                    url=dimension_url,
+                                    headers=headers,
+                                ),
+                            ),
+                        )
+                        
+                        try:
+                            # Use the SDK's request method with all retry logic
+                            decorated_request = self.request_decorator(self._request)
+                            dimension_response = decorated_request(prepared_request, {})
+                            
+                            if dimension_response.status_code == 200:
+                                record["dimensionSetLines"] = dimension_response.json().get("value", [])
+                            else:
+                                record["dimensionSetLines"] = []
+                                
+                        except (FatalAPIError, RetriableAPIError) as e:
+                            if "Dimension Value does not exist" in str(e):
+                                self.logger.info(f"Dimension Value does not exist for GL entry {gl_entry_id}. Skipping.")
+                                record["dimensionSetLines"] = []
+                            else:
+                                self.logger.warning(f"Failed to fetch dimensions for GL entry {gl_entry_id}: {str(e)}")
+                                record["dimensionSetLines"] = []
+                    else:
+                        record["dimensionSetLines"] = []
+                        
+                except Exception as e:
+                    self.logger.warning(f"Error fetching dimensions for GL entry: {str(e)}")
+                    record["dimensionSetLines"] = []
+            elif "dimensionSetLines" not in record:
+                # Fallback if no context available
+                record["dimensionSetLines"] = []
+                
+            yield record
+        self._sync_without_dimensions = False
+        self._current_company_id = None
+
     def get_child_context(self, record, context):
         return {
             "gl_entry_id": record["id"], 
@@ -690,7 +804,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             "company_name": context["company_name"], 
             "gl_doc_no": record["documentNumber"]
         }
-    
+
     def _sync_children(self, child_context: dict):
         # Document number is used as the foreign key in the vendorLedgerEntries Stream
         # So we want to make sure we only sync once per document number
