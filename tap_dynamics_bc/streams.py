@@ -1,6 +1,8 @@
 """Stream type classes for tap-dynamics-bc."""
 
+import json
 from typing import Optional, cast, Any, Dict, Iterable
+from urllib.parse import urlencode
 import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
@@ -696,14 +698,34 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
                 date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
                 params["$filter"] = f"{self.replication_key} gt {date}"
                 # params["$filter"] = f"lastModifiedDateTime gt 2025-01-07T00:00:00.000Z and lastModifiedDateTime lt 2025-01-07T02:29:00.000Z"
-        if not self._sync_without_dimensions and self.expand:
+        if self.expand:
             params["$expand"] = self.expand
-        elif self._sync_without_dimensions and "$expand" in params:
-            del params["$expand"]
         if next_page_token:
             params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
             params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
         return params
+    
+    def _call_api(self, url):
+        # Use proper authentication headers
+        headers = self.http_headers
+        if self.authenticator:
+            headers.update(self.authenticator.auth_headers or {})
+
+        # Use prepare_request for consistent authentication and retry logic
+        prepared_request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method="GET",
+                    url=url,
+                    headers=headers,
+                ),
+            ),
+        )
+        # Use the SDK's request method with all retry logic
+        decorated_request = self.request_decorator(self._request)
+        response = decorated_request(prepared_request, {})
+        return response
 
     def make_request(self, context, next_page_token):
         """Make request with fallback logic for dimension expansion failures."""        
@@ -712,90 +734,58 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
                 context, next_page_token=next_page_token
             )
             resp = self._request(prepared_request, context)
-            self.logger.info(f'--------------------------------')
-            self.logger.info(f'{len(resp.json()["value"])} records')
-            self.logger.info(f'--------------------------------')
             return resp
         except FatalAPIError as e:
-            if not self._sync_without_dimensions and "Dimension Value does not exist" in str(e):
+            if "Dimension Value does not exist" in str(e):
                 self.logger.warning(
                     f"Dimension expansion failed for {self.name}: {str(e)}. "
-                    "Retrying without dimension expansion."
+                    "Now trying to fetch GL entries in batches of 200."
                 )
-                # Set flag to disable dimension expansion for subsequent requests
-                self._sync_without_dimensions = True
-                self._current_company_id = context.get("company_id")
                 
-                # Retry the request without expand
-                prepared_request = self.prepare_request(
-                    context, next_page_token=next_page_token
-                )
-                resp = self._request(prepared_request, context)
-                self.logger.info(f'--------------------------------')
-                self.logger.info(f'{len(resp.json()["value"])} records')
-                self.logger.info(f'--------------------------------')
-                return resp
+                full_url = prepared_request.url
+                # extract base url
+                base_url = full_url.split('?')[0]                
+
+                gl_ids_resp = self._call_api(f"{prepared_request.url.replace('expand=dimensionSetLines', 'select=id')}")
+                all_gls = []
+
+                # use batches of 200 to make requests
+                gl_ids = [_gl_id["id"] for _gl_id in gl_ids_resp.json()["value"]]
+                for i in range(0, len(gl_ids), 200):
+                    batch = gl_ids[i:i+200]
+                    filter = ' or '.join([f"id eq {id}" for id in batch])
+                    batch_url = f"{base_url}?{urlencode({'$filter': filter, '$expand': 'dimensionSetLines'})}"
+                    try:
+                        batch_resp = self._call_api(batch_url)
+                        self.logger.info(f"Batch {i} of {len(gl_ids)} fetched successfully")
+                        batch_resp = batch_resp.json()["value"]
+                        all_gls.extend(batch_resp)
+                    except Exception as e:
+                        self.logger.warning(f"Failed to fetch dimensions for GL entry: {str(e)}")
+                        try:
+                            gl_resp = self._call_api(f"{base_url}?{urlencode({'$filter': filter})}")
+                            gl_entries = gl_resp.json()["value"]
+                            for gl_entry in gl_entries:
+                                # fetch dimensions for each gl entry
+                                try:
+                                    dimensions_resp = self._call_api(f"{base_url}({gl_entry['id']})/dimensionSetLines")
+                                    dimensions = dimensions_resp.json()["value"]
+                                    gl_entry["dimensionSetLines"] = dimensions
+                                except Exception as e:
+                                    self.logger.warning(f"Failed to fetch dimensions for GL entry: {str(e)}")
+                                    gl_entry["dimensionSetLines"] = []
+                                all_gls.append(gl_entry)
+                        except Exception as e:
+                            self.logger.warning(f"Failed to fetch GL entries for batch {i}: {str(e)}")
+                            continue
+
+                data = gl_ids_resp.json()
+                data["value"] = all_gls
+                gl_ids_resp._content = json.dumps(data).encode()
+                return gl_ids_resp
             else:
                 # Re-raise the error if it's not dimension-related
                 raise
-
-    def parse_response(self, response: requests.Response) -> Iterable[dict]:
-        """Parse the response and ensure dimensionSetLines is always present."""
-        for record in super().parse_response(response):
-            if "dimensionSetLines" not in record and self._current_company_id:
-                # If dimensionSetLines is not present, fetch it from the API
-                try:
-                    company_id = self._current_company_id
-                    gl_entry_id = record.get("id")
-                    
-                    if company_id and gl_entry_id:
-                        dimension_url = f"{self.url_base}/companies({company_id})/generalLedgerEntries({gl_entry_id})/dimensionSetLines"
-                        
-                        # Use proper authentication headers
-                        headers = self.http_headers
-                        headers.update(self.authenticator.auth_headers or {})
-                        # Use prepare_request for consistent authentication and retry logic
-                        prepared_request = cast(
-                            requests.PreparedRequest,
-                            self.requests_session.prepare_request(
-                                requests.Request(
-                                    method="GET",
-                                    url=dimension_url,
-                                    headers=headers,
-                                ),
-                            ),
-                        )
-                        
-                        try:
-                            # Use the SDK's request method with all retry logic
-                            decorated_request = self.request_decorator(self._request)
-                            dimension_response = decorated_request(prepared_request, {})
-                            
-                            if dimension_response.status_code == 200:
-                                record["dimensionSetLines"] = dimension_response.json().get("value", [])
-                            else:
-                                record["dimensionSetLines"] = []
-                                
-                        except (FatalAPIError, RetriableAPIError) as e:
-                            if "Dimension Value does not exist" in str(e):
-                                self.logger.info(f"Dimension Value does not exist for GL entry {gl_entry_id}. Skipping.")
-                                record["dimensionSetLines"] = []
-                            else:
-                                self.logger.warning(f"Failed to fetch dimensions for GL entry {gl_entry_id}: {str(e)}")
-                                record["dimensionSetLines"] = []
-                    else:
-                        record["dimensionSetLines"] = []
-                        
-                except Exception as e:
-                    self.logger.warning(f"Error fetching dimensions for GL entry: {str(e)}")
-                    record["dimensionSetLines"] = []
-            elif "dimensionSetLines" not in record:
-                # Fallback if no context available
-                record["dimensionSetLines"] = []
-                
-            yield record
-        self._sync_without_dimensions = False
-        self._current_company_id = None
 
     def get_child_context(self, record, context):
         return {
