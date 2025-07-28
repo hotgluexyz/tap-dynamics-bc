@@ -1,11 +1,11 @@
 """Stream type classes for tap-dynamics-bc."""
 
 import json
-from typing import Optional, cast, Any, Dict, Iterable
+from typing import Optional, cast, Any, Dict
 from urllib.parse import urlencode
 import requests
 from singer_sdk import typing as th
-from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
+from singer_sdk.exceptions import FatalAPIError
 
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
 
@@ -651,8 +651,6 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     parent_stream_type = CompaniesStream
     expand = "dimensionSetLines"
     synced_doc_nos = set()
-    _sync_without_dimensions = False
-    _current_company_id = None
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -687,23 +685,23 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         )),
     ).to_dict()
 
-    def get_url_params(
-        self, context: Optional[dict], next_page_token: Optional[Any]
-    ) -> Dict[str, Any]:
-        """Return a dictionary of values to be used in URL parameterization."""
-        params: dict = {}
-        if self.replication_key:
-            start_date = self.get_starting_timestamp(context)
-            if start_date:
-                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                params["$filter"] = f"{self.replication_key} gt {date}"
-                # params["$filter"] = f"lastModifiedDateTime gt 2025-01-07T00:00:00.000Z and lastModifiedDateTime lt 2025-01-07T02:29:00.000Z"
-        if self.expand:
-            params["$expand"] = self.expand
-        if next_page_token:
-            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
-            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
-        return params
+    # def get_url_params(
+    #     self, context: Optional[dict], next_page_token: Optional[Any]
+    # ) -> Dict[str, Any]:
+    #     """Return a dictionary of values to be used in URL parameterization."""
+    #     params: dict = {}
+    #     if self.replication_key:
+    #         start_date = self.get_starting_timestamp(context)
+    #         if start_date:
+    #             date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+    #             # params["$filter"] = f"{self.replication_key} gt {date}"
+    #             params["$filter"] = f"lastModifiedDateTime gt 2025-01-07T00:00:00.000Z and lastModifiedDateTime lt 2025-01-07T02:29:00.000Z"
+    #     if self.expand:
+    #         params["$expand"] = self.expand
+    #     if next_page_token:
+    #         params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
+    #         params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
+    #     return params
     
     def _call_api(self, url):
         # Use proper authentication headers
@@ -737,55 +735,83 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             return resp
         except FatalAPIError as e:
             if "Dimension Value does not exist" in str(e):
-                self.logger.warning(
-                    f"Dimension expansion failed for {self.name}: {str(e)}. "
-                    "Now trying to fetch GL entries in batches of 200."
-                )
-                
-                full_url = prepared_request.url
-                # extract base url
-                base_url = full_url.split('?')[0]                
-
-                gl_ids_resp = self._call_api(f"{prepared_request.url.replace('expand=dimensionSetLines', 'select=id')}")
-                all_gls = []
-
-                # use batches of 200 to make requests
-                gl_ids = [_gl_id["id"] for _gl_id in gl_ids_resp.json()["value"]]
-                for i in range(0, len(gl_ids), 200):
-                    batch = gl_ids[i:i+200]
-                    filter = ' or '.join([f"id eq {id}" for id in batch])
-                    batch_url = f"{base_url}?{urlencode({'$filter': filter, '$expand': 'dimensionSetLines'})}"
-                    try:
-                        batch_resp = self._call_api(batch_url)
-                        self.logger.info(f"Batch {i} of {len(gl_ids)} fetched successfully")
-                        batch_resp = batch_resp.json()["value"]
-                        all_gls.extend(batch_resp)
-                    except Exception as e:
-                        self.logger.warning(f"Failed to fetch dimensions for GL entry: {str(e)}")
-                        try:
-                            gl_resp = self._call_api(f"{base_url}?{urlencode({'$filter': filter})}")
-                            gl_entries = gl_resp.json()["value"]
-                            for gl_entry in gl_entries:
-                                # fetch dimensions for each gl entry
-                                try:
-                                    dimensions_resp = self._call_api(f"{base_url}({gl_entry['id']})/dimensionSetLines")
-                                    dimensions = dimensions_resp.json()["value"]
-                                    gl_entry["dimensionSetLines"] = dimensions
-                                except Exception as e:
-                                    self.logger.warning(f"Failed to fetch dimensions for GL entry: {str(e)}")
-                                    gl_entry["dimensionSetLines"] = []
-                                all_gls.append(gl_entry)
-                        except Exception as e:
-                            self.logger.warning(f"Failed to fetch GL entries for batch {i}: {str(e)}")
-                            continue
-
-                data = gl_ids_resp.json()
-                data["value"] = all_gls
-                gl_ids_resp._content = json.dumps(data).encode()
-                return gl_ids_resp
+                return self._handle_dimension_failure(e, prepared_request)
             else:
                 # Re-raise the error if it's not dimension-related
                 raise
+
+    def _handle_dimension_failure(self, error, prepared_request):
+        """Handle dimension expansion failure by fetching data in batches."""
+        self.logger.warning(
+            f"Dimension expansion failed for {self.name}: {str(error)}. "
+            "Now trying to fetch GL entries in batches of 200."
+        )
+        
+        base_url = prepared_request.url.split('?')[0]
+        gl_ids_resp = self._fetch_gl_ids(prepared_request)
+        gl_ids = [_gl_id["id"] for _gl_id in gl_ids_resp.json()["value"]]
+        
+        all_gls = self._fetch_gl_entries_in_batches(base_url, gl_ids)
+        return self._create_enriched_response(gl_ids_resp, all_gls)
+
+    def _fetch_gl_ids(self, prepared_request):
+        """Fetch only GL entry IDs to minimize data transfer."""
+        ids_url = prepared_request.url.replace('expand=dimensionSetLines', 'select=id')
+        return self._call_api(ids_url)
+
+    def _fetch_gl_entries_in_batches(self, base_url, gl_ids, batch_size=200):
+        """Fetch GL entries with dimensions in batches."""
+        all_gls = []
+        
+        for i in range(0, len(gl_ids), batch_size):
+            batch = gl_ids[i:i+batch_size]
+            batch_entries = self._fetch_batch_with_dimensions(base_url, batch, i, len(gl_ids))
+            all_gls.extend(batch_entries)
+            
+        return all_gls
+
+    def _fetch_batch_with_dimensions(self, base_url, batch_ids, batch_index, total_ids):
+        """Attempt to fetch a batch of GL entries with dimensions."""
+        filter_clause = ' or '.join([f"id eq {id}" for id in batch_ids])
+        batch_url = f"{base_url}?{urlencode({'$filter': filter_clause, '$expand': 'dimensionSetLines'})}"
+        
+        try:
+            batch_resp = self._call_api(batch_url)
+            self.logger.info(f"Batch {batch_index} of {total_ids} fetched successfully")
+            return batch_resp.json()["value"]
+        except Exception as e:
+            self.logger.warning(f"Failed to fetch batch with dimensions: {str(e)}")
+            return self._fetch_batch_without_dimensions(base_url, batch_ids, filter_clause, batch_index)
+
+    def _fetch_batch_without_dimensions(self, base_url, batch_ids, filter_clause, batch_index):
+        """Fallback: fetch batch without dimensions, then add dimensions individually."""
+        try:
+            gl_resp = self._call_api(f"{base_url}?{urlencode({'$filter': filter_clause})}")
+            gl_entries = gl_resp.json()["value"]
+            
+            for gl_entry in gl_entries:
+                gl_entry["dimensionSetLines"] = self._fetch_individual_dimensions(base_url, gl_entry['id'])
+                
+            return gl_entries
+        except Exception as e:
+            self.logger.warning(f"Failed to fetch GL entries for batch {batch_index}: {str(e)}")
+            return []
+
+    def _fetch_individual_dimensions(self, base_url, gl_entry_id):
+        """Fetch dimensions for a single GL entry."""
+        try:
+            dimensions_resp = self._call_api(f"{base_url}({gl_entry_id})/dimensionSetLines")
+            return dimensions_resp.json()["value"]
+        except Exception as e:
+            self.logger.warning(f"Failed to fetch dimensions for GL entry {gl_entry_id}: {str(e)}")
+            return []
+
+    def _create_enriched_response(self, original_response, enriched_data):
+        """Create a response object with enriched GL entries data."""
+        data = original_response.json()
+        data["value"] = enriched_data
+        original_response._content = json.dumps(data).encode()
+        return original_response
 
     def get_child_context(self, record, context):
         return {
