@@ -685,24 +685,6 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         )),
     ).to_dict()
 
-    # def get_url_params(
-    #     self, context: Optional[dict], next_page_token: Optional[Any]
-    # ) -> Dict[str, Any]:
-    #     """Return a dictionary of values to be used in URL parameterization."""
-    #     params: dict = {}
-    #     if self.replication_key:
-    #         start_date = self.get_starting_timestamp(context)
-    #         if start_date:
-    #             date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
-    #             # params["$filter"] = f"{self.replication_key} gt {date}"
-    #             params["$filter"] = f"lastModifiedDateTime gt 2025-01-07T00:00:00.000Z and lastModifiedDateTime lt 2025-01-07T02:29:00.000Z"
-    #     if self.expand:
-    #         params["$expand"] = self.expand
-    #     if next_page_token:
-    #         params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
-    #         params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
-    #     return params
-    
     def _call_api(self, url):
         # Use proper authentication headers
         headers = self.http_headers
