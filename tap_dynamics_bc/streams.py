@@ -695,18 +695,20 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     ) -> Dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization."""
         params: dict = {}
-        if self._is_initial_sync(context):
-            start_date = self.get_starting_timestamp(context)
-            if start_date:
-                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                params["$filter"] = f"{self.replication_key} gt {date}"
-        else:
-            report_periods = self.config.get("report_periods")
+        report_periods = self.config.get("report_periods")
+
+        if report_periods and not self._is_initial_sync(context):
             min_time = datetime.datetime.min.time()
             today = datetime.date.today()
             today = datetime.datetime.combine(today, min_time)
             date = (today - relativedelta(months=report_periods)).strftime("%Y-%m-%dT%H:%M:%SZ")
             params["$filter"] = f"{self.replication_key} gt {date}"
+        else:
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+            
         if self.expand:
             params["$expand"] = self.expand
         if next_page_token:
