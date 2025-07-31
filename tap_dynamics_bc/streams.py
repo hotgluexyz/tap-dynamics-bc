@@ -698,12 +698,14 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         report_periods = self.config.get("report_periods", 3)
 
         if not self._is_initial_sync(context):
+            self.logger.info(f"Not initial sync, fetching GL entries for last {report_periods} months")
             min_time = datetime.datetime.min.time()
             today = datetime.date.today()
             today = datetime.datetime.combine(today, min_time)
             date = (today - relativedelta(months=report_periods)).strftime("%Y-%m-%dT%H:%M:%SZ")
             params["$filter"] = f"{self.replication_key} gt {date}"
         else:
+            self.logger.info("Initial sync, fetching GL entries for all time")
             start_date = self.get_starting_timestamp(context)
             if start_date:
                 date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
