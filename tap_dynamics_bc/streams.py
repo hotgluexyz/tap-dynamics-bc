@@ -695,9 +695,9 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     ) -> Dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization."""
         params: dict = {}
-        report_periods = self.config.get("report_periods")
+        report_periods = self.config.get("report_periods", 3)
 
-        if report_periods and not self._is_initial_sync(context):
+        if not self._is_initial_sync(context):
             min_time = datetime.datetime.min.time()
             today = datetime.date.today()
             today = datetime.datetime.combine(today, min_time)
