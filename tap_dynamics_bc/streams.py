@@ -6,10 +6,10 @@ from urllib.parse import urlencode
 import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
-
+import datetime
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
-
-
+from dateutil.relativedelta import relativedelta
+import pendulum
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -647,7 +647,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
     name = "general_ledger_entries"
     path = "/companies({company_id})/generalLedgerEntries"
     primary_keys = ["id"]
-    replication_key = "lastModifiedDateTime"
+    replication_key = "postingDate"
     parent_stream_type = CompaniesStream
     expand = "dimensionSetLines"
     synced_doc_nos = set()
@@ -684,6 +684,39 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             )
         )),
     ).to_dict()
+    
+    def _is_initial_sync(self, context: dict) -> bool:
+        bookmark_date = self.get_starting_timestamp(context)
+        configured_start = pendulum.parse(self.config.get("start_date"))
+        return bookmark_date == configured_start
+    
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        """Return a dictionary of values to be used in URL parameterization."""
+        params: dict = {}
+        report_periods = self.config.get("report_periods", 3)
+
+        if not self._is_initial_sync(context):
+            today = datetime.date.today()
+            beginning_of_month = today.replace(day=1)
+            beginning_of_month = datetime.datetime.combine(beginning_of_month, datetime.datetime.min.time())
+            date = (beginning_of_month - relativedelta(months=report_periods - 1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            self.logger.info(f"Not initial sync, fetching GL entries for last {report_periods} months, starting from {date}")
+            params["$filter"] = f"{self.replication_key} gt {date}"
+        else:
+            self.logger.info("Initial sync, fetching GL entries for all time")
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+            
+        if self.expand:
+            params["$expand"] = self.expand
+        if next_page_token:
+            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
+            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
+        return params
 
     def _call_api(self, url):
         # Use proper authentication headers
