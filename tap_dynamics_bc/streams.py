@@ -819,7 +819,7 @@ class GLEntriesDimensionsStream(dynamicsBcStream):
 
     name = "gl_entries_dimensions"
     path = "/companies({company_id})/generalLedgerEntries({gl_entry_id})/dimensionSetLines"
-    primary_keys = ["id"]
+    primary_keys = ["id", "gl_entry_id"]
     parent_stream_type = GeneralLedgerEntriesStream
 
     schema = th.PropertiesList(
