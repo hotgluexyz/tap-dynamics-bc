@@ -18,6 +18,8 @@ from singer import StateMessage
 class dynamicsBcStream(RESTStream):
     """dynamics-bc stream class."""
     envs_list = None
+    page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
+    timeout = 600 # 10 minutes (same as Dynamics BC API)
 
     @cached_property
     def url_base(self) -> str:
@@ -68,7 +70,8 @@ class dynamicsBcStream(RESTStream):
     def http_headers(self) -> dict:
         """Return the http headers needed."""
         headers = {
-            "If-Match": "*"
+            "If-Match": "*",
+            "Prefer": f"odata.maxpagesize={self.page_size}"
         }
         
         if "user_agent" in self.config:

@@ -107,6 +107,7 @@ class ItemsStream(dynamicsBcStream):
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
     expand = "itemCategory,picture"
+    page_size = 1000
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -274,6 +275,7 @@ class PurchaseInvoicesStream(dynamicsBcStream):
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
     expand = "purchaseInvoiceLines, dimensionSetLines, purchaseInvoiceLines($expand=dimensionSetLines)"
+    page_size = 1000
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
