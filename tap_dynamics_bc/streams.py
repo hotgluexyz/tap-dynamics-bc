@@ -10,6 +10,8 @@ import datetime
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
 from dateutil.relativedelta import relativedelta
 import pendulum
+import re
+
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -1049,7 +1051,9 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
     ):
         """Return a dictionary of values to be used in URL parameterization."""
         params = super().get_url_params(context, next_page_token)
-        params.update({"$filter": f"Document_No eq '{context['gl_doc_no']}'"})
+        # Only replace single quotes that are not already doubled
+        escaped_gl_doc_no = re.sub(r"(?<!')'(?!')", "''", context['gl_doc_no'])
+        params.update({"$filter": f"Document_No eq '{escaped_gl_doc_no}'"})
         return params
 
     schema = th.PropertiesList(
