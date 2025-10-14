@@ -53,7 +53,13 @@ class CompaniesStream(dynamicsBcStream):
         )
 
         try:
-            resp = decorated_request(prepared_request, context)
+            decorated_request(prepared_request, context)
+            if (
+                len(self.config.get("company_ids", [])) > 0 
+                and record["id"] not in self.config.get("company_ids") 
+                and record['name'] not in self.config.get("company_ids")
+            ):
+                return None
             return {"company_id": record["id"], "company_name": record["name"]}
         except FatalAPIError:
             self.logger.warning(
