@@ -852,8 +852,8 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
                     self.synced_doc_nos.add(child_context["gl_doc_no"])
 
 
-class GeneralLedgerEntriesRepKeyLastModifiedDateTimeStream(GeneralLedgerEntriesStream):
-    name = "general_ledger_entries_rep_key_last_modified_date_time"
+class GeneralLedgerEntriesIncrementalStream(GeneralLedgerEntriesStream):
+    name = "general_ledger_entries_incremental"
     path = "/companies({company_id})/generalLedgerEntries"
     primary_keys = ["id"]
     replication_key = "lastModifiedDateTime"
@@ -1060,7 +1060,7 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
     name = "vendor_ledger_entries"
     path = "/Company('{company_name}')/VendorLedgerEntries"
     primary_keys = ["Document_No", "company_id"]
-    parent_stream_type = GeneralLedgerEntriesRepKeyLastModifiedDateTimeStream
+    parent_stream_type = GeneralLedgerEntriesIncrementalStream
 
     def get_url_params(
         self, context: Optional[dict], next_page_token
