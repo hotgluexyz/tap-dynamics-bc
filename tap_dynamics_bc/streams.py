@@ -1060,7 +1060,7 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
     name = "vendor_ledger_entries"
     path = "/Company('{company_name}')/VendorLedgerEntries"
     primary_keys = ["Document_No", "company_id"]
-    parent_stream_type = GeneralLedgerEntriesStream
+    parent_stream_type = GeneralLedgerEntriesRepKeyLastModifiedDateTimeStream
 
     def get_url_params(
         self, context: Optional[dict], next_page_token
