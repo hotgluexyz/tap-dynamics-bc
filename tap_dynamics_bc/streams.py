@@ -176,7 +176,7 @@ class SalesInvoicesStream(dynamicsBcStream):
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
-    expand = "salesInvoiceLines, dimensionSetLines, salesInvoiceLines($expand=dimensionSetLines)"
+    expand = "dimensionSetLines, salesInvoiceLines($expand=dimensionSetLines)"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
