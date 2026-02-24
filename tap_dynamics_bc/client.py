@@ -97,9 +97,9 @@ class dynamicsBcStream(RESTStream):
             skiptoken_value = query_params.get('$skiptoken')
             # If $skiptoken exists, get its first value (as it can be a list)
             if aid_value and skiptoken_value:
-                if type(aid_value) == list:
+                if isinstance(aid_value, list):
                     aid_value = aid_value[0]
-                if type(skiptoken_value) == list:
+                if isinstance(skiptoken_value, list):
                     skiptoken_value = skiptoken_value[0]
                 return "&aid=" + aid_value + "&$skiptoken=" + skiptoken_value
 
