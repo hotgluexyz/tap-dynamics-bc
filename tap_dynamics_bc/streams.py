@@ -935,6 +935,12 @@ class GLEntriesDimensionsStream(dynamicsBcStream):
         else:
             super().validate_response(response)
 
+    def post_process(self, row: dict, context: Optional[dict]) -> dict:
+        """Add gl_entry_id from context to each record."""
+        if context and "gl_entry_id" in context:
+            row["gl_entry_id"] = context["gl_entry_id"]
+        return row
+
 class DimensionsStream(dynamicsBcStream):
     """Define custom stream."""
 
