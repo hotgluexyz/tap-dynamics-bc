@@ -4,9 +4,9 @@
 from singer import utils
 import json
 import requests
-from singer_sdk.authenticators import OAuthAuthenticator, SingletonMeta
-from singer_sdk.helpers._util import utc_now
-from singer_sdk.streams import Stream as RESTStreamBase
+from hotglue_singer_sdk.authenticators import OAuthAuthenticator, SingletonMeta
+from hotglue_singer_sdk.helpers._util import utc_now
+from hotglue_singer_sdk.streams import Stream as RESTStreamBase
 from typing import Optional
 
 # The SingletonMeta metaclass makes your streams reuse the same authenticator instance.

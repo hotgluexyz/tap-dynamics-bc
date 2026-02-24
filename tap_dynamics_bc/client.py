@@ -4,13 +4,13 @@ from typing import Any, Dict, Optional
 from urllib.parse import parse_qs, urlparse
 
 import requests
-from singer_sdk.helpers.jsonpath import extract_jsonpath
-from singer_sdk.streams import RESTStream
+from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
+from hotglue_singer_sdk.streams import RESTStream
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
 from backports.cached_property import cached_property
 import copy
-from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
+from hotglue_singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 import singer
 from singer import StateMessage
 
