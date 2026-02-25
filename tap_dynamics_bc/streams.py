@@ -888,10 +888,6 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             if child_stream.selected or child_stream.has_selected_descendents:
                 should_not_sync = child_stream.name == "vendor_ledger_entries" and child_context["gl_doc_no"] in self.synced_doc_nos
                 if not should_not_sync:
-                    child_stream.state_partitioning_keys = list(
-                        set(child_stream.state_partitioning_keys or [])
-                        | set(child_context.keys())
-                    )
                     child_stream.sync(context=child_context)
                     self.synced_doc_nos.add(child_context["gl_doc_no"])
 

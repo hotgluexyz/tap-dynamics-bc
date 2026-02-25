@@ -189,6 +189,13 @@ class dynamicsBcStream(RESTStream):
 
         singer.write_message(StateMessage(value=tap_state))
 
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        for schema_field in self.schema.get("properties", {}).keys():
+            if schema_field in context and schema_field not in row:
+                row[schema_field] = context[schema_field]
+        
+        return row
+
 class DynamicsBCODataStream(dynamicsBcStream):
     """Dynamics BC OData stream class."""
 
