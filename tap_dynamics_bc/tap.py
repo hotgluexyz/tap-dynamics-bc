@@ -2,8 +2,8 @@
 
 from typing import List
 
-from singer_sdk import Stream, Tap
-from singer_sdk import typing as th
+from hotglue_singer_sdk import Stream, Tap
+from hotglue_singer_sdk import typing as th
 
 from tap_dynamics_bc.streams import (
     AccountsStream,

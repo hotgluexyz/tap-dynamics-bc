@@ -4,13 +4,13 @@ from typing import Any, Dict, Optional
 from urllib.parse import parse_qs, urlparse
 
 import requests
-from singer_sdk.helpers.jsonpath import extract_jsonpath
-from singer_sdk.streams import RESTStream
+from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
+from hotglue_singer_sdk.streams import RESTStream
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
 from backports.cached_property import cached_property
 import copy
-from singer_sdk.exceptions import FatalAPIError, RetriableAPIError
+from hotglue_singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 import singer
 from singer import StateMessage
 
@@ -97,9 +97,9 @@ class dynamicsBcStream(RESTStream):
             skiptoken_value = query_params.get('$skiptoken')
             # If $skiptoken exists, get its first value (as it can be a list)
             if aid_value and skiptoken_value:
-                if type(aid_value) == list:
+                if isinstance(aid_value, list):
                     aid_value = aid_value[0]
-                if type(skiptoken_value) == list:
+                if isinstance(skiptoken_value, list):
                     skiptoken_value = skiptoken_value[0]
                 return "&aid=" + aid_value + "&$skiptoken=" + skiptoken_value
 
@@ -188,6 +188,13 @@ class dynamicsBcStream(RESTStream):
                     tap_state["bookmarks"][stream_name] = {"partitions": []}
 
         singer.write_message(StateMessage(value=tap_state))
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        for schema_field in self.schema.get("properties", {}).keys():
+            if schema_field in (context or {}) and schema_field not in row:
+                row[schema_field] = context[schema_field]
+        
+        return row
 
 class DynamicsBCODataStream(dynamicsBcStream):
     """Dynamics BC OData stream class."""

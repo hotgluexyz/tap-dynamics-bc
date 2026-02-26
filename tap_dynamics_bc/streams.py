@@ -4,8 +4,8 @@ import json
 from typing import Optional, cast, Any, Dict
 from urllib.parse import urlencode
 import requests
-from singer_sdk import typing as th
-from singer_sdk.exceptions import FatalAPIError
+from hotglue_singer_sdk import typing as th
+from hotglue_singer_sdk.exceptions import FatalAPIError
 import datetime
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
 from dateutil.relativedelta import relativedelta
