@@ -5,6 +5,8 @@ from typing import List
 from hotglue_singer_sdk import Stream, Tap
 from hotglue_singer_sdk import typing as th
 
+from tap_dynamics_bc.auth import TapDynamicsBCAuth
+
 from tap_dynamics_bc.streams import (
     AccountsStream,
     CompaniesStream,
@@ -67,6 +69,13 @@ class TapdynamicsBc(Tap):
         super().__init__(config, catalog, state, parse_env_config, validate_config)
 
     name = "tap-dynamics-bc"
+
+    @classmethod
+    def access_token_support(cls, connector=None):
+        """Return authenticator class and auth endpoint for token refresh."""
+        authenticator = TapDynamicsBCAuth
+        auth_endpoint = "https://login.microsoftonline.com/common/oauth2/token"
+        return authenticator, auth_endpoint
 
     # TODO: Update this section with the actual config values you expect:
     config_jsonschema = th.PropertiesList(
