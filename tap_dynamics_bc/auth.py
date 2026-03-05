@@ -22,7 +22,6 @@ class TapDynamicsBCAuth(OAuthAuthenticator, metaclass=SingletonMeta):
         oauth_scopes: Optional[str] = None
     ) -> None:
         super().__init__(stream=stream, auth_endpoint=auth_endpoint, oauth_scopes=oauth_scopes)
-        self._config_file = config_file
         self._tap = stream._tap
 
     @property
