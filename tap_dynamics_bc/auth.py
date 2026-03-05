@@ -17,6 +17,7 @@ class TapDynamicsBCAuth(OAuthAuthenticator, metaclass=SingletonMeta):
     def __init__(
         self,
         stream: RESTStreamBase,
+        config_file: Optional[str] = None,
         auth_endpoint: Optional[str] = None,
         oauth_scopes: Optional[str] = None
     ) -> None:
