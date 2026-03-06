@@ -308,6 +308,136 @@ class SalesInvoicesStream(dynamicsBcStream):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
+class SalesCreditStream(dynamicsBcStream):
+    """Define custom stream."""
+
+    name = "sales_credit"
+    path = "/companies({company_id})/salesCreditMemos"
+    primary_keys = ["id", "lastModifiedDateTime"]
+    replication_key = "lastModifiedDateTime"
+    parent_stream_type = CompaniesStream
+    expand = "dimensionSetLines, salesCreditMemoLines($expand=dimensionSetLines)"
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("number", th.StringType),
+        th.Property("externalDocumentNumber", th.StringType),
+        th.Property("creditMemoDate", th.DateType),
+        th.Property("postingDate", th.DateType),
+        th.Property("dueDate", th.DateType),
+        th.Property("customerId", th.StringType),
+        th.Property("customerNumber", th.StringType),
+        th.Property("customerName", th.StringType),
+        th.Property("billToName", th.StringType),
+        th.Property("billToCustomerId", th.StringType),
+        th.Property("billToCustomerNumber", th.StringType),
+        th.Property("sellToAddressLine1", th.StringType),
+        th.Property("sellToAddressLine2", th.StringType),
+        th.Property("sellToCity", th.StringType),
+        th.Property("sellToCountry", th.StringType),
+        th.Property("sellToState", th.StringType),
+        th.Property("sellToPostCode", th.StringType),
+        th.Property("billToAddressLine1", th.StringType),
+        th.Property("billToAddressLine2", th.StringType),
+        th.Property("billToCity", th.StringType),
+        th.Property("billToCountry", th.StringType),
+        th.Property("billToState", th.StringType),
+        th.Property("billToPostCode", th.StringType),
+        th.Property("shortcutDimension1Code", th.StringType),
+        th.Property("shortcutDimension2Code", th.StringType),
+        th.Property("currencyId", th.StringType),
+        th.Property("currencyCode", th.StringType),
+        th.Property("paymentTermsId", th.StringType),
+        th.Property("shipmentMethodId", th.StringType),
+        th.Property("salesperson", th.StringType),
+        th.Property("pricesIncludeTax", th.BooleanType),
+        th.Property("discountAmount", th.NumberType),
+        th.Property("discountAppliedBeforeTax", th.BooleanType),
+        th.Property("totalAmountExcludingTax", th.NumberType),
+        th.Property("totalTaxAmount", th.NumberType),
+        th.Property("totalAmountIncludingTax", th.NumberType),
+        th.Property("status", th.StringType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("invoiceId", th.StringType),
+        th.Property("invoiceNumber", th.StringType),
+        th.Property("phoneNumber", th.StringType),
+        th.Property("email", th.StringType),
+        th.Property("customerReturnReasonId", th.StringType),
+        th.Property(
+            "salesCreditMemoLines",
+            th.ArrayType(
+                th.ObjectType(
+                    th.Property("id", th.StringType),
+                    th.Property("documentId", th.StringType),
+                    th.Property("sequence", th.IntegerType),
+                    th.Property("itemId", th.StringType),
+                    th.Property("accountId", th.StringType),
+                    th.Property("lineType", th.StringType),
+                    th.Property("lineObjectNumber", th.StringType),
+                    th.Property("description", th.StringType),
+                    th.Property("unitOfMeasureId", th.StringType),
+                    th.Property("unitOfMeasureCode", th.StringType),
+                    th.Property("unitPrice", th.NumberType),
+                    th.Property("quantity", th.NumberType),
+                    th.Property("discountAmount", th.NumberType),
+                    th.Property("discountPercent", th.NumberType),
+                    th.Property("discountAppliedBeforeTax", th.BooleanType),
+                    th.Property("amountExcludingTax", th.NumberType),
+                    th.Property("taxCode", th.StringType),
+                    th.Property("taxPercent", th.NumberType),
+                    th.Property("totalTaxAmount", th.NumberType),
+                    th.Property("amountIncludingTax", th.NumberType),
+                    th.Property("invoiceDiscountAllocation", th.NumberType),
+                    th.Property("netAmount", th.NumberType),
+                    th.Property("netTaxAmount", th.NumberType),
+                    th.Property("netAmountIncludingTax", th.NumberType),
+                    th.Property("shipmentDate", th.DateType),
+                    th.Property("itemVariantId", th.StringType),
+                    th.Property(
+                        "dimensionSetLines",
+                        th.ArrayType(
+                            th.ObjectType(
+                                th.Property("id", th.StringType),
+                                th.Property("code", th.StringType),
+                                th.Property("consolidationCode", th.StringType),
+                                th.Property("parentId", th.StringType),
+                                th.Property("parentType", th.StringType),
+                                th.Property("displayName", th.StringType),
+                                th.Property("valueId", th.StringType),
+                                th.Property("valueCode", th.StringType),
+                                th.Property("valueConsolidationCode", th.StringType),
+                                th.Property("valueDisplayName", th.StringType),
+                            )
+                        ),
+                    ),
+                )
+            ),
+        ),
+        th.Property(
+            "dimensionSetLines",
+            th.ArrayType(
+                th.ObjectType(
+                    th.Property("id", th.StringType),
+                    th.Property("code", th.StringType),
+                    th.Property("consolidationCode", th.StringType),
+                    th.Property("parentId", th.StringType),
+                    th.Property("parentType", th.StringType),
+                    th.Property("displayName", th.StringType),
+                    th.Property("valueId", th.StringType),
+                    th.Property("valueCode", th.StringType),
+                    th.Property("valueConsolidationCode", th.StringType),
+                    th.Property("valueDisplayName", th.StringType),
+                )
+            ),
+        ),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+    def get_child_context(self, record, context):
+        return {"company_id": context["company_id"], "company_name": context["company_name"]}
+
+
 class PurchaseInvoicesStream(dynamicsBcStream):
     """Define custom stream."""
 
