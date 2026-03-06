@@ -311,7 +311,7 @@ class SalesInvoicesStream(dynamicsBcStream):
 class SalesCreditStream(dynamicsBcStream):
     """Define custom stream."""
 
-    name = "sales_credit"
+    name = "sales_credit_memos"
     path = "/companies({company_id})/salesCreditMemos"
     primary_keys = ["id", "lastModifiedDateTime"]
     replication_key = "lastModifiedDateTime"
