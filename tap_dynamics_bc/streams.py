@@ -375,6 +375,7 @@ class SalesCreditStream(dynamicsBcStream):
                     th.Property("lineType", th.StringType),
                     th.Property("lineObjectNumber", th.StringType),
                     th.Property("description", th.StringType),
+                    th.Property("description2", th.StringType),
                     th.Property("unitOfMeasureId", th.StringType),
                     th.Property("unitOfMeasureCode", th.StringType),
                     th.Property("unitPrice", th.NumberType),
@@ -393,6 +394,7 @@ class SalesCreditStream(dynamicsBcStream):
                     th.Property("netAmountIncludingTax", th.NumberType),
                     th.Property("shipmentDate", th.DateType),
                     th.Property("itemVariantId", th.StringType),
+                    th.Property("locationId", th.StringType),
                     th.Property(
                         "dimensionSetLines",
                         th.ArrayType(
