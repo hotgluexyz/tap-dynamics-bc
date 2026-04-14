@@ -89,7 +89,17 @@ class TapdynamicsBc(Tap):
         th.Property(
             "refresh_token",
             th.StringType,
-            required=True,
+            required=False,
+        ),
+        th.Property(
+            "redirect_uri",
+            th.StringType,
+            required=False,
+        ),
+        th.Property(
+            "tenant_id",
+            th.StringType,
+            required=False,
         ),
         th.Property(
             "client_secret",
