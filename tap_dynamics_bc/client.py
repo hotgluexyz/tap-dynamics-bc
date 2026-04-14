@@ -44,7 +44,6 @@ class dynamicsBcStream(RESTStream):
         authenticator = self.authenticator
         if authenticator:
             headers.update(authenticator.auth_headers or {})
-        # separate the url for client credentials and refresh token
         if self.config.get("refresh_token"):
             url = "https://api.businesscentral.dynamics.com/environments/v1.1"
         else:
