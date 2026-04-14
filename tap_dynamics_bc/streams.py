@@ -32,6 +32,14 @@ class CompaniesStream(dynamicsBcStream):
         th.Property("systemModifiedBy", th.StringType),
     ).to_dict()
 
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        """REMOVE BEFORE MERGE - this was added to be able to compare the 
+        branches using different auth methods, the permissions betweent then are different,
+        so we need to remove the company that is not accessible with the impersonating a user auth."""
+        if row.get("id") == "3f4c778c-7b01-f111-a1fd-7ced8d2674f8":
+            return None
+        return row
+
     def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
         """Return a context dictionary for child streams."""
         decorated_request = self.request_decorator(self._request)
