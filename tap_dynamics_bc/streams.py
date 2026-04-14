@@ -32,6 +32,7 @@ class CompaniesStream(dynamicsBcStream):
         th.Property("systemModifiedBy", th.StringType),
     ).to_dict()
 
+
     def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
         """Return a context dictionary for child streams."""
         decorated_request = self.request_decorator(self._request)

@@ -44,7 +44,12 @@ class dynamicsBcStream(RESTStream):
         authenticator = self.authenticator
         if authenticator:
             headers.update(authenticator.auth_headers or {})
-        envs_list = requests.get(url="https://api.businesscentral.dynamics.com/environments/v1.1",headers=headers)
+        # separate the url for client credentials and refresh token
+        if self.config.get("refresh_token"):
+            url = "https://api.businesscentral.dynamics.com/environments/v1.1"
+        else:
+            url = "https://api.businesscentral.dynamics.com/admin/v2.0/applications/BusinessCentral/environments"
+        envs_list = requests.get(url=url,headers=headers)
         self.validate_response(envs_list)
         envs_list = envs_list.json()
         self.envs_list = envs_list
