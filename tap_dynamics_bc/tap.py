@@ -6,6 +6,7 @@ from hotglue_singer_sdk import Stream, Tap
 from hotglue_singer_sdk import typing as th
 
 from tap_dynamics_bc.auth import TapDynamicsBCAuth
+from tap_dynamics_bc.discover import discover_dynamic_streams
 
 from tap_dynamics_bc.streams import (
     AccountsStream,
@@ -117,12 +118,78 @@ class TapdynamicsBc(Tap):
             th.ArrayType(th.StringType),
             required=False,
         ),
+        th.Property(
+            "enable_odata_discovery",
+            th.BooleanType,
+            required=False,
+            default=False,
+            description=(
+                "When true, fetch the BC OData V4 $metadata document and "
+                "append a stream per entity set to the discovered catalog."
+            ),
+        ),
+        th.Property(
+            "odata_discovery_include_prefixes",
+            th.ArrayType(th.StringType),
+            required=False,
+            description=(
+                "If set, only OData entity sets whose name starts with one "
+                "of these prefixes are added (e.g. ['AGBI'])."
+            ),
+        ),
+        th.Property(
+            "odata_discovery_exclude_prefixes",
+            th.ArrayType(th.StringType),
+            required=False,
+            description=(
+                "OData entity sets whose name starts with one of these "
+                "prefixes are skipped. E.g. ['Power_BI_', 'ExcelTemplate', "
+                "'Accountant', 'workflow']."
+            ),
+        ),
     ).to_dict()
 
-    def discover_streams(self) -> List[Stream]:
-        """Return a list of discovered streams."""
+    # OData entity-set names already covered by the hand-written REST streams
+    # in STREAM_TYPES. Skipped during dynamic discovery so the catalog doesn't
+    # ship two streams for the same logical entity.
+    #   companies               <-> Company
+    #   sales_orders            <-> SalesOrder
+    #   general_ledger_entries  <-> G_LEntries
+    #   accounts                <-> Chart_of_Accounts
+    #   vendor_ledger_entries   <-> VendorLedgerEntries (same OData endpoint)
+    STATIC_STREAM_ODATA_NAMES = frozenset({
+        "Company",
+        "SalesOrder",
+        "G_LEntries",
+        "Chart_of_Accounts",
+        "VendorLedgerEntries",
+    })
 
-        return [stream_class(tap=self) for stream_class in STREAM_TYPES]
+    def discover_streams(self) -> List[Stream]:
+        """Return the static stream list, optionally extended via OData discovery."""
+        streams: List[Stream] = [stream_class(tap=self) for stream_class in STREAM_TYPES]
+
+        if not self.config.get("enable_odata_discovery", False):
+            return streams
+
+        include_prefixes = self.config.get("odata_discovery_include_prefixes")
+        exclude_prefixes = self.config.get("odata_discovery_exclude_prefixes")
+
+        # Skip both the curated OData equivalents and the raw static stream names.
+        # The latter is a safeguard so we don't ship two streams with the same name.
+        static_names = {
+            cls.name for cls in STREAM_TYPES if getattr(cls, "name", None)
+        }
+        skip_names = self.STATIC_STREAM_ODATA_NAMES | static_names
+
+        dynamic_streams = discover_dynamic_streams(
+            self,
+            parent_stream_type=CompaniesStream,
+            include_prefixes=include_prefixes,
+            exclude_prefixes=exclude_prefixes,
+            skip_names=skip_names,
+        )
+        return streams + dynamic_streams
 
 
 if __name__ == "__main__":
