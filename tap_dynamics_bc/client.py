@@ -35,6 +35,13 @@ class dynamicsBcStream(RESTStream):
                 (e for e in environments["value"] if e["name"].lower() == env_name.lower()),
                 None,
             )
+            # Handle "Name (Type)" format that HotGlue UI may produce
+            if not chosen and " (" in env_name:
+                env_name_stripped = env_name.split(" (")[0].strip()
+                chosen = next(
+                    (e for e in environments["value"] if e["name"].lower() == env_name_stripped.lower()),
+                    None,
+                )
             if chosen:
                 return f"https://api.businesscentral.dynamics.com/v2.0/{chosen['aadTenantId']}/{chosen['name']}/api/v2.0"
         self.validate_env(env_name)
