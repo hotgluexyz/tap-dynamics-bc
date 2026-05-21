@@ -24,14 +24,21 @@ class dynamicsBcStream(RESTStream):
     @cached_property
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
-        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
         env_name = self.config.get("environment_name", "production")
         if "?" in env_name:
             env_name = env_name.split("?")
-            if isinstance(env_name,list):
+            if isinstance(env_name, list):
                 env_name = env_name[0]
-        self.validate_env(env_name)        
-        return url_template.format(env_name)
+        environments = self.get_environments_list()
+        if "value" in environments:
+            chosen = next(
+                (e for e in environments["value"] if e["name"].lower() == env_name.lower()),
+                None,
+            )
+            if chosen:
+                return f"https://api.businesscentral.dynamics.com/v2.0/{chosen['aadTenantId']}/{chosen['name']}/api/v2.0"
+        self.validate_env(env_name)
+        return f"https://api.businesscentral.dynamics.com/v2.0/{env_name}/api/v2.0"
 
     records_jsonpath = "$.value[*]"
     next_page_token_jsonpath = "$.['@odata.nextLink']"
