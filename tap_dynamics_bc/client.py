@@ -75,7 +75,6 @@ class dynamicsBcStream(RESTStream):
     def http_headers(self) -> dict:
         """Return the http headers needed."""
         headers = {
-            "If-Match": "*",
             "Prefer": f"odata.maxpagesize={self.page_size}"
         }
         
