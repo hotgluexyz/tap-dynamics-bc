@@ -1101,14 +1101,27 @@ class DimensionValuesStream(dynamicsBcStream):
     @property
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
-        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/microsoft/reportsFinance/beta"
         env_name = self.config.get("environment_name", "production")
         if "?" in env_name:
             env_name = env_name.split("?")
             if isinstance(env_name, list):
                 env_name = env_name[0]
+        environments = self.get_environments_list()
+        if "value" in environments:
+            chosen = next(
+                (e for e in environments["value"] if e["name"].lower() == env_name.lower()),
+                None,
+            )
+            if not chosen and " (" in env_name:
+                env_name_stripped = env_name.split(" (")[0].strip()
+                chosen = next(
+                    (e for e in environments["value"] if e["name"].lower() == env_name_stripped.lower()),
+                    None,
+                )
+            if chosen:
+                return f"https://api.businesscentral.dynamics.com/v2.0/{chosen['aadTenantId']}/{chosen['name']}/api/microsoft/reportsFinance/beta"
         self.validate_env(env_name)
-        return url_template.format(env_name)
+        return f"https://api.businesscentral.dynamics.com/v2.0/{env_name}/api/microsoft/reportsFinance/beta"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
