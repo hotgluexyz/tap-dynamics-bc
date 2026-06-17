@@ -72,7 +72,7 @@ class TapDynamicsBCAuth(OAuthAuthenticator, metaclass=SingletonMeta):
         return cls(stream=stream, auth_endpoint=auth_endpoint)
 
     # Authentication and refresh
-    def update_access_token(self) -> None:
+    def update_access_token_locally(self) -> None:
         """Update `access_token` along with: `last_refreshed` and `expires_in`.
 
         Raises:
