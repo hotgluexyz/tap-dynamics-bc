@@ -211,4 +211,9 @@ class DynamicsBCODataStream(dynamicsBcStream):
         if not chosen_environment:
             raise Exception("No environment with name: " + self.config.get('environment_name', 'Production'))
         return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
-    
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        # Header records appear with empty values and should be skipped
+        if all(value == '' for k, value in row.items() if k != '@odata.etag'):
+            return None
+        return super().post_process(row, context)
