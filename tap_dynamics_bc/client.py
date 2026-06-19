@@ -133,6 +133,44 @@ class dynamicsBcStream(RESTStream):
         )
         resp = self._request(prepared_request, context)
         return resp
+
+    def make_request_with_adaptive_page_size(
+        self,
+        context,
+        next_page_token,
+        *,
+        minimum_page_size: int = 10,
+    ):
+        """Retry with smaller page sizes when a page exceeds the read timeout.
+
+        Halves ``page_size`` on each ``ReadTimeout`` until the request succeeds
+        or ``minimum_page_size`` is reached. The winning size is kept on the
+        stream instance for subsequent pages in the same company partition.
+        """
+        page_size = self.page_size
+        last_error = None
+
+        while page_size >= minimum_page_size:
+            self.page_size = page_size
+            try:
+                prepared_request = self.prepare_request(
+                    context, next_page_token=next_page_token
+                )
+                return self._request(prepared_request, context)
+            except requests.exceptions.ReadTimeout as err:
+                last_error = err
+                next_page_size = max(minimum_page_size, page_size // 2)
+                if next_page_size >= page_size:
+                    break
+                self.logger.warning(
+                    "Read timeout fetching %s at page_size=%s; retrying with page_size=%s",
+                    self.name,
+                    page_size,
+                    next_page_size,
+                )
+                page_size = next_page_size
+
+        raise last_error
     
     def request_records(self, context: Optional[dict]):
         next_page_token: Any = None
