@@ -179,6 +179,18 @@ class SalesInvoicesStream(dynamicsBcStream):
     parent_stream_type = CompaniesStream
     expand = "dimensionSetLines, salesInvoiceLines($expand=dimensionSetLines)"
     page_size = 1000
+    _default_page_size = 1000
+
+    @property
+    def timeout(self) -> int:
+        # lower timeout since we have adaptive page size logic below
+        return 120
+
+    def make_request(self, context, next_page_token):
+        # Reset page size on each company's first page (one stream instance, many companies).
+        if next_page_token is None:
+            self.page_size = self._default_page_size
+        return self.make_request_with_adaptive_page_size(context, next_page_token)
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
