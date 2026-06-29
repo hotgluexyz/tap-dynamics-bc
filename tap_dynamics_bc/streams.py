@@ -581,6 +581,7 @@ class VendorsStream(dynamicsBcStream):
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
     expand = "defaultDimensions"
+    max_workers = 5
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),

@@ -3,6 +3,7 @@
 from typing import Any, Dict, Optional
 from urllib.parse import parse_qs, urlparse
 
+import pendulum
 import requests
 from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
 from hotglue_singer_sdk.streams import RESTStream
@@ -20,6 +21,8 @@ class dynamicsBcStream(RESTStream):
     envs_list = None
     page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
     timeout = 600 # 10 minutes (same as Dynamics BC API)
+    max_workers = 1
+    min_paging_window_hours = 6
 
     @cached_property
     def url_base(self) -> str:
@@ -110,22 +113,71 @@ class dynamicsBcStream(RESTStream):
 
         return None
 
+    def get_paging_windows(self, context):
+        if not self.replication_key or self.max_workers <= 1:
+            return []
+        start = self.get_starting_timestamp(context)
+        if not start:
+            return []
+        start = pendulum.instance(start).in_timezone("UTC")
+        end = pendulum.now("UTC")
+        if start >= end:
+            return []
+        total_seconds = (end - start).total_seconds()
+        min_window_seconds = self.min_paging_window_hours * 3600
+        window_count = min(
+            self.max_workers,
+            max(1, int(total_seconds // min_window_seconds)),
+        )
+        step = total_seconds / window_count
+        return [
+            {
+                "window_start": start if i == 0 else start.add(seconds=step * i),
+                "window_end": end if i == window_count - 1 else start.add(seconds=step * (i + 1)),
+            }
+            for i in range(window_count)
+        ]
+
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
     ) -> Dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization."""
         params: dict = {}
         if self.replication_key:
-            start_date = self.get_starting_timestamp(context)
-            if start_date:
-                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                params["$filter"] = f"{self.replication_key} gt {date}"
+            if context and "window_start" in context and "window_end" in context:
+                ws = context["window_start"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                we = context["window_end"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = (
+                    f"{self.replication_key} gt {ws} and "
+                    f"{self.replication_key} le {we}"
+                )
+            else:
+                start_date = self.get_starting_timestamp(context)
+                if start_date:
+                    date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                    params["$filter"] = f"{self.replication_key} gt {date}"
         if self.expand:
             params["$expand"] = self.expand
         if next_page_token:
             params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
             params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
         return params
+
+    def get_records(self, context):
+        context = context or {}
+        windows = self.get_paging_windows(context)
+        if self.replication_key and self.max_workers > 1 and len(windows) > 1:
+            yield from self._sync_records_parallel(context, windows)
+            return
+        yield from super().get_records(context)
+
+    def _collect_records_for_window(self, window_context):
+        records = []
+        for record in self.request_records(window_context):
+            transformed = self.post_process(record, window_context)
+            if transformed is not None:
+                records.append(transformed)
+        return records
 
     def make_request(self, context, next_page_token):
         prepared_request = self.prepare_request(
