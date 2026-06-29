@@ -21,7 +21,7 @@ class dynamicsBcStream(RESTStream):
     envs_list = None
     page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
     timeout = 600 # 10 minutes (same as Dynamics BC API)
-    max_workers = 1
+    parallelization_limit = 5
     min_paging_window_hours = 6
 
     @cached_property
@@ -114,7 +114,7 @@ class dynamicsBcStream(RESTStream):
         return None
 
     def get_paging_windows(self, context):
-        if not self.replication_key or self.max_workers <= 1:
+        if not self.replication_key or self.parallelization_limit <= 1:
             return []
         start = self.get_starting_timestamp(context)
         if not start:
@@ -126,7 +126,7 @@ class dynamicsBcStream(RESTStream):
         total_seconds = (end - start).total_seconds()
         min_window_seconds = self.min_paging_window_hours * 3600
         window_count = min(
-            self.max_workers,
+            self.parallelization_limit,
             max(1, int(total_seconds // min_window_seconds)),
         )
         step = total_seconds / window_count
@@ -162,22 +162,6 @@ class dynamicsBcStream(RESTStream):
             params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
             params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
         return params
-
-    def get_records(self, context):
-        context = context or {}
-        windows = self.get_paging_windows(context)
-        if self.replication_key and self.max_workers > 1 and len(windows) > 1:
-            yield from self._sync_records_parallel(context, windows)
-            return
-        yield from super().get_records(context)
-
-    def _collect_records_for_window(self, window_context):
-        records = []
-        for record in self.request_records(window_context):
-            transformed = self.post_process(record, window_context)
-            if transformed is not None:
-                records.append(transformed)
-        return records
 
     def make_request(self, context, next_page_token):
         prepared_request = self.prepare_request(
