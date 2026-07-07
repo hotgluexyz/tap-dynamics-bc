@@ -14,6 +14,12 @@ from hotglue_singer_sdk.exceptions import FatalAPIError, RetriableAPIError
 import singer
 from singer import StateMessage
 
+# Business Central stamps unmodified records with this sentinel timestamp on
+# system audit fields (e.g. SystemModifiedAt, lastModifiedDateTime). Such
+# records are older than any real start_date and would be dropped by a plain
+# "greater than" replication filter, so initial syncs must explicitly keep them.
+BC_DEFAULT_MODIFIED_SENTINEL = "0001-01-01T00:00:00Z"
+
 
 class dynamicsBcStream(RESTStream):
     """dynamics-bc stream class."""
@@ -249,6 +255,38 @@ class DynamicsBCODataStream(dynamicsBcStream):
         if not chosen_environment:
             raise Exception("No environment with name: " + self.config.get('environment_name', 'Production'))
         return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
+
+    def _is_initial_sync(self, context: Optional[dict]) -> bool:
+        """Return True only for the first sync, when no bookmark exists yet.
+
+        The SDK reports ``get_starting_timestamp`` as ``max(bookmark, start_date)``,
+        so it equals ``start_date`` whenever the bookmark has not advanced past it
+        (e.g. every emitted row carried a replication key at or below start_date,
+        including the BC sentinel). Comparing the starting timestamp against
+        ``start_date`` would therefore keep flagging later runs as initial and leave
+        the broad sentinel filter enabled forever. Instead, detect the initial sync
+        by the absence of a finalized replication-key bookmark in state, which a
+        completed prior sync always writes.
+        """
+        state = self.get_context_state(context)
+        return not state.get("replication_key_value")
+
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        params = super().get_url_params(context, next_page_token)
+        # Unmodified BC records carry the sentinel replication-key value, which
+        # is before start_date and excluded by the default "gt" filter. On the
+        # initial sync, broaden the filter so these records are not lost.
+        if self.replication_key and self._is_initial_sync(context):
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = (
+                    f"({self.replication_key} gt {date}) or "
+                    f"({self.replication_key} eq {BC_DEFAULT_MODIFIED_SENTINEL})"
+                )
+        return params
 
     def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
         # Header records appear with empty values and should be skipped

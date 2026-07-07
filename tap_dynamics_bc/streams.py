@@ -7,12 +7,14 @@ import requests
 from hotglue_singer_sdk import typing as th
 from hotglue_singer_sdk.exceptions import FatalAPIError
 import datetime
-from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
+from tap_dynamics_bc.client import (
+    BC_DEFAULT_MODIFIED_SENTINEL,
+    dynamicsBcStream,
+    DynamicsBCODataStream,
+)
 from dateutil.relativedelta import relativedelta
 import pendulum
 import re
-
-BC_DEFAULT_LAST_MODIFIED = "0001-01-01T00:00:00Z"
 
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
@@ -1061,7 +1063,7 @@ class GeneralLedgerEntriesIncrementalStream(GeneralLedgerEntriesStream):
                 # is before start_date and would be excluded by the default gt filter.
                 params["$filter"] = (
                     f"(lastModifiedDateTime gt {date}) or "
-                    f"(lastModifiedDateTime eq {BC_DEFAULT_LAST_MODIFIED})"
+                    f"(lastModifiedDateTime eq {BC_DEFAULT_MODIFIED_SENTINEL})"
                 )
         return params
 
