@@ -12,6 +12,8 @@ from dateutil.relativedelta import relativedelta
 import pendulum
 import re
 
+BC_DEFAULT_LAST_MODIFIED = "0001-01-01T00:00:00Z"
+
 class CompaniesStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -1050,7 +1052,18 @@ class GeneralLedgerEntriesIncrementalStream(GeneralLedgerEntriesStream):
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
     ) -> Dict[str, Any]:
-        return dynamicsBcStream.get_url_params(self, context, next_page_token)
+        params = dynamicsBcStream.get_url_params(self, context, next_page_token)
+        if self._is_initial_sync(context or {}):
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                # Unmodified GL entries use BC's sentinel lastModifiedDateTime, which
+                # is before start_date and would be excluded by the default gt filter.
+                params["$filter"] = (
+                    f"(lastModifiedDateTime gt {date}) or "
+                    f"(lastModifiedDateTime eq {BC_DEFAULT_LAST_MODIFIED})"
+                )
+        return params
 
 
 class GLEntriesDimensionsStream(dynamicsBcStream):
