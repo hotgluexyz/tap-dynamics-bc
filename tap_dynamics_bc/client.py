@@ -3,7 +3,6 @@
 from typing import Any, Dict, Optional
 from urllib.parse import parse_qs, urlparse
 
-import pendulum
 import requests
 from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
 from hotglue_singer_sdk.streams import RESTStream
@@ -258,11 +257,19 @@ class DynamicsBCODataStream(dynamicsBcStream):
         return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
 
     def _is_initial_sync(self, context: Optional[dict]) -> bool:
-        bookmark_date = self.get_starting_timestamp(context)
-        start_date = self.config.get("start_date")
-        if not bookmark_date or not start_date:
-            return True
-        return bookmark_date == pendulum.parse(start_date)
+        """Return True only for the first sync, when no bookmark exists yet.
+
+        The SDK reports ``get_starting_timestamp`` as ``max(bookmark, start_date)``,
+        so it equals ``start_date`` whenever the bookmark has not advanced past it
+        (e.g. every emitted row carried a replication key at or below start_date,
+        including the BC sentinel). Comparing the starting timestamp against
+        ``start_date`` would therefore keep flagging later runs as initial and leave
+        the broad sentinel filter enabled forever. Instead, detect the initial sync
+        by the absence of a finalized replication-key bookmark in state, which a
+        completed prior sync always writes.
+        """
+        state = self.get_context_state(context)
+        return not state.get("replication_key_value")
 
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
