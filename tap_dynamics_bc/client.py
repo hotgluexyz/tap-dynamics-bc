@@ -3,6 +3,7 @@
 from typing import Any, Dict, Optional
 from urllib.parse import parse_qs, urlparse
 
+import pendulum
 import requests
 from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
 from hotglue_singer_sdk.streams import RESTStream
@@ -26,6 +27,8 @@ class dynamicsBcStream(RESTStream):
     envs_list = None
     page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
     timeout = 600 # 10 minutes (same as Dynamics BC API)
+    parallelization_limit = 5
+    min_paging_window_hours = 6
 
     @cached_property
     def url_base(self) -> str:
@@ -116,16 +119,49 @@ class dynamicsBcStream(RESTStream):
 
         return None
 
+    def get_paging_windows(self, context):
+        if not self.replication_key or self.parallelization_limit <= 1:
+            return []
+        start = self.get_starting_timestamp(context)
+        if not start:
+            return []
+        start = pendulum.instance(start).in_timezone("UTC")
+        end = pendulum.now("UTC")
+        if start >= end:
+            return []
+        total_seconds = (end - start).total_seconds()
+        min_window_seconds = self.min_paging_window_hours * 3600
+        window_count = min(
+            self.parallelization_limit,
+            max(1, int(total_seconds // min_window_seconds)),
+        )
+        step = total_seconds / window_count
+        return [
+            {
+                "window_start": start if i == 0 else start.add(seconds=step * i),
+                "window_end": end if i == window_count - 1 else start.add(seconds=step * (i + 1)),
+            }
+            for i in range(window_count)
+        ]
+
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
     ) -> Dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization."""
         params: dict = {}
         if self.replication_key:
-            start_date = self.get_starting_timestamp(context)
-            if start_date:
-                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
-                params["$filter"] = f"{self.replication_key} gt {date}"
+            if context and "window_start" in context and "window_end" in context:
+                ws = context["window_start"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                we = context["window_end"].strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = (
+                    f"{self.replication_key} gt {ws} and "
+                    f"{self.replication_key} le {we}"
+                )
+            else:
+                start_date = self.get_starting_timestamp(context)
+                if start_date:
+                    date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                    params["$filter"] = f"{self.replication_key} gt {date}"
         if self.expand:
             params["$expand"] = self.expand
         if next_page_token:
