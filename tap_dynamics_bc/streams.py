@@ -1054,7 +1054,7 @@ class ClosingGeneralLedgerEntriesStream(DynamicsBCAnalyticsStream):
 
     name = "closing_general_ledger_entries"
     path = "/companies({company_id})/closingGeneralLedgerEntries"
-    primary_keys = ["entryNo"]
+    primary_keys = ["entryNo", "glAccountNo"]
     replication_key = "systemModifiedAt"
     parent_stream_type = CompaniesStream
 
