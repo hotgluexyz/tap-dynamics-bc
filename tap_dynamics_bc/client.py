@@ -19,16 +19,20 @@ class dynamicsBcStream(RESTStream):
     """dynamics-bc stream class."""
     envs_list = None
 
-    @cached_property
-    def url_base(self) -> str:
-        """Return the API URL root, configurable via tap settings."""
-        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
+    def get_environment(self):
         env_name = self.config.get("environment_name", "production")
         if "?" in env_name:
             env_name = env_name.split("?")
             if isinstance(env_name,list):
                 env_name = env_name[0]
-        self.validate_env(env_name)        
+        self.validate_env(env_name)
+        return env_name    
+
+    @cached_property
+    def url_base(self) -> str:
+        """Return the API URL root, configurable via tap settings."""
+        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
+        env_name = self.get_environment()      
         return url_template.format(env_name)
 
     records_jsonpath = "$.value[*]"
@@ -202,7 +206,7 @@ class DynamicsBCAnalyticsStream(dynamicsBcStream):
 
     @cached_property
     def url_base(self):
-        environment = self.config.get("environment_name", "production")
+        environment = self.get_environment()
         return f"https://api.businesscentral.dynamics.com/v2.0/{environment}/api/microsoft/analytics/v1.0"
     
 
