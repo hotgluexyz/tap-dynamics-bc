@@ -194,3 +194,38 @@ class DynamicsBCODataStream(dynamicsBcStream):
             raise Exception("No environment with name: " + self.config.get('environment_name', 'Production'))
         return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
     
+
+class DynamicsBCAnalyticsStream(dynamicsBcStream):
+    """Dynamics BC Analytics stream class."""
+
+    page_size = 1000
+
+    @cached_property
+    def url_base(self):
+        environment = self.config.get("environment_name", "production")
+        return f"https://api.businesscentral.dynamics.com/v2.0/{environment}/api/microsoft/analytics/v1.0"
+    
+
+    def get_next_page_token(
+        self, response: requests.Response, previous_token: Optional[Any]
+    ) -> Optional[Any]:
+        """Return a token for identifying next page or None if no more pages."""
+        if not response.json().get("value", []):
+            return None
+        previous_token = previous_token or 0
+        return previous_token + self.page_size
+
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        """Return a dictionary of values to be used in URL parameterization."""
+        params: dict = {}
+        params["$top"] = self.page_size
+        if self.replication_key:
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+        if next_page_token:
+            params["$skip"] = next_page_token
+        return params
