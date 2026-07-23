@@ -7,7 +7,7 @@ import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
 
-from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream
+from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream, DynamicsBCAnalyticsStream
 
 
 class CompaniesStream(dynamicsBcStream):
@@ -1047,4 +1047,29 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
         th.Property("AuxiliaryIndex1", th.StringType),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType)
+    ).to_dict()
+
+
+class ClosingGeneralLedgerEntriesStream(DynamicsBCAnalyticsStream):
+
+    name = "closing_general_ledger_entries"
+    path = "/companies({company_id})/closingGeneralLedgerEntries"
+    primary_keys = ["entryNo", "glAccountNo"]
+    replication_key = "systemModifiedAt"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("entryNo", th.IntegerType),
+        th.Property("postingDate", th.DateType),
+        th.Property("glAccountNo", th.StringType),
+        th.Property("description", th.StringType),
+        th.Property("amount", th.NumberType),
+        th.Property("dimensionSetID", th.IntegerType),
+        th.Property("sourceCode", th.StringType),
+        th.Property("sourceType", th.StringType),
+        th.Property("sourceNo", th.StringType),
+        th.Property("incomeBalance", th.StringType),
+        th.Property("systemModifiedAt", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
     ).to_dict()
