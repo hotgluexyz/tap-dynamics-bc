@@ -1,0 +1,1312 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-VCPHHz", "scope": "-Fallback-scrubbed-zQzxUHSQmMuAbrmqHCYWwCTcpzxTuttIuNQGaGPgUWY",
+        "expires_in": "3852", "ext_expires_in": "-Fallback-scrubbed-wKNK", "expires_on":
+        "-Fallback-scrubbed-kWydWxponk", "not_before": "-Fallback-scrubbed-vXzZIvydTL",
+        "resource": "-Fallback-scrubbed-tGkxZJDsxfsBHDTbvamEiacgILKBXAQmFqqKWXyL",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-SicpNVLvLM0N8D-qJ94E5A'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:24:53 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AncO9iFYe7xLh7mJlQSotr_oOlVYAQAAALXJ8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:24:53 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - EUS ProdSlices
+      x-ms-request-id:
+      - 3e34393e-9314-4615-970a-13b4a6e48000
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-IjrhmCpZSaeLtyoCcxdFSIvqHmtwAIpUSgOC",
+        "applicationFamily": "-Fallback-scrubbed-nKoErzmmVZeiGTR", "type": "-Fallback-scrubbed-lThfcDi",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-QV", "webServiceUrl":
+        "-Fallback-scrubbed-tGkxZJDsxfsBHDTbvamEiacgILKBXAQmFqqKWXyL", "webClientLoginUrl":
+        "-Fallback-scrubbed-weHwBPTzIJYtgwmMCElqQRxMroJCElctMJhM"}, {"aadTenantId":
+        "-Fallback-scrubbed-IjrhmCpZSaeLtyoCcxdFSIvqHmtwAIpUSgOC", "applicationFamily":
+        "-Fallback-scrubbed-nKoErzmmVZeiGTR", "type": "-Fallback-scrubbed-LLAWKEdbnC",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-Iu", "webServiceUrl":
+        "-Fallback-scrubbed-tGkxZJDsxfsBHDTbvamEiacgILKBXAQmFqqKWXyL", "webClientLoginUrl":
+        "-Fallback-scrubbed-weHwBPTzIJYtgwmMCElqQRxMroJCElctMJhM"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:24:53 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 1c498460-7696-453d-9b2e-4f8e545db261
+      ms-correlation-x:
+      - 474cec4d-6afa-6e65-bcf2-29839d8d7073
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-QktwZySMNMjuBeKwoemhYzkQhUTUArSmvyqoDvmmZAJgKpjTJtjDCqeHWvIqEqzKYKizCKIYwSnncvSAzOOlJ",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-jxFizfLpJNatmRQJ", "timestamp": 3653, "name": "CRONUS
+        USA, Inc.", "displayName": "David Bell", "businessProfileId": "David Bell",
+        "systemCreatedAt": "-Fallback-scrubbed-hwYjkCvKUUjKmaDjZQFuOpzA", "systemCreatedBy":
+        "-Fallback-scrubbed-KQXnnUiiuYMHBALwftKzbvkaujurZfEKRhgF", "systemModifiedAt":
+        "-Fallback-scrubbed-hwYjkCvKUUjKmaDjZQFuOpzA", "systemModifiedBy": "-Fallback-scrubbed-KQXnnUiiuYMHBALwftKzbvkaujurZfEKRhgF"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:24:54 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 375582af-939a-4daa-9aba-12e1e629b4b6
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 60925b19-a53c-4658-9e61-d212187e26cc
+      ms-correlation-x:
+      - 07564613-ab26-03db-c593-e0f099560bfb
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-ymRaXvZMuvJSOzLNTrazijlqHRYrhNJPzthtuVnEBXiPkBiXvPVwbwmFNOVTaXfnakRExPNegrHjNHusaPqnGFJfWhgZrgRXddNgXkQryuSpYmurKAxIZbsiftPOqfUZXxKUEeAhykUigX",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-kaipLMSgTZkrpZgrZcANBwLLvfJnOqrCtvrfNbRlbXHO",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Kristi Jones",
+        "addressLine1": "62295 Amanda Manors Suite 009", "addressLine2": "4874 James
+        Overpass", "city": "South Ashley", "state": "-Fallback-scrubbed-JZ", "country":
+        "-Fallback-scrubbed-Iu", "postalCode": "47266", "phoneNumber": "001-846-960-2744x109",
+        "faxNumber": "-Fallback-scrubbed-MogxpGePRWGfYio", "email": "David Bell",
+        "website": "David Bell", "taxRegistrationNumber": "David Bell", "currencyCode":
+        "-Fallback-scrubbed-pDY", "currentFiscalYearStartDate": "-Fallback-scrubbed-NnBKmCrkPI",
+        "industry": "David Bell", "experience": "-Fallback-scrubbed-nFFNoWtdA", "lastModifiedDateTime":
+        "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink": "-Fallback-scrubbed-eWWfXmgsazAFnFZOmzMkRNEEiWMGLRWbcIivSGsouergmLmFMBuyDIsLIryODzVpzCaRdMgZnOXDUfYmcaiQDkgGLTQqdhZOuwTyznbdAAxrigTLeiyvfcBcEunBWsGytjgIwijiIfreCpaBHHYXkCcWihHXwLPdwPWDCcXKZNbWJxxqjX"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:24:55 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - f6442b04-32ee-45e5-9408-e0e76f1cb5c2
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 5399b8b8-fa49-4dd9-bf8c-f80d6ede2592
+      ms-correlation-x:
+      - 9198692f-c765-ae46-6118-3cb2fc6a5139
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-IjrhmCpZSaeLtyoCcxdFSIvqHmtwAIpUSgOC",
+        "applicationFamily": "-Fallback-scrubbed-nKoErzmmVZeiGTR", "type": "-Fallback-scrubbed-lThfcDi",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-QV", "webServiceUrl":
+        "-Fallback-scrubbed-tGkxZJDsxfsBHDTbvamEiacgILKBXAQmFqqKWXyL", "webClientLoginUrl":
+        "-Fallback-scrubbed-weHwBPTzIJYtgwmMCElqQRxMroJCElctMJhM"}, {"aadTenantId":
+        "-Fallback-scrubbed-IjrhmCpZSaeLtyoCcxdFSIvqHmtwAIpUSgOC", "applicationFamily":
+        "-Fallback-scrubbed-nKoErzmmVZeiGTR", "type": "-Fallback-scrubbed-LLAWKEdbnC",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-Iu", "webServiceUrl":
+        "-Fallback-scrubbed-tGkxZJDsxfsBHDTbvamEiacgILKBXAQmFqqKWXyL", "webClientLoginUrl":
+        "-Fallback-scrubbed-weHwBPTzIJYtgwmMCElqQRxMroJCElctMJhM"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:24:55 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 46efc8f4-f8fe-4932-a161-939a0464ebd7
+      ms-correlation-x:
+      - 325c9699-d4c2-6e64-143c-cdd21f7f964d
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=1000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/salesInvoices?%24filter=lastModifiedDateTime+gt+2026-02-18T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-tbCkBxIYyOtDJATyQKRHLqcetIlHqVkDTuyMgjnXkbhmwGkddfYeBcSFOcJDclwiZSBbEZOrIHrPdBoCGtPKOvvSFqJImeBnNxtXXrGnIOsdHVqkOdaOcfjQdFVZDCCBdUjxowkYd",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-vErghVDcLykBJNSUVyiOkpRueIOMTxxNHKxjAaLpsibh",
+        "id": "8c4931b7-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-bMaGjyUANrdz",
+        "externalDocumentNumber": "David Bell", "invoiceDate": "-Fallback-scrubbed-yOXnHgDrRb",
+        "postingDate": "-Fallback-scrubbed-yOXnHgDrRb", "dueDate": "-Fallback-scrubbed-cdxJwTpsCC",
+        "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd", "customerPurchaseOrderReference":
+        "-Fallback-scrubbed-VAFKMwcwq", "customerId": "-Fallback-scrubbed-hQutsZfJWyJhOKBKbFkRDrFyfVLZYpZbkftq",
+        "customerNumber": "-Fallback-scrubbed-Yrdnz", "customerName": "-Fallback-scrubbed-MwsLqILTKZqjD",
+        "billToName": "-Fallback-scrubbed-MwsLqILTKZqjD", "billToCustomerId": "-Fallback-scrubbed-hQutsZfJWyJhOKBKbFkRDrFyfVLZYpZbkftq",
+        "billToCustomerNumber": "-Fallback-scrubbed-Yrdnz", "shipToName": "-Fallback-scrubbed-MwsLqILTKZqjD",
+        "shipToContact": "-Fallback-scrubbed-hCkgRreuw", "sellToAddressLine1": "6343
+        Kelsey Spur Suite 738", "sellToAddressLine2": "David Bell", "sellToCity":
+        "East Davidhaven", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState":
+        "South Carolina", "sellToPostCode": "52722", "billToAddressLine1": "6343 Kelsey
+        Spur Suite 738", "billToAddressLine2": "David Bell", "billToCity": "East Davidhaven",
+        "billToCountry": "-Fallback-scrubbed-Iu", "billToState": "South Carolina",
+        "billToPostCode": "52722", "shipToAddressLine1": "6343 Kelsey Spur Suite 738",
+        "shipToAddressLine2": "David Bell", "shipToCity": "East Davidhaven", "shipToCountry":
+        "-Fallback-scrubbed-Iu", "shipToState": "South Carolina", "shipToPostCode":
+        "52722", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-aFRrya", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-fiZfAZFEOSUXYLvJVHtCmwufkfGoOcNyFhKl",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        -251290.855232911, "totalTaxAmount": 67555563.8812487, "totalAmountIncludingTax":
+        22146.8865690151, "status": "-Fallback-scrubbed-wTht", "lastModifiedDateTime":
+        "2026-02-18T21:07:11.677Z", "phoneNumber": "David Bell", "email": "troy30@example.com",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-RVprKkPhrjtlkuxriEtFaQXxWSijVHChvcMgcDEFjgrn",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-HpJwPQxVrZyoLDfFDbenlffCPleIlPnDizSO",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey
+        Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-rwVhZzHlTknhnNhEboIZQqZWNYqtcooMcIgNZpqUhiFq",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-HpJwPQxVrZyoLDfFDbenlffCPleIlPnDizSO",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-xyvbiAMHtuQBIbAANExlLWIyJGApTMOqNjTHAgLdAFuh",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-HpJwPQxVrZyoLDfFDbenlffCPleIlPnDizSO",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-cBXogUpjmNRhAFRzpTQSQsiBeHAaiTseEDGn",
+        "valueCode": "-Fallback-scrubbed-aFRrya", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-RiFFkPRtManKfRm"}, {"@odata.etag":
+        "-Fallback-scrubbed-vOvgCuTkFyIKWVAlYjjLfDdcMvicyTaRaJiDEkeCGQCQ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-HpJwPQxVrZyoLDfFDbenlffCPleIlPnDizSO", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-fXkUWITnaBySNTKgSrUBcXsRVjaXufbPnhYyqXUePjYQ",
+        "id": "8e4931b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-HpJwPQxVrZyoLDfFDbenlffCPleIlPnDizSO",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-WTKkGRbJQpYbpLPDloLFZJTmFbrgZHbmaNTp",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-uUQIEl",
+        "description": "-Fallback-scrubbed-SIdvovVpkCDbHvzlvafXpxeF", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 6851, "unitPrice":
+        -58709.8696268851, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -251290.855232911, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 3141, "totalTaxAmount": 67555563.8812487, "amountIncludingTax":
+        22146.8865690151, "invoiceDiscountAllocation": 3353, "netAmount": -251290.855232911,
+        "netTaxAmount": 67555563.8812487, "netAmountIncludingTax": 22146.8865690151,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-XPvXIQdJGwczHHYNcCCZxNuyuWZxUlIBPXoSTAXjEIoi",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sspFqQWisTpyGzUjOwPzlIHTreSBZPOVbOMk",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-UFXOCxHjjydPQvNJKnOAueDpUcRVLEYGMmqJVctphUlY",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sspFqQWisTpyGzUjOwPzlIHTreSBZPOVbOMk",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-zHupNVSyewTNjTDdoVETcZGwnZeCPezwgQAzQshzrwHf",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sspFqQWisTpyGzUjOwPzlIHTreSBZPOVbOMk",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-cBXogUpjmNRhAFRzpTQSQsiBeHAaiTseEDGn",
+        "valueCode": "-Fallback-scrubbed-aFRrya", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-RiFFkPRtManKfRm"}, {"@odata.etag":
+        "-Fallback-scrubbed-NqqnyEWclaCSORLUVYuzLTysLzfyNZwhKRhgjeeazHod", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-sspFqQWisTpyGzUjOwPzlIHTreSBZPOVbOMk", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-NGvxpquZmomoVVtPDoYaiGZuKELhDmzengfJBZgMIBPa", "id": "8f4931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "number": "-Fallback-scrubbed-jNDhnQsWznyi", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-DtgXijomPl", "postingDate": "-Fallback-scrubbed-DtgXijomPl",
+        "dueDate": "-Fallback-scrubbed-wjgZBWdJAX", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "-Fallback-scrubbed-VAFKMwcwq", "customerId":
+        "-Fallback-scrubbed-EvsgDOhNgNtvsOQHhAVDLOUAafxynZQzmAFV", "customerNumber":
+        "-Fallback-scrubbed-OKzfx", "customerName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws",
+        "billToName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws", "billToCustomerId":
+        "-Fallback-scrubbed-EvsgDOhNgNtvsOQHhAVDLOUAafxynZQzmAFV", "billToCustomerNumber":
+        "-Fallback-scrubbed-OKzfx", "shipToName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws",
+        "shipToContact": "-Fallback-scrubbed-NlOteNvxoGD", "sellToAddressLine1": "62219
+        Foster Summit Apt. 287", "sellToAddressLine2": "David Bell", "sellToCity":
+        "Coleshire", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "Rhode
+        Island", "sellToPostCode": "17487", "billToAddressLine1": "62219 Foster Summit
+        Apt. 287", "billToAddressLine2": "David Bell", "billToCity": "Coleshire",
+        "billToCountry": "-Fallback-scrubbed-Iu", "billToState": "Rhode Island", "billToPostCode":
+        "17487", "shipToAddressLine1": "62219 Foster Summit Apt. 287", "shipToAddressLine2":
+        "David Bell", "shipToCity": "Coleshire", "shipToCountry": "-Fallback-scrubbed-Iu",
+        "shipToState": "Rhode Island", "shipToPostCode": "17487", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-hfDly", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-VpIrQjgeXcqnEriZuoPpbGZibFwHvSeHLreL",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        2283753.448857, "totalTaxAmount": -92.47521219188, "totalAmountIncludingTax":
+        322.724731266969, "status": "-Fallback-scrubbed-wTht", "lastModifiedDateTime":
+        "2026-02-18T21:19:52.677Z", "phoneNumber": "David Bell", "email": "obrienheather@example.com",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-NgRXtoalCZPeNYhbWeTZxtfFtFxDKLpnzJTDNXAdMNfL",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey
+        Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-kEydlDKqVcUzLvkpnYWnjAfNFdrtTwPbOudpVWYASSje",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-AglqOzyEQWOFLvopeKoJCazmOCukNABCNoIqWmPhhGSf",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Paula
+        Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-kdIzlQHOiTqkWxwDIUYnliXzwDsCVaeNnHjBjPsdNKRT",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-TLJFegMxsNfAwDwyjGCkQhisGtAWyjDQOVbMKBRjettm", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-YQeNwagGHglsGQBKWsndEcBPgSuDtAkMiAZuGZlwwKbq",
+        "id": "914931b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-dNEGlmnhRWSvklvHHZPicuaZkmolnGUFgXFD",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-HktcUD",
+        "description": "-Fallback-scrubbed-cqTJuKGvAQc", "description2": "David Bell",
+        "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 6851, "unitPrice":
+        8724383965.32478, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -69.7504163747294, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": 9594860219.89724, "amountIncludingTax":
+        -9891.4895579269, "invoiceDiscountAllocation": 3353, "netAmount": -69.7504163747294,
+        "netTaxAmount": 9594860219.89724, "netAmountIncludingTax": -9891.4895579269,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-wPavvakfXHvSnRdRAQkfBZQeJIAJrFaLNkKHBohMrOQO",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-BreNFUcJzksuoNlPCTRXftZVJCIZznnFBYle",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-YXCmgGJKiYazuaJHOPEBgEFHVLmJSthMdAGsWVXvBnjD",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-BreNFUcJzksuoNlPCTRXftZVJCIZznnFBYle",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-lgmIVEJpdFivwePyAeCAkqempCtIROeRluvRXuBchTbC",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-BreNFUcJzksuoNlPCTRXftZVJCIZznnFBYle",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-bNraPlhBngEnfsWrpkfzEXSXwaiLCeBiAFFGMMownhRD",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-BreNFUcJzksuoNlPCTRXftZVJCIZznnFBYle",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-lpJfCgLLemaqnpUJvWonlkQRZwHDdRQkvfHEFtVijmWa", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-BreNFUcJzksuoNlPCTRXftZVJCIZznnFBYle", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-YGEiIYFhnYSfGbQBHwFLUKKwcpaZSqopCkpGGORviyjf", "id": "924931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "documentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc", "sequence":
+        5104, "itemId": "-Fallback-scrubbed-xfmesSLlFXOQczLyTvTLiUtMkTaQANuCgpdU",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-YHlRMi",
+        "description": "-Fallback-scrubbed-jFWFxgvlCBNvqgNTQbPRjNPBaB", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8329, "unitPrice":
+        -58709.8696268851, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -43.4420553193469, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": -683628.741214423, "amountIncludingTax":
+        12114863.6094354, "invoiceDiscountAllocation": 3353, "netAmount": -43.4420553193469,
+        "netTaxAmount": -683628.741214423, "netAmountIncludingTax": 12114863.6094354,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-aFGFtNWUINfkTqkGGNgPQoFiKlVxkVsVLfGFmhMqkAOq",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MTMULMnsmmocYoXOZBVvXIEJGflWhxVcYLbo",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-SZdfCphVgdxRtaWMPfMJSiqIdEodqVaAMdZMPxoXsjxV",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MTMULMnsmmocYoXOZBVvXIEJGflWhxVcYLbo",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-MkOXjzlopWZnLdqtjJwFJwRHEtDEYYBfmzvPeEdiECqU",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MTMULMnsmmocYoXOZBVvXIEJGflWhxVcYLbo",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-XBoLnCUSSJvXEXSzQuheFfCHWYeOKwIBGIKiuAPOlcpj",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MTMULMnsmmocYoXOZBVvXIEJGflWhxVcYLbo",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-uTUZxBdaFqYBOlDDvmTDUXuSqraaasQxLyUVAxNqolTd", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-MTMULMnsmmocYoXOZBVvXIEJGflWhxVcYLbo", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-PKcCuBmpLgEAskiIUqZkGNxxUaqFjofuYVoTbPlPbEEH", "id": "934931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "documentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc", "sequence":
+        7864, "itemId": "-Fallback-scrubbed-PJYJbmhyCmLzxqtKZdSAnyJOZNqqEUBWCBCH",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-gvkyzX",
+        "description": "-Fallback-scrubbed-vByAyWFhnvjruBAaTZPcnkPPxHx", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 6851, "unitPrice":
+        -3.65172750522252, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -59364341.525406, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": -7227910829.78876, "amountIncludingTax":
+        765315.671853356, "invoiceDiscountAllocation": 3353, "netAmount": -59364341.525406,
+        "netTaxAmount": -7227910829.78876, "netAmountIncludingTax": 765315.671853356,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-tDdvVkIJHSvaZkvnceHURQBrqIIcyBYoexylFrwoZlMi",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-UwpCfxOfYzANvDBlHOiVugVoyagENOoKEytl",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-YywJGNTaWZfQHhOFcfUPOqwHRxytBfNckppElIwSIXFj",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-UwpCfxOfYzANvDBlHOiVugVoyagENOoKEytl",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-YNDvrzuCFLohWHwEfQigAQpMHFMAspfUjOPnLpjxEBDV",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-UwpCfxOfYzANvDBlHOiVugVoyagENOoKEytl",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-SDOXvGDXiKSamyzDhqXDStHbkfjTxKYNLZUKyUnCkzCE",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-UwpCfxOfYzANvDBlHOiVugVoyagENOoKEytl",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-ePxoSCcLHzUubGwnERZRRevBkcjFLKoIEZxSlRyMDVqI", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-UwpCfxOfYzANvDBlHOiVugVoyagENOoKEytl", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-KInzjddfxsDcvYaDSWTsWrnbWNgbmfXzKYdcVWLUOWBv", "id": "944931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "documentId": "-Fallback-scrubbed-gqHuMOABUoXDaUuGfIGHsCfZgHDPtBtSbzRc", "sequence":
+        9106, "itemId": "-Fallback-scrubbed-jkJVgIbpVuYBNbOPBUbDlcItQfkpygaFuYZp",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-ihQKYw",
+        "description": "-Fallback-scrubbed-MOHXqAKsUkbVMhJQveOAbCZU", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8195, "unitPrice":
+        -1.79962173257415, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 471185.486319651, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": -666158587356.385, "amountIncludingTax":
+        -8365553981.68637, "invoiceDiscountAllocation": 3353, "netAmount": 471185.486319651,
+        "netTaxAmount": -21995268.41961, "netAmountIncludingTax": 2461752036.25, "shipmentDate":
+        "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-DHRZtoPxTXgKoUAaOAHsIaEBdwnRbckFHNGhfGTXoGcl",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-VOSoJdORAknPJuxrXTOvGdxRaipvhMTzGCod",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-VZOCQKxxfNmMiVCDpoYvSBjCXUYlTKavgBwuLqwplUJS",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-VOSoJdORAknPJuxrXTOvGdxRaipvhMTzGCod",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-JPtOoGVIcqxxKvUiveYLFPOWuTgWvsIGuZvHNemVRPOp",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-VOSoJdORAknPJuxrXTOvGdxRaipvhMTzGCod",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-ONnpRwZIWXLVMpQOLfleMculXmEMxNsSXpgXHjpLJauw",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-VOSoJdORAknPJuxrXTOvGdxRaipvhMTzGCod",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-JDEfdXmbkoUybOkreCPRMrArJcHtwxYudAHKIRxpcoiD", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-VOSoJdORAknPJuxrXTOvGdxRaipvhMTzGCod", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-VVOoLYIUwOrTBCNjxOGWcEIsytnAIoalKvUndmtBAWlT", "id": "994931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "number": "-Fallback-scrubbed-EyAidGeXUdyu", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-YQqEeSYmEp", "postingDate": "-Fallback-scrubbed-YQqEeSYmEp",
+        "dueDate": "-Fallback-scrubbed-EPcaGpDoDm", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "David Bell", "customerId": "-Fallback-scrubbed-EvsgDOhNgNtvsOQHhAVDLOUAafxynZQzmAFV",
+        "customerNumber": "-Fallback-scrubbed-OKzfx", "customerName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws",
+        "billToName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws", "billToCustomerId":
+        "-Fallback-scrubbed-EvsgDOhNgNtvsOQHhAVDLOUAafxynZQzmAFV", "billToCustomerNumber":
+        "-Fallback-scrubbed-OKzfx", "shipToName": "-Fallback-scrubbed-yMsDQeCWjOGUhcQJws",
+        "shipToContact": "-Fallback-scrubbed-NlOteNvxoGD", "sellToAddressLine1": "62219
+        Foster Summit Apt. 287", "sellToAddressLine2": "David Bell", "sellToCity":
+        "Coleshire", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "Rhode
+        Island", "sellToPostCode": "17487", "billToAddressLine1": "62219 Foster Summit
+        Apt. 287", "billToAddressLine2": "David Bell", "billToCity": "Coleshire",
+        "billToCountry": "-Fallback-scrubbed-Iu", "billToState": "Rhode Island", "billToPostCode":
+        "17487", "shipToAddressLine1": "62219 Foster Summit Apt. 287", "shipToAddressLine2":
+        "David Bell", "shipToCity": "Coleshire", "shipToCountry": "-Fallback-scrubbed-Iu",
+        "shipToState": "Rhode Island", "shipToPostCode": "17487", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-hfDly", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-VpIrQjgeXcqnEriZuoPpbGZibFwHvSeHLreL",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        -466272.81975799, "totalTaxAmount": -411376.911132616, "totalAmountIncludingTax":
+        1601092397.97306, "status": "-Fallback-scrubbed-wTht", "lastModifiedDateTime":
+        "2026-02-18T21:23:05.157Z", "phoneNumber": "David Bell", "email": "obrienheather@example.com",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-XHHriGEuNMFqTYeZQfnyNENjSiUYYabWAKSddCeARGwb",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey
+        Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-QdQGzyHyjqcAJJaeouZzZNsrIGQvMjinbYQAqWCVARbW",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-JbvIGTjBHPKtIxliIiiwsiEALtoARvsVzmNBletlBqUk",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Paula
+        Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-eoCKCrFBcmYvrkeXKEZpaLFtBrJmUevpdiqGpcrvEvLM",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-AHMxFaUbiLgrevFNdCMjkIOnwXeBYUEVOxkQyXbZRBGB", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-atAXDMBTTekHIvPFZayLyDSdmNKlPVepsRInyNtkZbNQ",
+        "id": "9b4931b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-nWKeCUkWXdmVRUqTvenvrOGNfHtgEqPoOJYa",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-rGrgmD",
+        "description": "-Fallback-scrubbed-vaslMrApjbYvSCobYTCkVFC", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8264, "unitPrice":
+        -58709.8696268851, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -58709.8696268851, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": -82.9115954904293, "amountIncludingTax":
+        -4.14931681553677, "invoiceDiscountAllocation": 3353, "netAmount": -58709.8696268851,
+        "netTaxAmount": -783.416551944336, "netAmountIncludingTax": 6504685980449.5,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-rYsVlbXwlRkCXwBURzcRirnHwIzYmhMiTeaWJFcvudYx",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ZbxuTpEaIDSExueRqssuKpBqLAdZAvRpRxup",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-PPcmehOxOHMQzkOplfUmPklmGGcDEYbiVthSyNKnNJDT",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ZbxuTpEaIDSExueRqssuKpBqLAdZAvRpRxup",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-vOiGzfbEKpVShTUECBEUZISqGUUgETdNVuJasRdgQoqL",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ZbxuTpEaIDSExueRqssuKpBqLAdZAvRpRxup",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-htbnFVtFQXBQXXDxcESMCAfuBBOpwONfyjcddtTovMMo",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ZbxuTpEaIDSExueRqssuKpBqLAdZAvRpRxup",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-rTPTacPFwQaHwbiPcAAVvBHUHmHzCpdnzoalflzBjPRw", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-ZbxuTpEaIDSExueRqssuKpBqLAdZAvRpRxup", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-fXdhFyFAZVyxWVdIhSwsJYGKteudcbdBKWYieFCpNsYP", "id": "9c4931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "documentId": "-Fallback-scrubbed-MHXmSdhvUxztmTvIyEudgHtxhatOQaaUKtUs", "sequence":
+        5104, "itemId": "-Fallback-scrubbed-XXNVLajytlgtkgWqsgDetuiiJGUSrcirMTGE",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-YCgkwc",
+        "description": "-Fallback-scrubbed-OcjvbdHcqFPFSuXqsAtunDMukb", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 3141, "unitPrice":
+        -3.65172750522252, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 667936814170.322, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 5080, "totalTaxAmount": 8748206.98466562, "amountIncludingTax":
+        144514478037.5, "invoiceDiscountAllocation": 3353, "netAmount": 667936814170.322,
+        "netTaxAmount": 8748206.98466562, "netAmountIncludingTax": 144514478037.5,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-KQLMlCqQVjHCxWIscMdtNPOIaPgzLPTmwZWanxhIxxYF",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-LHNCTcdRueCOTumodOgerJnyTFIcyphhfTye",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-OZNIAuscsrNXkZoFJQBfENbENCDfKggdzzzDUCBNSmns",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-LHNCTcdRueCOTumodOgerJnyTFIcyphhfTye",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-HnQOqhZRwUQbZymyHqpsmTofwEltXWoeHfLTvJLYjuic",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-LHNCTcdRueCOTumodOgerJnyTFIcyphhfTye",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-qNLPjhJHfDMoIprJXEfgryZgDUyTSQAsIIQD",
+        "valueCode": "-Fallback-scrubbed-nJGF", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-Ufts"}, {"@odata.etag": "-Fallback-scrubbed-ufZdMjkgOggZSQZGaOeEgqRSoSZIxeYvLbGJeQqujSJB",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-LHNCTcdRueCOTumodOgerJnyTFIcyphhfTye",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-wscjaXNvVOSvbSnHeNQwEZIpgjujQyuXCadZ",
+        "valueCode": "-Fallback-scrubbed-hfDly", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-lJstTaZXZzfPrk"}, {"@odata.etag":
+        "-Fallback-scrubbed-oZluRiGljEdEvuNkSxQqbDpfJfRojoBsphSOTEsrzpZA", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-LHNCTcdRueCOTumodOgerJnyTFIcyphhfTye", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-rKqUhtEowVmwgzDebgGDddZtIFDvSrdVGcmAnuzFIDsT", "id": "fd4931b7-7b01-f111-a1fd-7ced8d2674f8",
+        "number": "-Fallback-scrubbed-xsSVDwIqvdgi", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-vdgDDFKXhA", "postingDate": "-Fallback-scrubbed-vdgDDFKXhA",
+        "dueDate": "-Fallback-scrubbed-iIQcoxiAed", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "David Bell", "customerId": "-Fallback-scrubbed-LeuJJBhndQPZZjtUpRBbYYOxzjipqsgcxzMQ",
+        "customerNumber": "-Fallback-scrubbed-fBtwS", "customerName": "-Fallback-scrubbed-qivEpxaoq",
+        "billToName": "-Fallback-scrubbed-qivEpxaoq", "billToCustomerId": "-Fallback-scrubbed-LeuJJBhndQPZZjtUpRBbYYOxzjipqsgcxzMQ",
+        "billToCustomerNumber": "-Fallback-scrubbed-fBtwS", "shipToName": "-Fallback-scrubbed-qivEpxaoq",
+        "shipToContact": "-Fallback-scrubbed-HWZzYPnEaiV", "sellToAddressLine1": "85817
+        Eric Course Apt. 290", "sellToAddressLine2": "David Bell", "sellToCity": "South
+        Ashley", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "-Fallback-scrubbed-JZ",
+        "sellToPostCode": "47266", "billToAddressLine1": "85817 Eric Course Apt. 290",
+        "billToAddressLine2": "David Bell", "billToCity": "South Ashley", "billToCountry":
+        "-Fallback-scrubbed-Iu", "billToState": "-Fallback-scrubbed-JZ", "billToPostCode":
+        "47266", "shipToAddressLine1": "85817 Eric Course Apt. 290", "shipToAddressLine2":
+        "David Bell", "shipToCity": "South Ashley", "shipToCountry": "-Fallback-scrubbed-Iu",
+        "shipToState": "-Fallback-scrubbed-JZ", "shipToPostCode": "47266", "currencyId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "shortcutDimension1Code":
+        "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code": "-Fallback-scrubbed-aFRrya",
+        "currencyCode": "-Fallback-scrubbed-pDY", "orderId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "orderNumber": "David Bell", "paymentTermsId": "-Fallback-scrubbed-fiZfAZFEOSUXYLvJVHtCmwufkfGoOcNyFhKl",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        -497.871260873224, "totalTaxAmount": -94449751.6659079, "totalAmountIncludingTax":
+        -48.2691961609294, "status": "-Fallback-scrubbed-wTht", "lastModifiedDateTime":
+        "2026-02-18T21:08:06.073Z", "phoneNumber": "David Bell", "email": "johnsonroger@example.com",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-LIyjOxKrzQOVxuRFbJLOrkZBkfGkzqSZXnJWfmfCVMXJ",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey
+        Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-ILcwzendrcrdugqZQjPXitTrVGZEsDAiEYBHgKJHxbwE",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-hsDkfouswdRnAsGSAuFAtvLSqaxGZuFwsOENKmSQnsAA",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Paula
+        Walton", "valueId": "-Fallback-scrubbed-erkpGQFaLSifheCHhpWTdIwseCPYHNRYcFzM",
+        "valueCode": "-Fallback-scrubbed-sMwrzG", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-yvgjiC"}, {"@odata.etag": "-Fallback-scrubbed-amrTrNTOvnXqiZlIgIxilWioRfDFzVpcZcsSPozNtekj",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-cBXogUpjmNRhAFRzpTQSQsiBeHAaiTseEDGn",
+        "valueCode": "-Fallback-scrubbed-aFRrya", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-RiFFkPRtManKfRm"}, {"@odata.etag":
+        "-Fallback-scrubbed-wNoHEgwByKJoOVxcHPPMUthgBdpiEripZNdBAgfLCKQX", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-cqYrCteMyUaaOqFYAcagQHgUVqoJcttBNUTVMqeRRuEb",
+        "id": "ff4931b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-chfulkZMqtfcGelKZBKUWVgDhhItrcVdXXMd",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-uBmuVW",
+        "description": "-Fallback-scrubbed-cqVLjGJANemGxPmHJcDEjmus", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8195, "unitPrice":
+        -46480.3485245, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -62700798995.2734, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 8195, "totalTaxAmount": -504.230505149382, "amountIncludingTax":
+        -4083595.4828927, "invoiceDiscountAllocation": 3353, "netAmount": -62700798995.2734,
+        "netTaxAmount": -504.230505149382, "netAmountIncludingTax": -4083595.4828927,
+        "shipmentDate": "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-BFNbXsZVgCikGuiZfBJuQTzKwJCvhzinqdCiTiMEyPoL",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-TAvkpwCNBfiCUVvGOmMmoRmDTFMlKfoUrSbS",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-wthwHzwttodHBNzXcAYogCchVrYtjCJypnCStQiHuKmQ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-TAvkpwCNBfiCUVvGOmMmoRmDTFMlKfoUrSbS",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-hJBCuKxzBzlAHUGAbnqFcxNQtBUiTheRWzulvOXoejAs",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-TAvkpwCNBfiCUVvGOmMmoRmDTFMlKfoUrSbS",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-erkpGQFaLSifheCHhpWTdIwseCPYHNRYcFzM",
+        "valueCode": "-Fallback-scrubbed-sMwrzG", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-yvgjiC"}, {"@odata.etag": "-Fallback-scrubbed-bqusrLTobIRvHUjZVhpsweiMvsfGGPLFdiqynysLkPuy",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-TAvkpwCNBfiCUVvGOmMmoRmDTFMlKfoUrSbS",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-cBXogUpjmNRhAFRzpTQSQsiBeHAaiTseEDGn",
+        "valueCode": "-Fallback-scrubbed-aFRrya", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-RiFFkPRtManKfRm"}, {"@odata.etag":
+        "-Fallback-scrubbed-RWXOTnvpQlkHzufcAAQAeuTGKKiulinmHcepzZLnkKZT", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-TAvkpwCNBfiCUVvGOmMmoRmDTFMlKfoUrSbS", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-extuCAbLfKYgbSxNgScrzgpcpBcLyYJbbALSTniMsZuQ", "id": "004a31b7-7b01-f111-a1fd-7ced8d2674f8",
+        "documentId": "-Fallback-scrubbed-bZCORcwXzhnpsivryPZQhjhVnukAqCgqmAaK", "sequence":
+        5104, "itemId": "-Fallback-scrubbed-PnjuZzCvuJuDFMnViyEXGdfAKuXbXApyRUFJ",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-hDIiaW",
+        "description": "-Fallback-scrubbed-TwIScwuoPaoVTFjRFzmBJJ", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 3141, "unitPrice":
+        -58709.8696268851, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 2591, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 8195, "totalTaxAmount": 1256632472.98831, "amountIncludingTax":
+        -1909.22329243, "invoiceDiscountAllocation": 3353, "netAmount": 2591, "netTaxAmount":
+        1256632472.98831, "netAmountIncludingTax": -1909.22329243, "shipmentDate":
+        "-Fallback-scrubbed-nPtpbRUqya", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-SiOEZegVkVOIwfqtjnHWdTBgtLAKCDPTaZfINSGeBuUc",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sGhUpdCdxNIumeIAPjjrUYRmCNMXOGScracF",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-QbfOhAbCLugUiYdIYKQcrcrifBHxROPaGRTENirSsfkV",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sGhUpdCdxNIumeIAPjjrUYRmCNMXOGScracF",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-gmbqmgVrAIzdxRsHimeLekjbqdcWzApCKzKJldWruJLi",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OyHxLsjtaIeZp",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sGhUpdCdxNIumeIAPjjrUYRmCNMXOGScracF",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Paula Walton", "valueId": "-Fallback-scrubbed-erkpGQFaLSifheCHhpWTdIwseCPYHNRYcFzM",
+        "valueCode": "-Fallback-scrubbed-sMwrzG", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-yvgjiC"}, {"@odata.etag": "-Fallback-scrubbed-dFiAaLIUedZAwbVhpDWSPFmeLqWOztVSZqFoEiJUGtqX",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-sGhUpdCdxNIumeIAPjjrUYRmCNMXOGScracF",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-cBXogUpjmNRhAFRzpTQSQsiBeHAaiTseEDGn",
+        "valueCode": "-Fallback-scrubbed-aFRrya", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-RiFFkPRtManKfRm"}, {"@odata.etag":
+        "-Fallback-scrubbed-tToTRNgYiFVkBVrxloaSacwuTaatuOOlwUGCGCwvXPdt", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-sGhUpdCdxNIumeIAPjjrUYRmCNMXOGScracF", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-OMgxhvbteeOkFIsHMeqvYYYPbOcZAUSimFDzgkhYchPz", "id": "dcfb3df9-fb0c-f111-8405-002248340352",
+        "number": "-Fallback-scrubbed-xkhYQewiafJn", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-lRtIkJBuKm", "postingDate": "-Fallback-scrubbed-lRtIkJBuKm",
+        "dueDate": "-Fallback-scrubbed-bKBLHYuKku", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "David Bell", "customerId": "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI",
+        "customerNumber": "-Fallback-scrubbed-wOdqz", "customerName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "billToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB", "billToCustomerId":
+        "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI", "billToCustomerNumber":
+        "-Fallback-scrubbed-wOdqz", "shipToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "shipToContact": "-Fallback-scrubbed-tsjhwkscqLigk", "sellToAddressLine1":
+        "86772 Ashley Plains", "sellToAddressLine2": "David Bell", "sellToCity": "South
+        Ashley", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "-Fallback-scrubbed-JZ",
+        "sellToPostCode": "47266", "billToAddressLine1": "86772 Ashley Plains", "billToAddressLine2":
+        "David Bell", "billToCity": "South Ashley", "billToCountry": "-Fallback-scrubbed-Iu",
+        "billToState": "-Fallback-scrubbed-JZ", "billToPostCode": "47266", "shipToAddressLine1":
+        "86772 Ashley Plains", "shipToAddressLine2": "David Bell", "shipToCity": "South
+        Ashley", "shipToCountry": "-Fallback-scrubbed-Iu", "shipToState": "-Fallback-scrubbed-JZ",
+        "shipToPostCode": "47266", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-njXdH", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-RgqxXDZyZGhXPbfygkXAfyUgnSsxyAzyXpxp",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        1722, "totalTaxAmount": -8.48922639058886, "totalAmountIncludingTax": -918.681560154431,
+        "status": "-Fallback-scrubbed-wTht", "lastModifiedDateTime": "2026-02-18T21:08:34.933Z",
+        "phoneNumber": "David Bell", "email": "wgregory@example.net", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-CXdNOyhsqgjiVSlPUSOwvBYBjlxrXzZZDOeZGZetgZfQ",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-dbCFswxTStpwEtTGwZyvInPVooAbHjpzjLZg",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey
+        Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-ijFWCiuIBBiBHDwyVOXkeacaPcylkPxrgqBnblPzVOsq",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-dbCFswxTStpwEtTGwZyvInPVooAbHjpzjLZg",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-QyolwaQbyrJuGKWbtMeqrPWzjFDdASDeqyqTWhDnrbEH",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-dbCFswxTStpwEtTGwZyvInPVooAbHjpzjLZg",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-fuYrUqGZeSZqYMCpYwsZpFbUcxAdygJzdyyIbkUMgNTK", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-dbCFswxTStpwEtTGwZyvInPVooAbHjpzjLZg", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-tVEVASWUQACOcuEiHeZTdsuUtgaQRiaMLGcySngtWmVY",
+        "id": "b8e1750b-fc0c-f111-8405-002248340352", "documentId": "-Fallback-scrubbed-dbCFswxTStpwEtTGwZyvInPVooAbHjpzjLZg",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-NCvrHiPARQGTNUubAjgpmvLVOBVqwkpsjPKs",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-QHgmae",
+        "description": "-Fallback-scrubbed-sRPWvqjwegJyNP", "description2": "David
+        Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8264, "unitPrice":
+        51240051886.4662, "discountAmount": 75527.7100472383, "discountPercent": -135.888955611303,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1722, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 8195, "totalTaxAmount": -8.48922639058886, "amountIncludingTax":
+        -918.681560154431, "invoiceDiscountAllocation": 3353, "netAmount": 1722, "netTaxAmount":
+        -8.48922639058886, "netAmountIncludingTax": -918.681560154431, "shipmentDate":
+        "-Fallback-scrubbed-NnBKmCrkPI", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-DysjVOxMgDThYymPGUcPAsoiygmiRyLKsbZLKIvvShsP",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ALIqeCCeKXlIoSLAuvUnjHOiaOlnbSmvIBXd",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-JDNpUkaTrexnZFBHTXUwezPLOfUBYUqIKPwOfZZWJRdQ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ALIqeCCeKXlIoSLAuvUnjHOiaOlnbSmvIBXd",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-QzeMWhqWMggNBGrSliXJwDqXOEiiYAYFPJICFOnPQRIK",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-ALIqeCCeKXlIoSLAuvUnjHOiaOlnbSmvIBXd",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-QyOmoEAVGHlCVTGKpaGNPcNuATncliiWVPylEWxqSSlO", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-ALIqeCCeKXlIoSLAuvUnjHOiaOlnbSmvIBXd", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-FArSvjuWwfqKFRwErlRFclkwJwqUlyaooPfSEJSEfaPr", "id": "0b657e71-de0c-f111-8405-002248340352",
+        "number": "-Fallback-scrubbed-mUHYjhNBFmC", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-NnBKmCrkPI", "postingDate": "-Fallback-scrubbed-NnBKmCrkPI",
+        "dueDate": "-Fallback-scrubbed-jONsFxJaBK", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "David Bell", "customerId": "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI",
+        "customerNumber": "-Fallback-scrubbed-wOdqz", "customerName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "billToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB", "billToCustomerId":
+        "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI", "billToCustomerNumber":
+        "-Fallback-scrubbed-wOdqz", "shipToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "shipToContact": "-Fallback-scrubbed-tsjhwkscqLigk", "sellToAddressLine1":
+        "86772 Ashley Plains", "sellToAddressLine2": "David Bell", "sellToCity": "South
+        Ashley", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "-Fallback-scrubbed-JZ",
+        "sellToPostCode": "47266", "billToAddressLine1": "86772 Ashley Plains", "billToAddressLine2":
+        "David Bell", "billToCity": "South Ashley", "billToCountry": "-Fallback-scrubbed-Iu",
+        "billToState": "-Fallback-scrubbed-JZ", "billToPostCode": "47266", "shipToAddressLine1":
+        "86772 Ashley Plains", "shipToAddressLine2": "David Bell", "shipToCity": "South
+        Ashley", "shipToCountry": "-Fallback-scrubbed-Iu", "shipToState": "-Fallback-scrubbed-JZ",
+        "shipToPostCode": "47266", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-njXdH", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-RgqxXDZyZGhXPbfygkXAfyUgnSsxyAzyXpxp",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        -555.413406286094, "discountAmount": 3353, "discountAppliedBeforeTax": true,
+        "totalAmountExcludingTax": 788891591414.164, "totalTaxAmount": 876.227219259937,
+        "totalAmountIncludingTax": -555.413406286094, "status": "-Fallback-scrubbed-XSZos",
+        "lastModifiedDateTime": "2026-02-18T17:31:15.943Z", "phoneNumber": "David
+        Bell", "email": "wgregory@example.net", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-WlxhoOBtUuTOKdAOcrtwxtEfbXYXEBSolkMpwREcTHpl", "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-QWWYipkbziy", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey Copeland",
+        "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW", "valueCode":
+        "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell", "valueDisplayName":
+        "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-leOVPDBRNVWKqeqsGcGXSYnwMiWwcdtuXFWMVSDVWfBu",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-bMiQfBbiJiQFWoRYUEGyQfapjaBJFBmTIjxqTXdPFrjc",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-INgBxLFWfCKcHcPHREXLBtQkoVjXMZHVBCqtBBTuWfsU", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-JZdweNfPQYnMLpwjxYFuELfizcWJmgHmNPAGJHlu",
+        "id": "0c7fd690-de0c-f111-8405-002248340352", "documentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp",
+        "sequence": 6336, "itemId": "-Fallback-scrubbed-qNVcyLTEdBTIFUNeAKBEVREiADRGPytatAuS",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-dveDA",
+        "description": "-Fallback-scrubbed-rnNypzFXqGz", "description2": "David Bell",
+        "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 1528, "unitPrice":
+        5441, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 8101, "taxCode": "-Fallback-scrubbed-ldsVPTtOjv",
+        "taxPercent": 3353, "totalTaxAmount": 3353, "amountIncludingTax": -13.98006718342,
+        "invoiceDiscountAllocation": 3353, "netAmount": 8101, "netTaxAmount": 3353,
+        "netAmountIncludingTax": 8101, "shipmentDate": "-Fallback-scrubbed-NnBKmCrkPI",
+        "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-CortRXCnySArudCLWHsotpIudykboERxmeCn", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-PdCrGqYCrUaqCocVkAkeXxIvvLwTYfJLbtqtuAKRYZQn",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-XjxMlblSiTUGlSnleTqubnlXofxMYxHcpkwr",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-GEBiTwCGmAShYiMupwvkIGutctPZvikLziAzRjhLrHXQ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-XjxMlblSiTUGlSnleTqubnlXofxMYxHcpkwr",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-czJrZxAMMGBnUavLkBiMWVyFKeoUYpkzxdKEEejiPbjU",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-XjxMlblSiTUGlSnleTqubnlXofxMYxHcpkwr",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-WwgSLMYcbbTBGSPbKRGNITxQJCbsyxXLEAqjOXxOxMqh", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-XjxMlblSiTUGlSnleTqubnlXofxMYxHcpkwr", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-lfVlzbPuBlwkMIlhrhmlAJCEFdMCOrBzjfHrkZYwnnEm", "id": "ccb660f7-e60c-f111-8405-002248340352",
+        "documentId": "-Fallback-scrubbed-PTXlrVMxwvWjIvaqmjoIKFgTEoSorlWYMXvp", "sequence":
+        5104, "itemId": "-Fallback-scrubbed-TJszeHVwiZOSPlbYAKbvWnccBYxTszrZAqlE",
+        "accountId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "lineType":
+        "-Fallback-scrubbed-WlUV", "lineObjectNumber": "-Fallback-scrubbed-WiEFbK",
+        "description": "-Fallback-scrubbed-VIpQdGnCWtJqBHwcDNWmbM", "description2":
+        "David Bell", "unitOfMeasureId": "-Fallback-scrubbed-bleNLzUEGHNpRKhxpBUbiCZabOwVVrRFZBtK",
+        "unitOfMeasureCode": "-Fallback-scrubbed-oiH", "quantity": 8264, "unitPrice":
+        498082536.46737, "discountAmount": 3353, "discountPercent": 3353, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 498082536.46737, "taxCode": "-Fallback-scrubbed-hTsgNsXQo",
+        "taxPercent": 618.381779622146, "totalTaxAmount": 876.227219259937, "amountIncludingTax":
+        -332.62912218792, "invoiceDiscountAllocation": 3353, "netAmount": 498082536.46737,
+        "netTaxAmount": 876.227219259937, "netAmountIncludingTax": -332.62912218792,
+        "shipmentDate": "-Fallback-scrubbed-NnBKmCrkPI", "itemVariantId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "locationId": "-Fallback-scrubbed-CortRXCnySArudCLWHsotpIudykboERxmeCn", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-iYRFBpZdzFZCjAEHUJGZhCOVwHJqYOFPcNZAzqMiooCP",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QWWYipkbziy",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-oEAXpLvxNZlltkbdeQcnQeTNiEeyCXadRoAY",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Hailey Copeland", "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW",
+        "valueCode": "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-JIVlOTIHeYCRCPJZEwEuWRsmccPtriPUcTFcnEMPBevj",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-oEAXpLvxNZlltkbdeQcnQeTNiEeyCXadRoAY",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Brian Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-RrEAlaOtVXIZkmJgoKDKFOGFIasVMUKnlmBruvzDxcEa",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-oEAXpLvxNZlltkbdeQcnQeTNiEeyCXadRoAY",
+        "parentType": "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName":
+        "Frank Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-gfAZXyqsoMXUusVuLruwaXQXGQzXOmCmMdAbWGIELxXV", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-oEAXpLvxNZlltkbdeQcnQeTNiEeyCXadRoAY", "parentType":
+        "-Fallback-scrubbed-FsLdnmFbhWTTQEzWUXQvCbGRXSblpK", "displayName": "Dylan
+        Patton", "valueId": "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH",
+        "valueCode": "-Fallback-scrubbed-puwHZ", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-JvSUrywuSXSbHNVzMbDatBycCFPxxargLxFtYDWGihLG", "id": "def6f219-9d0d-f111-8405-002248340352",
+        "number": "-Fallback-scrubbed-bNrumqJXnSW", "externalDocumentNumber": "David
+        Bell", "invoiceDate": "-Fallback-scrubbed-ZOWtRfujTt", "postingDate": "-Fallback-scrubbed-ZOWtRfujTt",
+        "dueDate": "-Fallback-scrubbed-EPcaGpDoDm", "promisedPayDate": "-Fallback-scrubbed-HDTmKxUwOd",
+        "customerPurchaseOrderReference": "David Bell", "customerId": "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI",
+        "customerNumber": "-Fallback-scrubbed-wOdqz", "customerName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "billToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB", "billToCustomerId":
+        "-Fallback-scrubbed-PvHTZiMKJfDWyNBrWrSenCQMqhZQPIVjlYMI", "billToCustomerNumber":
+        "-Fallback-scrubbed-wOdqz", "shipToName": "-Fallback-scrubbed-ELRqWGoURuWHpiHwlB",
+        "shipToContact": "-Fallback-scrubbed-tsjhwkscqLigk", "sellToAddressLine1":
+        "86772 Ashley Plains", "sellToAddressLine2": "David Bell", "sellToCity": "South
+        Ashley", "sellToCountry": "-Fallback-scrubbed-Iu", "sellToState": "-Fallback-scrubbed-JZ",
+        "sellToPostCode": "47266", "billToAddressLine1": "86772 Ashley Plains", "billToAddressLine2":
+        "David Bell", "billToCity": "South Ashley", "billToCountry": "-Fallback-scrubbed-Iu",
+        "billToState": "-Fallback-scrubbed-JZ", "billToPostCode": "47266", "shipToAddressLine1":
+        "86772 Ashley Plains", "shipToAddressLine2": "David Bell", "shipToCity": "South
+        Ashley", "shipToCountry": "-Fallback-scrubbed-Iu", "shipToState": "-Fallback-scrubbed-JZ",
+        "shipToPostCode": "47266", "currencyId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "shortcutDimension1Code": "-Fallback-scrubbed-puwHZ", "shortcutDimension2Code":
+        "-Fallback-scrubbed-njXdH", "currencyCode": "-Fallback-scrubbed-pDY", "orderId":
+        "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal", "orderNumber":
+        "David Bell", "paymentTermsId": "-Fallback-scrubbed-RgqxXDZyZGhXPbfygkXAfyUgnSsxyAzyXpxp",
+        "shipmentMethodId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "salesperson": "-Fallback-scrubbed-Pb", "disputeStatusId": "-Fallback-scrubbed-BUBGvLNHGRInWBpUOqEYPGyiVuaIWLfvIdal",
+        "disputeStatus": "David Bell", "pricesIncludeTax": true, "remainingAmount":
+        3353, "discountAmount": 3353, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        3353, "totalTaxAmount": 3353, "totalAmountIncludingTax": 3353, "status": "-Fallback-scrubbed-XSZos",
+        "lastModifiedDateTime": "2026-02-19T14:13:40.873Z", "phoneNumber": "David
+        Bell", "email": "wgregory@example.net", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-jMWKTHubulmRKxHUnBolpoNaSBQbCsKzRPiSAUCjWbiK", "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-QWWYipkbziy", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-KUCIuHbpgSgITqkwJBwSWfBfqLZjpbLuLkJh", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Hailey Copeland",
+        "valueId": "-Fallback-scrubbed-HIKRAMthgvUJZhQeSuszbJTYzUAHscMINOfW", "valueCode":
+        "-Fallback-scrubbed-Pb", "valueConsolidationCode": "David Bell", "valueDisplayName":
+        "-Fallback-scrubbed-IbythgcHC"}, {"@odata.etag": "-Fallback-scrubbed-vhrlrIMLRvivwsngRBGOmikOsJIhqjwuxwUNCjpwHIlw",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gfiK",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-KUCIuHbpgSgITqkwJBwSWfBfqLZjpbLuLkJh",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Brian
+        Thompson", "valueId": "-Fallback-scrubbed-qIzvaWLtwocWwosFOSpBEfieJHjdGfVgtxeM",
+        "valueCode": "-Fallback-scrubbed-IU", "valueConsolidationCode": "David Bell",
+        "valueDisplayName": "-Fallback-scrubbed-yNGsjHTPVddeq"}, {"@odata.etag": "-Fallback-scrubbed-gGONPvQdxeHttjcdmPWfPIaMBMAtvxpgyhDBAboBBkjR",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-yyJoiSyjOcxxG",
+        "consolidationCode": "David Bell", "parentId": "-Fallback-scrubbed-KUCIuHbpgSgITqkwJBwSWfBfqLZjpbLuLkJh",
+        "parentType": "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Frank
+        Compton", "valueId": "-Fallback-scrubbed-nFIXDugbqipodqhVBSmgxshnJisAxlbpktLe",
+        "valueCode": "-Fallback-scrubbed-njXdH", "valueConsolidationCode": "David
+        Bell", "valueDisplayName": "-Fallback-scrubbed-oLzKvbdaTiOxfc"}, {"@odata.etag":
+        "-Fallback-scrubbed-YrYnkSuhGyKHJCiGRVafkLMdPJwYlgsdscGDOIZFrFuq", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-ChIrnFqCFD", "consolidationCode": "David Bell",
+        "parentId": "-Fallback-scrubbed-KUCIuHbpgSgITqkwJBwSWfBfqLZjpbLuLkJh", "parentType":
+        "-Fallback-scrubbed-HhoiyHqsrKrzoxIGcze", "displayName": "Dylan Patton", "valueId":
+        "-Fallback-scrubbed-XIjiVUmrAPUkNvVpfZMFxJfRlFFXLJyxoOQH", "valueCode": "-Fallback-scrubbed-puwHZ",
+        "valueConsolidationCode": "David Bell", "valueDisplayName": "-Fallback-scrubbed-nZGbf"}],
+        "salesInvoiceLines": []}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:24:57 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - b1292c34-2a95-45aa-8d1d-62ce0907804a
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '58818'
+      mise-correlation-id:
+      - 9b965add-5dce-4172-94be-4216989b5bb8
+      ms-correlation-x:
+      - f36d3929-8fc5-51b9-444e-93cc504b2720
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

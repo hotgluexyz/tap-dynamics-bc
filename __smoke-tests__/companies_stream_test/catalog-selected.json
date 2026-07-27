@@ -1,0 +1,337 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "companies",
+      "replication_method": "FULL_TABLE",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "systemVersion": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "businessProfileId": {
+            "type": ["string", "null"]
+          },
+          "systemCreatedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemCreatedBy": {
+            "type": ["string", "null"]
+          },
+          "systemModifiedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemModifiedBy": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "companies",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemVersion"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "businessProfileId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "company_information",
+      "replication_method": "FULL_TABLE",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "addressLine1": {
+            "type": ["string", "null"]
+          },
+          "addressLine2": {
+            "type": ["string", "null"]
+          },
+          "city": {
+            "type": ["string", "null"]
+          },
+          "state": {
+            "type": ["string", "null"]
+          },
+          "country": {
+            "type": ["string", "null"]
+          },
+          "postalCode": {
+            "type": ["string", "null"]
+          },
+          "phoneNumber": {
+            "type": ["string", "null"]
+          },
+          "faxNumber": {
+            "type": ["string", "null"]
+          },
+          "email": {
+            "type": ["string", "null"]
+          },
+          "website": {
+            "type": ["string", "null"]
+          },
+          "taxRegistrationNumber": {
+            "type": ["string", "null"]
+          },
+          "currencyCode": {
+            "type": ["string", "null"]
+          },
+          "currentFiscalYearStartDate": {
+            "type": ["string", "null"]
+          },
+          "industry": {
+            "type": ["string", "null"]
+          },
+          "picture@odata.mediaReadLink": {
+            "type": ["string", "null"]
+          },
+          "lastModifiedDateTime": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "company_id": {
+            "type": ["string", "null"]
+          },
+          "company_name": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "company_information",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "addressLine1"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "addressLine2"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "city"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "state"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "country"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "postalCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "phoneNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "faxNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "email"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "website"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "taxRegistrationNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currencyCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currentFiscalYearStartDate"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "industry"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "picture@odata.mediaReadLink"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "lastModifiedDateTime"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_id"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"]
+          }
+        }
+      ]
+    }
+  ]
+}

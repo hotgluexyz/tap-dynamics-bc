@@ -1,0 +1,577 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-awTDUH", "scope": "-Fallback-scrubbed-WsZSDsjyAxzXLiwKmbDJErbNfmgiRHlAprQQRnsnDSV",
+        "expires_in": "4900", "ext_expires_in": "-Fallback-scrubbed-CafW", "expires_on":
+        "-Fallback-scrubbed-kFKyssZZFm", "not_before": "-Fallback-scrubbed-rBeiCxJzWY",
+        "resource": "-Fallback-scrubbed-dVgmCVjLNXXXlUetLamGEnErPyoYlmkihhyCfAwz",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-0ONq9XarK-dKjyNc6yR9Gg'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:22 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AuxBzCzWJvZApoE448qvTEHoOlVYAQAAANrR8eEOAAAA; expires=Thu, 20-Aug-2026
+        20:47:23 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - EUS ProdSlices
+      x-ms-request-id:
+      - aa679238-f2ea-4f67-8048-649aac725300
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-lrkicazFpRchxQNaedOJxmYuFtOELzspmDCN",
+        "applicationFamily": "-Fallback-scrubbed-ZJrhhiQgMvjWTsO", "type": "-Fallback-scrubbed-pXNqFrV",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Cg", "webServiceUrl":
+        "-Fallback-scrubbed-dVgmCVjLNXXXlUetLamGEnErPyoYlmkihhyCfAwz", "webClientLoginUrl":
+        "-Fallback-scrubbed-oprVLCglRaWJEEwrgRgOtQMfhcJKZUVfFPWP"}, {"aadTenantId":
+        "-Fallback-scrubbed-lrkicazFpRchxQNaedOJxmYuFtOELzspmDCN", "applicationFamily":
+        "-Fallback-scrubbed-ZJrhhiQgMvjWTsO", "type": "-Fallback-scrubbed-dpckLSMcFo",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-cW", "webServiceUrl":
+        "-Fallback-scrubbed-dVgmCVjLNXXXlUetLamGEnErPyoYlmkihhyCfAwz", "webClientLoginUrl":
+        "-Fallback-scrubbed-oprVLCglRaWJEEwrgRgOtQMfhcJKZUVfFPWP"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:23 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 8746e52b-c804-4aea-a7c7-6ee142fea439
+      ms-correlation-x:
+      - aa72317b-f9f4-1a60-47e4-a77db2347b7a
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-BqyHEhGGjMuFnezbbDaJScFVGxZcFlWwDFcgrXyLnDMRhqzOmsvKoFuCiytRpNIZHAGQemWxehOONeNGsnwFN",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-PdHpOuHSQisGNfYT", "timestamp": 3619, "name": "CRONUS
+        USA, Inc.", "displayName": "Ryan Miller", "businessProfileId": "Ryan Miller",
+        "systemCreatedAt": "-Fallback-scrubbed-LVbtVmDODlhphyFUAkRDcwTg", "systemCreatedBy":
+        "-Fallback-scrubbed-ztJJxsKbWAyptztnhHKATGNwNKMjQFKxPhkO", "systemModifiedAt":
+        "-Fallback-scrubbed-LVbtVmDODlhphyFUAkRDcwTg", "systemModifiedBy": "-Fallback-scrubbed-ztJJxsKbWAyptztnhHKATGNwNKMjQFKxPhkO"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:23 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - cb806e05-577c-4bf2-9920-63e0b3fba1ce
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - a2ef79fe-7b15-42ee-83c5-606ff483133e
+      ms-correlation-x:
+      - 0b6dd124-0343-40df-aafd-b385f54f8632
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-XrVXwrAQgHtnmNiIuobAFJFFHALLioOeQMZzWLjZlBFZhBTssMQRijBFNIbBujIEUmnAwrtJgyTmUrrTWvgnxCzNVjsWtZEzGIsEJkXUssVNYQgmnpDhTPETFLIuvkhgDbZDQOBysXBROR",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-gRTJsjMveSCzSizyYkmWQyMxRbrHvKLAytVNhzxhPLpc",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Catherine White",
+        "addressLine1": "816 White Ways Suite 211", "addressLine2": "254 Morgan Corner
+        Suite 696", "city": "Benjaminton", "state": "-Fallback-scrubbed-vX", "country":
+        "-Fallback-scrubbed-cW", "postalCode": "33283", "phoneNumber": "303.538.1036x7049",
+        "faxNumber": "-Fallback-scrubbed-IiDlVcEEgbcJfjG", "email": "Ryan Miller",
+        "website": "Ryan Miller", "taxRegistrationNumber": "Ryan Miller", "currencyCode":
+        "-Fallback-scrubbed-bQs", "currentFiscalYearStartDate": "-Fallback-scrubbed-qxbnlKXVVm",
+        "industry": "Ryan Miller", "experience": "-Fallback-scrubbed-NkJWKQtEy", "lastModifiedDateTime":
+        "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink": "-Fallback-scrubbed-kkZfwLoEiJbRVNqrybXlxECIDqXkyUfDACYvemQriQCcrrIClqzYyXpPXvpWsPnrpDallltgCCXTOsnqYkjrsacylplJzgjIvefUaDMIeTPtsMSSmJEafbuPifXNBBAahWMJTtJiXNgfXepPvdUHkTLbkxOByCTzKwyidumhRgicEadmee"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:24 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - a64a0dff-5d8f-4944-90e7-f25b598bb3b1
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 6e820e20-3541-4c4e-b7c8-6545c2205ade
+      ms-correlation-x:
+      - d16199da-f0cc-aada-3677-b6a0de5b13f5
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-lrkicazFpRchxQNaedOJxmYuFtOELzspmDCN",
+        "applicationFamily": "-Fallback-scrubbed-ZJrhhiQgMvjWTsO", "type": "-Fallback-scrubbed-pXNqFrV",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Cg", "webServiceUrl":
+        "-Fallback-scrubbed-dVgmCVjLNXXXlUetLamGEnErPyoYlmkihhyCfAwz", "webClientLoginUrl":
+        "-Fallback-scrubbed-oprVLCglRaWJEEwrgRgOtQMfhcJKZUVfFPWP"}, {"aadTenantId":
+        "-Fallback-scrubbed-lrkicazFpRchxQNaedOJxmYuFtOELzspmDCN", "applicationFamily":
+        "-Fallback-scrubbed-ZJrhhiQgMvjWTsO", "type": "-Fallback-scrubbed-dpckLSMcFo",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-cW", "webServiceUrl":
+        "-Fallback-scrubbed-dVgmCVjLNXXXlUetLamGEnErPyoYlmkihhyCfAwz", "webClientLoginUrl":
+        "-Fallback-scrubbed-oprVLCglRaWJEEwrgRgOtQMfhcJKZUVfFPWP"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:26 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 3b58178f-bd1f-494c-9c23-ec477f08110a
+      ms-correlation-x:
+      - 874eaa2f-2da6-b8c2-d319-54aab074d873
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/microsoft/reportsFinance/beta/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/dimensionValues
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-RJKxpYDGaeQomKqBwlIYEOiqfqJgLOgqfYbnRCVOYIgFNWeYcOINsrzSWWKmFgjjYcUAxDuhBbOlzoMTmQalZsaxGybofiolMLqvEjUtUoBirJpqCtTUmIEyvsBdISzZXIeGbgSXToCOztWCbnOKyBuyVZsgRQslOrGS",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-hSMrXsFsQbzoiEaSDNuGJvervhbldYFVshBVZXQwjTuh",
+        "id": "0f91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-lc", "dimensionValueName": "-Fallback-scrubbed-DvKWzH",
+        "dimensionValueId": 2915, "dimensionValueType": "-Fallback-scrubbed-GdBLvnwmYHE",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.703Z"},
+        {"@odata.etag": "-Fallback-scrubbed-zmrUtkuZtMwZshSWUCgNtSvHVdjQFVwfTeknOqulMzaQ",
+        "id": "1091419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-pR", "dimensionValueName": "-Fallback-scrubbed-CjkwaZYhyUum",
+        "dimensionValueId": 7347, "dimensionValueType": "-Fallback-scrubbed-GdBLvnwmYHE",
+        "blocked": false, "indentation": 2915, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-pWZklxyGFThUTErqQEQglKeqCShseOfxtfwpAXTtKcGy",
+        "id": "1191419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-es", "dimensionValueName": "-Fallback-scrubbed-OqnzwbqtRNeybuzOy",
+        "dimensionValueId": 812, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 7347, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-uxSVfCiHcLxWMwpNVKLPdGPHQTkUXgPhvhnsywkdKbSF",
+        "id": "1291419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-NC", "dimensionValueName": "-Fallback-scrubbed-igtoarpTOJgWKyMdculcx",
+        "dimensionValueId": 735, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 7347, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-AlkkRpBqBciTPqylTFbBAtpGRuqVtshrzGSRQbThjePl",
+        "id": "1391419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-IF", "dimensionValueName": "-Fallback-scrubbed-asrOoViJhNdhpzwBYZq",
+        "dimensionValueId": 782, "dimensionValueType": "-Fallback-scrubbed-UouOYumMB",
+        "blocked": false, "indentation": 2915, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-qCkMMOiIUdcnvESmcYYoQIScqbvMgycpzSPBjFiABtfR",
+        "id": "1491419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-iR", "dimensionValueName": "-Fallback-scrubbed-nKlMNdTDpvZe",
+        "dimensionValueId": 642, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 2915, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-tGCJjzRqFJeCeVPeNkzhEAQYEiATdtciuHyPohAZFDso",
+        "id": "1591419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-DC", "dimensionValueName": "-Fallback-scrubbed-zGmqVUwKAUdlk",
+        "dimensionValueId": 5240, "dimensionValueType": "-Fallback-scrubbed-UouOYumMB",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.717Z"},
+        {"@odata.etag": "-Fallback-scrubbed-DgyKIXmiOdIiwVcThyvCjnRJuzrNrzSuoeOvzjNKvGnD",
+        "id": "1691419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-FU", "dimensionValueName": "-Fallback-scrubbed-AMWIIsO",
+        "dimensionValueId": 4338, "dimensionValueType": "-Fallback-scrubbed-GdBLvnwmYHE",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.717Z"},
+        {"@odata.etag": "-Fallback-scrubbed-llqaIoazMZpPiTmsElHShgQOLUBPMjGKlNBePoWVGkhG",
+        "id": "1791419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-BT", "dimensionValueName": "-Fallback-scrubbed-THRuEytBTNhfr",
+        "dimensionValueId": 166, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 2915, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.76Z"},
+        {"@odata.etag": "-Fallback-scrubbed-DvmTUHHjxwWWlgbRbDojMqwjrBjNzxRXtCjvxHYhpIhk",
+        "id": "1891419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-Jr", "dimensionValueName": "-Fallback-scrubbed-nwAQYSzGDVNpM",
+        "dimensionValueId": 7248, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 2915, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.76Z"},
+        {"@odata.etag": "-Fallback-scrubbed-aOwYhsMBFQLimouQbRNqBQOfIZQZgckqEhUNSGUfIVRt",
+        "id": "1991419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tmDt",
+        "dimensionValueCode": "-Fallback-scrubbed-hb", "dimensionValueName": "-Fallback-scrubbed-BONHHFSmBlmpWK",
+        "dimensionValueId": 8855, "dimensionValueType": "-Fallback-scrubbed-UouOYumMB",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-aJvwnhQNtKPsBHvaJfbJVoPJEhATnjlMeaEEVejnrgbq",
+        "id": "1a91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nxqjFazgGRJwe",
+        "dimensionValueCode": "-Fallback-scrubbed-GTnJ", "dimensionValueName": "-Fallback-scrubbed-DCpg",
+        "dimensionValueId": 4813, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-pFDKKfcQuQyHaDukCsLuBNiUIxLnGxPBIzMrWWpjYSOg",
+        "id": "1b91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nxqjFazgGRJwe",
+        "dimensionValueCode": "-Fallback-scrubbed-bwljSeasDp", "dimensionValueName":
+        "-Fallback-scrubbed-oHXoMBLvvK", "dimensionValueId": 993, "dimensionValueType":
+        "-Fallback-scrubbed-zScpExCc", "blocked": false, "indentation": 1294, "consolidationCode":
+        "Ryan Miller", "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-goWwQFmXHvMHxwhhnAnFpBErzZEfsUJYOCWDtxjQYSMi",
+        "id": "1c91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nxqjFazgGRJwe",
+        "dimensionValueCode": "-Fallback-scrubbed-hcmbtf", "dimensionValueName": "-Fallback-scrubbed-opYLgg",
+        "dimensionValueId": 3339, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-XKZQzZfekZVYWZTdkNkMkzzrPNHskdobhvDvUYDneprO",
+        "id": "8960a4b5-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-ZNutV",
+        "dimensionValueCode": "-Fallback-scrubbed-FcjDBe", "dimensionValueName": "-Fallback-scrubbed-UusbHk",
+        "dimensionValueId": 3872, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T17:18:01.603Z"},
+        {"@odata.etag": "-Fallback-scrubbed-IBnkEoOMqhxLDsMBJYeTzDumZBkapHkWkciXrNbCthIR",
+        "id": "0ea99cbb-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-ZNutV",
+        "dimensionValueCode": "-Fallback-scrubbed-kTfKaH", "dimensionValueName": "-Fallback-scrubbed-JaOFhU",
+        "dimensionValueId": 7482, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T17:18:06.847Z"},
+        {"@odata.etag": "-Fallback-scrubbed-JGMNFVJnbjnYiAkntupvojRbpzdSlEqSlpVUKueeXoxr",
+        "id": "b43c8dc7-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-ZNutV",
+        "dimensionValueCode": "-Fallback-scrubbed-QUNccW", "dimensionValueName": "-Fallback-scrubbed-ifIihF",
+        "dimensionValueId": 2511, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T17:18:13.21Z"},
+        {"@odata.etag": "-Fallback-scrubbed-wYcnHCCffIcyWxQaoXFKSVNLtqEsavlDNGhqdvzJMaWV",
+        "id": "1d91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JZHkpFeWSTeOY",
+        "dimensionValueCode": "-Fallback-scrubbed-ULZUF", "dimensionValueName": "-Fallback-scrubbed-MQnXBzQsXcmKZB",
+        "dimensionValueId": 6329, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 7347, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-SxKbYkKaoqOGDwNIwXoauEilGMuFacDKqKSiPiqGySrb",
+        "id": "1e91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JZHkpFeWSTeOY",
+        "dimensionValueCode": "-Fallback-scrubbed-ULGAVu", "dimensionValueName": "-Fallback-scrubbed-yNeMpLoUpnddnKb",
+        "dimensionValueId": 3639, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 7347, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-XPEYohKYVxEoSBAktCQehaGbvHAevdfpOAUpqASqZzkq",
+        "id": "1f91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JZHkpFeWSTeOY",
+        "dimensionValueCode": "-Fallback-scrubbed-cUctO", "dimensionValueName": "-Fallback-scrubbed-tKrLqEOeEwEpoh",
+        "dimensionValueId": 7869, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 7347, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-IzYQlLeSVSzygCEhCrdKXhCElQkZYjekDmilkovRfHMS",
+        "id": "2091419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-zNKYTQCkXx",
+        "dimensionValueCode": "-Fallback-scrubbed-EUO", "dimensionValueName": "-Fallback-scrubbed-PwExNenvJGYkcN",
+        "dimensionValueId": 32, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 2915, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-GXGPnbMRYeUrpBKATEzMtpJHgdnpBNIhDItBbBdJxYlI",
+        "id": "2191419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-zNKYTQCkXx",
+        "dimensionValueCode": "-Fallback-scrubbed-RZBt", "dimensionValueName": "-Fallback-scrubbed-YpHLZPNMif",
+        "dimensionValueId": 1120, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 2915, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-bnppXRZGoYRcTmFKclqeJIsPSnTgHPqgavAWxoYtfMVv",
+        "id": "2291419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-zNKYTQCkXx",
+        "dimensionValueCode": "-Fallback-scrubbed-WDcyT", "dimensionValueName": "-Fallback-scrubbed-MpOZE",
+        "dimensionValueId": 3087, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 2915, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-CamMfIBBBKTIlOmlvtIgpufNiFtsUKyaHwALnxnauwaA",
+        "id": "a240f473-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-GFSAyIQ",
+        "dimensionValueCode": "-Fallback-scrubbed-zolBtysc", "dimensionValueName":
+        "-Fallback-scrubbed-zolBtysc", "dimensionValueId": 8303, "dimensionValueType":
+        "-Fallback-scrubbed-zScpExCc", "blocked": false, "indentation": 1294, "consolidationCode":
+        "Ryan Miller", "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T12:52:38.473Z"},
+        {"@odata.etag": "-Fallback-scrubbed-rQlNBXafnQszvYUcfLLhossHoHsKGCiYumYpEJjjAZpo",
+        "id": "42d1e47f-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-GFSAyIQ",
+        "dimensionValueCode": "-Fallback-scrubbed-UZnslFKP", "dimensionValueName":
+        "-Fallback-scrubbed-UZnslFKP", "dimensionValueId": 9522, "dimensionValueType":
+        "-Fallback-scrubbed-zScpExCc", "blocked": false, "indentation": 1294, "consolidationCode":
+        "Ryan Miller", "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T12:52:44.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-ZcdlGqkgcUOyGfZHMZGsXjgDGiIuxlbQzoTsqIzABJuB",
+        "id": "4b1bdd85-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-GFSAyIQ",
+        "dimensionValueCode": "-Fallback-scrubbed-yEKnoVXe", "dimensionValueName":
+        "-Fallback-scrubbed-yEKnoVXe", "dimensionValueId": 3571, "dimensionValueType":
+        "-Fallback-scrubbed-zScpExCc", "blocked": false, "indentation": 1294, "consolidationCode":
+        "Ryan Miller", "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-03-26T12:52:51.307Z"},
+        {"@odata.etag": "-Fallback-scrubbed-JwGVQcUvdhazUJkTqwLzPJWeJOHVCKCrTmAcqHowtVJA",
+        "id": "1b96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-UkrbPqBwZ",
+        "dimensionValueCode": "-Fallback-scrubbed-ot", "dimensionValueName": "-Fallback-scrubbed-PbQIkJfQHRS",
+        "dimensionValueId": 6499, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-YjYXKnWiKAzaLhrXoHDJiSXNvaoyHsjDKQPvFDCKOBIu",
+        "id": "1c96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-UkrbPqBwZ",
+        "dimensionValueCode": "-Fallback-scrubbed-yM", "dimensionValueName": "-Fallback-scrubbed-SmNdwoJXuXpAVucrY",
+        "dimensionValueId": 5436, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-aPVeprdouwOcgOyBDrnDKfcKCCbZERXhdjvaenruWGIC",
+        "id": "1d96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-UkrbPqBwZ",
+        "dimensionValueCode": "-Fallback-scrubbed-we", "dimensionValueName": "-Fallback-scrubbed-TdaJVzMCckm",
+        "dimensionValueId": 7367, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-EOTLqsLuOlfbLEBsMPEdLruuzIyoqOjZfCVQZNeCVLlO",
+        "id": "2391419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-ypLbgkWolHMgn",
+        "dimensionValueCode": "-Fallback-scrubbed-nJsGDv", "dimensionValueName": "-Fallback-scrubbed-xBWRSi",
+        "dimensionValueId": 1227, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.73Z"},
+        {"@odata.etag": "-Fallback-scrubbed-zLlQhEaACNniHvAlszMAOtlAOTnjsCPnEKOhhJokHjPY",
+        "id": "2491419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-ypLbgkWolHMgn",
+        "dimensionValueCode": "-Fallback-scrubbed-vxvurE", "dimensionValueName": "-Fallback-scrubbed-cGlZmp",
+        "dimensionValueId": 834, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:10.73Z"},
+        {"@odata.etag": "-Fallback-scrubbed-CSyVVmTNIdFbHPhRGzhcyqPADbLyrbogcFZcMZTAEaPx",
+        "id": "1e96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-lzWGvBRPBHH",
+        "dimensionValueCode": "-Fallback-scrubbed-Ta", "dimensionValueName": "-Fallback-scrubbed-hhUgTrKiw",
+        "dimensionValueId": 6112, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"},
+        {"@odata.etag": "-Fallback-scrubbed-GGhQfekwtTQwGSBUVWswwwuypETTjIpxjQMOuCDKWWNA",
+        "id": "1f96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-lzWGvBRPBHH",
+        "dimensionValueCode": "-Fallback-scrubbed-xX", "dimensionValueName": "-Fallback-scrubbed-MrxMDFIRuCCZj",
+        "dimensionValueId": 7034, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"},
+        {"@odata.etag": "-Fallback-scrubbed-olQQFdshIAxgThbPPwOdwIUthCkegczOTsMBMVJJOIap",
+        "id": "2096419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-lzWGvBRPBHH",
+        "dimensionValueCode": "-Fallback-scrubbed-pH", "dimensionValueName": "-Fallback-scrubbed-lwgbaZuVQY",
+        "dimensionValueId": 7660, "dimensionValueType": "-Fallback-scrubbed-zScpExCc",
+        "blocked": false, "indentation": 1294, "consolidationCode": "Ryan Miller",
+        "globalDimensionNumber": 1294, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:27 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 5ac9b483-9fc5-41c0-a2a1-d99df132b419
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '13235'
+      mise-correlation-id:
+      - 24cf054d-066d-49cc-b97c-9e654796604b
+      ms-correlation-x:
+      - 914f1761-e71d-f7d7-d8c1-cc097bcc2381
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

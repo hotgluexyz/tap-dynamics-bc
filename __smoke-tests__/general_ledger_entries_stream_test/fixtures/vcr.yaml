@@ -1,0 +1,402 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-dopPWC", "scope": "-Fallback-scrubbed-KtkIGvYTaMPonBtiLKkqtCLXztmtyIXhCmtBUiarqjM",
+        "expires_in": "4340", "ext_expires_in": "-Fallback-scrubbed-EEWb", "expires_on":
+        "-Fallback-scrubbed-SDUtSoQBuT", "not_before": "-Fallback-scrubbed-YeaEBfhDir",
+        "resource": "-Fallback-scrubbed-ohGDikSjFcDowoHQjoIoPWkCMNOLKSeJYmJhTjto",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-rY_HbbBPxXY2WnoIyruRhw'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:41 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=An8qM82vVEpLu2w3AzgOls7oOlVYAQAAAFzK8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:27:41 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - EUS ProdSlices
+      x-ms-request-id:
+      - c4c3276b-dec8-4298-8a23-6a5578b90b00
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-drRzeAuoXqijPZkVKGLabYyPIthdlZdYMDQo",
+        "applicationFamily": "-Fallback-scrubbed-EohkCenOyftkSWG", "type": "-Fallback-scrubbed-EjOVyJn",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-sq", "webServiceUrl":
+        "-Fallback-scrubbed-ohGDikSjFcDowoHQjoIoPWkCMNOLKSeJYmJhTjto", "webClientLoginUrl":
+        "-Fallback-scrubbed-QpsIXtEQNqAMRNsussgaIcZEBbacGRDGKLDS"}, {"aadTenantId":
+        "-Fallback-scrubbed-drRzeAuoXqijPZkVKGLabYyPIthdlZdYMDQo", "applicationFamily":
+        "-Fallback-scrubbed-EohkCenOyftkSWG", "type": "-Fallback-scrubbed-FfajvxXmHT",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-wx", "webServiceUrl":
+        "-Fallback-scrubbed-ohGDikSjFcDowoHQjoIoPWkCMNOLKSeJYmJhTjto", "webClientLoginUrl":
+        "-Fallback-scrubbed-QpsIXtEQNqAMRNsussgaIcZEBbacGRDGKLDS"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:42 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 7ac48d3a-f374-4b64-87ff-d64c56cca530
+      ms-correlation-x:
+      - ced8b9b7-4128-7c92-419f-da2545f28eaf
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-uRotVmNOEyZSvsbpJSezjvAvtftmKKuMwjqwlUmzyGbQoNYwUxFAHjtbdLBMygLOcxUOkpUdmhSSYNmGQbwxb",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-eBWaaYGJYLEeovUa", "timestamp": 420, "name": "CRONUS USA,
+        Inc.", "displayName": "Erin Mckenzie", "businessProfileId": "Erin Mckenzie",
+        "systemCreatedAt": "-Fallback-scrubbed-EBSpJjELeqyfqiKLZZuDWmZf", "systemCreatedBy":
+        "-Fallback-scrubbed-WMuekKwBKEZHSsAmowjIitOiYYlQhHbmmBsl", "systemModifiedAt":
+        "-Fallback-scrubbed-EBSpJjELeqyfqiKLZZuDWmZf", "systemModifiedBy": "-Fallback-scrubbed-WMuekKwBKEZHSsAmowjIitOiYYlQhHbmmBsl"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:42 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - a6278efd-d82f-413f-9d88-c35fa037769f
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - fbc83ecc-1c71-4687-8bf6-b24a63faea22
+      ms-correlation-x:
+      - 117642c3-9ec3-b15b-0718-d2fa70958389
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-AqHuMrtpcqcMwtZaENISPeNsmsGGwieiQywUEiRFCiDSUWRRMMnloddbDghOAHwWmtuljVUwKrIOQuQrAUBQgSTWnqbcWfXHNRxlbHIIATLuFCODHkjihVcUCMtNOtQgrvWZFZpGDAlHJC",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-QWCTMKjbrUjLayceQAOdYdXwevPqdZOVpsUZpwWXOMrb",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Amy Williams",
+        "addressLine1": "2469 Garrison Heights", "addressLine2": "110 Gina Parkway",
+        "city": "Lake Alanshire", "state": "-Fallback-scrubbed-sn", "country": "-Fallback-scrubbed-wx",
+        "postalCode": "17780", "phoneNumber": "8296293715", "faxNumber": "-Fallback-scrubbed-JoMrNAefNvkMkVU",
+        "email": "Erin Mckenzie", "website": "Erin Mckenzie", "taxRegistrationNumber":
+        "Erin Mckenzie", "currencyCode": "-Fallback-scrubbed-EnC", "currentFiscalYearStartDate":
+        "-Fallback-scrubbed-gMrBKsvHIA", "industry": "Erin Mckenzie", "experience":
+        "-Fallback-scrubbed-DFdRoeiJR", "lastModifiedDateTime": "2026-02-04T03:43:12.517Z",
+        "picture@odata.mediaReadLink": "-Fallback-scrubbed-MHoVmAwbEwhuGlvqfjxwzmhTwJSjQHORzHMjlWnxVqFfnyhEzZqUzXnkbfNLlkRHMzSSqUGOisWPqAiVoSmVeKZdNUUJokpgUTnhHJMfeqbHVqQufKCkLdqQLrzpWvDMwSXVtabvAGYjjKAElfOvMAhGKUxtjbbmmnnzUEqwCbPMOtqCXA"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:43 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 8d9d30db-d623-45f6-a2cc-47fee27c433b
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 59bc1c35-f9a8-4616-9d6f-b2a5c056a189
+      ms-correlation-x:
+      - cfb4062c-b9e6-7d3e-0bff-41c4b8b92ca2
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-drRzeAuoXqijPZkVKGLabYyPIthdlZdYMDQo",
+        "applicationFamily": "-Fallback-scrubbed-EohkCenOyftkSWG", "type": "-Fallback-scrubbed-EjOVyJn",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-sq", "webServiceUrl":
+        "-Fallback-scrubbed-ohGDikSjFcDowoHQjoIoPWkCMNOLKSeJYmJhTjto", "webClientLoginUrl":
+        "-Fallback-scrubbed-QpsIXtEQNqAMRNsussgaIcZEBbacGRDGKLDS"}, {"aadTenantId":
+        "-Fallback-scrubbed-drRzeAuoXqijPZkVKGLabYyPIthdlZdYMDQo", "applicationFamily":
+        "-Fallback-scrubbed-EohkCenOyftkSWG", "type": "-Fallback-scrubbed-FfajvxXmHT",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-wx", "webServiceUrl":
+        "-Fallback-scrubbed-ohGDikSjFcDowoHQjoIoPWkCMNOLKSeJYmJhTjto", "webClientLoginUrl":
+        "-Fallback-scrubbed-QpsIXtEQNqAMRNsussgaIcZEBbacGRDGKLDS"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:43 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - e627fead-8965-4d8c-847e-f10fb84c74e2
+      ms-correlation-x:
+      - c8849552-bc13-0821-9e2a-278a0f391bb4
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries?%24filter=lastModifiedDateTime+gt+2026-07-17T00%3A00%3A00Z&%24expand=dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-gGcfyrGstSQYjlLwtGGxFBRUyjtjAJKkdvoPciICKyUQBWowsEHfIPZvGaWIMNkmUmzgIyQLsnTQswDFoIXPlwPJsuYSxACodpuoilJeDIqCoGRhJvmHAkNCvvmCFnRuOeVtWaleUvLDEdKx",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-ieRBjatoAtWpzmXWuBXtPPJRWjLgyygfHfddRkwhqIWg",
+        "id": "48c70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 5607, "postingDate":
+        "-Fallback-scrubbed-UtGbziNXry", "documentNumber": "-Fallback-scrubbed-ndYmyq",
+        "documentType": "-Fallback-scrubbed-bTzaPgP", "accountId": "-Fallback-scrubbed-HFHWrmTNfodxWCJNDAPhNToBgrhwmybKSJAt",
+        "accountNumber": "-Fallback-scrubbed-EnaPU", "description": "-Fallback-scrubbed-JQiXxhwdEdTWrukcYWrodX",
+        "debitAmount": 168.97484616781, "creditAmount": 7031, "additionalCurrencyDebitAmount":
+        7031, "additionalCurrencyCreditAmount": 7031, "lastModifiedDateTime": "2026-07-17T18:49:03.097Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-gBllgqcvPaCLQSNfxoQBCsMVJdTSyIalslFThfoMnEeN",
+        "id": "4ec70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 3271, "postingDate":
+        "-Fallback-scrubbed-UtGbziNXry", "documentNumber": "-Fallback-scrubbed-ndYmyq",
+        "documentType": "-Fallback-scrubbed-bTzaPgP", "accountId": "-Fallback-scrubbed-fgSaieqXSJlaBVZzGTMDacOOPahFJGiwAnKb",
+        "accountNumber": "-Fallback-scrubbed-SlBFM", "description": "-Fallback-scrubbed-JQiXxhwdEdTWrukcYWrodX",
+        "debitAmount": 7031, "creditAmount": 7557, "additionalCurrencyDebitAmount":
+        7031, "additionalCurrencyCreditAmount": 7031, "lastModifiedDateTime": "2026-07-17T18:49:03.5Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-lHPZuxdYghgjhJBxwTPPsBhWurSKYllcrXkfQGJenpav",
+        "id": "54c70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 5838, "postingDate":
+        "-Fallback-scrubbed-UtGbziNXry", "documentNumber": "-Fallback-scrubbed-ndYmyq",
+        "documentType": "-Fallback-scrubbed-bTzaPgP", "accountId": "-Fallback-scrubbed-QZWHkKTTbqQHLtGZSxZmbHDzeCnmzXdhDRFa",
+        "accountNumber": "-Fallback-scrubbed-QKuhf", "description": "-Fallback-scrubbed-JQiXxhwdEdTWrukcYWrodX",
+        "debitAmount": 3646.41713675808, "creditAmount": 7031, "additionalCurrencyDebitAmount":
+        7031, "additionalCurrencyCreditAmount": 7031, "lastModifiedDateTime": "2026-07-17T18:49:03.563Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-YRpqtiLGzIEXJKmEXmIagSweULCdGxjtiETpUgLQGByo",
+        "id": "63c70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 1672, "postingDate":
+        "-Fallback-scrubbed-UtGbziNXry", "documentNumber": "-Fallback-scrubbed-ndYmyq",
+        "documentType": "-Fallback-scrubbed-bTzaPgP", "accountId": "-Fallback-scrubbed-lskujsJspaHbMpcpZFknScwGUbsWIgVDyrNW",
+        "accountNumber": "-Fallback-scrubbed-ASYxE", "description": "-Fallback-scrubbed-JQiXxhwdEdTWrukcYWrodX",
+        "debitAmount": 7031, "creditAmount": 1572201337817.51, "additionalCurrencyDebitAmount":
+        7031, "additionalCurrencyCreditAmount": 7031, "lastModifiedDateTime": "2026-07-17T18:49:03.6Z",
+        "dimensionSetLines": []}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:44 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - bc7ee3bb-df54-4af6-9723-c5b36ba5576a
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '2176'
+      mise-correlation-id:
+      - 79b862da-4470-442b-995a-5e0203dcd201
+      ms-correlation-x:
+      - cfe471bb-19df-25fb-0607-303dc45e7715
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

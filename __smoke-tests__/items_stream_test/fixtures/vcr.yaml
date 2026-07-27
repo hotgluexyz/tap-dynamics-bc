@@ -1,0 +1,414 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-wCzieJ", "scope": "-Fallback-scrubbed-nzPfOAzQpwqUcOVGwJyCdWclzuSNdWviqrSFmcyHZKQ",
+        "expires_in": "4447", "ext_expires_in": "-Fallback-scrubbed-VRBn", "expires_on":
+        "-Fallback-scrubbed-iQiqdoNMhT", "not_before": "-Fallback-scrubbed-yABYjYOAds",
+        "resource": "-Fallback-scrubbed-eRhNZbRfPeIKwmhOjmgPohbWgBBnZHmJKAWrvIEw",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-He56yB6BecLTGPCRnLH_fg'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:35 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AmdG-IqD_3RHqMKhziezgVPoOlVYAQAAAN_J8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:25:35 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24997.6 - WUS3 ProdSlices
+      x-ms-request-id:
+      - fc42d94a-7c72-42ba-85b9-b4bd7f911d00
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-aRbzSRopxxBLlCtZKsXYqsizzFWZsepjBdEU",
+        "applicationFamily": "-Fallback-scrubbed-QosqiHJouBdtcjD", "type": "-Fallback-scrubbed-XiVuvCT",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-br", "webServiceUrl":
+        "-Fallback-scrubbed-eRhNZbRfPeIKwmhOjmgPohbWgBBnZHmJKAWrvIEw", "webClientLoginUrl":
+        "-Fallback-scrubbed-BEnJRzhSRAGPeRahkZbbRfUgkvHqvOwDctpb"}, {"aadTenantId":
+        "-Fallback-scrubbed-aRbzSRopxxBLlCtZKsXYqsizzFWZsepjBdEU", "applicationFamily":
+        "-Fallback-scrubbed-QosqiHJouBdtcjD", "type": "-Fallback-scrubbed-riBPsHwtXf",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-xC", "webServiceUrl":
+        "-Fallback-scrubbed-eRhNZbRfPeIKwmhOjmgPohbWgBBnZHmJKAWrvIEw", "webClientLoginUrl":
+        "-Fallback-scrubbed-BEnJRzhSRAGPeRahkZbbRfUgkvHqvOwDctpb"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:35 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - c3b49075-5a36-420f-a70b-8286be91a318
+      ms-correlation-x:
+      - 6114d0d0-d603-0366-5c95-a037e04ed571
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-BbOMxpnDLelVgAqODoBJWqpeXLzbcvStPhSeOUFyMfRHCyYuCGHycLHmXfIQmNItBwlrdjWxSaohNKAdoATbL",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-CeRRxEGoYSidsHcH", "timestamp": 3183, "name": "CRONUS
+        USA, Inc.", "displayName": "Devin Moss MD", "businessProfileId": "Devin Moss
+        MD", "systemCreatedAt": "-Fallback-scrubbed-gyrjmnSuImddVGOcIlavfTZj", "systemCreatedBy":
+        "-Fallback-scrubbed-psTSiCzbrohNiGUwliINrYkgkUAMDPuGbaAE", "systemModifiedAt":
+        "-Fallback-scrubbed-gyrjmnSuImddVGOcIlavfTZj", "systemModifiedBy": "-Fallback-scrubbed-psTSiCzbrohNiGUwliINrYkgkUAMDPuGbaAE"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:36 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - ce02c836-aa26-4396-8845-367b8852d63c
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 21eac7c6-8f52-4428-bed6-a6be5df6cef1
+      ms-correlation-x:
+      - b6a47960-6893-e509-8880-0536f5b42e67
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-mYMUSqvcZEVfzhWrMQYmyqmjMqZsMhDDCmULiFPuTKZwNyzEdvGpxBgYCpeoABsZYBvfLMsdYwSDelYLqOZZhhvzDtuyqVPSoCAdHcWphuEzkhmhAuUuAvqnYdLTCQkPxoVRFDTrCZhoxN",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-GLwFHMEctcGeRIXeTonEvbFZSpMYTFbiblTkoQPVFemO",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Mary Owens",
+        "addressLine1": "5206 Keller Centers Suite 518", "addressLine2": "06273 Steve
+        Falls", "city": "Michealstad", "state": "-Fallback-scrubbed-UF", "country":
+        "-Fallback-scrubbed-xC", "postalCode": "66618", "phoneNumber": "794-467-6668x34151",
+        "faxNumber": "-Fallback-scrubbed-AVNamNuwEFLkHjI", "email": "Devin Moss MD",
+        "website": "Devin Moss MD", "taxRegistrationNumber": "Devin Moss MD", "currencyCode":
+        "-Fallback-scrubbed-HIN", "currentFiscalYearStartDate": "-Fallback-scrubbed-koODgIiDCA",
+        "industry": "Devin Moss MD", "experience": "-Fallback-scrubbed-uzFtZXRni",
+        "lastModifiedDateTime": "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink":
+        "-Fallback-scrubbed-cdUyGcIqXQvoSnDCBQUghFEsoGHkhpaezXKBwVulpgTvoeFjqWECYYUIuGQVqSmAXfhksVynyiAhLqBoBWZCOaTjVPwQFQDMTgkfAwWJpefvzWBoCSBUvdXODnGcxHIfhkBLDtTbCkAbCfabGarnwSZTGRQPNBtHzEnZNaPUcmHXYKMdiN"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:36 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 989cf262-c2d5-4dab-8a20-432b7189b262
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 7cc0e140-4679-4228-a469-012972f56257
+      ms-correlation-x:
+      - f21bb185-16c0-1d1b-b99c-ca6d47d38bc8
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-aRbzSRopxxBLlCtZKsXYqsizzFWZsepjBdEU",
+        "applicationFamily": "-Fallback-scrubbed-QosqiHJouBdtcjD", "type": "-Fallback-scrubbed-XiVuvCT",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-br", "webServiceUrl":
+        "-Fallback-scrubbed-eRhNZbRfPeIKwmhOjmgPohbWgBBnZHmJKAWrvIEw", "webClientLoginUrl":
+        "-Fallback-scrubbed-BEnJRzhSRAGPeRahkZbbRfUgkvHqvOwDctpb"}, {"aadTenantId":
+        "-Fallback-scrubbed-aRbzSRopxxBLlCtZKsXYqsizzFWZsepjBdEU", "applicationFamily":
+        "-Fallback-scrubbed-QosqiHJouBdtcjD", "type": "-Fallback-scrubbed-riBPsHwtXf",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-xC", "webServiceUrl":
+        "-Fallback-scrubbed-eRhNZbRfPeIKwmhOjmgPohbWgBBnZHmJKAWrvIEw", "webClientLoginUrl":
+        "-Fallback-scrubbed-BEnJRzhSRAGPeRahkZbbRfUgkvHqvOwDctpb"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:37 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 31181426-aa5f-4649-98d0-8f75724f6474
+      ms-correlation-x:
+      - 7b814d03-7e13-07f0-bb56-bb99837d2112
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=1000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/items?%24filter=lastModifiedDateTime+gt+2026-04-01T00%3A00%3A00Z&%24expand=itemCategory%2Cpicture
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-kzuKnUQUyANRXoHWjwrcuwYTszdFKMMwxpOixDcBslDhJouJBfJqXVCrixSmEjHGEHHWwQbnhFhJVFfutxFKacgkqhUsqHbkWzunehiGSYFfQZHSmnNxBtoZxypXzgrBl",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-fynKQsFvQidJIZsckyklkcWRFOlVagNETZdbclObyjTd",
+        "id": "a596419f-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-YkYeGm",
+        "displayName": "Karen Best", "displayName2": "Devin Moss MD", "type": "-Fallback-scrubbed-mWrDKJGDp",
+        "itemCategoryId": "-Fallback-scrubbed-WSqXsfzhKbsKUNLOYgnDqAutCxlTayYkmhed",
+        "itemCategoryCode": "-Fallback-scrubbed-cbgh", "blocked": true, "gtin": "Devin
+        Moss MD", "inventory": 8457, "unitPrice": 6564319894978.4, "priceIncludesTax":
+        true, "unitCost": -8576.48634211102, "taxGroupId": "-Fallback-scrubbed-ycFprsyIcwsoCGeypBDIVzvvOZqzRibNHUzE",
+        "taxGroupCode": "-Fallback-scrubbed-vGuRqqrBh", "baseUnitOfMeasureId": "-Fallback-scrubbed-FhWShJuKjaTubIOagTmNHmXyIlGXmbJKwoyy",
+        "baseUnitOfMeasureCode": "-Fallback-scrubbed-OVu", "generalProductPostingGroupId":
+        "-Fallback-scrubbed-uIPDkWNgnzYeBGsCSITaYGPkonlrNzvLGMIM", "generalProductPostingGroupCode":
+        "-Fallback-scrubbed-XNMtpO", "inventoryPostingGroupId": "-Fallback-scrubbed-vNAYBEZXZGczKrHzEGrAiNHlyMfYsnvXgpcr",
+        "inventoryPostingGroupCode": "-Fallback-scrubbed-ERncjL", "lastModifiedDateTime":
+        "2026-05-11T18:04:58.307Z", "itemCategory": {"@odata.etag": "-Fallback-scrubbed-shUQauKOhdPTAhwkNCYhYSgZcHHabRaXvZmhOSxXFkeZ",
+        "id": "9996419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cbgh",
+        "displayName": "Eric Wilkins", "lastModifiedDateTime": "2026-02-04T03:43:15.267Z"},
+        "picture": {"@odata.etag": "-Fallback-scrubbed-IwBfmpUqKEjqDUWIVVGfasOHZWMXqAjbcRrkStufkOQy",
+        "id": "a596419f-7b01-f111-a1fd-7ced8d2674f8", "parentType": "-Fallback-scrubbed-GyJb",
+        "width": 528, "height": 1675, "contentType": "-Fallback-scrubbed-iItwRJFCbF",
+        "pictureContent@odata.mediaEditLink": "-Fallback-scrubbed-eWmdUYKLgWiLGTseWVAUTolSVfcgNBxAjujzzlgefkFAgyGwfZXIUpKvMglzXedwZWwSpAetsxrWVBJuPcvtopqXoyaZyhFtzbthOupeXyfGvvNnLuhdvHPVGzfKCPgabbRbKyKUuswodNMTvpUGvpaawvLzpuOGQNExxrLfYlRouLWnoEDW",
+        "pictureContent@odata.mediaReadLink": "-Fallback-scrubbed-eWmdUYKLgWiLGTseWVAUTolSVfcgNBxAjujzzlgefkFAgyGwfZXIUpKvMglzXedwZWwSpAetsxrWVBJuPcvtopqXoyaZyhFtzbthOupeXyfGvvNnLuhdvHPVGzfKCPgabbRbKyKUuswodNMTvpUGvpaawvLzpuOGQNExxrLfYlRouLWnoEDW"}},
+        {"@odata.etag": "-Fallback-scrubbed-kUcNqboFOYOGYIrxZikjQatHuoEHdqkCpjFJOLpoZqmL",
+        "id": "ac96419f-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-fEJSAs",
+        "displayName": "Margaret Acosta", "displayName2": "Devin Moss MD", "type":
+        "-Fallback-scrubbed-mWrDKJGDp", "itemCategoryId": "-Fallback-scrubbed-abVurRJUHwucXywhRNYwJoiEtyQQffGWmMhk",
+        "itemCategoryCode": "-Fallback-scrubbed-cTCVp", "blocked": true, "gtin": "Devin
+        Moss MD", "inventory": 7836, "unitPrice": 68358320.38871, "priceIncludesTax":
+        true, "unitCost": -206.41475978977, "taxGroupId": "-Fallback-scrubbed-ycFprsyIcwsoCGeypBDIVzvvOZqzRibNHUzE",
+        "taxGroupCode": "-Fallback-scrubbed-vGuRqqrBh", "baseUnitOfMeasureId": "-Fallback-scrubbed-FhWShJuKjaTubIOagTmNHmXyIlGXmbJKwoyy",
+        "baseUnitOfMeasureCode": "-Fallback-scrubbed-OVu", "generalProductPostingGroupId":
+        "-Fallback-scrubbed-uIPDkWNgnzYeBGsCSITaYGPkonlrNzvLGMIM", "generalProductPostingGroupCode":
+        "-Fallback-scrubbed-XNMtpO", "inventoryPostingGroupId": "-Fallback-scrubbed-vNAYBEZXZGczKrHzEGrAiNHlyMfYsnvXgpcr",
+        "inventoryPostingGroupCode": "-Fallback-scrubbed-ERncjL", "lastModifiedDateTime":
+        "2026-04-01T20:50:07.68Z", "itemCategory": {"@odata.etag": "-Fallback-scrubbed-kKJWHJfTDtYOdAFfZPeMDuKxIacVZfyTCwGSaJLdGecx",
+        "id": "9896419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cTCVp",
+        "displayName": "Kimberly Washington", "lastModifiedDateTime": "2026-02-04T03:43:15.24Z"},
+        "picture": {"@odata.etag": "-Fallback-scrubbed-cbBYCndulEXgIVIAwlHACYzMcdJnYotPNncUZuuPlvUE",
+        "id": "ac96419f-7b01-f111-a1fd-7ced8d2674f8", "parentType": "-Fallback-scrubbed-GyJb",
+        "width": 7275, "height": 528, "contentType": "-Fallback-scrubbed-iItwRJFCbF",
+        "pictureContent@odata.mediaEditLink": "-Fallback-scrubbed-jvyzJSmkQtIONtdpbJhxTIJkCMCQYfRTXHLXeUMBzyjJzSJhnRQhqdfcKNoxAMysKEkpWyhayjcsEoBtkVnWDgPitfDqWITFzcLQOAYxVrbVqugRoeVJGzAEzloQTrjgsvbyxDyMOPRdaERbRoiLIACvVAegiNldKMKVzhKxQiocuMnrJDOM",
+        "pictureContent@odata.mediaReadLink": "-Fallback-scrubbed-jvyzJSmkQtIONtdpbJhxTIJkCMCQYfRTXHLXeUMBzyjJzSJhnRQhqdfcKNoxAMysKEkpWyhayjcsEoBtkVnWDgPitfDqWITFzcLQOAYxVrbVqugRoeVJGzAEzloQTrjgsvbyxDyMOPRdaERbRoiLIACvVAegiNldKMKVzhKxQiocuMnrJDOM"}}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:38 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - b350086a-0d2d-4372-989a-793226332f74
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '3490'
+      mise-correlation-id:
+      - cc910901-5ca9-4912-a2c2-e7d7ea9f3343
+      ms-correlation-x:
+      - bc0773bc-1269-b496-c1ed-44e1695f5552
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
