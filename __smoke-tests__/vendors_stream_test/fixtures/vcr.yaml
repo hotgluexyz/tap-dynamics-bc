@@ -1,0 +1,429 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-seKzJi", "scope": "-Fallback-scrubbed-xovuFRqPmzjkBJXxJjANVRcWlevkHdYMechHgkMKopH",
+        "expires_in": "5386", "ext_expires_in": "-Fallback-scrubbed-GwuP", "expires_on":
+        "-Fallback-scrubbed-qNEhCLDKII", "not_before": "-Fallback-scrubbed-qoopyrqWfg",
+        "resource": "-Fallback-scrubbed-kVyRLAyfEcNMILfMImRyZTNgruLlBgAkOmqwsfnc",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-MjG9QwGBqV6ebITKy0yL6w'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:50 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=At5-gK8nNUtPrp79ZQhqCH7oOlVYAQAAAGbK8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:27:50 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - SCUS ProdSlices
+      x-ms-request-id:
+      - 36b0a02b-dbc8-4ce0-b8c2-0b0a8a416800
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-NhJRKbkBUGmHQfhzOOSpTVgMzoblCZdHfKiC",
+        "applicationFamily": "-Fallback-scrubbed-jfxWGleqKCuLkCD", "type": "-Fallback-scrubbed-UpLUoFO",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-oj", "webServiceUrl":
+        "-Fallback-scrubbed-kVyRLAyfEcNMILfMImRyZTNgruLlBgAkOmqwsfnc", "webClientLoginUrl":
+        "-Fallback-scrubbed-OeYgLeXwcPoevBcWJYDwYBYLCSstGYTwVcTo"}, {"aadTenantId":
+        "-Fallback-scrubbed-NhJRKbkBUGmHQfhzOOSpTVgMzoblCZdHfKiC", "applicationFamily":
+        "-Fallback-scrubbed-jfxWGleqKCuLkCD", "type": "-Fallback-scrubbed-xRZfcuaXRl",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-EM", "webServiceUrl":
+        "-Fallback-scrubbed-kVyRLAyfEcNMILfMImRyZTNgruLlBgAkOmqwsfnc", "webClientLoginUrl":
+        "-Fallback-scrubbed-OeYgLeXwcPoevBcWJYDwYBYLCSstGYTwVcTo"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:51 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 806c21c8-e048-4ad9-a4e9-8f61892c3910
+      ms-correlation-x:
+      - fca5dcbf-bbe0-c5a1-0884-556c28929da0
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-WnIlyFOrWevGmyftPbNNqxdidyjQrGXsxdyMWQGfPUNTJWYCwLDZgVYlsfqbKOZYtUJabuHRemXWZdBodDfCI",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-UaeXsXscUpFGAVri", "timestamp": 8394, "name": "CRONUS
+        USA, Inc.", "displayName": "Brian Cannon", "businessProfileId": "Brian Cannon",
+        "systemCreatedAt": "-Fallback-scrubbed-gmzXxdPdaHMcONXMLcfWhTup", "systemCreatedBy":
+        "-Fallback-scrubbed-SToYxeJTFNIOCBgNiGJgQBpDfGlJhHEAvnHl", "systemModifiedAt":
+        "-Fallback-scrubbed-gmzXxdPdaHMcONXMLcfWhTup", "systemModifiedBy": "-Fallback-scrubbed-SToYxeJTFNIOCBgNiGJgQBpDfGlJhHEAvnHl"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:51 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 53b0acc9-faea-4d28-8b32-01d1026d6981
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 52fd1fa0-ead3-4ec2-b54b-505f7e5b6419
+      ms-correlation-x:
+      - d9a3b27a-e813-1377-a7ae-89dd746ebb8d
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-niSXageVhSJoKAIXztKxERMcdgSifqVCnPVNRcOibSZCDcKgDmeQHbQLzBTGhmQPtaTzPiwVERohFLDdYfUaavkVJOUgpnvubkQVkSTjKVlruyJkIxSUfsfwTSoeLlHfgrKewESCyKQgXA",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-IiWRFYeEKejTgkEMuvYecVbgJZhvEfmqmPEEjuXutQIp",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Rodney Morrison",
+        "addressLine1": "7717 Osborne Inlet", "addressLine2": "1094 Dalton Inlet",
+        "city": "Port Kimberly", "state": "-Fallback-scrubbed-MX", "country": "-Fallback-scrubbed-EM",
+        "postalCode": "91944", "phoneNumber": "001-403-262-1458x410", "faxNumber":
+        "-Fallback-scrubbed-xgFljwNDBgbFeVo", "email": "Brian Cannon", "website":
+        "Brian Cannon", "taxRegistrationNumber": "Brian Cannon", "currencyCode": "-Fallback-scrubbed-JEb",
+        "currentFiscalYearStartDate": "-Fallback-scrubbed-wppEZwdpDC", "industry":
+        "Brian Cannon", "experience": "-Fallback-scrubbed-bgtRpYvQJ", "lastModifiedDateTime":
+        "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink": "-Fallback-scrubbed-zdEfPGRDliqZVfTrXpgBRtQxDXpebtWyzTYjtAHLJogbTFxJIpEuPyGpebxJbAjdNoDiMPemcYPwLJmwvLahnisIwgaPOPwzlAQNjpBgYDtSJCiRyxVJGCiVUnPYhBJNpOjbOUPLNJFqjODiwFEOgezrVGVdLrOTosAKjlmleRNQSzBclW"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:51 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - c5132ace-9690-4758-9b3a-23cc6d355588
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 34d11a63-ae8c-44c8-8bea-6de8a262c94c
+      ms-correlation-x:
+      - 588877a7-fe2e-28bc-f247-25d8aa9f62ea
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-NhJRKbkBUGmHQfhzOOSpTVgMzoblCZdHfKiC",
+        "applicationFamily": "-Fallback-scrubbed-jfxWGleqKCuLkCD", "type": "-Fallback-scrubbed-UpLUoFO",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-oj", "webServiceUrl":
+        "-Fallback-scrubbed-kVyRLAyfEcNMILfMImRyZTNgruLlBgAkOmqwsfnc", "webClientLoginUrl":
+        "-Fallback-scrubbed-OeYgLeXwcPoevBcWJYDwYBYLCSstGYTwVcTo"}, {"aadTenantId":
+        "-Fallback-scrubbed-NhJRKbkBUGmHQfhzOOSpTVgMzoblCZdHfKiC", "applicationFamily":
+        "-Fallback-scrubbed-jfxWGleqKCuLkCD", "type": "-Fallback-scrubbed-xRZfcuaXRl",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-EM", "webServiceUrl":
+        "-Fallback-scrubbed-kVyRLAyfEcNMILfMImRyZTNgruLlBgAkOmqwsfnc", "webClientLoginUrl":
+        "-Fallback-scrubbed-OeYgLeXwcPoevBcWJYDwYBYLCSstGYTwVcTo"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:53 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 5e438476-559a-4c13-a168-d920e4bab87e
+      ms-correlation-x:
+      - 323e3b00-1d16-d356-159a-c95934e55d04
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/vendors?%24filter=lastModifiedDateTime+gt+2026-06-01T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-GBCtFkYoDxjLNQQuNvJgRsgTbiNTVsBhLnRIXCFrTTVLtpvUSEopOKrLaJmIEpuKjVcpagUWBnlhlAoILfCyDsJDnzkbtdAFkOBeoRsQDaFdyPVxTZsKgUDxqckyosYsvWn",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-CfVKlbgPgEAvWUaDKEVlqymLRuqNBReCeSgEuTwevcYo",
+        "id": "7253cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-AWSNcA",
+        "displayName": "Tiffany Scott", "addressLine1": "44840 Owens Parks", "addressLine2":
+        "Brian Cannon", "city": "East George", "state": "-Fallback-scrubbed-va", "country":
+        "-Fallback-scrubbed-EM", "postalCode": "71550", "phoneNumber": "Brian Cannon",
+        "email": "Brian Cannon", "website": "Brian Cannon", "taxRegistrationNumber":
+        "Brian Cannon", "currencyId": "-Fallback-scrubbed-RmzDQEJrJYMmfzOjsnEoMxJdRRRzrqCgMXnD",
+        "currencyCode": "-Fallback-scrubbed-JEb", "irs1099Code": "Brian Cannon", "paymentTermsId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "paymentMethodId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "taxLiable": false,
+        "blocked": "-Fallback-scrubbed-tajolTy", "balance": 7797, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.397Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-RFSspNgkACmQcmljFUyZuaUgmmLmwHzfTvksZhBQSvxP",
+        "id": "7553cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-GYCODr",
+        "displayName": "Steven Johnson", "addressLine1": "44840 Owens Parks", "addressLine2":
+        "Brian Cannon", "city": "East George", "state": "-Fallback-scrubbed-va", "country":
+        "-Fallback-scrubbed-EM", "postalCode": "71550", "phoneNumber": "Brian Cannon",
+        "email": "Brian Cannon", "website": "Brian Cannon", "taxRegistrationNumber":
+        "Brian Cannon", "currencyId": "-Fallback-scrubbed-RmzDQEJrJYMmfzOjsnEoMxJdRRRzrqCgMXnD",
+        "currencyCode": "-Fallback-scrubbed-JEb", "irs1099Code": "Brian Cannon", "paymentTermsId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "paymentMethodId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "taxLiable": false,
+        "blocked": "-Fallback-scrubbed-tajolTy", "balance": 7797, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.59Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-ARVtXqWeCLKvTPDlPQLZlePDjSJSvXgkfiXBpgXDvLlK",
+        "id": "7853cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-iQzgJZ",
+        "displayName": "Alexander Klein DDS", "addressLine1": "44840 Owens Parks",
+        "addressLine2": "Brian Cannon", "city": "East George", "state": "-Fallback-scrubbed-va",
+        "country": "-Fallback-scrubbed-EM", "postalCode": "71550", "phoneNumber":
+        "Brian Cannon", "email": "Brian Cannon", "website": "Brian Cannon", "taxRegistrationNumber":
+        "Brian Cannon", "currencyId": "-Fallback-scrubbed-UPSrssOUvJhPVMPPevoVMjaDBKHlsiZjmLFI",
+        "currencyCode": "-Fallback-scrubbed-ISS", "irs1099Code": "Brian Cannon", "paymentTermsId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "paymentMethodId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "taxLiable": false,
+        "blocked": "-Fallback-scrubbed-tajolTy", "balance": 7797, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.887Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-lqxeWmKHowrCvxmDUHSenuMjgZadTVeCcamhBSOVNjLd",
+        "id": "7b53cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-FiUlvA",
+        "displayName": "Jeffrey Adams", "addressLine1": "44840 Owens Parks", "addressLine2":
+        "Brian Cannon", "city": "East George", "state": "-Fallback-scrubbed-va", "country":
+        "-Fallback-scrubbed-EM", "postalCode": "71550", "phoneNumber": "Brian Cannon",
+        "email": "Brian Cannon", "website": "Brian Cannon", "taxRegistrationNumber":
+        "Brian Cannon", "currencyId": "-Fallback-scrubbed-awPxUnbEJdbtjASnbutRfHnBTNfHskZFKlSq",
+        "currencyCode": "-Fallback-scrubbed-zRG", "irs1099Code": "Brian Cannon", "paymentTermsId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "paymentMethodId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "taxLiable": false,
+        "blocked": "-Fallback-scrubbed-tajolTy", "balance": 7797, "lastModifiedDateTime":
+        "2026-07-15T13:57:20.093Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-trsLSFdTGjINoTWHfLyRNtfKuIqstPhanqMuuepxpURI",
+        "id": "7e53cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-LASqgi",
+        "displayName": "Dorothy Morales", "addressLine1": "44840 Owens Parks", "addressLine2":
+        "Brian Cannon", "city": "East George", "state": "-Fallback-scrubbed-va", "country":
+        "-Fallback-scrubbed-EM", "postalCode": "71550", "phoneNumber": "Brian Cannon",
+        "email": "Brian Cannon", "website": "Brian Cannon", "taxRegistrationNumber":
+        "Brian Cannon", "currencyId": "-Fallback-scrubbed-iBhmnWvhyzMdsnMnHGebfRodbbJkscNeWrdC",
+        "currencyCode": "-Fallback-scrubbed-EKn", "irs1099Code": "Brian Cannon", "paymentTermsId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "paymentMethodId":
+        "-Fallback-scrubbed-EufKdnTdrwUyINCrOOqcjZOUUNKpAXAiloJJ", "taxLiable": false,
+        "blocked": "-Fallback-scrubbed-tajolTy", "balance": 7797, "lastModifiedDateTime":
+        "2026-07-15T13:57:20.357Z", "defaultDimensions": []}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:53 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - ad3d2f34-890f-4dba-829b-1ecd57b38c0c
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '3514'
+      mise-correlation-id:
+      - d085841f-bae4-440d-ac71-f5f9ddd73dc7
+      ms-correlation-x:
+      - dd47f2eb-ef05-e968-4fbb-cc36237123a7
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

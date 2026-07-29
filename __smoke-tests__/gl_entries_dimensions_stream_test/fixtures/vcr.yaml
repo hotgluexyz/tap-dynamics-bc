@@ -1,0 +1,1117 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-MoBzzH", "scope": "-Fallback-scrubbed-pZDynctYgPuGnBASytDyKlyPAqFmLFCHJXdZOKVPvnE",
+        "expires_in": "3939", "ext_expires_in": "-Fallback-scrubbed-wwFK", "expires_on":
+        "-Fallback-scrubbed-mniuiQkpKa", "not_before": "-Fallback-scrubbed-YaRspjYeok",
+        "resource": "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-D_Auof6hipHedaHWzergew'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:58:31 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=ArPbFMkt9h1BkrU_gdx6wAHoOlVYAQAAAIfD8uEOAAAA; expires=Fri, 21-Aug-2026
+        13:58:32 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24997.6 - WUS3 ProdSlices
+      x-ms-request-id:
+      - 362ea5d5-b142-415f-a0bf-7001f5331a00
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe",
+        "applicationFamily": "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-vFwvOBL",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-fj", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}, {"aadTenantId":
+        "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe", "applicationFamily":
+        "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-qRJypJbfXb",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-tr", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:58:31 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - f352009d-8e88-4ff2-91cd-6e7d422db4ad
+      ms-correlation-x:
+      - cc2c6c8d-90c5-592c-f21c-0e468be771ff
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-TVmYPMpZFzYPCVcdPexnpjdaFuZpZgLpABJDqFMKSiucauTsczLciLxxsGZUoRcwsWzcBaMBSFOHWLfKflTNg",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-KepeFejWMLVyXhIh", "timestamp": 7560, "name": "CRONUS
+        USA, Inc.", "displayName": "Roger Jones", "businessProfileId": "Roger Jones",
+        "systemCreatedAt": "-Fallback-scrubbed-qBhuHSZhfhRBUFOdcMPYtnYu", "systemCreatedBy":
+        "-Fallback-scrubbed-oVLFHOVUVdGBFwqrBKGIimmnfkrLnUaPNrfS", "systemModifiedAt":
+        "-Fallback-scrubbed-qBhuHSZhfhRBUFOdcMPYtnYu", "systemModifiedBy": "-Fallback-scrubbed-oVLFHOVUVdGBFwqrBKGIimmnfkrLnUaPNrfS"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:33 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - c3d3397e-817b-4032-8a82-14ad240bf2b7
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 28687d24-56f0-4630-b8d7-a75b1bfa1f7a
+      ms-correlation-x:
+      - 02098c46-2247-efc6-df2e-455520509c93
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-sxbXzSZbWGbfLhoJnZJzxAFhhixjTxvoMXdxkKvmKYLIfEQhCnAEJHtiBzHaGWSxRWLGctiSluoGkqAxorcIYQQBSUtUawZaovFtycfsKXieIQBnJMKhyJlvGBVnDgUyBXPLIPwUwwTzcz",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-phEDNtdPQfLjlyateWxLhTprOxBxVLSmqNKmZLsZbGeP",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "John Mendoza",
+        "addressLine1": "51907 David Trail Suite 457", "addressLine2": "476 Smith
+        Path Suite 758", "city": "Cookfurt", "state": "-Fallback-scrubbed-HL", "country":
+        "-Fallback-scrubbed-tr", "postalCode": "24661", "phoneNumber": "856.884.8071x903",
+        "faxNumber": "-Fallback-scrubbed-GKglRexlZWpykvF", "email": "Roger Jones",
+        "website": "Roger Jones", "taxRegistrationNumber": "Roger Jones", "currencyCode":
+        "-Fallback-scrubbed-qan", "currentFiscalYearStartDate": "-Fallback-scrubbed-qQQOUfDeDr",
+        "industry": "Roger Jones", "experience": "-Fallback-scrubbed-LXBfQqtdp", "lastModifiedDateTime":
+        "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink": "-Fallback-scrubbed-hCDoAKyjmAKgPvRhEMhKktNEffgwDSrPKHMKEOQuBhFerOsFvleGnJyjWCFBxnIisPhdCHpyPiixvcyUbBsiFCDbywPGYtsCYCrwbToPGKrdwvglARSGoCxrhMsyeZxRWbukhiENIcogkFpwUUASaMZJBcqHcesRjpnEXctEvVqWudPqHW"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:33 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 992909ce-c6ba-43f8-97ad-02823223523b
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 8f45ac61-97ba-4bc4-91df-56ffcb05845e
+      ms-correlation-x:
+      - b261eb09-c2ca-8f8c-43bc-d75812d1f206
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe",
+        "applicationFamily": "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-vFwvOBL",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-fj", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}, {"aadTenantId":
+        "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe", "applicationFamily":
+        "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-qRJypJbfXb",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-tr", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:58:34 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 788f6274-a27b-43f2-81ec-0f9c129dda8a
+      ms-correlation-x:
+      - 8a3561ae-7f61-f45e-15db-59cbe263def5
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries?%24filter=lastModifiedDateTime+gt+2026-07-15T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-JxciFDOzJBOGpHFbSuFvULDKAsPVXOarAFbxzkpzarsqfiEkgXEXXrVAuGdtRvrQLkoTUhNGixZFZKFUZgdNsVXKWBhbtDwoXYQGNFhYxMXjxbKuoQsLyDMFfRmxiLiPjoIWOQHAXKSRcnra",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-sFrzPTBwhIHATmFPzFYBvSGyPKfNCIdgtnHzBcJICZud",
+        "id": "7c46f200-9580-f111-8070-0022483430dd", "entryNumber": 3904, "postingDate":
+        "-Fallback-scrubbed-uZaqFfvVtq", "documentNumber": "-Fallback-scrubbed-ziCtcGK",
+        "documentType": "-Fallback-scrubbed-bDmOToU", "accountId": "-Fallback-scrubbed-kEeSyWnBnwtqYmiIcDgyjYbRHFcsbYWQWHuw",
+        "accountNumber": "-Fallback-scrubbed-RtzxD", "description": "-Fallback-scrubbed-FJaOZUEloablCarTCuodU",
+        "debitAmount": 340, "creditAmount": 2495, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-15T21:34:51.827Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-OxXgiZOqCXehqyeoADcNeiGoPWbMiwEeaKwDFHaptwRr",
+        "id": "1107baae-6e27-f111-8340-00224829d901", "code": "-Fallback-scrubbed-rUkrZ",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-dyeiEMYPTaQHKspIRfopijxPPFbdWwwjQBPbLrJgNKnT", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-zihC", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Kelly Gilmore", "valueId": "-Fallback-scrubbed-SSVIGHUKcknzCEQcOLlkZnOtVbUCFalgXPbS",
+        "valueCode": "-Fallback-scrubbed-da", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-lpiATe"}, {"@odata.etag": "-Fallback-scrubbed-DrjWpxZhcQdbWJLDVFerYscMjNTShjELOvOIldPhyQmX",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-MBjMKWbCoO",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Courtney Morales", "valueId": "-Fallback-scrubbed-dpkIJVuNThnECTawelgcVRZNgCzRIVsWRnkM",
+        "valueCode": "-Fallback-scrubbed-pxhjP", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-aFUWK"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-zemGFNPMUTBTVomBerImEfOayvbHfkVSXJsdIoLMDfEE", "id": "7d46f200-9580-f111-8070-0022483430dd",
+        "entryNumber": 7936, "postingDate": "-Fallback-scrubbed-uZaqFfvVtq", "documentNumber":
+        "-Fallback-scrubbed-ziCtcGK", "documentType": "-Fallback-scrubbed-bDmOToU",
+        "accountId": "-Fallback-scrubbed-gurpZictVlUBmWcPksboMTZuyrdePmYaUYDG", "accountNumber":
+        "-Fallback-scrubbed-rJBUt", "description": "-Fallback-scrubbed-zaULiRrYUuUqeWEaKwGY",
+        "debitAmount": 2495, "creditAmount": 340, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-15T21:34:51.93Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-hWYxsJnpzCqaFfMuVznJXYAnEhdWJfxOfkeedoRvyFoB",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-ejEJmAK",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Veronica Lopez", "valueId": "-Fallback-scrubbed-cITdbQUevPihreYOJNpsJaVdrJBYzkrBTkpS",
+        "valueCode": "-Fallback-scrubbed-FXoVkEkk", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-FXoVkEkk"}, {"@odata.etag":
+        "-Fallback-scrubbed-xEMVTgkLkXfrwWWCcGiffvdIRGsntKnlQLSNOBxphrTz", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-rUkrZ", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-hcsQdZjWjhGKSZNrEHwuEtCZbiUjBReKoyeHPboPIbjt", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-MBjMKWbCoO", "consolidationCode": "Roger Jones",
+        "parentId": "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG", "parentType":
+        "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName": "Courtney
+        Morales", "valueId": "-Fallback-scrubbed-TYGFnBORsRuMdqSfubXLnKnbQWNvIHuGbsYF",
+        "valueCode": "-Fallback-scrubbed-ocG", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-RtGmhubhtdQNLA"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-pQMIOyFsbVaIOTCyEqXzcUslhCMxkxpbILwXgZCTxViQ", "id": "1ced93cb-9680-f111-8070-0022483430dd",
+        "entryNumber": 2475, "postingDate": "-Fallback-scrubbed-uZaqFfvVtq", "documentNumber":
+        "-Fallback-scrubbed-UQSUcYR", "documentType": "-Fallback-scrubbed-bDmOToU",
+        "accountId": "-Fallback-scrubbed-kEeSyWnBnwtqYmiIcDgyjYbRHFcsbYWQWHuw", "accountNumber":
+        "-Fallback-scrubbed-RtzxD", "description": "-Fallback-scrubbed-FJaOZUEloablCarTCuodU",
+        "debitAmount": 340, "creditAmount": 2495, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-15T21:47:42.297Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-hrvmraavONXibMAjhdwosqawBzwdaRIJxCUICKFoGKXA",
+        "id": "1107baae-6e27-f111-8340-00224829d901", "code": "-Fallback-scrubbed-rUkrZ",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-vMIflIyKTwmhsGFyZHnIVFsMrdEQcFNacAbJCrIcVfDP", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-zihC", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Kelly Gilmore", "valueId": "-Fallback-scrubbed-SSVIGHUKcknzCEQcOLlkZnOtVbUCFalgXPbS",
+        "valueCode": "-Fallback-scrubbed-da", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-lpiATe"}, {"@odata.etag": "-Fallback-scrubbed-SogRCcKRZWPwuThOIPGibNQNYigiOTVAplkbktrvcBaN",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-MBjMKWbCoO",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Courtney Morales", "valueId": "-Fallback-scrubbed-dpkIJVuNThnECTawelgcVRZNgCzRIVsWRnkM",
+        "valueCode": "-Fallback-scrubbed-pxhjP", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-aFUWK"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-bEGekHFRjPpqJWBZrhRMeNpYfpWYeNpJtRkkVPeAbFqF", "id": "1ded93cb-9680-f111-8070-0022483430dd",
+        "entryNumber": 3560, "postingDate": "-Fallback-scrubbed-uZaqFfvVtq", "documentNumber":
+        "-Fallback-scrubbed-UQSUcYR", "documentType": "-Fallback-scrubbed-bDmOToU",
+        "accountId": "-Fallback-scrubbed-gurpZictVlUBmWcPksboMTZuyrdePmYaUYDG", "accountNumber":
+        "-Fallback-scrubbed-rJBUt", "description": "-Fallback-scrubbed-zaULiRrYUuUqeWEaKwGY",
+        "debitAmount": 2495, "creditAmount": 340, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-15T21:47:42.35Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-fZBdxaHZfXrFMueKQNAJZtIoZrOFYLsSBJqjaVrbeSdl",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-ejEJmAK",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Veronica Lopez", "valueId": "-Fallback-scrubbed-cITdbQUevPihreYOJNpsJaVdrJBYzkrBTkpS",
+        "valueCode": "-Fallback-scrubbed-FXoVkEkk", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-FXoVkEkk"}, {"@odata.etag":
+        "-Fallback-scrubbed-TMiVdRnxsWLUArcJJLgCTEegfLOLeuIFJiYDDEQfjxNp", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-rUkrZ", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-dGsfAtgnCWsyEpdiJlgiiJyFcipAvJQyQWMDhJIBQHzk", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-MBjMKWbCoO", "consolidationCode": "Roger Jones",
+        "parentId": "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk", "parentType":
+        "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName": "Courtney
+        Morales", "valueId": "-Fallback-scrubbed-TYGFnBORsRuMdqSfubXLnKnbQWNvIHuGbsYF",
+        "valueCode": "-Fallback-scrubbed-ocG", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-RtGmhubhtdQNLA"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-HxAJppwCHRsQLkQitcKQyeQhzaoJWibCRwuQwWscGLbW", "id": "48c70a2b-1082-f111-8070-7c1e52167ef6",
+        "entryNumber": 1976, "postingDate": "-Fallback-scrubbed-DZkgVyLNLu", "documentNumber":
+        "-Fallback-scrubbed-ITcefe", "documentType": "-Fallback-scrubbed-bDmOToU",
+        "accountId": "-Fallback-scrubbed-NPeCtPyApxcqtWdhOvvFwAwBewAxElIqBsDJ", "accountNumber":
+        "-Fallback-scrubbed-sYGLp", "description": "-Fallback-scrubbed-kLqDsxFjKlpevQdWjFvsQA",
+        "debitAmount": 961367965779.271, "creditAmount": 340, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-17T18:49:03.097Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-ixwGsDBvZdjTozGpunsfXoBFyxiSGGzgTeLrzvaznhXM",
+        "id": "4ec70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 1274, "postingDate":
+        "-Fallback-scrubbed-DZkgVyLNLu", "documentNumber": "-Fallback-scrubbed-ITcefe",
+        "documentType": "-Fallback-scrubbed-bDmOToU", "accountId": "-Fallback-scrubbed-DCGIbiwhgokttnTDOhMKRkcYoonKzZUzuazN",
+        "accountNumber": "-Fallback-scrubbed-QPzIN", "description": "-Fallback-scrubbed-kLqDsxFjKlpevQdWjFvsQA",
+        "debitAmount": 340, "creditAmount": 9579, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-17T18:49:03.5Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-baAGCkquhmPXqVWIpNcisfOENfCHvjBfGOjlTwfrARaQ",
+        "id": "54c70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 1155, "postingDate":
+        "-Fallback-scrubbed-DZkgVyLNLu", "documentNumber": "-Fallback-scrubbed-ITcefe",
+        "documentType": "-Fallback-scrubbed-bDmOToU", "accountId": "-Fallback-scrubbed-AnQtUkxYRCZkJreyYwpONmdQhMRNJdJUDOXk",
+        "accountNumber": "-Fallback-scrubbed-tWUtA", "description": "-Fallback-scrubbed-kLqDsxFjKlpevQdWjFvsQA",
+        "debitAmount": 2755520869920.39, "creditAmount": 340, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-17T18:49:03.563Z",
+        "dimensionSetLines": []}, {"@odata.etag": "-Fallback-scrubbed-SjaqFSmwKFIeULdjzxEQwsnxPaXAhJkAsfyKNvfhKqql",
+        "id": "63c70a2b-1082-f111-8070-7c1e52167ef6", "entryNumber": 1495, "postingDate":
+        "-Fallback-scrubbed-DZkgVyLNLu", "documentNumber": "-Fallback-scrubbed-ITcefe",
+        "documentType": "-Fallback-scrubbed-bDmOToU", "accountId": "-Fallback-scrubbed-piNGkJsuCQaEioOdMCOfqgiRxolvLoIYzrko",
+        "accountNumber": "-Fallback-scrubbed-ULFBM", "description": "-Fallback-scrubbed-kLqDsxFjKlpevQdWjFvsQA",
+        "debitAmount": 340, "creditAmount": -89541.7241010076, "additionalCurrencyDebitAmount":
+        340, "additionalCurrencyCreditAmount": 340, "lastModifiedDateTime": "2026-07-17T18:49:03.6Z",
+        "dimensionSetLines": []}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:34 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 8886610e-e534-44c5-a1a5-54decb84b8c1
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '8914'
+      mise-correlation-id:
+      - b9e73bea-6bf6-4f8e-b9b6-a63c3ba5b3cc
+      ms-correlation-x:
+      - 84680936-30bb-b3f4-0353-23c85dfdbc11
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe",
+        "applicationFamily": "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-vFwvOBL",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-fj", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}, {"aadTenantId":
+        "-Fallback-scrubbed-PfqKowAknqGhBYEJyeSXkDcstRMOEIrWcgOe", "applicationFamily":
+        "-Fallback-scrubbed-CfTeLCIquDebemp", "type": "-Fallback-scrubbed-qRJypJbfXb",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-tr", "webServiceUrl":
+        "-Fallback-scrubbed-NcXwbPQzdImsOzOKwrtHHZAfDitrjpzjgeTtVOyq", "webClientLoginUrl":
+        "-Fallback-scrubbed-tahwqLMirCRXPEgPKMacbIqWpEhrnmjNHjxt"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:58:35 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 1a1a37e8-6dca-45d2-96e3-d5d1e0074d05
+      ms-correlation-x:
+      - ea676c9c-15ce-4957-e924-ef774866f178
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(7c46f200-9580-f111-8070-0022483430dd)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-IJtgkAIkbiKjXkcTOcMlEZcEvAmThHFafsVkDjZbkRAHvikXVOwJIULgOhrJErYCRaunFvZFPyPkUckpJjfLbhuscDPchdzalmwymYUgVZONMsXQNtdjCyfThRQHAkCYeHeyOOphFAHvJbbzsYQtGbLDmSgrcpRBbsmCDJPZvTlNbDjufZnrAHwlOGCtZDcNjYUeRoce",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-OxXgiZOqCXehqyeoADcNeiGoPWbMiwEeaKwDFHaptwRr",
+        "id": "1107baae-6e27-f111-8340-00224829d901", "code": "-Fallback-scrubbed-rUkrZ",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-dyeiEMYPTaQHKspIRfopijxPPFbdWwwjQBPbLrJgNKnT", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-zihC", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Kelly Gilmore", "valueId": "-Fallback-scrubbed-SSVIGHUKcknzCEQcOLlkZnOtVbUCFalgXPbS",
+        "valueCode": "-Fallback-scrubbed-da", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-lpiATe"}, {"@odata.etag": "-Fallback-scrubbed-DrjWpxZhcQdbWJLDVFerYscMjNTShjELOvOIldPhyQmX",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-MBjMKWbCoO",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-fWzINvZreAgrBRwJOtZQPzyFmnrxgCJUwhQo",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Courtney Morales", "valueId": "-Fallback-scrubbed-dpkIJVuNThnECTawelgcVRZNgCzRIVsWRnkM",
+        "valueCode": "-Fallback-scrubbed-pxhjP", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-aFUWK"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:36 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 3a2c4d9e-0e45-4d4c-a2d7-f78f50070c32
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '1412'
+      mise-correlation-id:
+      - bf43ddfd-8d7b-46c7-af2f-d12b41b8e99b
+      ms-correlation-x:
+      - 9b708584-d701-5a40-5604-b88f7d0b77e0
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(7d46f200-9580-f111-8070-0022483430dd)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-YkfKNvQzualVqWMpVLeHhupsvnvBJDynYQfOpsizXjtpvHusFenqXeKaOVvHhlYlvdsTVcfTFBjRJrXepOEoxFhzuEfYOjEHEmVBsBguwLTXvqdMZSpccMEOsllxndFwUotpcxKAQZtjjvPFpMKmlRkIbVaeWPkWPGKyclaaeVRTspRYWaKBqNmVmmVnlkyeojnxZOLO",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-hWYxsJnpzCqaFfMuVznJXYAnEhdWJfxOfkeedoRvyFoB",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-ejEJmAK",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Veronica Lopez", "valueId": "-Fallback-scrubbed-cITdbQUevPihreYOJNpsJaVdrJBYzkrBTkpS",
+        "valueCode": "-Fallback-scrubbed-FXoVkEkk", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-FXoVkEkk"}, {"@odata.etag":
+        "-Fallback-scrubbed-xEMVTgkLkXfrwWWCcGiffvdIRGsntKnlQLSNOBxphrTz", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-rUkrZ", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-hcsQdZjWjhGKSZNrEHwuEtCZbiUjBReKoyeHPboPIbjt", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-MBjMKWbCoO", "consolidationCode": "Roger Jones",
+        "parentId": "-Fallback-scrubbed-hKOKlbLiaIWPHCiJbQeiUbABKfOdiSnAGHLG", "parentType":
+        "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName": "Courtney
+        Morales", "valueId": "-Fallback-scrubbed-TYGFnBORsRuMdqSfubXLnKnbQWNvIHuGbsYF",
+        "valueCode": "-Fallback-scrubbed-ocG", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-RtGmhubhtdQNLA"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:36 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 03656128-837d-4671-acd3-0b530ed9a59c
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '1433'
+      mise-correlation-id:
+      - 45cda9da-4db1-412a-8e30-c59e2fed953d
+      ms-correlation-x:
+      - 77c3d029-4d1f-904f-d141-dbf9930b61c5
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(1ced93cb-9680-f111-8070-0022483430dd)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-myhgcbsYAyLPDGEptVCasLwqhCDLULSzvknKQwQxdAVxAZHgApoLvPjCYHvDiAnrFpEggOhtMWiizNVWORQwKxGWqwIBxNySAIuqZESSrSUNznRPOVVsxluniLrIbpQGvERSIBSfaVfxIbOwcUimUnpqbsDPatdvOOgegpkfykVGuEPjNPFJfgturvYUPlJnbYXAWFMH",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-hrvmraavONXibMAjhdwosqawBzwdaRIJxCUICKFoGKXA",
+        "id": "1107baae-6e27-f111-8340-00224829d901", "code": "-Fallback-scrubbed-rUkrZ",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-vMIflIyKTwmhsGFyZHnIVFsMrdEQcFNacAbJCrIcVfDP", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-zihC", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Kelly Gilmore", "valueId": "-Fallback-scrubbed-SSVIGHUKcknzCEQcOLlkZnOtVbUCFalgXPbS",
+        "valueCode": "-Fallback-scrubbed-da", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-lpiATe"}, {"@odata.etag": "-Fallback-scrubbed-SogRCcKRZWPwuThOIPGibNQNYigiOTVAplkbktrvcBaN",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-MBjMKWbCoO",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-gGiYIkhHWgIlyxcALhzbXDkMTZdgmDuZWsHV",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Courtney Morales", "valueId": "-Fallback-scrubbed-dpkIJVuNThnECTawelgcVRZNgCzRIVsWRnkM",
+        "valueCode": "-Fallback-scrubbed-pxhjP", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-aFUWK"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:37 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - d4789b45-7177-445b-be14-7a10f81db66a
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '1412'
+      mise-correlation-id:
+      - 97d27b61-6643-497a-b187-86d5ee651bc4
+      ms-correlation-x:
+      - 7db9c86a-b874-b311-eb91-71f7e75a0e03
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(1ded93cb-9680-f111-8070-0022483430dd)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-XEGHMCxKTnudfFSBnCvBwYAoPciLGGDsxRWGJTDdLjlkJZXdSlrcqPbvbXCZokOSjUXPKInuVPctNhROBTuhBVFKSlJAubVklFayIYMSnnSennmFZSzZkNxzciapifwgLJCIByjPqfXDgpdeFjvRmqqkXVFgwzmEyvzoNzsxhgFwBvBxhxKWlSGQbhCOHVJpiJdhwYPu",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-fZBdxaHZfXrFMueKQNAJZtIoZrOFYLsSBJqjaVrbeSdl",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-ejEJmAK",
+        "consolidationCode": "Roger Jones", "parentId": "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk",
+        "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName":
+        "Veronica Lopez", "valueId": "-Fallback-scrubbed-cITdbQUevPihreYOJNpsJaVdrJBYzkrBTkpS",
+        "valueCode": "-Fallback-scrubbed-FXoVkEkk", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-FXoVkEkk"}, {"@odata.etag":
+        "-Fallback-scrubbed-TMiVdRnxsWLUArcJJLgCTEegfLOLeuIFJiYDDEQfjxNp", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-rUkrZ", "consolidationCode": "Roger Jones", "parentId":
+        "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk", "parentType": "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM",
+        "displayName": "Taylor Kennedy", "valueId": "-Fallback-scrubbed-eVHbiTDfmzazHZuUAuSoBIKnufCCsRZziQnQ",
+        "valueCode": "-Fallback-scrubbed-tDkqlF", "valueConsolidationCode": "Roger
+        Jones", "valueDisplayName": "-Fallback-scrubbed-WZetAA"}, {"@odata.etag":
+        "-Fallback-scrubbed-dGsfAtgnCWsyEpdiJlgiiJyFcipAvJQyQWMDhJIBQHzk", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-MBjMKWbCoO", "consolidationCode": "Roger Jones",
+        "parentId": "-Fallback-scrubbed-GNAscejUKfyWZcNYZAkQPFVSqlUQXmgqWZVk", "parentType":
+        "-Fallback-scrubbed-dVcuMSHJFpZAPoHEzDxDTjBeoNGeKueM", "displayName": "Courtney
+        Morales", "valueId": "-Fallback-scrubbed-TYGFnBORsRuMdqSfubXLnKnbQWNvIHuGbsYF",
+        "valueCode": "-Fallback-scrubbed-ocG", "valueConsolidationCode": "Roger Jones",
+        "valueDisplayName": "-Fallback-scrubbed-RtGmhubhtdQNLA"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:38 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - e57b1412-5e58-4b3c-8978-ca7545eca9a0
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '1433'
+      mise-correlation-id:
+      - 0753f579-a954-4c60-9e34-b6520e24ce65
+      ms-correlation-x:
+      - 9a2b6872-d9df-6c8a-cf95-7db5be9daba0
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(48c70a2b-1082-f111-8070-7c1e52167ef6)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-MzpDBMcQvxjyBNqeipcquHJNILqKCBgGKzzRQZHFtORRHhTBqLpmkBhGZuJjjnsZPLxINNlNgQRmIjHEnFRdMBLkZRfuCMJkvoluVXvoXJtOPRHwCYQhrVJdhTSkHzERgqlDcZbLpBFMEuvCWAsIcHyzgMggcWcSMVNfmfBsppdchbOQNRMTSrQldEBHAtJULeKQVuJF",
+        "value": []}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:39 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 385361e1-de5f-4aa1-b9be-a244c5195a02
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '232'
+      mise-correlation-id:
+      - fa03c9a7-8efe-409d-b0f6-fcbc5918cb42
+      ms-correlation-x:
+      - 31975439-a695-9021-e4b6-0098a6b2f4d3
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(4ec70a2b-1082-f111-8070-7c1e52167ef6)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-mXAnDCuknLSHmPzpijNPsSIbrbdAzXQQpgIsXCDqNEbxzFVCtdOqsMDgYwfzSfDUPKZzMAXlKwCLiOoAsPqdmEtgGTbdShbzEkfEzrmzuYneZpsabufWPGgiLvVRIZdzGRvRXRgmWAaSixsCUFshlzJYGoYpxAxpVYdkmGZNFQoCHxbVfvTenIhdioOqaKjthuAAobaC",
+        "value": []}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:39 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 03afe5cf-15d1-45f8-8a87-7636f0512799
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '232'
+      mise-correlation-id:
+      - ced0667f-5b05-465b-835b-4152c286bc03
+      ms-correlation-x:
+      - 7d4c21fd-c6d5-81e1-eed6-38c281498fd0
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(54c70a2b-1082-f111-8070-7c1e52167ef6)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-LNhbMcaCqnLENCDUWzzfVVNlAlIBNEoIEepFxPyeUncbwFEqfAhogQsgQOqMbFtaMDgNwrgNfyyHnZjtwYheajusvUClvNBeGRflLOvbjAogFFnIHeTLYHIkOFIaqVAKQRGREdBBpMeIQidZNHhwYDHxGfgRSEdFmQITUsVbzlFEdddtuKpAFgkSAfnxvFsxeQVHDShL",
+        "value": []}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:39 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 33f40053-2d25-438e-bff9-08795c552367
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '232'
+      mise-correlation-id:
+      - 3f224ac6-c4e2-4e93-bc12-f3280c65bfca
+      ms-correlation-x:
+      - 09fb16f1-d127-aa67-4138-85db52739135
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/generalLedgerEntries(63c70a2b-1082-f111-8070-7c1e52167ef6)/dimensionSetLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-VCCBkNXybTldPLqPpMvCJcMwaVFDsuskAbNxcUHIDJqetmlHdfpylwCJsFblkzEXKCenUNcGHMNSKWTVBNwZUWEBNHVIglFCwGuODTTngQXeglzVcqbNdyuGPHiQPfdagKJbnuFjZnatLfPvOuBaDsVtHvvHqeOPqTIEeBTMcycRlKvOKBCprwRKXVhNucsPrVTqZcuG",
+        "value": []}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:58:40 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 9e3bc05d-c88c-48a2-9ea0-dc9c54062e52
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '232'
+      mise-correlation-id:
+      - 96bf9093-ebd1-4d05-85e8-fa3ce76dc47d
+      ms-correlation-x:
+      - 935401fd-47ae-9148-d180-3c69ee6b1224
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,678 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "companies",
+      "replication_method": "FULL_TABLE",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "systemVersion": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "businessProfileId": {
+            "type": ["string", "null"]
+          },
+          "systemCreatedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemCreatedBy": {
+            "type": ["string", "null"]
+          },
+          "systemModifiedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemModifiedBy": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "companies",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemVersion"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false
+          }
+        },
+        {
+          "breadcrumb": ["properties", "name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "businessProfileId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"],
+            "replication-method": "FULL_TABLE"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "currencies",
+      "replication_key": "lastModifiedDateTime",
+      "replication_method": "INCREMENTAL",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "code": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "symbol": {
+            "type": ["string", "null"]
+          },
+          "amountDecimalPlaces": {
+            "type": ["string", "null"]
+          },
+          "amountRoundingPrecision": {
+            "type": ["number", "null"]
+          },
+          "lastModifiedDateTime": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "company_id": {
+            "type": ["string", "null"]
+          },
+          "company_name": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "currencies",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "code"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "symbol"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "amountDecimalPlaces"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "amountRoundingPrecision"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "lastModifiedDateTime"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_id"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"],
+            "valid-replication-keys": ["lastModifiedDateTime"]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "vendors",
+      "replication_key": "lastModifiedDateTime",
+      "replication_method": "INCREMENTAL",
+      "key_properties": ["id", "lastModifiedDateTime"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "number": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "addressLine1": {
+            "type": ["string", "null"]
+          },
+          "addressLine2": {
+            "type": ["string", "null"]
+          },
+          "city": {
+            "type": ["string", "null"]
+          },
+          "state": {
+            "type": ["string", "null"]
+          },
+          "country": {
+            "type": ["string", "null"]
+          },
+          "postalCode": {
+            "type": ["string", "null"]
+          },
+          "phoneNumber": {
+            "type": ["string", "null"]
+          },
+          "email": {
+            "type": ["string", "null"]
+          },
+          "website": {
+            "type": ["string", "null"]
+          },
+          "taxRegistrationNumber": {
+            "type": ["string", "null"]
+          },
+          "currencyId": {
+            "type": ["string", "null"]
+          },
+          "currencyCode": {
+            "type": ["string", "null"]
+          },
+          "irs1099Code": {
+            "type": ["string", "null"]
+          },
+          "paymentTermsId": {
+            "type": ["string", "null"]
+          },
+          "paymentMethodId": {
+            "type": ["string", "null"]
+          },
+          "taxLiable": {
+            "type": ["boolean", "null"]
+          },
+          "blocked": {
+            "type": ["string", "null"]
+          },
+          "balance": {
+            "type": ["number", "null"]
+          },
+          "lastModifiedDateTime": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "defaultDimensions": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": ["string", "null"]
+                },
+                "dimensionId": {
+                  "type": ["string", "null"]
+                },
+                "dimensionCode": {
+                  "type": ["string", "null"]
+                },
+                "dimensionValueId": {
+                  "type": ["string", "null"]
+                },
+                "dimensionValueCode": {
+                  "type": ["string", "null"]
+                },
+                "lastModifiedDateTime": {
+                  "format": "date-time",
+                  "type": ["string", "null"]
+                }
+              },
+              "type": "object"
+            },
+            "type": ["array", "null"]
+          },
+          "company_id": {
+            "type": ["string", "null"]
+          },
+          "company_name": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "vendors",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "number"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "addressLine1"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "addressLine2"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "city"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "state"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "country"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "postalCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "phoneNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "email"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "website"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "taxRegistrationNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currencyId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currencyCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "irs1099Code"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "paymentTermsId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "paymentMethodId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "taxLiable"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "blocked"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "balance"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "lastModifiedDateTime"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "defaultDimensions"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_id"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id", "lastModifiedDateTime"],
+            "valid-replication-keys": ["lastModifiedDateTime"]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "dimension_values",
+      "replication_method": "FULL_TABLE",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "dimensionCode": {
+            "type": ["string", "null"]
+          },
+          "dimensionValueCode": {
+            "type": ["string", "null"]
+          },
+          "dimensionValueName": {
+            "type": ["string", "null"]
+          },
+          "dimensionValueId": {
+            "type": ["integer", "null"]
+          },
+          "dimensionValueType": {
+            "type": ["string", "null"]
+          },
+          "blocked": {
+            "type": ["boolean", "null"]
+          },
+          "indentation": {
+            "type": ["integer", "null"]
+          },
+          "consolidationCode": {
+            "type": ["string", "null"]
+          },
+          "globalDimensionNumber": {
+            "type": ["integer", "null"]
+          },
+          "lastModifiedDateTime": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "company_id": {
+            "type": ["string", "null"]
+          },
+          "company_name": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "dimension_values",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dimensionCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dimensionValueCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dimensionValueName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dimensionValueId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dimensionValueType"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "blocked"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "indentation"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "consolidationCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "globalDimensionNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "lastModifiedDateTime"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_id"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"]
+          }
+        }
+      ]
+    }
+  ]
+}

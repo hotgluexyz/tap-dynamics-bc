@@ -1,0 +1,788 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "companies",
+      "replication_method": "FULL_TABLE",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "systemVersion": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "displayName": {
+            "type": ["string", "null"]
+          },
+          "businessProfileId": {
+            "type": ["string", "null"]
+          },
+          "systemCreatedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemCreatedBy": {
+            "type": ["string", "null"]
+          },
+          "systemModifiedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "systemModifiedBy": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "companies",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemVersion"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "displayName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "businessProfileId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemCreatedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedAt"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "systemModifiedBy"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id"]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "sales_invoices",
+      "replication_key": "lastModifiedDateTime",
+      "replication_method": "INCREMENTAL",
+      "key_properties": ["id", "lastModifiedDateTime"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "number": {
+            "type": ["string", "null"]
+          },
+          "externalDocumentNumber": {
+            "type": ["string", "null"]
+          },
+          "invoiceDate": {
+            "format": "date",
+            "type": ["string", "null"]
+          },
+          "postingDate": {
+            "format": "date",
+            "type": ["string", "null"]
+          },
+          "dueDate": {
+            "format": "date",
+            "type": ["string", "null"]
+          },
+          "customerPurchaseOrderReference": {
+            "type": ["string", "null"]
+          },
+          "customerId": {
+            "type": ["string", "null"]
+          },
+          "customerNumber": {
+            "type": ["string", "null"]
+          },
+          "customerName": {
+            "type": ["string", "null"]
+          },
+          "billToName": {
+            "type": ["string", "null"]
+          },
+          "billToCustomerId": {
+            "type": ["string", "null"]
+          },
+          "billToCustomerNumber": {
+            "type": ["string", "null"]
+          },
+          "shipToName": {
+            "type": ["string", "null"]
+          },
+          "shipToContact": {
+            "type": ["string", "null"]
+          },
+          "sellToAddressLine1": {
+            "type": ["string", "null"]
+          },
+          "sellToAddressLine2": {
+            "type": ["string", "null"]
+          },
+          "sellToCity": {
+            "type": ["string", "null"]
+          },
+          "sellToCountry": {
+            "type": ["string", "null"]
+          },
+          "sellToState": {
+            "type": ["string", "null"]
+          },
+          "sellToPostCode": {
+            "type": ["string", "null"]
+          },
+          "billToAddressLine1": {
+            "type": ["string", "null"]
+          },
+          "billToAddressLine2": {
+            "type": ["string", "null"]
+          },
+          "billToCity": {
+            "type": ["string", "null"]
+          },
+          "billToCountry": {
+            "type": ["string", "null"]
+          },
+          "billToState": {
+            "type": ["string", "null"]
+          },
+          "billToPostCode": {
+            "type": ["string", "null"]
+          },
+          "shipToAddressLine1": {
+            "type": ["string", "null"]
+          },
+          "shipToAddressLine2": {
+            "type": ["string", "null"]
+          },
+          "shipToCity": {
+            "type": ["string", "null"]
+          },
+          "shipToCountry": {
+            "type": ["string", "null"]
+          },
+          "shipToState": {
+            "type": ["string", "null"]
+          },
+          "shipToPostCode": {
+            "type": ["string", "null"]
+          },
+          "currencyId": {
+            "type": ["string", "null"]
+          },
+          "shortcutDimension1Code": {
+            "type": ["string", "null"]
+          },
+          "shortcutDimension2Code": {
+            "type": ["string", "null"]
+          },
+          "currencyCode": {
+            "type": ["string", "null"]
+          },
+          "orderId": {
+            "type": ["string", "null"]
+          },
+          "orderNumber": {
+            "type": ["string", "null"]
+          },
+          "paymentTermsId": {
+            "type": ["string", "null"]
+          },
+          "shipmentMethodId": {
+            "type": ["string", "null"]
+          },
+          "salesperson": {
+            "type": ["string", "null"]
+          },
+          "pricesIncludeTax": {
+            "type": ["boolean", "null"]
+          },
+          "remainingAmount": {
+            "type": ["number", "null"]
+          },
+          "discountAmount": {
+            "type": ["number", "null"]
+          },
+          "discountAppliedBeforeTax": {
+            "type": ["boolean", "null"]
+          },
+          "totalAmountExcludingTax": {
+            "type": ["number", "null"]
+          },
+          "totalTaxAmount": {
+            "type": ["number", "null"]
+          },
+          "totalAmountIncludingTax": {
+            "type": ["number", "null"]
+          },
+          "status": {
+            "type": ["string", "null"]
+          },
+          "lastModifiedDateTime": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "phoneNumber": {
+            "type": ["string", "null"]
+          },
+          "email": {
+            "type": ["string", "null"]
+          },
+          "salesInvoiceLines": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": ["string", "null"]
+                },
+                "documentId": {
+                  "type": ["string", "null"]
+                },
+                "sequence": {
+                  "type": ["integer", "null"]
+                },
+                "itemId": {
+                  "type": ["string", "null"]
+                },
+                "accountId": {
+                  "type": ["string", "null"]
+                },
+                "lineType": {
+                  "type": ["string", "null"]
+                },
+                "lineObjectNumber": {
+                  "type": ["string", "null"]
+                },
+                "description": {
+                  "type": ["string", "null"]
+                },
+                "unitOfMeasureId": {
+                  "type": ["string", "null"]
+                },
+                "unitOfMeasureCode": {
+                  "type": ["string", "null"]
+                },
+                "unitPrice": {
+                  "type": ["number", "null"]
+                },
+                "quantity": {
+                  "type": ["number", "null"]
+                },
+                "discountAmount": {
+                  "type": ["number", "null"]
+                },
+                "discountPercent": {
+                  "type": ["number", "null"]
+                },
+                "discountAppliedBeforeTax": {
+                  "type": ["boolean", "null"]
+                },
+                "amountExcludingTax": {
+                  "type": ["number", "null"]
+                },
+                "taxCode": {
+                  "type": ["string", "null"]
+                },
+                "taxPercent": {
+                  "type": ["number", "null"]
+                },
+                "totalTaxAmount": {
+                  "type": ["number", "null"]
+                },
+                "amountIncludingTax": {
+                  "type": ["number", "null"]
+                },
+                "invoiceDiscountAllocation": {
+                  "type": ["number", "null"]
+                },
+                "netAmount": {
+                  "type": ["number", "null"]
+                },
+                "netTaxAmount": {
+                  "type": ["number", "null"]
+                },
+                "netAmountIncludingTax": {
+                  "type": ["number", "null"]
+                },
+                "shipmentDate": {
+                  "format": "date",
+                  "type": ["string", "null"]
+                },
+                "itemVariantId": {
+                  "type": ["string", "null"]
+                },
+                "locationId": {
+                  "type": ["string", "null"]
+                }
+              },
+              "type": "object"
+            },
+            "type": ["array", "null"]
+          },
+          "company_id": {
+            "type": ["string", "null"]
+          },
+          "company_name": {
+            "type": ["string", "null"]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "sales_invoices",
+      "metadata": [
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "number"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "externalDocumentNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "invoiceDate"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "postingDate"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "dueDate"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "customerPurchaseOrderReference"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "customerId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "customerNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "customerName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToCustomerId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToCustomerNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToName"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToContact"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToAddressLine1"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToAddressLine2"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToCity"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToCountry"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToState"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "sellToPostCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToAddressLine1"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToAddressLine2"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToCity"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToCountry"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToState"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "billToPostCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToAddressLine1"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToAddressLine2"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToCity"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToCountry"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToState"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipToPostCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currencyId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shortcutDimension1Code"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shortcutDimension2Code"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "currencyCode"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "orderId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "orderNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "paymentTermsId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "shipmentMethodId"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "salesperson"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "pricesIncludeTax"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "remainingAmount"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "discountAmount"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "discountAppliedBeforeTax"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "totalAmountExcludingTax"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "totalTaxAmount"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "totalAmountIncludingTax"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "status"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "lastModifiedDateTime"],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "phoneNumber"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "email"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "salesInvoiceLines"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_id"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "company_name"],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": ["id", "lastModifiedDateTime"],
+            "valid-replication-keys": ["lastModifiedDateTime"]
+          }
+        }
+      ]
+    }
+  ]
+}

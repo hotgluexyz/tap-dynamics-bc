@@ -1,0 +1,2073 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-qqxyNy", "scope": "-Fallback-scrubbed-OtWXyqqmAUDTnpzxuFxRNbDaphXxPLdAEvQiGKMzVew",
+        "expires_in": "4043", "ext_expires_in": "-Fallback-scrubbed-EeIw", "expires_on":
+        "-Fallback-scrubbed-GTwjAakJNp", "not_before": "-Fallback-scrubbed-InVtlqTxxc",
+        "resource": "-Fallback-scrubbed-AmpwhoGKCPHIdoDJEKDbmdZYtaKkoxCVwtAyzTje",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-aP_Be6skjZvMosdy31kifA'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:25 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AgOaYCkTlY1AveDFfBVw7P_oOlVYAQAAANXJ8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:25:25 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24997.6 - WUS3 ProdSlices
+      x-ms-request-id:
+      - f1d23840-4eec-421b-b582-8861f1561900
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-IpDJgcDRFRCpooAmGSbrFUODlQidXBgwWiHz",
+        "applicationFamily": "-Fallback-scrubbed-cYUvvfPzdLhLihp", "type": "-Fallback-scrubbed-KRfVQcF",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-UE", "webServiceUrl":
+        "-Fallback-scrubbed-AmpwhoGKCPHIdoDJEKDbmdZYtaKkoxCVwtAyzTje", "webClientLoginUrl":
+        "-Fallback-scrubbed-CDVPtvePPYvuXpoZbSaNRANkjjmAJslXLwpN"}, {"aadTenantId":
+        "-Fallback-scrubbed-IpDJgcDRFRCpooAmGSbrFUODlQidXBgwWiHz", "applicationFamily":
+        "-Fallback-scrubbed-cYUvvfPzdLhLihp", "type": "-Fallback-scrubbed-mllgLnVMZl",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-bP", "webServiceUrl":
+        "-Fallback-scrubbed-AmpwhoGKCPHIdoDJEKDbmdZYtaKkoxCVwtAyzTje", "webClientLoginUrl":
+        "-Fallback-scrubbed-CDVPtvePPYvuXpoZbSaNRANkjjmAJslXLwpN"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:25 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - ad6238fd-78f6-4793-aca0-d4e5e2ba28cd
+      ms-correlation-x:
+      - 8e77a52b-2cb0-2107-9876-78c694fa02a4
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-vKwFOvTkjpWivZreantVxWilmPWHHsJzIEIGPBVRYueVqMSrdKGTToCRHJXYbRrpQAykPTHnaqZfLLLGXYAwn",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-okgIdVwcMJRAHusS", "timestamp": 7101, "name": "CRONUS
+        USA, Inc.", "displayName": "Monique Garcia", "businessProfileId": "Monique
+        Garcia", "systemCreatedAt": "-Fallback-scrubbed-fdnZBxcFmODexBQrRfIQMLFJ",
+        "systemCreatedBy": "-Fallback-scrubbed-PvoNNXMfcLdsPkQuzltOtLVJBmDaxauiBvke",
+        "systemModifiedAt": "-Fallback-scrubbed-fdnZBxcFmODexBQrRfIQMLFJ", "systemModifiedBy":
+        "-Fallback-scrubbed-PvoNNXMfcLdsPkQuzltOtLVJBmDaxauiBvke"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:26 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - bd209b58-1b4c-4117-9514-2a19de63d0ff
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - fd419712-c7ed-421a-8e9f-25665b8068e5
+      ms-correlation-x:
+      - 0856de4e-1e51-76c1-1d5a-989a47718527
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-tLoLGoesMmdJzpTcakaqNEJMYdSsXOWKNdQtFCWboxsBMryHXxXmMdQwAYhjOeRLoOkfnWnkbIsGfxQACgOFWFrjyrbaYJKSvNbhYaaqpjZnhvSQEDnlBgiwZkjkcgJfUJeHwyBhjnmeMk",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-FfHjOCGkaqTWFdnLlxSqziIgSjosEVdkZAENdkZbUWBB",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Derrick Anderson",
+        "addressLine1": "06456 Schultz Island", "addressLine2": "7306 Casey Mills",
+        "city": "Romeroberg", "state": "-Fallback-scrubbed-Hh", "country": "-Fallback-scrubbed-bP",
+        "postalCode": "45361", "phoneNumber": "9917193859", "faxNumber": "-Fallback-scrubbed-zqyoxlXqDNOVgga",
+        "email": "Monique Garcia", "website": "Monique Garcia", "taxRegistrationNumber":
+        "Monique Garcia", "currencyCode": "-Fallback-scrubbed-Gyu", "currentFiscalYearStartDate":
+        "-Fallback-scrubbed-oCHVptlkWo", "industry": "Monique Garcia", "experience":
+        "-Fallback-scrubbed-LWLNVgaEl", "lastModifiedDateTime": "2026-02-04T03:43:12.517Z",
+        "picture@odata.mediaReadLink": "-Fallback-scrubbed-WlyGSIIJYUoWVLSwWxbUoVFlmsfiVIQvsPqYiijZPLEpDThiXsTTgiTzqwHWyKZllPlDZxvVgpRnykCgxgdFiRWgXNyfFluMqLKqOxumTBkGNuHuFWcpOnZMjSSbPCxctdqpdHVQXFHaqZyyzTeefeQyjDoImwHXyZlfSfayuzTBiXVVlN"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:27 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - d5609b17-dd77-4121-a77b-70627d1637cd
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - a8707bc1-4c1e-457a-b5fe-b80704021a4a
+      ms-correlation-x:
+      - cc1e949f-8e7f-36fc-1d62-a6856496a379
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-IpDJgcDRFRCpooAmGSbrFUODlQidXBgwWiHz",
+        "applicationFamily": "-Fallback-scrubbed-cYUvvfPzdLhLihp", "type": "-Fallback-scrubbed-KRfVQcF",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-UE", "webServiceUrl":
+        "-Fallback-scrubbed-AmpwhoGKCPHIdoDJEKDbmdZYtaKkoxCVwtAyzTje", "webClientLoginUrl":
+        "-Fallback-scrubbed-CDVPtvePPYvuXpoZbSaNRANkjjmAJslXLwpN"}, {"aadTenantId":
+        "-Fallback-scrubbed-IpDJgcDRFRCpooAmGSbrFUODlQidXBgwWiHz", "applicationFamily":
+        "-Fallback-scrubbed-cYUvvfPzdLhLihp", "type": "-Fallback-scrubbed-mllgLnVMZl",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-bP", "webServiceUrl":
+        "-Fallback-scrubbed-AmpwhoGKCPHIdoDJEKDbmdZYtaKkoxCVwtAyzTje", "webClientLoginUrl":
+        "-Fallback-scrubbed-CDVPtvePPYvuXpoZbSaNRANkjjmAJslXLwpN"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:27 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 7f7f1982-af0f-4b7d-a50c-f5ccab0b3aee
+      ms-correlation-x:
+      - f34eb39f-826f-f1b5-1fd7-bdf597331c4f
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=1000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/purchaseInvoices?%24filter=lastModifiedDateTime+gt+2026-03-31T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-VFPKXjpFMOdqDuESxXhJWjJZDHdGsHLDoFBpgiRXXeijuGjQbdMyOzbefvdbMgbPMGlpdVCUqRcyBhzHjwMTzaKJzIRlLlIiotZfdgJNLpKegFsEWvMlENynAlPBticuIIbFDnquzCwk",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-bpAQsYaFeJiBaTDRfPkVfqchYnXFVDtEneTSJOMEfylq",
+        "id": "1773153c-6329-f111-8340-000d3a11d3d8", "number": "-Fallback-scrubbed-jiYkHT",
+        "postingDate": "-Fallback-scrubbed-xbcDuCYXZT", "invoiceDate": "-Fallback-scrubbed-xbcDuCYXZT",
+        "dueDate": "-Fallback-scrubbed-WxAgvbjQlt", "vendorInvoiceNumber": "-Fallback-scrubbed-dijtdQQRYGe",
+        "vendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO", "vendorNumber":
+        "-Fallback-scrubbed-aKFPfXanEPbwOzB", "vendorName": "-Fallback-scrubbed-SJNNIBpleA",
+        "payToName": "-Fallback-scrubbed-SJNNIBpleA", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO",
+        "payToVendorNumber": "-Fallback-scrubbed-aKFPfXanEPbwOzB", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "buyFromAddressLine2": "-Fallback-scrubbed-VAMrQ", "buyFromCity": "-Fallback-scrubbed-JPgAPVkH",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-lI",
+        "buyFromPostCode": "-Fallback-scrubbed-VRhmv", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "payToAddressLine2": "-Fallback-scrubbed-VAMrQ", "payToCity": "-Fallback-scrubbed-JPgAPVkH",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-lI",
+        "payToPostCode": "-Fallback-scrubbed-VRhmv", "shortcutDimension1Code": "-Fallback-scrubbed-CfShK",
+        "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-gqMGdVeRemKtlEdVWTiDjsICIKMUCZlQqBHS",
+        "currencyCode": "-Fallback-scrubbed-jaI", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -8576569805.82408, "totalTaxAmount": 7545, "totalAmountIncludingTax": -8576569805.82408,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-04-10T18:19:54.863Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-OacbmDfdGdmtVCLdjCYdHiLdtpfLHemsdQPapmyTUHie",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ETRBBsfvmkErIInNGavzdGatSMkblFOhmsER",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-jWKpCtuBZKJWwVOARLtnKyaFAjACRXgbpqOIVXFnsELQ", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-ETRBBsfvmkErIInNGavzdGatSMkblFOhmsER", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC", "valueCode": "-Fallback-scrubbed-GG",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-TxEjrA"},
+        {"@odata.etag": "-Fallback-scrubbed-WhCRkEJsxCMpsZqwCfnmrxJUAzhMwijxfUtgOqttHnfm",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ETRBBsfvmkErIInNGavzdGatSMkblFOhmsER",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-QGsRTazZfGUXsOrWRhKKpSOhWylmookPGeqR",
+        "valueCode": "-Fallback-scrubbed-CfShK", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-ZhZmE"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-sMwLhIvgPTLPoIzEjFUpNQxHUIwacidTUfKIupWwGNLt",
+        "id": "2173153c-6329-f111-8340-000d3a11d3d8", "documentId": "-Fallback-scrubbed-ETRBBsfvmkErIInNGavzdGatSMkblFOhmsER",
+        "sequence": 5934, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 4440598.4446186, "quantity":
+        8435, "discountAmount": 7761, "discountPercent": -91020356.5812402, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 8063024.26915393, "netTaxAmount": 7545, "netAmountIncludingTax":
+        8063024.26915393, "expectedReceiptDate": "-Fallback-scrubbed-xbcDuCYXZT",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-hNqkANbGvWcxycLqdUtQpjObHPNyiKstfLuGUlzeNAST",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-vGPdtCGLTDbmBauSTUAGiiKSxySpkOzzRkXh",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-sDJyyZCRVpiuetiiMjUgXxVLcnBqcSgnFfbJpORDkppN", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-jSFkX", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-vGPdtCGLTDbmBauSTUAGiiKSxySpkOzzRkXh", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Douglas
+        Holder", "valueId": "-Fallback-scrubbed-YlVelmzLtowWJHgedXEbTBnvPYZlHwBdDyGg",
+        "valueCode": "-Fallback-scrubbed-hkINue", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-PRQDjL"}, {"@odata.etag":
+        "-Fallback-scrubbed-TSuFtcUvcZsybBNHXuaMzIMPEcZfQuJFxprZycDYgQPA", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-vGPdtCGLTDbmBauSTUAGiiKSxySpkOzzRkXh", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC",
+        "valueCode": "-Fallback-scrubbed-GG", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-TxEjrA"}, {"@odata.etag": "-Fallback-scrubbed-bomTiVRjygAtYhKZtbxqJxmgpcpxsjcaxyUfdrTvaQao",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-vGPdtCGLTDbmBauSTUAGiiKSxySpkOzzRkXh",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-GWEQyrXzVIeUOHjnUZrMiCfQUUXAVrAaHlljJVUPSejz", "id": "1a73153c-6329-f111-8340-000d3a11d3d8",
+        "documentId": "-Fallback-scrubbed-ETRBBsfvmkErIInNGavzdGatSMkblFOhmsER", "sequence":
+        5036, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 587, "quantity":
+        587, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7876, "netTaxAmount": 7545, "netAmountIncludingTax": 7876,
+        "expectedReceiptDate": "-Fallback-scrubbed-xbcDuCYXZT", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-umwzPzivhhJiJGSUubBdlCWztaqKEFKAfyyWkApZeOMd",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-OyXIyESABfbFudjcnvBgQAeupuOROQCLXLCZ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-LRJZOmQBqTtGBxPwaEdAfYJcuVWCGHXTaKmcAOjiQgdx", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-jSFkX", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-OyXIyESABfbFudjcnvBgQAeupuOROQCLXLCZ", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Douglas
+        Holder", "valueId": "-Fallback-scrubbed-YlVelmzLtowWJHgedXEbTBnvPYZlHwBdDyGg",
+        "valueCode": "-Fallback-scrubbed-hkINue", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-PRQDjL"}, {"@odata.etag":
+        "-Fallback-scrubbed-vLgurydmxCfQIXDhZzeZVREEzSYDcKXkVHpoiQglIvjJ", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-OyXIyESABfbFudjcnvBgQAeupuOROQCLXLCZ", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC",
+        "valueCode": "-Fallback-scrubbed-GG", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-TxEjrA"}, {"@odata.etag": "-Fallback-scrubbed-jgUpXmsupxvNKtxjGhXcfbhSPuWJNBfPPuEMczteuoOv",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-OyXIyESABfbFudjcnvBgQAeupuOROQCLXLCZ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-xuSKkhjTuaRTyhNyjqTivTNnOvpeCPdfQvnKcpySDNuJ", "id": "8f466b8f-722c-f111-bec2-000d3a1cb494",
+        "number": "-Fallback-scrubbed-nnKDKw", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-PQSpekcPfIQTKOwEnJS", "vendorId":
+        "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz", "vendorNumber":
+        "-Fallback-scrubbed-HtgjBwXZT", "vendorName": "-Fallback-scrubbed-gRWigcjVKzaH",
+        "payToName": "-Fallback-scrubbed-gRWigcjVKzaH", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz",
+        "payToVendorNumber": "-Fallback-scrubbed-HtgjBwXZT", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-gqMGdVeRemKtlEdVWTiDjsICIKMUCZlQqBHS", "currencyCode":
+        "-Fallback-scrubbed-jaI", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        1.89510338945426, "totalTaxAmount": 7545, "totalAmountIncludingTax": 1.89510338945426,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T10:58:18.633Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-baBWqPKnkNAbBhPRgRlibHMMAguBFAgJXGAaGTEIYPhP",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iNQyLcqLvmNUsUPqregxoGTbZWvvxpFBsZsf",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-ggjmlgvkYJgGAAUqIzutkkztBHTRBmnqjoaUDzLlPweH",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iNQyLcqLvmNUsUPqregxoGTbZWvvxpFBsZsf",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-CUplDxiSMjFFeehQRqFKQDVrWnPqJHTfyZOwjwshYZGJ",
+        "id": "9dfcd281-f02c-f111-bec2-000d3a1cb494", "documentId": "-Fallback-scrubbed-iNQyLcqLvmNUsUPqregxoGTbZWvvxpFBsZsf",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 3.1098639140465,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 1.89510338945426, "netTaxAmount": 7545, "netAmountIncludingTax":
+        1.89510338945426, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        []}, {"@odata.etag": "-Fallback-scrubbed-qWQfpJmlsCpjExepafFdmLVwLBvLrAfgYLwrPlghyvzR",
+        "id": "9efcd281-f02c-f111-bec2-000d3a1cb494", "documentId": "-Fallback-scrubbed-iNQyLcqLvmNUsUPqregxoGTbZWvvxpFBsZsf",
+        "sequence": 3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        []}]}, {"@odata.etag": "-Fallback-scrubbed-AYaEcLKShLRweySnglcPetZBypLyQuFxrLhsLivxSNSu",
+        "id": "4cb1949a-f02c-f111-bec2-000d3a1cb494", "number": "-Fallback-scrubbed-rXTXpf",
+        "postingDate": "-Fallback-scrubbed-MKxAevvDYb", "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "dueDate": "-Fallback-scrubbed-OOKGdazPIT", "vendorInvoiceNumber": "-Fallback-scrubbed-zNKKHWtAuNpUuZuAReA",
+        "vendorId": "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz", "vendorNumber":
+        "-Fallback-scrubbed-HtgjBwXZT", "vendorName": "-Fallback-scrubbed-gRWigcjVKzaH",
+        "payToName": "-Fallback-scrubbed-gRWigcjVKzaH", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz",
+        "payToVendorNumber": "-Fallback-scrubbed-HtgjBwXZT", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "-Fallback-scrubbed-fOfGG",
+        "currencyId": "-Fallback-scrubbed-gqMGdVeRemKtlEdVWTiDjsICIKMUCZlQqBHS", "currencyCode":
+        "-Fallback-scrubbed-jaI", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -82994453.118658, "totalTaxAmount": 7545, "totalAmountIncludingTax": -82994453.118658,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T11:52:51.557Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-loufgjqALrlDPXjbruxiTCMxVZHPtzEpwOodHquJrroJ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-ajeQzlTruVpeeODDDiCUrYaGpfwcOgMVdprArIgTWXcl",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-RohwMxgJsgjvYNHmpFvQyMkWyswPqmbFDbHHBXHaHHsQ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Lindsey Bailey",
+        "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD", "valueCode":
+        "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique Garcia", "valueDisplayName":
+        "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines": [{"@odata.etag":
+        "-Fallback-scrubbed-RWHXuLXvBZinCCHmDaHcDJysvGccGqXrYzUInQdxadNr", "id": "404d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 3.1098639140465,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 1.89510338945426, "netTaxAmount": 7545, "netAmountIncludingTax":
+        1.89510338945426, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-QgttHEEmtSvGJFBYijBDfUlIhRXYgUcMkIvJMGxhopLR",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XLmVwLnYxlAtPzxTcxayYoBRQkqJkpVTlxdr",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-ZlIolMJybIwvJQICCKHQmIJHuRfnOLYeaXNXqqWxhbSJ",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XLmVwLnYxlAtPzxTcxayYoBRQkqJkpVTlxdr",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-peKJjPgntbJqEHjqHRsilPUJvjlDaSTOJxIhuUiUPjwY", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-XLmVwLnYxlAtPzxTcxayYoBRQkqJkpVTlxdr", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-ivzmlvcQzRLjECEkpLwKygVMdMgrQNdTiHOGvfJginVC", "id": "454d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-KcceZeIBXbldfoxFJQyYINEksSErtTgQiGjfPNncijqO",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SArJsaxJijiELjMUgmsNxnhIIiGAHmiaOtSd",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-WjDqZjzIyFftdcOseBEDGeCeTYYQKXuJqYEhVqLdRGgZ",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SArJsaxJijiELjMUgmsNxnhIIiGAHmiaOtSd",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-vncVoEcmBwuBMxjWlxErolevtPwKLrfrxjLVqhabCMZa", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-SArJsaxJijiELjMUgmsNxnhIIiGAHmiaOtSd", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-oBsVbrYGaWNhwBKyCIjpiXykjqrsgbUhhqqagJUbFHMg", "id": "4b4d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        4304, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 3.1098639140465,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 1.89510338945426, "netTaxAmount": 7545, "netAmountIncludingTax":
+        1.89510338945426, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-aSbkwKELiIfKIeaIEhFCGKPJLNDkNxyxrdjwbZlceDVV",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-CVzxhdmpzMXeILZDeHdTufcTZMlDRIBRhqan",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-DvzDIwinSVcxqKLlLDEGkoPfqlueOQwqaMNFyeLnFDMf",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-CVzxhdmpzMXeILZDeHdTufcTZMlDRIBRhqan",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-OJyEbrErfHnzukOZIMXpHOnbHixoJjvtvcUUGHMuDrav", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-CVzxhdmpzMXeILZDeHdTufcTZMlDRIBRhqan", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-sCmECAtYIypsKcSFlJoqUURBZVxSrrVjvvGjyAQMpRJt", "id": "4f4d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        2694, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-psZLRXipGiRadKHEGymswaoEFAEzPeaFQzdKfbGcsrwc",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-nFimVIUkYHPDCufCpyZJUhlgeWGIuXZNirYO",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-KqsdiRkLLWfJDaMGHkpcgHfibnLCRSeyVYwdwsCaayyj",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-nFimVIUkYHPDCufCpyZJUhlgeWGIuXZNirYO",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-zmOBqetnFkvylWoMVtvafditGGgihQCSraQoGYDbzQYy", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-nFimVIUkYHPDCufCpyZJUhlgeWGIuXZNirYO", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-KkDmjaSjlnQseHdjMzqJNaIWGjoOuYullrQViICRNWtZ", "id": "554d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        1265, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 3.1098639140465,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 1.89510338945426, "netTaxAmount": 7545, "netAmountIncludingTax":
+        1.89510338945426, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-vCGJWprRpLNkFFnhYpsZZRvemkGQDAuqUgzpdCmOYBIJ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-pPRmpnsKfQvFznmNszwbMvwHNZyjUCjOlGtj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-qaglFOeMGNOfdJVMGWcOgfOPExfRIRwDnijgZHetALZO",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-pPRmpnsKfQvFznmNszwbMvwHNZyjUCjOlGtj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-zqeKZBTwMIvMHediSkPpWqIiSKbaRJUIodWTAoMuXPnh", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-pPRmpnsKfQvFznmNszwbMvwHNZyjUCjOlGtj", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-dnNqeNYAjJXTIhFUPcMRoHoQYdKDwSAIJuqdavymuTbZ", "id": "574d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        6131, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-FTOMuRQvdkAestDOAEZmyNAentGtkXBzepVATGfKzRmT",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-yDdpXtVSqUoxbkNoFQmTyGKEEYsXLLPYrvPY",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-OVkGackCwshMLRVaSlhTHCZxOSRXdQMGvsrjMbIkMnPQ",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-yDdpXtVSqUoxbkNoFQmTyGKEEYsXLLPYrvPY",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-ALesNwPjjpYsztGZQRygoMzEtelyDpoJkydBjSeHEFYX", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-yDdpXtVSqUoxbkNoFQmTyGKEEYsXLLPYrvPY", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-GcTxEHcHxMKJGmkUBtHJfxEhdIqYBrNaAdyOjXapAiyl", "id": "9ae23022-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        5519, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 16.9512320791427, "discountPercent": -7370276865.94311,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7913.92478779958, "netTaxAmount": 7545, "netAmountIncludingTax":
+        7913.92478779958, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-WcydjyDwxQNBAABlWBazAhTRCqxTucDxuRkZYcGUKVYm",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iOztKlMNnpnaLhboULmKIKiVjWJYwvxkvLgg",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-QWdVskjgcUmgbSDcMLFlSViGaSRYkXdvpBABWXNVqctH", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-iOztKlMNnpnaLhboULmKIKiVjWJYwvxkvLgg", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-oswYjyicufIUaDyCKFJbKvnGdLMUHyGBTsqtaxHxHZTp",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iOztKlMNnpnaLhboULmKIKiVjWJYwvxkvLgg",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-ikMdlnzFJWLyMuAQkAvMXywmlyeoMRuedPQXjCWfxDbg", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-iOztKlMNnpnaLhboULmKIKiVjWJYwvxkvLgg", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-dCjdGzKPwpUVLHNNMkRsbVqiXtjgUaQkrswoXczwcqnQ", "id": "a6e23022-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-OypFkVLabPbgnkoBoCMwqUPtCcZDKDujhSSi", "sequence":
+        3561, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 1652, "quantity": 8435,
+        "discountAmount": 16.9512320791427, "discountPercent": 37.793082890389, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 13424707556.29, "netTaxAmount": 7545, "netAmountIncludingTax":
+        13424707556.29, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-nOnsADAicIGqPUEVOuLRJuwGwxZVwigAzgESeDSeiURw",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-EUgGkoKOQFgMNZWgtMvDeTbzSlWzNjmaahAa",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-IwtrvXMvKHgJfzPTbXUSRtiaDsPSToWRibyi",
+        "valueCode": "-Fallback-scrubbed-oqYHCznM", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-oqYHCznM"}, {"@odata.etag":
+        "-Fallback-scrubbed-BnVWRzfuZzmrfZLmLeLKCvlGjkDlOcnwRPwHbcUDJLQq", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-EUgGkoKOQFgMNZWgtMvDeTbzSlWzNjmaahAa", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-hbzwCtOUWpEZKnScHeEHxkcJtogTlmSsyruQBZSwXCYG",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-EUgGkoKOQFgMNZWgtMvDeTbzSlWzNjmaahAa",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}, {"@odata.etag":
+        "-Fallback-scrubbed-NtwEemNPXsuMDwfmhUVfBUkEgxhuBOvCjOkNHNXapbes", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-sTIdMvTYne", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-EUgGkoKOQFgMNZWgtMvDeTbzSlWzNjmaahAa", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Lindsey
+        Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-wdreXiBzDrhlsRdlQWGbIhbXenXtqZygzLNvEaHmZeqb", "id": "5af0fc25-f72c-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-GCicXH", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-zNKKHWtAuNpUuZuAReA", "vendorId":
+        "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ", "vendorNumber":
+        "-Fallback-scrubbed-ndBdrnzdA", "vendorName": "-Fallback-scrubbed-XZpamSnvd",
+        "payToName": "-Fallback-scrubbed-XZpamSnvd", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "payToVendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-BAkeIGOqfVEzFTHoXIqNdyRydaZHQZRsHbdP", "currencyCode":
+        "-Fallback-scrubbed-qqr", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        3.2112097967924, "totalTaxAmount": 7545, "totalAmountIncludingTax": 3.2112097967924,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T11:51:04.253Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-oudLkqlSUGShSmpGFtIetGOdcYcwXyQcjeTOHSRrQhba",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XKyLvlnLxSkncbgsMAWPbfJOYzcDCpJpwhJW",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-gQVVWRzrlRjUjsLAMNhSyApuXsBkGfbZijFJgOEAMtpp",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XKyLvlnLxSkncbgsMAWPbfJOYzcDCpJpwhJW",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-UXMbYkNQRxjjhioEsoBeUnqoBHJhzjabfgTFLnQTSKTC",
+        "id": "043f8fe2-f72c-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-XKyLvlnLxSkncbgsMAWPbfJOYzcDCpJpwhJW",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -444188.45451902,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3.2112097967924, "netTaxAmount": 7545, "netAmountIncludingTax":
+        3.2112097967924, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-ntfWfaSwxQdQFovLSFefcPyLUtWYpVoFazLBfoWevQlY",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-RokMnsXRkAcgmmbrJTPULyBnFEIzMWOBuAbJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-QqDtUiUOhGtKigrsEyyqXXAPZvwCvQoIlmamzaxjfdSW",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-RokMnsXRkAcgmmbrJTPULyBnFEIzMWOBuAbJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-lzkQBsjQbLnujGEHtQOtUOSwcNmuEtlYUrBvyZRQYEeR", "id": "053f8fe2-f72c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-XKyLvlnLxSkncbgsMAWPbfJOYzcDCpJpwhJW", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-drNQsZCdenVuBbvtLQuFvrCvQQhFctDPHnWnKxpdsjkc",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SEtUBlcAcxRqJaRfeOAWEzbPITkCqsRYSJbU",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-PGODKVYWBkcLXLaiJPHsGBGctpIjnxayGAAmASrBdOJQ",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SEtUBlcAcxRqJaRfeOAWEzbPITkCqsRYSJbU",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-BrpxyOGQipYGwcytKmonZPgWPcLmcBZLVYTBEFszvpRf", "id": "8a6812d2-002d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-QUfPMS", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-ejUlKicCuYLBVsXMKKZ", "vendorId":
+        "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz", "vendorNumber":
+        "-Fallback-scrubbed-HtgjBwXZT", "vendorName": "-Fallback-scrubbed-gRWigcjVKzaH",
+        "payToName": "-Fallback-scrubbed-gRWigcjVKzaH", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz",
+        "payToVendorNumber": "-Fallback-scrubbed-HtgjBwXZT", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-BAkeIGOqfVEzFTHoXIqNdyRydaZHQZRsHbdP", "currencyCode":
+        "-Fallback-scrubbed-qqr", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        28924.4247477614, "totalTaxAmount": 7545, "totalAmountIncludingTax": 28924.4247477614,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T13:13:43.8Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-LHAkjWKoLjkEZiCWwRqWLquwGCbucDHQwNHCWeZwiuFc",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-gHsqGJpeklFalZkcmoyvEDhOexpQvTWcBmjxhrwvBknr",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-lAAewsrlsoUFVNwRXbLhchqBUvClDTpQLGscYpwZVCBr",
+        "id": "44715649-012d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -444188.45451902,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3.2112097967924, "netTaxAmount": 7545, "netAmountIncludingTax":
+        3.2112097967924, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-iTVGZpgWnQsnwgiCTPLSxHJeNemCkxpTejvPTcfYEynH",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SOPpeMNLdWqZxkchFFFhRXcHXApAZkFyKEAQ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-LvmtsSGfCrStZFljuZibeMHZwybAhFbHLeNOQAEhSCOk",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-SOPpeMNLdWqZxkchFFFhRXcHXApAZkFyKEAQ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-VObJzAhSKvfLbbltGOLkuTuxhCwkHKuGFbKRuGWlMAfz", "id": "45715649-012d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-YkWqQKKyakgKHDMqsASYHgItDKYTjgwPmZTnyAHhRJEQ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-BlGdxvGqoRwrmDFraHFcTUfcaQfNYdHnGAlx",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-DpLWGeTtcSwBnIWGvdAZnpKrgDKDhtvPZJgAwrsFHEYN",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-BlGdxvGqoRwrmDFraHFcTUfcaQfNYdHnGAlx",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-XeflMCeglFWeXjAcbjDZiMhYVvYlYylLBtxdxVsGPorC", "id": "453c1669-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT", "sequence":
+        4304, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 16.9512320791427, "discountPercent": -7370276865.94311,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7913.92478779958, "netTaxAmount": 7545, "netAmountIncludingTax":
+        7913.92478779958, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-WEGhDbxOZscrdvJsfFQuQkwJySngJHbNvEgFTlhRQzCI",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ZzOAReJKbhnaszNYbDdXYbXJwuTzUoGVLqFz",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-IaMzchuqZVUqseTTIBGybQJpCaLKpvzoVLjgZxRoHyoA", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-ZzOAReJKbhnaszNYbDdXYbXJwuTzUoGVLqFz", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-KsqzIoHyfPXVwCTmtHzFwVLsOgjSZWqjevwakCdSOEPE",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ZzOAReJKbhnaszNYbDdXYbXJwuTzUoGVLqFz",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-bPEKoirShJFqMBwgbKGCOQxXMPAlyaAqQqqyjYOfHnFK", "id": "663c1669-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-exWtmohESLUqySzhOWstYndhvPJjdTRqbkQT", "sequence":
+        2694, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 1652, "quantity": 8435,
+        "discountAmount": 16.9512320791427, "discountPercent": 37.793082890389, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 13424707556.29, "netTaxAmount": 7545, "netAmountIncludingTax":
+        13424707556.29, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-JmBySSLqMtdmAXDuMDEwzkOCnvJIzNfgLVHrxridUIbm",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ExkLraXgodJuTZfkcWrRLGGAJItHwJKctYZD",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-IwtrvXMvKHgJfzPTbXUSRtiaDsPSToWRibyi",
+        "valueCode": "-Fallback-scrubbed-oqYHCznM", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-oqYHCznM"}, {"@odata.etag":
+        "-Fallback-scrubbed-qqduAOyVoqUHrDckrjvTHaZFfQZvLSTDqCXOOJaBOHlY", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-ExkLraXgodJuTZfkcWrRLGGAJItHwJKctYZD", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-eMCXTQcOifLhYTFlTsSfNXdKnnASXzgPMqhyfUZZbGMu",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-ExkLraXgodJuTZfkcWrRLGGAJItHwJKctYZD",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-WFfavMVIoQQiFqqVqyBbvCSlZWIwwwZQavdmECKLqeVT", "id": "e6206ad8-002d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-XPrdks", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-ejUlKicCuYLBVsXMKKZ", "vendorId":
+        "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ", "vendorNumber":
+        "-Fallback-scrubbed-ndBdrnzdA", "vendorName": "-Fallback-scrubbed-XZpamSnvd",
+        "payToName": "-Fallback-scrubbed-XZpamSnvd", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "payToVendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-BAkeIGOqfVEzFTHoXIqNdyRydaZHQZRsHbdP", "currencyCode":
+        "-Fallback-scrubbed-qqr", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        28924.4247477614, "totalTaxAmount": 7545, "totalAmountIncludingTax": 28924.4247477614,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T13:13:51.9Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-TNCroFjhBNsjGICzlYpOWezjmjZbyNRrHRybMBJNbwvT",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-LpthmRVnCRFRWXiWagiMWLMzAwRmboBhksfybPZUrPvo",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-HsMBPqiTTYfFanbJKVfRbKbHFfnRcgawqlnMFzaPAzvK",
+        "id": "52715649-012d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -444188.45451902,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3.2112097967924, "netTaxAmount": 7545, "netAmountIncludingTax":
+        3.2112097967924, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-tCkMCGywoJtnSHbWFbaFxedeNNxNTTrfvlxauCOYNgmG",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-xmMvaoykPpevixXAbmxfOCpFVUiTjBuphWCj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-uiwdyWUtEeNDdrzcWZIvVGAiIoFjoPQZSUnVloWhWaSC",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-xmMvaoykPpevixXAbmxfOCpFVUiTjBuphWCj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-dAaagFiLapHwOPlRkbfTeVwxsuXVUmQFnLJXVnMrXAxx", "id": "53715649-012d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-MtKBElVvcdbwGhPlgBMBbufXaJLjVACTkfiojMhKHBCD",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XfiHBwPxEOpGVYFqIGGCUFvhRtIvtvMZUuyP",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-slsMZiGOXQZJJRLhiJXuCTOnRSDGDsXTAkGbDfxXZMVT",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-XfiHBwPxEOpGVYFqIGGCUFvhRtIvtvMZUuyP",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-EBLEGZAdITaNIoJrlJDbWEsBvfFiGyVowxusvXsNoDXO", "id": "e5a14c6f-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO", "sequence":
+        4304, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 16.9512320791427, "discountPercent": -7370276865.94311,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7913.92478779958, "netTaxAmount": 7545, "netAmountIncludingTax":
+        7913.92478779958, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-vHAMGkOvqbKIcXtvGDSrQgFiAdrbJuQchJwyDIJWLFZc",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-DxcJIMEPnrhEMXEwpNMPViNxskXevLJUgSAd",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-XQMXDYXbllLzlwmdhgLWEytdEKbGoTQqEsJUfnsXaxoH", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-DxcJIMEPnrhEMXEwpNMPViNxskXevLJUgSAd", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-viXbgYRidbqCWKdYSPnnEyogkDHyXqyUdARzdqtynizo",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-DxcJIMEPnrhEMXEwpNMPViNxskXevLJUgSAd",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-jKBADhfJjGWAErSyGapocYLvdPgfPORUoXjXzQIBrTfB", "id": "e6a14c6f-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-WMpuNfSLjEWFbWFylCCRZrtQeMtTnbuarYuO", "sequence":
+        2694, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 1652, "quantity": 8435,
+        "discountAmount": 16.9512320791427, "discountPercent": 37.793082890389, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 13424707556.29, "netTaxAmount": 7545, "netAmountIncludingTax":
+        13424707556.29, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-ZwFhURSNKYqckICMrItqLXsqeJaTrnzvJMcRsivFUzzO",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-PUiarwHuSqIrZUfarHMOfsEdcCEnNVVqcuSj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-IwtrvXMvKHgJfzPTbXUSRtiaDsPSToWRibyi",
+        "valueCode": "-Fallback-scrubbed-oqYHCznM", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-oqYHCznM"}, {"@odata.etag":
+        "-Fallback-scrubbed-VeUdNORsaeEmlSokURRVXprJFqAdgcyJlxYtMBFavPDT", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-PUiarwHuSqIrZUfarHMOfsEdcCEnNVVqcuSj", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-tpKEMHMTsuEnGAVkZIWEXWsdGWNGnwNqHMnovwFsRAph",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-PUiarwHuSqIrZUfarHMOfsEdcCEnNVVqcuSj",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-lVVqoKZVihOFBHWNRvlfaGwiDVJqbzBZRWpvDCzZQDvX", "id": "d8902ffe-1a2d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-EtvStz", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-yVfBZkWddIQpmvbffqZ", "vendorId":
+        "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz", "vendorNumber":
+        "-Fallback-scrubbed-HtgjBwXZT", "vendorName": "-Fallback-scrubbed-gRWigcjVKzaH",
+        "payToName": "-Fallback-scrubbed-gRWigcjVKzaH", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-qZWbsotVuyXmEEKetgEuJeBfRzwQEEGYaqYz",
+        "payToVendorNumber": "-Fallback-scrubbed-HtgjBwXZT", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-BAkeIGOqfVEzFTHoXIqNdyRydaZHQZRsHbdP", "currencyCode":
+        "-Fallback-scrubbed-qqr", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        28924.4247477614, "totalTaxAmount": 7545, "totalAmountIncludingTax": 28924.4247477614,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T16:25:24.67Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-DTQBuMgPIuLEjMgEueIJdbVGkCyGMinnaiJKjfCnYwme",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-foNalCHHfexsrtpFmzpUSxKaYcOsCFNueSfytMhlwTIC",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-UabeOCOcRBTNZdDAJGPStPqziVQlavzprlYenVQERblg",
+        "id": "8240f530-1e2d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -444188.45451902,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3.2112097967924, "netTaxAmount": 7545, "netAmountIncludingTax":
+        3.2112097967924, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-uPXeDiRrmAaZlNOjkBViYmeRXmQhUBwBtFAoHWAEClEl",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-LkIOmtqurTWIvOwWKjJesrsoxErRJRKiVvCF",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-ajAXfwXavSWdgdJzaIxvIkUMsEwfXwdMAETMUDvyFADu",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-LkIOmtqurTWIvOwWKjJesrsoxErRJRKiVvCF",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-gHkxNXNhBWMWwmqQxzAUMonDnSYAtqghxQywHbdOkfRW", "id": "8340f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-ztNSdeoZvfPWLhIAFHAzytfPFtIvHooATUCrLEzSYRVW",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-jTKnpjkCgPRROWTCJKqRHQGxvRXeMucgerYS",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-AqYWVjITKRGdJhqufAqMbUplEAczUXyOvgGsbNYVtBXO",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-jTKnpjkCgPRROWTCJKqRHQGxvRXeMucgerYS",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-CUMCjcvpbwBMALQchYkYTdakjUkSdhuIeyvkRIrPARzF", "id": "a240f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO", "sequence":
+        4304, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 16.9512320791427, "discountPercent": -7370276865.94311,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7913.92478779958, "netTaxAmount": 7545, "netAmountIncludingTax":
+        7913.92478779958, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-RpWIcbgaQbulznewUBOcwQSYolbTLzArZdJfoKjpopOY",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-QRBkrhPxCJyMzrELbrWbcGiTQgiwWSzwpisy",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-jTHhjbDohohKajsybsjMCyqNtAaYMXYLhbvUBcAlgsEN", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-QRBkrhPxCJyMzrELbrWbcGiTQgiwWSzwpisy", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-yuCWuvvsqaAppsbIlyaDTStwVhinrkJFCbIjpVBLDohJ",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-QRBkrhPxCJyMzrELbrWbcGiTQgiwWSzwpisy",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-mhxORovjCXEPrmnjPCSfoVjixTXbgsSjBvqteZDsVVzV", "id": "a340f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-fyuNGyOoClFrBebNkXzRVPzcMGWUPcARSEUO", "sequence":
+        2694, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 1652, "quantity": 8435,
+        "discountAmount": 16.9512320791427, "discountPercent": 37.793082890389, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 13424707556.29, "netTaxAmount": 7545, "netAmountIncludingTax":
+        13424707556.29, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-UADBezQYGCvKFGEnPNooPKCNKbesTLnHfzfZUfLaSRIU",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-vKXbPxzySdRNDgCsFsYxRsHTExUHdqvBIzJx",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-IwtrvXMvKHgJfzPTbXUSRtiaDsPSToWRibyi",
+        "valueCode": "-Fallback-scrubbed-oqYHCznM", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-oqYHCznM"}, {"@odata.etag":
+        "-Fallback-scrubbed-gCIZPxPtUWJqWFYHpNaBzmbgdbeIGsoiyYKfxsjGmBcF", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-vKXbPxzySdRNDgCsFsYxRsHTExUHdqvBIzJx", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-ATrOnSuPxtCxTQQdAHKSRBOHzaiscxQCzqNgsNFKgwfE",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-vKXbPxzySdRNDgCsFsYxRsHTExUHdqvBIzJx",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-MmBKlzEqwyoSVarAnNfjsoktdjgyQlRVjGVMzrDzcELe", "id": "e9cfa705-1b2d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-LaHHOJ", "postingDate": "-Fallback-scrubbed-MKxAevvDYb",
+        "invoiceDate": "-Fallback-scrubbed-EHZWETtWPm", "dueDate": "-Fallback-scrubbed-OOKGdazPIT",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-yVfBZkWddIQpmvbffqZ", "vendorId":
+        "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ", "vendorNumber":
+        "-Fallback-scrubbed-ndBdrnzdA", "vendorName": "-Fallback-scrubbed-EvGgmhQTripC",
+        "payToName": "-Fallback-scrubbed-EvGgmhQTripC", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "payToVendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "-Fallback-scrubbed-HTH", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-BAkeIGOqfVEzFTHoXIqNdyRydaZHQZRsHbdP", "currencyCode":
+        "-Fallback-scrubbed-qqr", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        28924.4247477614, "totalTaxAmount": 7545, "totalAmountIncludingTax": 28924.4247477614,
+        "status": "-Fallback-scrubbed-riQxw", "lastModifiedDateTime": "2026-03-31T16:25:32.803Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-LmxesqAhvIXzBczpEBoeakjFfZqdALcpJxibuUXEioqX",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-KmOtTeNLhKCmimIuFGWQpxiwwIMaOWXnIoYeHIsRgNIS",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-zxAAmpmIeXCLcAPFWBzQBLvTNROwsDakgHVvbxZjeyYi",
+        "id": "4c393c37-1e2d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-rnzcHaiGiHmQtiHPZKMiEzaF", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -444188.45451902,
+        "quantity": 5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3.2112097967924, "netTaxAmount": 7545, "netAmountIncludingTax":
+        3.2112097967924, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-kvPeyvQrEfCWcsVZLxJNVrqbZReYeZvbqITRehSGKYPG",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-cqsjWPIxhnWQfZinQbhkeDLJwxeCwcqKyJoF",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-XwIZjKWdzIkIoKeSgWJWHFilxGPTUCPyNHQFNPnETMTX",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-cqsjWPIxhnWQfZinQbhkeDLJwxeCwcqKyJoF",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-JjTMhCHSyWvSqtWNwTstmGqKtDCCBIwbuxsTTIDAJDkc", "id": "4d393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud", "sequence":
+        3776, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-FfwBLetaxWgDrrF", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 7545, "quantity": 8435,
+        "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-zxeMSCXJXW",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7545, "netTaxAmount": 7545, "netAmountIncludingTax": 7545,
+        "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-yfVOELxypTBwfYRPUUpBQYzVeoexTXZJfPsmSnKjdBJz",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-lZKK",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-uXQwmDfRorOPPlgHbJjGKovYsOeNDUGtDkMK",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Amy Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-slpogbYWrqWKRZNJKPXSaoAokNzbflhHYXzwewCOSKqE",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-uXQwmDfRorOPPlgHbJjGKovYsOeNDUGtDkMK",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-QoovAgfWHXLUaTgxSPHLmtMfQpDMlNzeTNClcapdpAff", "id": "4f393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud", "sequence":
+        4304, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 16.9512320791427, "discountPercent": -7370276865.94311,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 7913.92478779958, "netTaxAmount": 7545, "netAmountIncludingTax":
+        7913.92478779958, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm",
+        "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-plIrUWIaheUzqLdWdnrhxwuwcLkxGqczpUyJbgKCENBa",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-qgfNkrFAUgqtdqeInQNrMFLDWioYAzcOMCEl",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-CfUDKiAiYjxTWmMzHNRIlPBIwIcebaKYWWVJcAiuMDrN", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-qgfNkrFAUgqtdqeInQNrMFLDWioYAzcOMCEl", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-tJBOjxRQRpvrmgiXYsgMfhLhJzbWmAnnmYEBZKTLEUHm",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-qgfNkrFAUgqtdqeInQNrMFLDWioYAzcOMCEl",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-hCKFqWqeZdEUlkygfPyemNHaIYuhwYZqckdzOYgrUyGM", "id": "50393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-iKHsiHtJEuzqFhbOnQakOpzfiErWnjzvPsud", "sequence":
+        2694, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 1652, "quantity": 8435,
+        "discountAmount": 16.9512320791427, "discountPercent": 37.793082890389, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 13424707556.29, "netTaxAmount": 7545, "netAmountIncludingTax":
+        13424707556.29, "expectedReceiptDate": "-Fallback-scrubbed-EHZWETtWPm", "itemVariantId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-wWHHLxigfFCLajobGcgwRlpBYWBmmhRdyPmOrAqzNCHL",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-NYbWyVnXlTxbPPULntXpmGWgowTSTKXLwdbJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-IwtrvXMvKHgJfzPTbXUSRtiaDsPSToWRibyi",
+        "valueCode": "-Fallback-scrubbed-oqYHCznM", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-oqYHCznM"}, {"@odata.etag":
+        "-Fallback-scrubbed-UwmJSrcXyAuvnEFdvSEHbzvXdISXzYIBMONIpfnPsJdK", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-NYbWyVnXlTxbPPULntXpmGWgowTSTKXLwdbJ", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-mAMbewEVAqrbvaNaKggTeTRkDNOZIieqLCiM",
+        "valueCode": "-Fallback-scrubbed-bd", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-zLTuMrfalddo"}, {"@odata.etag": "-Fallback-scrubbed-SmdgofFTQgXBtcVLubnsCrCPktawMCvhenmcbCmVrtRf",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-NYbWyVnXlTxbPPULntXpmGWgowTSTKXLwdbJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-IRmFmqrCgnbgimCsrlXIElfyOtzizSpmXsWhGJrEBhON", "id": "ac707ad5-5d4d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-yBVZul", "postingDate": "-Fallback-scrubbed-jvCjTNPePZ",
+        "invoiceDate": "-Fallback-scrubbed-jvCjTNPePZ", "dueDate": "-Fallback-scrubbed-zzSIMwrlnm",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-nnKDKw", "vendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "vendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "vendorName": "-Fallback-scrubbed-EvGgmhQTripC",
+        "payToName": "-Fallback-scrubbed-EvGgmhQTripC", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "payToVendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "Monique Garcia", "shortcutDimension2Code": "-Fallback-scrubbed-fOfGG", "currencyId":
+        "-Fallback-scrubbed-JxFoPACWNKpyZLRxRZpTXUtuMOPynuFEgJpy", "currencyCode":
+        "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        9574, "totalTaxAmount": 7545, "totalAmountIncludingTax": 9574, "status": "-Fallback-scrubbed-riQxw",
+        "lastModifiedDateTime": "2026-05-11T18:18:34.127Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-vlMFWJNXlaMCiImFzNnuOYdlrXVTOUFhOkDWdOcxnVSk", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-SUgXqAFZPVsIW", "consolidationCode": "Monique
+        Garcia", "parentId": "-Fallback-scrubbed-MmhhSOniPujhwmmcOEqbKjsHDWzKtFRCRCnO",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-YwvvQdwOxwRBUsxVBgogxrPQVDUGiTXGDGMBwLEsGEHU",
+        "id": "42665806-5e4d-f111-a820-0022481ca23d", "documentId": "-Fallback-scrubbed-MmhhSOniPujhwmmcOEqbKjsHDWzKtFRCRCnO",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-EywwksEtTsiWtvbTkAixmGATtkqSdCITWdPf",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-sGBghw",
+        "description": "-Fallback-scrubbed-flgnNxMnMXK", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -516735085206.91,
+        "quantity": 587, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 9574, "netTaxAmount": 7545, "netAmountIncludingTax": 9574,
+        "expectedReceiptDate": "-Fallback-scrubbed-jvCjTNPePZ", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-mTsZxsSzLLOcJJTumIFlpMJYGJSbbLDDpAGAWOjUshQW",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-SUgXqAFZPVsIW",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-brUbxFrAOKRFNaPozySVRbhGfgpZZyIaFnOC",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "David Ramirez", "valueId": "-Fallback-scrubbed-LCoHGcCcvjraPTznFaNiXuVyJLxqenpzevhj",
+        "valueCode": "-Fallback-scrubbed-fOfGG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-vXZbDBRKIqipLJ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-frjGIhdywPgUqmWiWrnUNRtKspfWJJvqUinMqKFkXZJR", "id": "0ca195fd-634d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-qlTjCE", "postingDate": "-Fallback-scrubbed-ODvvJPYlFN",
+        "invoiceDate": "-Fallback-scrubbed-ODvvJPYlFN", "dueDate": "-Fallback-scrubbed-ODvvJPYlFN",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-MXkvfu", "vendorId": "-Fallback-scrubbed-UewskMULjezHxLPiMHVetPSUjdpIUiegmrYM",
+        "vendorNumber": "-Fallback-scrubbed-DdIoq", "vendorName": "-Fallback-scrubbed-TBDVLhggjUkkWp",
+        "payToName": "-Fallback-scrubbed-TdzKTnKsKksXWvGiOgIy", "payToContact": "-Fallback-scrubbed-aBxZPSYWNyWez",
+        "payToVendorId": "-Fallback-scrubbed-hJtZhtFpbhaeQBriVSVwhbnEaJpRxNtXgxqq",
+        "payToVendorNumber": "-Fallback-scrubbed-brdJt", "shipToName": "Derrick Anderson",
+        "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "-Fallback-scrubbed-QPkCTJO",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-wG",
+        "buyFromPostCode": "-Fallback-scrubbed-LJvwy", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "payToAddressLine2": "Monique Garcia", "payToCity": "-Fallback-scrubbed-QPkCTJO",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-wG",
+        "payToPostCode": "-Fallback-scrubbed-LJvwy", "shortcutDimension1Code": "Monique
+        Garcia", "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "currencyCode": "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        7545, "totalTaxAmount": 7545, "totalAmountIncludingTax": 7545, "status": "-Fallback-scrubbed-riQxw",
+        "lastModifiedDateTime": "2026-05-11T18:05:33.917Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-EZIfKFpuaopxteoDyUYIDRlgnBmEGgQYUsfzCoCPmnFc", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-SpqLLSUDlWtpKREkmTLhVXyjfISrsrUnnGyg", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-YKGsVvcXDnPLkkdsbBpRLmFvMEXhtmITNbyZ", "valueCode": "-Fallback-scrubbed-Ti",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-fNKtnNlZBNajA"}],
+        "purchaseInvoiceLines": []}, {"@odata.etag": "-Fallback-scrubbed-pHxIAtRrhCkfdthUhBELfMtSdlnyPXyjBUudaCpknSZa",
+        "id": "78eee28a-634d-f111-a820-0022481ca23d", "number": "-Fallback-scrubbed-bSGrMe",
+        "postingDate": "-Fallback-scrubbed-msvUvGMRPW", "invoiceDate": "-Fallback-scrubbed-msvUvGMRPW",
+        "dueDate": "-Fallback-scrubbed-msvUvGMRPW", "vendorInvoiceNumber": "-Fallback-scrubbed-xRkGeI",
+        "vendorId": "-Fallback-scrubbed-UewskMULjezHxLPiMHVetPSUjdpIUiegmrYM", "vendorNumber":
+        "-Fallback-scrubbed-DdIoq", "vendorName": "-Fallback-scrubbed-TBDVLhggjUkkWp",
+        "payToName": "-Fallback-scrubbed-TdzKTnKsKksXWvGiOgIy", "payToContact": "-Fallback-scrubbed-aBxZPSYWNyWez",
+        "payToVendorId": "-Fallback-scrubbed-hJtZhtFpbhaeQBriVSVwhbnEaJpRxNtXgxqq",
+        "payToVendorNumber": "-Fallback-scrubbed-brdJt", "shipToName": "Derrick Anderson",
+        "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "-Fallback-scrubbed-QPkCTJO",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-wG",
+        "buyFromPostCode": "-Fallback-scrubbed-LJvwy", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "payToAddressLine2": "Monique Garcia", "payToCity": "-Fallback-scrubbed-QPkCTJO",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-wG",
+        "payToPostCode": "-Fallback-scrubbed-LJvwy", "shortcutDimension1Code": "Monique
+        Garcia", "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "currencyCode": "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        7545, "totalTaxAmount": 7545, "totalAmountIncludingTax": 7545, "status": "-Fallback-scrubbed-riQxw",
+        "lastModifiedDateTime": "2026-05-11T18:02:23.77Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-vadyMzTNGzxzaGUMzgQMcMYfHenXNWUREEtqUDomFYJA", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-qAnZQtMZoBzqzxwysIeQcvUOpgIentakfzCS", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-YKGsVvcXDnPLkkdsbBpRLmFvMEXhtmITNbyZ", "valueCode": "-Fallback-scrubbed-Ti",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-fNKtnNlZBNajA"}],
+        "purchaseInvoiceLines": []}, {"@odata.etag": "-Fallback-scrubbed-SKydfTKokIhKjSzFljrzihpLpUwdljQgJVOsBycsxima",
+        "id": "0f193634-644d-f111-a820-0022481ca23d", "number": "-Fallback-scrubbed-AWZkzF",
+        "postingDate": "-Fallback-scrubbed-ODvvJPYlFN", "invoiceDate": "-Fallback-scrubbed-ODvvJPYlFN",
+        "dueDate": "-Fallback-scrubbed-ODvvJPYlFN", "vendorInvoiceNumber": "-Fallback-scrubbed-MXkvfu",
+        "vendorId": "-Fallback-scrubbed-UewskMULjezHxLPiMHVetPSUjdpIUiegmrYM", "vendorNumber":
+        "-Fallback-scrubbed-DdIoq", "vendorName": "-Fallback-scrubbed-TBDVLhggjUkkWp",
+        "payToName": "-Fallback-scrubbed-TBDVLhggjUkkWp", "payToContact": "-Fallback-scrubbed-TpNpLeIZRRWL",
+        "payToVendorId": "-Fallback-scrubbed-UewskMULjezHxLPiMHVetPSUjdpIUiegmrYM",
+        "payToVendorNumber": "-Fallback-scrubbed-DdIoq", "shipToName": "Derrick Anderson",
+        "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "-Fallback-scrubbed-QPkCTJO",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-wG",
+        "buyFromPostCode": "-Fallback-scrubbed-LJvwy", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "payToAddressLine2": "Monique Garcia", "payToCity": "-Fallback-scrubbed-QPkCTJO",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-wG",
+        "payToPostCode": "-Fallback-scrubbed-LJvwy", "shortcutDimension1Code": "Monique
+        Garcia", "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "currencyCode": "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        7545, "totalTaxAmount": 7545, "totalAmountIncludingTax": 7545, "status": "-Fallback-scrubbed-riQxw",
+        "lastModifiedDateTime": "2026-05-11T18:07:07.277Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-kjOwetYhkoZnoLuWAZHeSXhthpEVLJXTDRyXvLINYIqS", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-TPnErBBggbscdFfczhAuEeeMJVecSbNsYtAd", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-YKGsVvcXDnPLkkdsbBpRLmFvMEXhtmITNbyZ", "valueCode": "-Fallback-scrubbed-Ti",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-fNKtnNlZBNajA"},
+        {"@odata.etag": "-Fallback-scrubbed-sYkWOFdWpUTlAXCxPAcgguOWEJfHBfwjUTLIsrWuTGjp",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-AlCJlvZdkspTC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-TPnErBBggbscdFfczhAuEeeMJVecSbNsYtAd",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Adam Bender", "valueId": "-Fallback-scrubbed-vmsreOfyDFXVoCaIDZBpsIQfonfCYcDYpIFS",
+        "valueCode": "-Fallback-scrubbed-XKpZBsgDaI", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-TkKNIrrUbD"}, {"@odata.etag":
+        "-Fallback-scrubbed-yiTIMlbRxMwHYtdnJOnzRmbasEnALTxhvqgcWgQIhvNf", "id": "0e91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-HSLaqykwdEUQn", "consolidationCode": "Monique
+        Garcia", "parentId": "-Fallback-scrubbed-TPnErBBggbscdFfczhAuEeeMJVecSbNsYtAd",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "David Sanchez", "valueId": "-Fallback-scrubbed-nEUXRhKVzbMuSaznEIBWxikYNjauawTlGVgM",
+        "valueCode": "-Fallback-scrubbed-jnIcMG", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-yQOral"}], "purchaseInvoiceLines":
+        []}, {"@odata.etag": "-Fallback-scrubbed-nugNzaduOJwmKhGnUuwSzIyIvxIiNmHDlExtwoARYydi",
+        "id": "d1524f98-3a29-f111-8340-000d3a11d3d8", "number": "-Fallback-scrubbed-gqOAFb",
+        "postingDate": "-Fallback-scrubbed-uqVovbeorq", "invoiceDate": "-Fallback-scrubbed-uqVovbeorq",
+        "dueDate": "-Fallback-scrubbed-fcttwCKjVk", "vendorInvoiceNumber": "-Fallback-scrubbed-UbuGWLpBd",
+        "vendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO", "vendorNumber":
+        "-Fallback-scrubbed-aKFPfXanEPbwOzB", "vendorName": "-Fallback-scrubbed-SJNNIBpleA",
+        "payToName": "-Fallback-scrubbed-SJNNIBpleA", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO",
+        "payToVendorNumber": "-Fallback-scrubbed-aKFPfXanEPbwOzB", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "buyFromAddressLine2": "-Fallback-scrubbed-VAMrQ", "buyFromCity": "-Fallback-scrubbed-JPgAPVkH",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-lI",
+        "buyFromPostCode": "-Fallback-scrubbed-VRhmv", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "payToAddressLine2": "-Fallback-scrubbed-VAMrQ", "payToCity": "-Fallback-scrubbed-JPgAPVkH",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-lI",
+        "payToPostCode": "-Fallback-scrubbed-VRhmv", "shortcutDimension1Code": "-Fallback-scrubbed-CfShK",
+        "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-gqMGdVeRemKtlEdVWTiDjsICIKMUCZlQqBHS",
+        "currencyCode": "-Fallback-scrubbed-jaI", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        587, "totalTaxAmount": 7545, "totalAmountIncludingTax": 587, "status": "-Fallback-scrubbed-OGXF",
+        "lastModifiedDateTime": "2026-04-01T18:21:46.377Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-lDWdibWIWBUMfVvOpoCqAQQSzNmyofLTLnLIGrUIDwqJ", "id": "860c5c21-0f29-f111-8340-000d3a11d3d8",
+        "code": "-Fallback-scrubbed-XFtThQC", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-YtiXTiXhxvMxGKdSEWPxcITuKykjYEDfUeUe", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Bill Elliott
+        PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-tZZuwqSmwETpcBYetgWfUdrziNlWoSMQlnUNycMggHXF", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-YtiXTiXhxvMxGKdSEWPxcITuKykjYEDfUeUe", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC", "valueCode": "-Fallback-scrubbed-GG",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-TxEjrA"},
+        {"@odata.etag": "-Fallback-scrubbed-dvdwHUmKrNABSMdGIqMmENQwfStDvVnaoTXOZVLgzNPA",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-YtiXTiXhxvMxGKdSEWPxcITuKykjYEDfUeUe",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-QGsRTazZfGUXsOrWRhKKpSOhWylmookPGeqR",
+        "valueCode": "-Fallback-scrubbed-CfShK", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-ZhZmE"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-GnsXsWhZIghjIBsixKMsgTdTiTxLuZYhPyKMqCHgusrs",
+        "id": "dd524f98-3a29-f111-8340-000d3a11d3d8", "documentId": "-Fallback-scrubbed-YtiXTiXhxvMxGKdSEWPxcITuKykjYEDfUeUe",
+        "sequence": 5934, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "unitOfMeasureCode": "Monique Garcia", "unitCost": 5934, "quantity": 8435,
+        "discountAmount": 587, "discountPercent": 6809, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 587, "netTaxAmount": 7545, "netAmountIncludingTax": 587,
+        "expectedReceiptDate": "-Fallback-scrubbed-uqVovbeorq", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-vYkfpEpMWHINWmMDKTFoWKEIZeOMviQLsBGPXTdslIZr",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-BjOSbRokJWyWniKSserpGlhLmwDcQsUsfxfJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-FEvdaCsmLkYnBuJNaZtBbIAyEVEMXqkOmKqlItLnMvHL", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-BjOSbRokJWyWniKSserpGlhLmwDcQsUsfxfJ", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC",
+        "valueCode": "-Fallback-scrubbed-GG", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-TxEjrA"}, {"@odata.etag": "-Fallback-scrubbed-tJyhnWunayErLZKdXAGkKjfEeLNDjHzqbxaRaPflEXMR",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-BjOSbRokJWyWniKSserpGlhLmwDcQsUsfxfJ",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-QGsRTazZfGUXsOrWRhKKpSOhWylmookPGeqR",
+        "valueCode": "-Fallback-scrubbed-CfShK", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-ZhZmE"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-KhkgglCfMpOrhLPjDoFHVgTAuqNslkHzqsyyvHCXDxOt", "id": "3e21174c-e429-f111-8340-00224829d901",
+        "number": "-Fallback-scrubbed-ybxtcb", "postingDate": "-Fallback-scrubbed-xbcDuCYXZT",
+        "invoiceDate": "-Fallback-scrubbed-xbcDuCYXZT", "dueDate": "-Fallback-scrubbed-WxAgvbjQlt",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-TOFPiTMio", "vendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO",
+        "vendorNumber": "-Fallback-scrubbed-aKFPfXanEPbwOzB", "vendorName": "-Fallback-scrubbed-SJNNIBpleA",
+        "payToName": "-Fallback-scrubbed-SJNNIBpleA", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-AcQogQYUqvcUEmamxJmvShyyNmhLcaXjvIUO",
+        "payToVendorNumber": "-Fallback-scrubbed-aKFPfXanEPbwOzB", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "buyFromAddressLine2": "-Fallback-scrubbed-VAMrQ", "buyFromCity": "-Fallback-scrubbed-JPgAPVkH",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-lI",
+        "buyFromPostCode": "-Fallback-scrubbed-VRhmv", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-rrwyjRkkPFhpyzNBrZnjEiCXUkhZiPl",
+        "payToAddressLine2": "-Fallback-scrubbed-VAMrQ", "payToCity": "-Fallback-scrubbed-JPgAPVkH",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-lI",
+        "payToPostCode": "-Fallback-scrubbed-VRhmv", "shortcutDimension1Code": "-Fallback-scrubbed-CfShK",
+        "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-gqMGdVeRemKtlEdVWTiDjsICIKMUCZlQqBHS",
+        "currencyCode": "-Fallback-scrubbed-jaI", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        4680, "totalTaxAmount": 7545, "totalAmountIncludingTax": 4680, "status": "-Fallback-scrubbed-OGXF",
+        "lastModifiedDateTime": "2026-04-01T20:50:07.383Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-jpQhfDPMXZlgIVjoCPPGjNTCOsmSHggYNyRGBPVBLgdw", "id": "860c5c21-0f29-f111-8340-000d3a11d3d8",
+        "code": "-Fallback-scrubbed-XFtThQC", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-RaxgggBqjQGvwQxVsirCDXetMjZJkdOItAaM", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Bill Elliott
+        PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-BUVjhEtbVAPasmSpmDwKLkPrusBFRSEQEwVSmFwMHXAC", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-RaxgggBqjQGvwQxVsirCDXetMjZJkdOItAaM", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC", "valueCode": "-Fallback-scrubbed-GG",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-TxEjrA"},
+        {"@odata.etag": "-Fallback-scrubbed-LcKikONLlWoZkEVWrSOKzhoqRZDJzCJZGTiuktEixbRM",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-RaxgggBqjQGvwQxVsirCDXetMjZJkdOItAaM",
+        "parentType": "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-QGsRTazZfGUXsOrWRhKKpSOhWylmookPGeqR",
+        "valueCode": "-Fallback-scrubbed-CfShK", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-ZhZmE"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-DCbiuxnrwOqBnRjmdBJHkwkAHzBlLXKYsabXXQQKPcKV",
+        "id": "4121174c-e429-f111-8340-00224829d901", "documentId": "-Fallback-scrubbed-RaxgggBqjQGvwQxVsirCDXetMjZJkdOItAaM",
+        "sequence": 5934, "itemId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "accountId": "-Fallback-scrubbed-gVLPsjSbuHqGKhfpxQxLthqRtJNXiIQtZLJh", "lineType":
+        "-Fallback-scrubbed-VqOGckp", "lineObjectNumber": "-Fallback-scrubbed-PvYjG",
+        "description": "-Fallback-scrubbed-ZvTObKZUdeOcZEFFuJnBGGwhLN", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 6809, "quantity":
+        5934, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 9908, "netTaxAmount": 7545, "netAmountIncludingTax": 9908,
+        "expectedReceiptDate": "-Fallback-scrubbed-xbcDuCYXZT", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-TeypuTjjalFEkAZmMOGaHbbNqOOfQDrDASkQfZqHwjNd",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-pDsUOAyMvCRWTAfdBwiMyFRSoaDOWTksYHJO",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-cldPOoendLpCtroCBiVSwNHXTnExoMyAZDXXElhavajw", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-jSFkX", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-pDsUOAyMvCRWTAfdBwiMyFRSoaDOWTksYHJO", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Douglas
+        Holder", "valueId": "-Fallback-scrubbed-YlVelmzLtowWJHgedXEbTBnvPYZlHwBdDyGg",
+        "valueCode": "-Fallback-scrubbed-hkINue", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-PRQDjL"}, {"@odata.etag":
+        "-Fallback-scrubbed-dBjHgAPNwtqXTDtnnGjahULpMCJUBMmHzuSguOuzraLk", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-pDsUOAyMvCRWTAfdBwiMyFRSoaDOWTksYHJO", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC",
+        "valueCode": "-Fallback-scrubbed-GG", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-TxEjrA"}, {"@odata.etag": "-Fallback-scrubbed-blihJFfbiLsVcsThozFhtAADXxZHYnJWETReFNaDdNee",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-pDsUOAyMvCRWTAfdBwiMyFRSoaDOWTksYHJO",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-aaZIFwLppwfCTGXFnOhyoTekzcfBxDswCmxRyrKQhPeY", "id": "4021174c-e429-f111-8340-00224829d901",
+        "documentId": "-Fallback-scrubbed-RaxgggBqjQGvwQxVsirCDXetMjZJkdOItAaM", "sequence":
+        5036, "itemId": "-Fallback-scrubbed-HHYddkxFgRdWDapacPtyeMlBWcKCHYMPecfT",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-XtAcbe",
+        "description": "-Fallback-scrubbed-LWfeXoFWuIlrBaVnYngVLEe", "description2":
+        "Monique Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": 7876, "quantity":
+        5036, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 3186, "netTaxAmount": 7545, "netAmountIncludingTax": 3186,
+        "expectedReceiptDate": "-Fallback-scrubbed-xbcDuCYXZT", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-RKpLGEQzgfMKOWOSbHZfzRTpQqugspTPnXYk", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-gkltTdmokvXyUybYWuEMZIAVSlxjTfcKELHmWOvVSyqT",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-XFtThQC",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-PrTOjilGatQqIliLuVLkwcZfVyGRcOSksXGr",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Bill Elliott PhD", "valueId": "-Fallback-scrubbed-xhgaMgJFAeiypUHNkkTxtpNetrkeODIsCKHM",
+        "valueCode": "-Fallback-scrubbed-tvnCXKYa", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-tvnCXKYa"}, {"@odata.etag":
+        "-Fallback-scrubbed-HGzwucgnuFdtnznekSpZjAkWPUmPNsUNOwupQTeGcgeq", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-jSFkX", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-PrTOjilGatQqIliLuVLkwcZfVyGRcOSksXGr", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Douglas
+        Holder", "valueId": "-Fallback-scrubbed-YlVelmzLtowWJHgedXEbTBnvPYZlHwBdDyGg",
+        "valueCode": "-Fallback-scrubbed-hkINue", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-PRQDjL"}, {"@odata.etag":
+        "-Fallback-scrubbed-BFvgYkgqnIDDarliAfCsQXSDEzBBDyFnGzgRsXInFDOB", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-PrTOjilGatQqIliLuVLkwcZfVyGRcOSksXGr", "parentType":
+        "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName": "Amy
+        Scott", "valueId": "-Fallback-scrubbed-iVzLfqpPwmxLYLfVcRPyDtNjRVKeNNVYXpUC",
+        "valueCode": "-Fallback-scrubbed-GG", "valueConsolidationCode": "Monique Garcia",
+        "valueDisplayName": "-Fallback-scrubbed-TxEjrA"}, {"@odata.etag": "-Fallback-scrubbed-SPLfSXiniNwwnJtHpbVjCYYofaxyfYHJIxSrmkFgtbRM",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-sTIdMvTYne",
+        "consolidationCode": "Monique Garcia", "parentId": "-Fallback-scrubbed-PrTOjilGatQqIliLuVLkwcZfVyGRcOSksXGr",
+        "parentType": "-Fallback-scrubbed-DFmMDJzUiSTeQNuJqvfrJYHXyXjjpXTVJ", "displayName":
+        "Lindsey Bailey", "valueId": "-Fallback-scrubbed-holAOzkTqlcFFYiQrUfgOAiOULIRoyfqqgBD",
+        "valueCode": "-Fallback-scrubbed-HTH", "valueConsolidationCode": "Monique
+        Garcia", "valueDisplayName": "-Fallback-scrubbed-liAFamIKwYAMRh"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-ehWSBtMjZbtGJrBUEFNLotHVuVshiOOUDPsZNlwNFbkB", "id": "2cb511ae-654d-f111-bec2-7ced8dce9219",
+        "number": "-Fallback-scrubbed-XazJbw", "postingDate": "-Fallback-scrubbed-ODvvJPYlFN",
+        "invoiceDate": "-Fallback-scrubbed-ODvvJPYlFN", "dueDate": "-Fallback-scrubbed-ODvvJPYlFN",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-MXkvfu", "vendorId": "-Fallback-scrubbed-hJtZhtFpbhaeQBriVSVwhbnEaJpRxNtXgxqq",
+        "vendorNumber": "-Fallback-scrubbed-brdJt", "vendorName": "-Fallback-scrubbed-TdzKTnKsKksXWvGiOgIy",
+        "payToName": "-Fallback-scrubbed-TdzKTnKsKksXWvGiOgIy", "payToContact": "-Fallback-scrubbed-aBxZPSYWNyWez",
+        "payToVendorId": "-Fallback-scrubbed-hJtZhtFpbhaeQBriVSVwhbnEaJpRxNtXgxqq",
+        "payToVendorNumber": "-Fallback-scrubbed-brdJt", "shipToName": "Derrick Anderson",
+        "shipToContact": "Monique Garcia", "buyFromAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "-Fallback-scrubbed-QPkCTJO",
+        "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "-Fallback-scrubbed-wG",
+        "buyFromPostCode": "-Fallback-scrubbed-LJvwy", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "-Fallback-scrubbed-MqaoGWhqgZAat",
+        "payToAddressLine2": "Monique Garcia", "payToCity": "-Fallback-scrubbed-QPkCTJO",
+        "payToCountry": "-Fallback-scrubbed-bP", "payToState": "-Fallback-scrubbed-wG",
+        "payToPostCode": "-Fallback-scrubbed-LJvwy", "shortcutDimension1Code": "Monique
+        Garcia", "shortcutDimension2Code": "Monique Garcia", "currencyId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "currencyCode": "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        7545, "totalTaxAmount": 7545, "totalAmountIncludingTax": 7545, "status": "-Fallback-scrubbed-riQxw",
+        "lastModifiedDateTime": "2026-05-11T18:17:43.407Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-dYzCrWcgYrYgsxGpgtpjpqvjuMkJtMeMddeOzmpzEFve", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-lZKK", "consolidationCode": "Monique Garcia",
+        "parentId": "-Fallback-scrubbed-eNhKQgWgozPtwQJtiVAmekxBVTEacjqIvvjm", "parentType":
+        "-Fallback-scrubbed-tjMyuLAnQPvfNfuYGNXYcn", "displayName": "Amy Scott", "valueId":
+        "-Fallback-scrubbed-YKGsVvcXDnPLkkdsbBpRLmFvMEXhtmITNbyZ", "valueCode": "-Fallback-scrubbed-Ti",
+        "valueConsolidationCode": "Monique Garcia", "valueDisplayName": "-Fallback-scrubbed-fNKtnNlZBNajA"}],
+        "purchaseInvoiceLines": []}, {"@odata.etag": "-Fallback-scrubbed-KVOzjCXNHaAhCGDOGLvGHExOMqbzeulvFfFfismFOTxB",
+        "id": "92acaa42-5e4d-f111-a820-0022481ca23d", "number": "-Fallback-scrubbed-XazJbw",
+        "postingDate": "-Fallback-scrubbed-jvCjTNPePZ", "invoiceDate": "-Fallback-scrubbed-jvCjTNPePZ",
+        "dueDate": "-Fallback-scrubbed-zzSIMwrlnm", "vendorInvoiceNumber": "-Fallback-scrubbed-nnKDKw",
+        "vendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ", "vendorNumber":
+        "-Fallback-scrubbed-ndBdrnzdA", "vendorName": "-Fallback-scrubbed-EvGgmhQTripC",
+        "payToName": "-Fallback-scrubbed-EvGgmhQTripC", "payToContact": "Monique Garcia",
+        "payToVendorId": "-Fallback-scrubbed-XWcJioEnYJOBaytUhjjeNkSlaWIPdUKKwxXQ",
+        "payToVendorNumber": "-Fallback-scrubbed-ndBdrnzdA", "shipToName": "Derrick
+        Anderson", "shipToContact": "Monique Garcia", "buyFromAddressLine1": "Monique
+        Garcia", "buyFromAddressLine2": "Monique Garcia", "buyFromCity": "Monique
+        Garcia", "buyFromCountry": "-Fallback-scrubbed-bP", "buyFromState": "Monique
+        Garcia", "buyFromPostCode": "Monique Garcia", "shipToAddressLine1": "06456
+        Schultz Island", "shipToAddressLine2": "7306 Casey Mills", "shipToCity": "Romeroberg",
+        "shipToCountry": "-Fallback-scrubbed-bP", "shipToState": "Monique Garcia",
+        "shipToPostCode": "45361", "payToAddressLine1": "Monique Garcia", "payToAddressLine2":
+        "Monique Garcia", "payToCity": "Monique Garcia", "payToCountry": "-Fallback-scrubbed-bP",
+        "payToState": "Monique Garcia", "payToPostCode": "Monique Garcia", "shortcutDimension1Code":
+        "Monique Garcia", "shortcutDimension2Code": "Monique Garcia", "currencyId":
+        "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "currencyCode":
+        "-Fallback-scrubbed-Gyu", "orderId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "orderNumber": "Monique Garcia", "purchaser": "Monique Garcia", "pricesIncludeTax":
+        true, "discountAmount": 7545, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        9574, "totalTaxAmount": 7545, "totalAmountIncludingTax": 9574, "status": "-Fallback-scrubbed-OGXF",
+        "lastModifiedDateTime": "2026-05-11T18:04:57.1Z", "dimensionSetLines": [],
+        "purchaseInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-uEfyyYTRVOIerDAYcIddmTvuBuWLbqxSCskyoNHTNlDB",
+        "id": "edddb254-5e4d-f111-a820-0022481ca23d", "documentId": "-Fallback-scrubbed-xnWvlBIwoOmDxCNWNBvFVsVOJPUDZhQhYThb",
+        "sequence": 1117, "itemId": "-Fallback-scrubbed-EywwksEtTsiWtvbTkAixmGATtkqSdCITWdPf",
+        "accountId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "lineType":
+        "-Fallback-scrubbed-MUQa", "lineObjectNumber": "-Fallback-scrubbed-sGBghw",
+        "description": "-Fallback-scrubbed-flgnNxMnMXK", "description2": "Monique
+        Garcia", "unitOfMeasureId": "-Fallback-scrubbed-DxKxhsVzROjCPpmxrIhcaLKHsVPhBYNVcZOP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-lKG", "unitCost": -516735085206.91,
+        "quantity": 587, "discountAmount": 7545, "discountPercent": 7545, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 7545, "taxCode": "-Fallback-scrubbed-bFMMzNpFS",
+        "taxPercent": 7545, "totalTaxAmount": 7545, "amountIncludingTax": 7545, "invoiceDiscountAllocation":
+        7545, "netAmount": 9574, "netTaxAmount": 7545, "netAmountIncludingTax": 9574,
+        "expectedReceiptDate": "-Fallback-scrubbed-jvCjTNPePZ", "itemVariantId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp",
+        "locationId": "-Fallback-scrubbed-qdzavqAashFLLLqqHxvzXlqriobjyTYAaqdp", "dimensionSetLines":
+        []}]}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:28 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 33f929d9-4994-4540-a450-07f80ea6d113
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '104444'
+      mise-correlation-id:
+      - d5c9bccb-c700-4382-867d-971455183a79
+      ms-correlation-x:
+      - 4f0b9623-633a-4342-1ae0-8ee7e644501d
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

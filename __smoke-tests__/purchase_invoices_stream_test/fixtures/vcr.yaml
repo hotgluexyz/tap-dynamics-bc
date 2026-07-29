@@ -1,0 +1,2138 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-cTcZha", "scope": "-Fallback-scrubbed-LBCBjCifwwnxvSvQAOYOMiLLTEImnmEeYmxgcQGzlBD",
+        "expires_in": "5347", "ext_expires_in": "-Fallback-scrubbed-jggm", "expires_on":
+        "-Fallback-scrubbed-HLzPRQiEAH", "not_before": "-Fallback-scrubbed-GdOVzxjwjM",
+        "resource": "-Fallback-scrubbed-LEzVFZBfICmsKzqaWnHPltWEzpoUVvjVMuwJcMQv",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-buksQ032mPdXYkAJsqv2UA'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:14 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AuPDlxqP1yNCsDBVXhXcZqnoOlVYAQAAAMrJ8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:25:14 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24997.6 - WUS3 ProdSlices
+      x-ms-request-id:
+      - e4349575-eecb-4981-97a1-826d2e4f1800
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-zBfzErgTWXKesWmdZvRZAWsmaPKpXtWbmAWw",
+        "applicationFamily": "-Fallback-scrubbed-uWYMlDdIDLXvlhQ", "type": "-Fallback-scrubbed-ZneOrJC",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Yu", "webServiceUrl":
+        "-Fallback-scrubbed-LEzVFZBfICmsKzqaWnHPltWEzpoUVvjVMuwJcMQv", "webClientLoginUrl":
+        "-Fallback-scrubbed-aBLhuvkwCKMkmBxVZGqPrMIPMWsjwMzBIOEX"}, {"aadTenantId":
+        "-Fallback-scrubbed-zBfzErgTWXKesWmdZvRZAWsmaPKpXtWbmAWw", "applicationFamily":
+        "-Fallback-scrubbed-uWYMlDdIDLXvlhQ", "type": "-Fallback-scrubbed-YJRfinahVn",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-PY", "webServiceUrl":
+        "-Fallback-scrubbed-LEzVFZBfICmsKzqaWnHPltWEzpoUVvjVMuwJcMQv", "webClientLoginUrl":
+        "-Fallback-scrubbed-aBLhuvkwCKMkmBxVZGqPrMIPMWsjwMzBIOEX"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:14 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 85441f48-9330-4af2-a4cc-f6f14207f5aa
+      ms-correlation-x:
+      - e11bb99a-ba68-43df-f826-57f88294213a
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-sYQTzjSNZpvBmZdbhTheUNAMmjuHSDTUdaGKKvBGNUDmQdBAftmYpoipMtevfGbNfUBXoxHsuuGaQUBxYdHJm",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-RIexYmskrgqWLvod", "timestamp": 1029, "name": "CRONUS
+        USA, Inc.", "displayName": "Alexandra Thompson", "businessProfileId": "Alexandra
+        Thompson", "systemCreatedAt": "-Fallback-scrubbed-jfUFaaxaqNCjEoQlaBUVeApN",
+        "systemCreatedBy": "-Fallback-scrubbed-xXEGQlWTxZoryCpBeSSnTKPghPBCQDXzNbxP",
+        "systemModifiedAt": "-Fallback-scrubbed-jfUFaaxaqNCjEoQlaBUVeApN", "systemModifiedBy":
+        "-Fallback-scrubbed-xXEGQlWTxZoryCpBeSSnTKPghPBCQDXzNbxP"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:15 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - af76b563-3e1b-4805-bea4-040543cde62a
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - ee1954cb-fefe-4aff-be7e-7853480e0541
+      ms-correlation-x:
+      - 5897e2e8-d533-f39a-d3bf-99e2d3dd327c
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-TsoJlFVSFnbTZNxyQWtnZLdqKNjEjfASLjBvXJfJgYCrInyynQbVxfNjNtbegaRjRRxqAHZUIuNIFYqUORWnLHylPWeilojuFikqlqxJbJaxhELAfllYQSZZbvxQLhrroZPOiRetaoioEZ",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-oLKgZgTMxVXfnwGCgggRKzFkYUIygqKWywIirZqvXlPd",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Denise Johnson",
+        "addressLine1": "325 Mendez Center Suite 617", "addressLine2": "02230 Wells
+        Islands Apt. 947", "city": "Olsenport", "state": "-Fallback-scrubbed-hz",
+        "country": "-Fallback-scrubbed-PY", "postalCode": "22556", "phoneNumber":
+        "420-837-0696x280", "faxNumber": "-Fallback-scrubbed-DiVldOAFhoffKam", "email":
+        "Alexandra Thompson", "website": "Alexandra Thompson", "taxRegistrationNumber":
+        "Alexandra Thompson", "currencyCode": "-Fallback-scrubbed-Aow", "currentFiscalYearStartDate":
+        "-Fallback-scrubbed-xkIuXOxlLP", "industry": "Alexandra Thompson", "experience":
+        "-Fallback-scrubbed-mBtvdhcQk", "lastModifiedDateTime": "2026-02-04T03:43:12.517Z",
+        "picture@odata.mediaReadLink": "-Fallback-scrubbed-cybfwyCMqyfhSzHKsOnzfZBKHfIweLdFTjdDXCRRVWojPPqtbyCqaXWsIdNRutUXfFnKYkxpPzAYvyGNEAvIxOfdhGcvfbMbjuQBcrCnkCljNZwOtkvDEaElVHmVngbvEcYMwqINtlhcEYJogJidELCsawuBIqpuXiXlpcRmoXzMKUMluI"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:15 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 564169b4-bec9-4e7d-b03c-4ced4aead609
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - ca97d8e3-0d14-4cce-9668-ea100c9d56e2
+      ms-correlation-x:
+      - 0014109e-c42e-6a99-a249-fbe47d48e668
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-zBfzErgTWXKesWmdZvRZAWsmaPKpXtWbmAWw",
+        "applicationFamily": "-Fallback-scrubbed-uWYMlDdIDLXvlhQ", "type": "-Fallback-scrubbed-ZneOrJC",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Yu", "webServiceUrl":
+        "-Fallback-scrubbed-LEzVFZBfICmsKzqaWnHPltWEzpoUVvjVMuwJcMQv", "webClientLoginUrl":
+        "-Fallback-scrubbed-aBLhuvkwCKMkmBxVZGqPrMIPMWsjwMzBIOEX"}, {"aadTenantId":
+        "-Fallback-scrubbed-zBfzErgTWXKesWmdZvRZAWsmaPKpXtWbmAWw", "applicationFamily":
+        "-Fallback-scrubbed-uWYMlDdIDLXvlhQ", "type": "-Fallback-scrubbed-YJRfinahVn",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-PY", "webServiceUrl":
+        "-Fallback-scrubbed-LEzVFZBfICmsKzqaWnHPltWEzpoUVvjVMuwJcMQv", "webClientLoginUrl":
+        "-Fallback-scrubbed-aBLhuvkwCKMkmBxVZGqPrMIPMWsjwMzBIOEX"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:25:16 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - b243e6c9-e924-4668-862a-86caa97e429e
+      ms-correlation-x:
+      - 35862514-e393-c374-ec42-638821c2dc19
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=1000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/purchaseInvoices?%24filter=lastModifiedDateTime+gt+2026-03-31T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-rUdxtklCopmjWxjHcuwDgxroHepRlibAcEBJJxsuaPjmrhkJuaeODUMdSCKAQjDqkyXndInnyHOfEADXYjffoUTkYVjZqNmnwWLyXYRmwxGTpfbcigprfYFVGrKxkBRgXQZLTTMttOJB",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-cVRuhHRSTWpSPKSMnoaMVnPuCZiFpetdtkPbtSmvJeqk",
+        "id": "1773153c-6329-f111-8340-000d3a11d3d8", "number": "-Fallback-scrubbed-CFLIPC",
+        "postingDate": "-Fallback-scrubbed-YKSiSpiQqB", "invoiceDate": "-Fallback-scrubbed-YKSiSpiQqB",
+        "dueDate": "-Fallback-scrubbed-MQwSAekSsz", "vendorInvoiceNumber": "-Fallback-scrubbed-EFGGnXhviPr",
+        "vendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu", "vendorNumber":
+        "-Fallback-scrubbed-alXTiTftvMzmQMc", "vendorName": "-Fallback-scrubbed-HBuikaNpUI",
+        "payToName": "-Fallback-scrubbed-HBuikaNpUI", "payToContact": "Alexandra Thompson",
+        "payToVendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu",
+        "payToVendorNumber": "-Fallback-scrubbed-alXTiTftvMzmQMc", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk",
+        "buyFromAddressLine2": "-Fallback-scrubbed-vQigf", "buyFromCity": "-Fallback-scrubbed-FDfSANDD",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-wy",
+        "buyFromPostCode": "-Fallback-scrubbed-erAmp", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk", "payToAddressLine2":
+        "-Fallback-scrubbed-vQigf", "payToCity": "-Fallback-scrubbed-FDfSANDD", "payToCountry":
+        "-Fallback-scrubbed-PY", "payToState": "-Fallback-scrubbed-wy", "payToPostCode":
+        "-Fallback-scrubbed-erAmp", "shortcutDimension1Code": "-Fallback-scrubbed-MQHjm",
+        "shortcutDimension2Code": "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-dVondqfNcPawZmtXHPUGuClLQrVdrkJsPOci",
+        "currencyCode": "-Fallback-scrubbed-eSR", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -93917404943.5536, "totalTaxAmount": 1911, "totalAmountIncludingTax": -93917404943.5536,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-04-10T18:19:54.863Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-detuTaxodGWGPauGiXUdVLgVzlBPKoGvJAHgEvQnuDSU",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-EzvyYCUdSZnbWEubKfZElUDYUJdhhHvwNPhr",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-WiQggOBtOlpFFFFSigNXipdTuCeNAVRRppWlCESGgWIp", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-EzvyYCUdSZnbWEubKfZElUDYUJdhhHvwNPhr", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Victoria Rogers",
+        "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk", "valueCode":
+        "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra Thompson", "valueDisplayName":
+        "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag": "-Fallback-scrubbed-szukKpuufuEBbxidwGAuvjOfbfrBSlMOtSPYObITHOdZ",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OvXXKHjOEp",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-EzvyYCUdSZnbWEubKfZElUDYUJdhhHvwNPhr",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Dillon Aguilar", "valueId": "-Fallback-scrubbed-sBbVIWBaUyZPMSwdwgycCidNrATwlFBjwHTR",
+        "valueCode": "-Fallback-scrubbed-MQHjm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-vAzik"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-LseEaKRcZHikyKqbIFVFMJeHqUkMJlGvBeEFqNDBlTCV",
+        "id": "2173153c-6329-f111-8340-000d3a11d3d8", "documentId": "-Fallback-scrubbed-EzvyYCUdSZnbWEubKfZElUDYUJdhhHvwNPhr",
+        "sequence": 7036, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": -906714011409.877,
+        "quantity": 844, "discountAmount": 9947, "discountPercent": -80823848.7092,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -213756640107.93, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -213756640107.93, "expectedReceiptDate": "-Fallback-scrubbed-YKSiSpiQqB",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-KqwzWXuDDWgyFFIuyfJeKGlKBQfusWXUuoMEXTHvvSuS",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-RKvwQnDsMTixRzFFKOfbuvLHmmdKXEtNSpKo",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-OteKclSOOPtKdfNsorRZkMuyqNNrYZZacgqhaqIwEpek", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-SWGiJ", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-RKvwQnDsMTixRzFFKOfbuvLHmmdKXEtNSpKo", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Jordan
+        Smith", "valueId": "-Fallback-scrubbed-PqcGOXdimLIKxoidbZeFBKePmdzqKvcdCBQV",
+        "valueCode": "-Fallback-scrubbed-LSZevL", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-DLgyOg"}, {"@odata.etag":
+        "-Fallback-scrubbed-vIxpfHSbQOzgifvAaFIZNDqTnMldkxCIQrXZaEkXqPog", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-RKvwQnDsMTixRzFFKOfbuvLHmmdKXEtNSpKo", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-zVNYEThaMbIIePpZjBKAlUPWaYEebMTKDBMTmpMGvPDq", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-RKvwQnDsMTixRzFFKOfbuvLHmmdKXEtNSpKo", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-qlxjbsLwsItWmoLlaIrsVHHOwwRzUeEhCkNRNAluBAQX", "id": "1a73153c-6329-f111-8340-000d3a11d3d8",
+        "documentId": "-Fallback-scrubbed-EzvyYCUdSZnbWEubKfZElUDYUJdhhHvwNPhr", "sequence":
+        1727, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 7954, "quantity":
+        7954, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 6271, "netTaxAmount": 1911, "netAmountIncludingTax": 6271,
+        "expectedReceiptDate": "-Fallback-scrubbed-YKSiSpiQqB", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-tIqtgCpHDMjdpdYntdatXlwFLQLJKXMjGprFTWetbIjw",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-LqeQONyYgXZEiBmGnMOYuzHQUbRBgSQZfMBD",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-PXnXQeMhxkfWmfslCXJPdXpbULblPNtmgREZrYKjjWDU", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-SWGiJ", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-LqeQONyYgXZEiBmGnMOYuzHQUbRBgSQZfMBD", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Jordan
+        Smith", "valueId": "-Fallback-scrubbed-PqcGOXdimLIKxoidbZeFBKePmdzqKvcdCBQV",
+        "valueCode": "-Fallback-scrubbed-LSZevL", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-DLgyOg"}, {"@odata.etag":
+        "-Fallback-scrubbed-PArMouuSZdiYFvxJyFTPDhSeyMIYCPPucdCsPIYNjqdN", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-LqeQONyYgXZEiBmGnMOYuzHQUbRBgSQZfMBD", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-eMNzpyoOgMFTBnnQLizyVYeRFqWIUAKemRfyjYHIsBKu", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-LqeQONyYgXZEiBmGnMOYuzHQUbRBgSQZfMBD", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-CHtgGaUogAIcTyYHZVXlIWSCTLAzIBQzbIOnwLSnJqIF", "id": "8f466b8f-722c-f111-bec2-000d3a1cb494",
+        "number": "-Fallback-scrubbed-DajXGD", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-mQCnIaOtErNBObLNnIV", "vendorId":
+        "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR", "vendorNumber":
+        "-Fallback-scrubbed-deFhplZnv", "vendorName": "-Fallback-scrubbed-TVsvECCvgkXr",
+        "payToName": "-Fallback-scrubbed-TVsvECCvgkXr", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR",
+        "payToVendorNumber": "-Fallback-scrubbed-deFhplZnv", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-dVondqfNcPawZmtXHPUGuClLQrVdrkJsPOci", "currencyCode":
+        "-Fallback-scrubbed-eSR", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -36536414105794.9, "totalTaxAmount": 1911, "totalAmountIncludingTax": -36536414105794.9,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T10:58:18.633Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-GMfvLqCvoUJmzSYXmSOANoLJtpGbRRogfddRqueCwGTM",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-xYZUaBdOWhupzuxxuJciyXOsSEoNBiWLiEvi",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-cBtLdFIqekejQpVITbSFiiZBcYxxxCyICZWaDeWvEokk", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-xYZUaBdOWhupzuxxuJciyXOsSEoNBiWLiEvi", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-muPEhWXWuqoSBnbnRpHbSCAmJPnkurzUmgDNUBSwvBqN",
+        "id": "9dfcd281-f02c-f111-bec2-000d3a1cb494", "documentId": "-Fallback-scrubbed-xYZUaBdOWhupzuxxuJciyXOsSEoNBiWLiEvi",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": -7402579.96521058,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -36536414105794.9, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -36536414105794.9, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        []}, {"@odata.etag": "-Fallback-scrubbed-BFkVIcCcSrYfmbcRUWhRIUwRzpqcTJrgZLkVYKTKnduR",
+        "id": "9efcd281-f02c-f111-bec2-000d3a1cb494", "documentId": "-Fallback-scrubbed-xYZUaBdOWhupzuxxuJciyXOsSEoNBiWLiEvi",
+        "sequence": 1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        []}]}, {"@odata.etag": "-Fallback-scrubbed-JIrcxoWEWHhjgCLwgKTOTUYbrcaipvZtqNEevMUFSTNz",
+        "id": "4cb1949a-f02c-f111-bec2-000d3a1cb494", "number": "-Fallback-scrubbed-ONLNZV",
+        "postingDate": "-Fallback-scrubbed-GMHPHeKZkr", "invoiceDate": "-Fallback-scrubbed-bEsRBilAad",
+        "dueDate": "-Fallback-scrubbed-pmWrbenwWU", "vendorInvoiceNumber": "-Fallback-scrubbed-cUNjjxGVITlCEsezGzo",
+        "vendorId": "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR", "vendorNumber":
+        "-Fallback-scrubbed-deFhplZnv", "vendorName": "-Fallback-scrubbed-TVsvECCvgkXr",
+        "payToName": "-Fallback-scrubbed-TVsvECCvgkXr", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR",
+        "payToVendorNumber": "-Fallback-scrubbed-deFhplZnv", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "-Fallback-scrubbed-WYrpH",
+        "currencyId": "-Fallback-scrubbed-dVondqfNcPawZmtXHPUGuClLQrVdrkJsPOci", "currencyCode":
+        "-Fallback-scrubbed-eSR", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -18.8847523792461, "totalTaxAmount": 1911, "totalAmountIncludingTax": -18.8847523792461,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T11:52:51.557Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-YzpVayXEJktHNQlnNWMMSzIrkYaKeAiytulwIzaRjxNx",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-ckQPjKtbovXcMhKibFpAedqywxwMYoajbwuxCscervql", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-IfwMShuaDEAMNioJtDjVzcpmzkGLwRYWDFPsPXarhQHz", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-gkewVAvieqgNKTrZOFERTzURhZSuYZjrvYORdFPRZdbD",
+        "id": "404d2a1c-f82c-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": -7402579.96521058,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -36536414105794.9, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -36536414105794.9, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-dKoQdBXjWevtIXEaCNmVHQiqszmMUHKeozEDpgSVirga",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-UHawhdpquUmxMOOfwTlxUPSuvsSRVItZvPPK",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-pMpGCxZisoTAdaFuxWGmvZqmCsTRYmlLHSiOdxTxXsoh", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-UHawhdpquUmxMOOfwTlxUPSuvsSRVItZvPPK",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-UZPHDeFdeSmIagSDveqYAVdSbWnltuPuueixjIXIFjTh", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-UHawhdpquUmxMOOfwTlxUPSuvsSRVItZvPPK", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-MkBPJazcBlSEGMlaiHoUCkXWpGDKDCapqtzNUlmIWcXx", "id": "454d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-YVZOstnZwfkSUBuZnqRtdeullaBGzIOcpSzAGWNpFzto",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-xvBNaDyqLmccoXjCYeULUhFJgBxKomNKNfbR",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-QwdVLpuWmnpQZzzUjmaruTrKgPwuytjSjArNMkxwmvOB", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-xvBNaDyqLmccoXjCYeULUhFJgBxKomNKNfbR",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-ishfPQHpQwkCRjYwDHfnWrFsWplXEDLPnwsHXUvhEqYr", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-xvBNaDyqLmccoXjCYeULUhFJgBxKomNKNfbR", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-geRXVfNQWrIJKeflmurDKBlMuxkfYlxTWRSCYlcLhvWW", "id": "4b4d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        8832, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": -7402579.96521058,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -36536414105794.9, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -36536414105794.9, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-zSuMRJuAuEpnHdBiSMPgSfLXfLIStAVTTykDetsstutg",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-diDKpLWylOCeNGwtaXAJGZuTFFdzkBBfALKU",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-xgBLGzSiaPQmuiRAFOvbXWvqUUIwgVSSsZyfFHqEJtiQ", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-diDKpLWylOCeNGwtaXAJGZuTFFdzkBBfALKU",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-ObwJWFSrFfuAwekCYPpcpVJvKEOFhxDQhFPKbysIrdNk", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-diDKpLWylOCeNGwtaXAJGZuTFFdzkBBfALKU", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-iHMqXGWKmZMrJVttKfmcTkjljnCxJuSEgHSUlJYecHEe", "id": "4f4d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        1319, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-BZRsCJJIzwzhDeGdPqKmMHrMOgoKCFyeKvlAMGgOojZR",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-gFtETddnloqnPOqBlWkchUhRhZvkTbuDnLRq",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-uSkClKtlyTJEkpubbctLIvlWHvJRFTNtZCZKMfRHMKxA", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-gFtETddnloqnPOqBlWkchUhRhZvkTbuDnLRq",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-hCoQTTbTpnRqMdUeDXORhsLWKOzbMWoQzBjQvVizTsTs", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-gFtETddnloqnPOqBlWkchUhRhZvkTbuDnLRq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-qLghjBPngPFfpklEJCilhhlZHqzWLMUKLexwmMHkvPAo", "id": "554d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        4790, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": -7402579.96521058,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -36536414105794.9, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -36536414105794.9, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-zysDqHaUgmBtRhGfMVVLzuycykufEMOjqUBdBWdUnxpI",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-dssKpCqdnUTAKxTZNEhmmwRLpBjIFQJExcYn",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-yxmAfXUcBfoZGBDaWfHMlnFayPnYaWtTtrClgJuEsjiq", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-dssKpCqdnUTAKxTZNEhmmwRLpBjIFQJExcYn",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-ucIdXFLolKoTMlWxfDDqISfzuVqHlqyCZrAOqTewAlhw", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-dssKpCqdnUTAKxTZNEhmmwRLpBjIFQJExcYn", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-WDljaiZhUBGhgadUTYDzOFAVLCxSQYAfxmYqzPCOjGPI", "id": "574d2a1c-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        222, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-SLMrvpsTWxlajQJuhERdMjYPJHFeWKfqceCDoPtNYpHl",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-GTLGSLBSzGemMBkQNfNTjeCZVnjbwEMiRBYY",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-WmDmeYypOmvdHfJrZavFZvakWnIYYcpmSkikDjLGXETk", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-GTLGSLBSzGemMBkQNfNTjeCZVnjbwEMiRBYY",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-bbFMlAMlBKXAfaTRnhqFWNItUPQahQNfhOBGhTUjUbGt", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-GTLGSLBSzGemMBkQNfNTjeCZVnjbwEMiRBYY", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-JQhgxffNjFNdnckeskRegomWLGpvGdGnpbkWcPMMyqmc", "id": "9ae23022-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        8727, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 16846382.970244, "discountPercent": -33100786452816.8,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7785835932.32027, "netTaxAmount": 1911, "netAmountIncludingTax":
+        7785835932.32027, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-ReckFEoPgfANqAjIhWoHSwwparHuJoUONAhgOKdqTwdR",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-VkAbkZjOuamhJpNnOuHXJaQssJivohTwdgWc",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-uCnLsDihARBajzDbGVuAXzIAjQZuVdRcnBtqZuUSgpoE", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-VkAbkZjOuamhJpNnOuHXJaQssJivohTwdgWc", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-EhMWllrXzmEiPNpRqisMjxmfIDIpOlQdrzYFNMcPJpxJ", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-VkAbkZjOuamhJpNnOuHXJaQssJivohTwdgWc",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-sEnzqurgWNmoAlwMhXOhIVVfDrENyIAgwHbcJOoSMWhL", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-VkAbkZjOuamhJpNnOuHXJaQssJivohTwdgWc", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-PkOlOitxQoxugxVAaWWCnICDNSgJDrDKmrnVjFXHmChO", "id": "a6e23022-f82c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kbDgnsalEeXszvSkYBRXWkMCnxVibPOFigAC", "sequence":
+        1268, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1916, "quantity": 844,
+        "discountAmount": 16846382.970244, "discountPercent": -2354765.81501687, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -9606957126430.67, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -9606957126430.67, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-NWEAdwfChQcrmDBMWRHjeQfOLbpBZNGOWxYEkwySnnVy",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-ZRfcBqsQJADUzuTAZhrATGdDBswBcZujQbmW",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-zVaJLuBgmpJjACjnDFpKGxckPvTUDFFcfmTQ",
+        "valueCode": "-Fallback-scrubbed-uAsSZIqA", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-uAsSZIqA"}, {"@odata.etag":
+        "-Fallback-scrubbed-qQzcLKLwnSlXRTlNCzSSAedCxRfHNbYHSWXaksMxItcJ", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-ZRfcBqsQJADUzuTAZhrATGdDBswBcZujQbmW", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-mfURCstnycADZjAieIxjcnthDZnpjeccGNFQhLEFfROH", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-ZRfcBqsQJADUzuTAZhrATGdDBswBcZujQbmW",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}, {"@odata.etag":
+        "-Fallback-scrubbed-ORGzkbkuUEGdHRvwQGojsQbpjdALjsrYKNKEUgBpQJNU", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-ZRfcBqsQJADUzuTAZhrATGdDBswBcZujQbmW", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-iDYXUUvQokCoMOEHbbAJSfIFQxnSTioQaAHUEprxWaiw", "id": "5af0fc25-f72c-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-nIEyCD", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-cUNjjxGVITlCEsezGzo", "vendorId":
+        "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC", "vendorNumber":
+        "-Fallback-scrubbed-AkLNxrRYV", "vendorName": "-Fallback-scrubbed-PQNSmvdrk",
+        "payToName": "-Fallback-scrubbed-PQNSmvdrk", "payToContact": "Alexandra Thompson",
+        "payToVendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "payToVendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-KQEwnNjVBFoUssUFuYgkVKOCrHBdVAbbhrsC", "currencyCode":
+        "-Fallback-scrubbed-WSB", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -896934404.945009, "totalTaxAmount": 1911, "totalAmountIncludingTax": -896934404.945009,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T11:51:04.253Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-wNdlNjifzMEpkgxByBViPfGGEJmYuZkgArIoTYHCFDzq",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-JRGMuhnBtfUgYaeTHXPUTeAuSSMQsioRxrNE",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-tZCMcSGInetRPbEoibjkGJLPIjtQvjZohfQETTsTXEKk", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-JRGMuhnBtfUgYaeTHXPUTeAuSSMQsioRxrNE", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-tkqSYrSZeAaeHgNOVBkLRptgFXeNyIFgcoypwlgCbjvG",
+        "id": "043f8fe2-f72c-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-JRGMuhnBtfUgYaeTHXPUTeAuSSMQsioRxrNE",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 831735.79253753,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -896934404.945009, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -896934404.945009, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-JWKdgJJOMoSEyzIdptydcuIpmWhRROlapHtulSqPduZz",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-hQquxbuILAPyOEAMWzzPxrrwhSSpUDlTEmAp",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-lgbOHKIJzrOGCLRnbGSdjMOekMoCNMWBFJPHGQXGrKxO", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-hQquxbuILAPyOEAMWzzPxrrwhSSpUDlTEmAp", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-azoOENYfdqqvrwTUSKCmyFrTfISNPDMOPFzPXewDZGrG", "id": "053f8fe2-f72c-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-JRGMuhnBtfUgYaeTHXPUTeAuSSMQsioRxrNE", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-vfPNvVXxjnVRksPMsMMxkctuoKSNIDvsBseWCzAhNjVR",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-CFkhcVWGykQHEmVXSFhwrshsXKZcYTNHKtsu",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-aoRztGbHewzMxccHGynbaufIeOaEZOkLiRrTAWnBEapt", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-CFkhcVWGykQHEmVXSFhwrshsXKZcYTNHKtsu", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-CpOCzrlBgBrCxlvNiYJimIjhqwNbqtpORLtvqcWozMzB", "id": "8a6812d2-002d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-WIuqSz", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-ATBoYzaNnxUVBjEPaFM", "vendorId":
+        "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR", "vendorNumber":
+        "-Fallback-scrubbed-deFhplZnv", "vendorName": "-Fallback-scrubbed-TVsvECCvgkXr",
+        "payToName": "-Fallback-scrubbed-TVsvECCvgkXr", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR",
+        "payToVendorNumber": "-Fallback-scrubbed-deFhplZnv", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-KQEwnNjVBFoUssUFuYgkVKOCrHBdVAbbhrsC", "currencyCode":
+        "-Fallback-scrubbed-WSB", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -8068.92568098585, "totalTaxAmount": 1911, "totalAmountIncludingTax": -8068.92568098585,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T13:13:43.8Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-xwEVHfVgwTvAmxPREsQuZWqQaezhVSVjolydcmvgScvJ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-HpoMIIloRYlNHgKyItUIWylqOkjJiHnjPGxIufCRZeUq", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-DKZKpgGPcOjJZhMyEDQqBaypFBoWhKdgCCkFjJKVbgPU",
+        "id": "44715649-012d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 831735.79253753,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -896934404.945009, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -896934404.945009, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-SFKLmrAOnEzGyobsyiCKkGbYTSXdnBWhzdSfmYvFthkn",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-kqTLpwIqLodabiIecKGcGlRoVEpFWdifXrKv",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-dReIfhtClgKopFVpeEFewolqetDiAHadPSetdTGQxCTi", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-kqTLpwIqLodabiIecKGcGlRoVEpFWdifXrKv", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-TajxSywygKSNHcbgddzgigJVkenxPYboTpNJejGWtsbA", "id": "45715649-012d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-plosnsBUpBWNqpQFJjdoEYwTpTjTGtiZoEQvpmrEfQYH",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-ZVFgWmjjUJIggKrvVtBKmJxNsTBMncvokjQz",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-DaGwqzUPQCtrbrcUxUwlAAIFvKZxCGJPaCfiIWuSWxeE", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-ZVFgWmjjUJIggKrvVtBKmJxNsTBMncvokjQz", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-lCtawsXdmucHhyTtQEcmXsMSnKqRsEtPqwkExNGTmGYa", "id": "453c1669-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt", "sequence":
+        8832, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 16846382.970244, "discountPercent": -33100786452816.8,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7785835932.32027, "netTaxAmount": 1911, "netAmountIncludingTax":
+        7785835932.32027, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-qJJhYOIbznqjqSrpOwwyhidyjSNDSkBbcfiBWJzTnKcP",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-uKcoTDqWajCyoDiqdlZHPxQHscQNfJLQzraF",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-QVdExfFxwztNfykQZOrYIKeGGMKYIduhGdzhweaIRYCE", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-uKcoTDqWajCyoDiqdlZHPxQHscQNfJLQzraF", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-LtzWsUcuUSBRwvLELLJfvEAqwFSZEHnrTjHnWKyIbeWF", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-uKcoTDqWajCyoDiqdlZHPxQHscQNfJLQzraF", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-XtURTqyHlgDnUgwBSejnlBWrBPhEevcHgenKMjJZMhhR", "id": "663c1669-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-NWXApRbWGJGdjVzGMzDieXSYhXlRDQNgLcCt", "sequence":
+        1319, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1916, "quantity": 844,
+        "discountAmount": 16846382.970244, "discountPercent": -2354765.81501687, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -9606957126430.67, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -9606957126430.67, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-eLidjFcJxEgbWJlhjwvgIpAnRKKkBYsASgpgMAyBQfmw",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-ZbpMtlkMlqAbkYUAdjnHwhZlbNVcCEOTQaAK",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-zVaJLuBgmpJjACjnDFpKGxckPvTUDFFcfmTQ",
+        "valueCode": "-Fallback-scrubbed-uAsSZIqA", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-uAsSZIqA"}, {"@odata.etag":
+        "-Fallback-scrubbed-YWnOfTitbKXdPvrgOWMcKJWTbiRastbrwunjNdVgNwNi", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-ZbpMtlkMlqAbkYUAdjnHwhZlbNVcCEOTQaAK", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-uIliZTxGgRpePWQXdqVVHibsyfORoAbEbhZAzjSdpqLA", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-ZbpMtlkMlqAbkYUAdjnHwhZlbNVcCEOTQaAK", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-yhbpdUeQscodfEUbneQEWlDcCvHwtXtIZEcDTFMHIeBi", "id": "e6206ad8-002d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-nDVdEU", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-ATBoYzaNnxUVBjEPaFM", "vendorId":
+        "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC", "vendorNumber":
+        "-Fallback-scrubbed-AkLNxrRYV", "vendorName": "-Fallback-scrubbed-PQNSmvdrk",
+        "payToName": "-Fallback-scrubbed-PQNSmvdrk", "payToContact": "Alexandra Thompson",
+        "payToVendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "payToVendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-KQEwnNjVBFoUssUFuYgkVKOCrHBdVAbbhrsC", "currencyCode":
+        "-Fallback-scrubbed-WSB", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -8068.92568098585, "totalTaxAmount": 1911, "totalAmountIncludingTax": -8068.92568098585,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T13:13:51.9Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-aLXqxdczlXUghJTLUiOnUWRWVSMVqOnYuCMyvbhFJpAG",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-DibgKyCncQPwhrtVIOrcHpByLYpHoJenBVfmwKGqWucX", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-pRylojvWrPbaacIEXCtQRQrxbayiYugNZFDkkNtZUdnW",
+        "id": "52715649-012d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 831735.79253753,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -896934404.945009, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -896934404.945009, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-wZlezeUQjaySBOjUTKgMigsZZInHjOvykjcJpTPKuDIQ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-eoCTGtFBVKkxvihwljDqWiQjTGxfxEzudIyH",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-YaectSnoiKujuyWQCmgMFUIZjIicAlKvzWOFqgZKBpMI", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-eoCTGtFBVKkxvihwljDqWiQjTGxfxEzudIyH", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-cbbVNituHlFYjzcfJJnNakuFygOeDduTSacOVFdPULau", "id": "53715649-012d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-OzLRMGlqkybAEfYULFJEyyWvPcEkShNaaOhJWZmpirsY",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-qZyRngreLFCqDEISfRPUsahHmKkHplmfTfBj",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-ybVrBtfTrQxaZCeoaMmcVtUnIEaELCpRXAwMwcmaNmvq", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-qZyRngreLFCqDEISfRPUsahHmKkHplmfTfBj", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-xPwzyobRkpPfDBWvThZYobJNtyPEWErgMRTkMJmgsOzY", "id": "e5a14c6f-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc", "sequence":
+        8832, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 16846382.970244, "discountPercent": -33100786452816.8,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7785835932.32027, "netTaxAmount": 1911, "netAmountIncludingTax":
+        7785835932.32027, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-KTJCbKGFEWXJUFQEPuVzxqfcBgNiOGokrPAGOQSBcizF",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-fqVIIJWYaVfVhnYiMNrcPeDptGZGyEkNdWwn",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-LauRqqzFIYgceJrDhJDvtDEugmMlaqNImoLoIyFbRMbt", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-fqVIIJWYaVfVhnYiMNrcPeDptGZGyEkNdWwn", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-yEDtaaJmQxNoUrFKPVpJaiQKEBPCEcoadetLmCiaSdjQ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-fqVIIJWYaVfVhnYiMNrcPeDptGZGyEkNdWwn", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-mrVWBIQLUJJvzPwCBlkVPRxAPnjIVFeqTBtJnqdqAZFl", "id": "e6a14c6f-032d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-lGOaUedOGaPRQiPqJuOeaUKPccfwWONAyvpc", "sequence":
+        1319, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1916, "quantity": 844,
+        "discountAmount": 16846382.970244, "discountPercent": -2354765.81501687, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -9606957126430.67, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -9606957126430.67, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-RCdNZNwgwKqwvtSuIZVCtWuujSTDAHTwSdGMFfdDNXwI",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-dSZwQPtAayHJUdFgzNeMuZklyhhxmQestRzV",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-zVaJLuBgmpJjACjnDFpKGxckPvTUDFFcfmTQ",
+        "valueCode": "-Fallback-scrubbed-uAsSZIqA", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-uAsSZIqA"}, {"@odata.etag":
+        "-Fallback-scrubbed-nJVHvPlCdMpHaQxDFhCpkbzroaxDmsTNdpNcwQUCfQpG", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-dSZwQPtAayHJUdFgzNeMuZklyhhxmQestRzV", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-KMRfTIOZNWyiuTfhncGQDPJcesTeTdQANjwkbILzPlgQ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-dSZwQPtAayHJUdFgzNeMuZklyhhxmQestRzV", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-EpTvnBVlEHonjTMpornhgfmenpPpGSuzrntiCnMekcmS", "id": "d8902ffe-1a2d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-UrBEpg", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-vIBEEdAKUthLlZZoAKQ", "vendorId":
+        "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR", "vendorNumber":
+        "-Fallback-scrubbed-deFhplZnv", "vendorName": "-Fallback-scrubbed-TVsvECCvgkXr",
+        "payToName": "-Fallback-scrubbed-TVsvECCvgkXr", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-KCnigsPcQgMfBUdxpIcsIrAlAqYWWdOgTKaR",
+        "payToVendorNumber": "-Fallback-scrubbed-deFhplZnv", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-KQEwnNjVBFoUssUFuYgkVKOCrHBdVAbbhrsC", "currencyCode":
+        "-Fallback-scrubbed-WSB", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -8068.92568098585, "totalTaxAmount": 1911, "totalAmountIncludingTax": -8068.92568098585,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T16:25:24.67Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-rapqvbRcIxRirfzUUTuHTOUZPGJxwSyxhLVQsXKFaWEV",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-inHWKxonYIFNgQueoHFjFgeXTApMmoEqSEQJWNkgwSxf", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-QqBqmctorIByZGnrnPVPNrebqFtRTWcwysprbsihKNyG",
+        "id": "8240f530-1e2d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 831735.79253753,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -896934404.945009, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -896934404.945009, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-nESYyxtdJkBNYFbIASefwVjuGsIXSxWtIapMfAwvUYOd",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-sGQRCYvkLxtxDoGrKUNXsIctUWEwpHTtlbtN",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-zwlWJEVzKVInXHSEaPbdAIAcXXLzkceKwGaZgWvsaUDG", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-sGQRCYvkLxtxDoGrKUNXsIctUWEwpHTtlbtN", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-akrbyhivKYRcmEYsnZGXvAotWwNhBUUAySVRtQzWrNQK", "id": "8340f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-WWdwXKYtcFMeHtBdxlAcRYzmVEMotWzFqwQymGeIEIyL",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-SumapDoKjdXxhTfEchOsGEsEhPNAItZGBEHP",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-gHBpBSgaMFunpuclFLBaVptWhyaiHnUfCjggROvTBNkS", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-SumapDoKjdXxhTfEchOsGEsEhPNAItZGBEHP", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-BURMDVLTttEQdKAbYRiCsxlqDfGsJueVHgwDJHycfrTe", "id": "a240f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH", "sequence":
+        8832, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 16846382.970244, "discountPercent": -33100786452816.8,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7785835932.32027, "netTaxAmount": 1911, "netAmountIncludingTax":
+        7785835932.32027, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-RodsJJrveeyCOcRkISpEmAygnyjwsUSvOSUMUyxHyENR",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-oTMEUhqwfLJZMrcclhVMSgWrqMPqJxikPiBA",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-VjylUXSwTRMBJCXdutUDMhJcpIpAeSJJeFIzGTgEJGts", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-oTMEUhqwfLJZMrcclhVMSgWrqMPqJxikPiBA", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-kIGKSRLcCzVBfMdAeMfRqZYQvZTOKGvXjqJdSyLSXMtJ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-oTMEUhqwfLJZMrcclhVMSgWrqMPqJxikPiBA", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-RgMsMvYCSduVwHREimMVhlrzrDlqWHCxxeepGZxySaBV", "id": "a340f530-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-vWGbqpZEyTbzDqswpBYHATYcssJpHnwwPmkH", "sequence":
+        1319, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1916, "quantity": 844,
+        "discountAmount": 16846382.970244, "discountPercent": -2354765.81501687, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -9606957126430.67, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -9606957126430.67, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-AyAdkaQTvphnSBKcaxVjpGFrcEUIhGtbMXDsrJoxqumq",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-UvRLxrczYsKDAoGdjlZkrghmQIlNqUCiACwA",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-zVaJLuBgmpJjACjnDFpKGxckPvTUDFFcfmTQ",
+        "valueCode": "-Fallback-scrubbed-uAsSZIqA", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-uAsSZIqA"}, {"@odata.etag":
+        "-Fallback-scrubbed-CHNCVUXDqtBKwbdzLDaqdHpJXRAzvTVHvfxmybrNZAbQ", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-UvRLxrczYsKDAoGdjlZkrghmQIlNqUCiACwA", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-kwNUmTyIraLixaqdsbSlLkxLxOHoLwkRLozTckdGJOmU", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-UvRLxrczYsKDAoGdjlZkrghmQIlNqUCiACwA", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-GQVRlobTryYisFrCMygrdNddmCJFotKZrTVJDKqfAGyW", "id": "e9cfa705-1b2d-f111-bec2-002248340352",
+        "number": "-Fallback-scrubbed-gJNUuC", "postingDate": "-Fallback-scrubbed-GMHPHeKZkr",
+        "invoiceDate": "-Fallback-scrubbed-bEsRBilAad", "dueDate": "-Fallback-scrubbed-pmWrbenwWU",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-vIBEEdAKUthLlZZoAKQ", "vendorId":
+        "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC", "vendorNumber":
+        "-Fallback-scrubbed-AkLNxrRYV", "vendorName": "-Fallback-scrubbed-DRvXteGnHetm",
+        "payToName": "-Fallback-scrubbed-DRvXteGnHetm", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "payToVendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "-Fallback-scrubbed-utX", "shortcutDimension2Code": "Alexandra Thompson",
+        "currencyId": "-Fallback-scrubbed-KQEwnNjVBFoUssUFuYgkVKOCrHBdVAbbhrsC", "currencyCode":
+        "-Fallback-scrubbed-WSB", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        -8068.92568098585, "totalTaxAmount": 1911, "totalAmountIncludingTax": -8068.92568098585,
+        "status": "-Fallback-scrubbed-DCSgY", "lastModifiedDateTime": "2026-03-31T16:25:32.803Z",
+        "dimensionSetLines": [{"@odata.etag": "-Fallback-scrubbed-ggjBPFVMFphLqtQqpboPgRrqlbTqkZLjtwKxZkAngxZw",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-uKPqyLkuWRoPjMvBopFrXcDKYGKqVmtncoVDkRirLxdj", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk", "valueCode":
+        "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-uatEKjHDCoKeUrLVpkKYLWVitWuyDGRoAuHPhoXdSgOq",
+        "id": "4c393c37-1e2d-f111-bec2-002248340352", "documentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-kxJxKXXwoiErGoPubapkqbCH", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 831735.79253753,
+        "quantity": 1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -896934404.945009, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -896934404.945009, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-qcQgqXAKcuqAnqucpegQDfryDVobzFECyHOmNfiSsrVi",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-tvMRgNiqQRCliqlzTGUIQyNSQkPFkOYsYTxf",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-WwSLtEYoDwlueyEPcAwLldEjjqqkdYNjCBnYzMdqAxDW", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-tvMRgNiqQRCliqlzTGUIQyNSQkPFkOYsYTxf", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-lEJVRcYKAElRkCsASVYrwSsvXgrQEIHQwEfYhJdMBdgm", "id": "4d393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN", "sequence":
+        1609, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-xGEkDEQvWCqLgMe", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1911, "quantity": 844,
+        "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ktTvkGgjlv",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 1911, "netTaxAmount": 1911, "netAmountIncludingTax": 1911,
+        "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-fgZhbyxgLfoATseWaQAkUUYGANZuTbgIDyTGxRhLFbgo",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-XvIOLmkfgXMnGQGxUrDcpIEMnLqMzpyzOWWO",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-vSlXWmXVyJlvrPNpsssHCuimJPPqEUEvcfwPOJiysgtW", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-XvIOLmkfgXMnGQGxUrDcpIEMnLqMzpyzOWWO", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-uwwJEHAEutIyguLesAdOZenWDTogUzbMALEpJdPLTgXc", "id": "4f393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN", "sequence":
+        8832, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 16846382.970244, "discountPercent": -33100786452816.8,
+        "discountAppliedBeforeTax": true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7785835932.32027, "netTaxAmount": 1911, "netAmountIncludingTax":
+        7785835932.32027, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-OLsAEShhXLeqJOZlHXcXgGaJjwrVzuoUnbWqeJwtoWlK",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-rfVjHLbFNyAjCiPEtsEEgEelxAaRopcqVDSo",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-IwxgsVHqGieDPxscsouFhWoyExIMMlCGuahrOBWEbPyZ", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-rfVjHLbFNyAjCiPEtsEEgEelxAaRopcqVDSo", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-IkUGbzqmDMXCkwGVWXQNvRpfEJKAbyYNumpiSbxnPOWZ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-rfVjHLbFNyAjCiPEtsEEgEelxAaRopcqVDSo", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-SXouMVyaeOTkJooZXBECYeCccNFOLfuzjikJTMUBWnOb", "id": "50393c37-1e2d-f111-bec2-002248340352",
+        "documentId": "-Fallback-scrubbed-kJIsCSGsMNjhULrcyeVIrcUttQaFRMdMSVeN", "sequence":
+        1319, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 1916, "quantity": 844,
+        "discountAmount": 16846382.970244, "discountPercent": -2354765.81501687, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": -9606957126430.67, "netTaxAmount": 1911, "netAmountIncludingTax":
+        -9606957126430.67, "expectedReceiptDate": "-Fallback-scrubbed-bEsRBilAad",
+        "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-pnjvepGNwaXouUhwvEBeVgnGMwkFLEreYfEVAcivDcRw",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-qmQnfcBzDTMGPmHaAjpruWGTuFPFchizLggC",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-zVaJLuBgmpJjACjnDFpKGxckPvTUDFFcfmTQ",
+        "valueCode": "-Fallback-scrubbed-uAsSZIqA", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-uAsSZIqA"}, {"@odata.etag":
+        "-Fallback-scrubbed-gwBzDruMTemOBxUEGnRhHjcptNBmAQSukpMmJQlhZgOz", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-qmQnfcBzDTMGPmHaAjpruWGTuFPFchizLggC", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-QNemwjIKTvjjJAQDUewRGENlpsKrXNaXanpV",
+        "valueCode": "-Fallback-scrubbed-Mj", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-dvEkPkhOMTWM"}, {"@odata.etag":
+        "-Fallback-scrubbed-faPSRnpozezlLMlMypVBOTJbEdjmEyjtJqQFulnsfudM", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-qmQnfcBzDTMGPmHaAjpruWGTuFPFchizLggC", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-fkqdvPYoddzDlMjuQFWXccZiddzOjOTTLwuqhOTMJQjm", "id": "ac707ad5-5d4d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-BtFywD", "postingDate": "-Fallback-scrubbed-NYrODLIxyZ",
+        "invoiceDate": "-Fallback-scrubbed-NYrODLIxyZ", "dueDate": "-Fallback-scrubbed-yQWgXWLDkA",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-DajXGD", "vendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "vendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "vendorName": "-Fallback-scrubbed-DRvXteGnHetm",
+        "payToName": "-Fallback-scrubbed-DRvXteGnHetm", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "payToVendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "Alexandra Thompson", "shortcutDimension2Code": "-Fallback-scrubbed-WYrpH",
+        "currencyId": "-Fallback-scrubbed-CZggeFSxyvEkVqtKpbOGtrXcTTNBVtZbKUQf", "currencyCode":
+        "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        4655, "totalTaxAmount": 1911, "totalAmountIncludingTax": 4655, "status": "-Fallback-scrubbed-DCSgY",
+        "lastModifiedDateTime": "2026-05-11T18:18:34.127Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-hZLDVvmAGReqRWfgoufHGhindKrzJirneKhWbrbZBRRK", "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-kEzoHYxAMmjXk", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-NxHDtgPsHSoWkhLfitPkRHMjIDQJAvDIBbYS",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-YkOjCrZesywIdxtfVitZeMSADRlrSRTtGBrGPVpXBKWd",
+        "id": "42665806-5e4d-f111-a820-0022481ca23d", "documentId": "-Fallback-scrubbed-NxHDtgPsHSoWkhLfitPkRHMjIDQJAvDIBbYS",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-yszAtWTspqfVnZWKhErTJPvPsAXJBMrpjUvX",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-vWCsol",
+        "description": "-Fallback-scrubbed-qndwOyGiXwL", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 801.49165643213,
+        "quantity": 7954, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 4655, "netTaxAmount": 1911, "netAmountIncludingTax": 4655,
+        "expectedReceiptDate": "-Fallback-scrubbed-NYrODLIxyZ", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-bUaXOWmqyIYXDcMjegXJSDbyyuzhQhGGCfXuFqNkZphQ",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-kEzoHYxAMmjXk",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-ZWqWbjrFGtCrsNkoJvbOtlUzyuqEDUkfstia",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Jennifer Shaw", "valueId": "-Fallback-scrubbed-IxXCtVfkUXyJLhJPyynLlUMFCybysDDFHjJf",
+        "valueCode": "-Fallback-scrubbed-WYrpH", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-pGKNafWoApbEqC"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-OXWKEXqIAddrbnducRQYDVJuVWqxGmxBTVDEBTXYjysD", "id": "0ca195fd-634d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-zuJAKF", "postingDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "invoiceDate": "-Fallback-scrubbed-ANlxkwNwHH", "dueDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-xgefPn", "vendorId": "-Fallback-scrubbed-QRQaDCDttZtMGJTWRIENrXshLkygIYEDtEpw",
+        "vendorNumber": "-Fallback-scrubbed-cPTSv", "vendorName": "-Fallback-scrubbed-dYfBnaacYqJnMN",
+        "payToName": "-Fallback-scrubbed-OhBAUmUHzpFUtkXfbLoX", "payToContact": "-Fallback-scrubbed-cqDcRTUXKpCJW",
+        "payToVendorId": "-Fallback-scrubbed-GyLvEQxgGasqOEReDFCaoeaehsCZaQZqvSQg",
+        "payToVendorNumber": "-Fallback-scrubbed-KJVbu", "shipToName": "Denise Johnson",
+        "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-oHiygOCJmovtV",
+        "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "-Fallback-scrubbed-BSCyjLe",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-Yd",
+        "buyFromPostCode": "-Fallback-scrubbed-VBkLn", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-oHiygOCJmovtV", "payToAddressLine2": "Alexandra Thompson",
+        "payToCity": "-Fallback-scrubbed-BSCyjLe", "payToCountry": "-Fallback-scrubbed-PY",
+        "payToState": "-Fallback-scrubbed-Yd", "payToPostCode": "-Fallback-scrubbed-VBkLn",
+        "shortcutDimension1Code": "Alexandra Thompson", "shortcutDimension2Code":
+        "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "currencyCode": "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        1911, "totalTaxAmount": 1911, "totalAmountIncludingTax": 1911, "status": "-Fallback-scrubbed-DCSgY",
+        "lastModifiedDateTime": "2026-05-11T18:05:33.917Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-MakFkWzKJckHGpbQculfAPxKWPXsMMTdJeMeACvdZPZd", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-htAWixFJbMwyJdRGDsjYtOFMqGgsQbwkcBVx", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Victoria Rogers",
+        "valueId": "-Fallback-scrubbed-snjvWJiFtOgehPkdkOMYBgUvLDMXMfjWeqXw", "valueCode":
+        "-Fallback-scrubbed-fw", "valueConsolidationCode": "Alexandra Thompson", "valueDisplayName":
+        "-Fallback-scrubbed-hBOcIaVXispLF"}], "purchaseInvoiceLines": []}, {"@odata.etag":
+        "-Fallback-scrubbed-usrUrocVSVqrhZFncuNafOyyYPsjPqDBllKnDYajAvVx", "id": "78eee28a-634d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-UgvYyn", "postingDate": "-Fallback-scrubbed-HnjOMwqqdQ",
+        "invoiceDate": "-Fallback-scrubbed-HnjOMwqqdQ", "dueDate": "-Fallback-scrubbed-HnjOMwqqdQ",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-KTgxSF", "vendorId": "-Fallback-scrubbed-QRQaDCDttZtMGJTWRIENrXshLkygIYEDtEpw",
+        "vendorNumber": "-Fallback-scrubbed-cPTSv", "vendorName": "-Fallback-scrubbed-dYfBnaacYqJnMN",
+        "payToName": "-Fallback-scrubbed-OhBAUmUHzpFUtkXfbLoX", "payToContact": "-Fallback-scrubbed-cqDcRTUXKpCJW",
+        "payToVendorId": "-Fallback-scrubbed-GyLvEQxgGasqOEReDFCaoeaehsCZaQZqvSQg",
+        "payToVendorNumber": "-Fallback-scrubbed-KJVbu", "shipToName": "Denise Johnson",
+        "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-oHiygOCJmovtV",
+        "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "-Fallback-scrubbed-BSCyjLe",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-Yd",
+        "buyFromPostCode": "-Fallback-scrubbed-VBkLn", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-oHiygOCJmovtV", "payToAddressLine2": "Alexandra Thompson",
+        "payToCity": "-Fallback-scrubbed-BSCyjLe", "payToCountry": "-Fallback-scrubbed-PY",
+        "payToState": "-Fallback-scrubbed-Yd", "payToPostCode": "-Fallback-scrubbed-VBkLn",
+        "shortcutDimension1Code": "Alexandra Thompson", "shortcutDimension2Code":
+        "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "currencyCode": "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        1911, "totalTaxAmount": 1911, "totalAmountIncludingTax": 1911, "status": "-Fallback-scrubbed-DCSgY",
+        "lastModifiedDateTime": "2026-05-11T18:02:23.77Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-wrDYOHKjTnaPaEzxmAIrbbMkSmXvjcYOvqjNmiLXGdCU", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-uMUyqPbtglLWfLaiZrOVlrdzjSdMRszZkEpl", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Victoria Rogers",
+        "valueId": "-Fallback-scrubbed-snjvWJiFtOgehPkdkOMYBgUvLDMXMfjWeqXw", "valueCode":
+        "-Fallback-scrubbed-fw", "valueConsolidationCode": "Alexandra Thompson", "valueDisplayName":
+        "-Fallback-scrubbed-hBOcIaVXispLF"}], "purchaseInvoiceLines": []}, {"@odata.etag":
+        "-Fallback-scrubbed-LxPXlxpuTBpMzkGMWqYpifBGssVoDjZSSXTQgihZksVa", "id": "0f193634-644d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-gjlEsn", "postingDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "invoiceDate": "-Fallback-scrubbed-ANlxkwNwHH", "dueDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-xgefPn", "vendorId": "-Fallback-scrubbed-QRQaDCDttZtMGJTWRIENrXshLkygIYEDtEpw",
+        "vendorNumber": "-Fallback-scrubbed-cPTSv", "vendorName": "-Fallback-scrubbed-dYfBnaacYqJnMN",
+        "payToName": "-Fallback-scrubbed-dYfBnaacYqJnMN", "payToContact": "-Fallback-scrubbed-RaFyldSNUKGJ",
+        "payToVendorId": "-Fallback-scrubbed-QRQaDCDttZtMGJTWRIENrXshLkygIYEDtEpw",
+        "payToVendorNumber": "-Fallback-scrubbed-cPTSv", "shipToName": "Denise Johnson",
+        "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-oHiygOCJmovtV",
+        "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "-Fallback-scrubbed-BSCyjLe",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-Yd",
+        "buyFromPostCode": "-Fallback-scrubbed-VBkLn", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-oHiygOCJmovtV", "payToAddressLine2": "Alexandra Thompson",
+        "payToCity": "-Fallback-scrubbed-BSCyjLe", "payToCountry": "-Fallback-scrubbed-PY",
+        "payToState": "-Fallback-scrubbed-Yd", "payToPostCode": "-Fallback-scrubbed-VBkLn",
+        "shortcutDimension1Code": "Alexandra Thompson", "shortcutDimension2Code":
+        "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "currencyCode": "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        1911, "totalTaxAmount": 1911, "totalAmountIncludingTax": 1911, "status": "-Fallback-scrubbed-DCSgY",
+        "lastModifiedDateTime": "2026-05-11T18:07:07.277Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-InlAiVGUVpFGMUBokmCvNrQjTrpNyWhSiIhKAinaGGHk", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-hkgOmPtmteUdPQZllBSZyKgivVHQWKmUssQo", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Victoria Rogers",
+        "valueId": "-Fallback-scrubbed-snjvWJiFtOgehPkdkOMYBgUvLDMXMfjWeqXw", "valueCode":
+        "-Fallback-scrubbed-fw", "valueConsolidationCode": "Alexandra Thompson", "valueDisplayName":
+        "-Fallback-scrubbed-hBOcIaVXispLF"}, {"@odata.etag": "-Fallback-scrubbed-dcxqXYfVZdsUwyvXgLhlHeGfLVLZuffgwvOFUlilrmAk",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-artOcbMyZCMeW",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-hkgOmPtmteUdPQZllBSZyKgivVHQWKmUssQo",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Joseph Melton", "valueId": "-Fallback-scrubbed-hQdBPVzCUAQoSGpXlBmKrmlttPtkbANAEBLV",
+        "valueCode": "-Fallback-scrubbed-gcHGyFoQdg", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-bySLeqzRXw"}, {"@odata.etag":
+        "-Fallback-scrubbed-PAxwJuibtcfTZuVfNvCIQUBHifaozLOBsnTgImJmhKVV", "id": "0e91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-YaZlCQnDnFsOq", "consolidationCode": "Alexandra
+        Thompson", "parentId": "-Fallback-scrubbed-hkgOmPtmteUdPQZllBSZyKgivVHQWKmUssQo",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Andrew Meza", "valueId": "-Fallback-scrubbed-fUmQLLsbCvvcFmlYLohagBmjbNgDjgxnikTq",
+        "valueCode": "-Fallback-scrubbed-yLaHYD", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-cOQFzm"}], "purchaseInvoiceLines":
+        []}, {"@odata.etag": "-Fallback-scrubbed-cGwYylLSZIbhLiSbjRjsaHEsZMuMJVZvAvUiHbgwZEOo",
+        "id": "d1524f98-3a29-f111-8340-000d3a11d3d8", "number": "-Fallback-scrubbed-nnmrBt",
+        "postingDate": "-Fallback-scrubbed-gRemJYVZBh", "invoiceDate": "-Fallback-scrubbed-gRemJYVZBh",
+        "dueDate": "-Fallback-scrubbed-xEUuTyCTqt", "vendorInvoiceNumber": "-Fallback-scrubbed-FeFqCJSQN",
+        "vendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu", "vendorNumber":
+        "-Fallback-scrubbed-alXTiTftvMzmQMc", "vendorName": "-Fallback-scrubbed-HBuikaNpUI",
+        "payToName": "-Fallback-scrubbed-HBuikaNpUI", "payToContact": "Alexandra Thompson",
+        "payToVendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu",
+        "payToVendorNumber": "-Fallback-scrubbed-alXTiTftvMzmQMc", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk",
+        "buyFromAddressLine2": "-Fallback-scrubbed-vQigf", "buyFromCity": "-Fallback-scrubbed-FDfSANDD",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-wy",
+        "buyFromPostCode": "-Fallback-scrubbed-erAmp", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk", "payToAddressLine2":
+        "-Fallback-scrubbed-vQigf", "payToCity": "-Fallback-scrubbed-FDfSANDD", "payToCountry":
+        "-Fallback-scrubbed-PY", "payToState": "-Fallback-scrubbed-wy", "payToPostCode":
+        "-Fallback-scrubbed-erAmp", "shortcutDimension1Code": "-Fallback-scrubbed-MQHjm",
+        "shortcutDimension2Code": "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-dVondqfNcPawZmtXHPUGuClLQrVdrkJsPOci",
+        "currencyCode": "-Fallback-scrubbed-eSR", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        7954, "totalTaxAmount": 1911, "totalAmountIncludingTax": 7954, "status": "-Fallback-scrubbed-HwnV",
+        "lastModifiedDateTime": "2026-04-01T18:21:46.377Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-UelxNrjIQwaPZsAUiuYHAWGAoXmvaOZEEVeitgIMcmgJ", "id": "860c5c21-0f29-f111-8340-000d3a11d3d8",
+        "code": "-Fallback-scrubbed-MjDOnwG", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-QryRKgDGlPFTutpdIZNFEWWlAjYlHUtwBWrx", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Crystal Wilson",
+        "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF", "valueCode":
+        "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag": "-Fallback-scrubbed-nWtmDPhlToWkNxOOsgjnZbxQLaktQqKhZkpTuIhsOOmX",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-QryRKgDGlPFTutpdIZNFEWWlAjYlHUtwBWrx",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-uskkXIcUDpoQNKiCMDvDGZqkEzSkBOKUcRsCofhkAfMv", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-QryRKgDGlPFTutpdIZNFEWWlAjYlHUtwBWrx", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-sBbVIWBaUyZPMSwdwgycCidNrATwlFBjwHTR", "valueCode":
+        "-Fallback-scrubbed-MQHjm", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-vAzik"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-fbWoCeTBPrLlWgZLXyYOrZdFSsKupCTeVhRhQCiLMCwZ",
+        "id": "dd524f98-3a29-f111-8340-000d3a11d3d8", "documentId": "-Fallback-scrubbed-QryRKgDGlPFTutpdIZNFEWWlAjYlHUtwBWrx",
+        "sequence": 7036, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "unitOfMeasureCode": "Alexandra Thompson", "unitCost": 7036, "quantity": 844,
+        "discountAmount": 7954, "discountPercent": 5562, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 7954, "netTaxAmount": 1911, "netAmountIncludingTax": 7954,
+        "expectedReceiptDate": "-Fallback-scrubbed-gRemJYVZBh", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-dShxxaJxFcUMHASKvdhSPepUavgeNYniFvPyMFuzPnaz",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-RYaUZNPDGJpyyIyfpTBfNTwNzIuowMvKAbQq",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-AJpJmqfgoQEoECoaMHdfeSqtJxRLwnRPyrwVcXTIKTsV", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-RYaUZNPDGJpyyIyfpTBfNTwNzIuowMvKAbQq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-bidIlcfWeJJnMEQkhMUmVCJYKDuLaZkvibyzINhRRwJd", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-RYaUZNPDGJpyyIyfpTBfNTwNzIuowMvKAbQq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-sBbVIWBaUyZPMSwdwgycCidNrATwlFBjwHTR",
+        "valueCode": "-Fallback-scrubbed-MQHjm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-vAzik"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-VwWTQyhsVmvlhVYmDWlBKUtREGFKTfmFZQvAEYmuZTMJ", "id": "3e21174c-e429-f111-8340-00224829d901",
+        "number": "-Fallback-scrubbed-uYngFC", "postingDate": "-Fallback-scrubbed-YKSiSpiQqB",
+        "invoiceDate": "-Fallback-scrubbed-YKSiSpiQqB", "dueDate": "-Fallback-scrubbed-MQwSAekSsz",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-dxZhgFOoO", "vendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu",
+        "vendorNumber": "-Fallback-scrubbed-alXTiTftvMzmQMc", "vendorName": "-Fallback-scrubbed-HBuikaNpUI",
+        "payToName": "-Fallback-scrubbed-HBuikaNpUI", "payToContact": "Alexandra Thompson",
+        "payToVendorId": "-Fallback-scrubbed-WYLqjYGYPVOdKLbnjNMqmVDFLNOArBZYTTwu",
+        "payToVendorNumber": "-Fallback-scrubbed-alXTiTftvMzmQMc", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk",
+        "buyFromAddressLine2": "-Fallback-scrubbed-vQigf", "buyFromCity": "-Fallback-scrubbed-FDfSANDD",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-wy",
+        "buyFromPostCode": "-Fallback-scrubbed-erAmp", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-FBWpRtPytHvLfPUPjfUIFXQFGxqPSIk", "payToAddressLine2":
+        "-Fallback-scrubbed-vQigf", "payToCity": "-Fallback-scrubbed-FDfSANDD", "payToCountry":
+        "-Fallback-scrubbed-PY", "payToState": "-Fallback-scrubbed-wy", "payToPostCode":
+        "-Fallback-scrubbed-erAmp", "shortcutDimension1Code": "-Fallback-scrubbed-MQHjm",
+        "shortcutDimension2Code": "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-dVondqfNcPawZmtXHPUGuClLQrVdrkJsPOci",
+        "currencyCode": "-Fallback-scrubbed-eSR", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        82, "totalTaxAmount": 1911, "totalAmountIncludingTax": 82, "status": "-Fallback-scrubbed-HwnV",
+        "lastModifiedDateTime": "2026-04-01T20:50:07.383Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-lynVWZhZFxrTFRbxJRqPZSRybXftdeXeOyOTNvcQSBxg", "id": "860c5c21-0f29-f111-8340-000d3a11d3d8",
+        "code": "-Fallback-scrubbed-MjDOnwG", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-mHAMnzsfcWxiYEXiEALbfzczbBYpmuuYzriw", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Crystal Wilson",
+        "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF", "valueCode":
+        "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag": "-Fallback-scrubbed-fpuyifXCWVhylJgmGGFIkqLDULxSSZlZTWMIkVQsvQlb",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-cMSr",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-mHAMnzsfcWxiYEXiEALbfzczbBYpmuuYzriw",
+        "parentType": "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName":
+        "Victoria Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-DkihPaAyemeybKdUSdsNmOAQzlvRKhNLIwHuftTGdyNJ", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-mHAMnzsfcWxiYEXiEALbfzczbBYpmuuYzriw", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Dillon Aguilar",
+        "valueId": "-Fallback-scrubbed-sBbVIWBaUyZPMSwdwgycCidNrATwlFBjwHTR", "valueCode":
+        "-Fallback-scrubbed-MQHjm", "valueConsolidationCode": "Alexandra Thompson",
+        "valueDisplayName": "-Fallback-scrubbed-vAzik"}], "purchaseInvoiceLines":
+        [{"@odata.etag": "-Fallback-scrubbed-hFgBRAYcFxrRuswEgxVKXVAzVJNxbVOhZhswUwuVIhZC",
+        "id": "4121174c-e429-f111-8340-00224829d901", "documentId": "-Fallback-scrubbed-mHAMnzsfcWxiYEXiEALbfzczbBYpmuuYzriw",
+        "sequence": 7036, "itemId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "accountId": "-Fallback-scrubbed-uvlTqxBqfxqOVVpqSXeTkgutAzzXMnxOCFyB", "lineType":
+        "-Fallback-scrubbed-surSxbs", "lineObjectNumber": "-Fallback-scrubbed-Aylha",
+        "description": "-Fallback-scrubbed-YKBXuQZpkEuLRpNupgDcZFcLoI", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 5562, "quantity":
+        7036, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 5276, "netTaxAmount": 1911, "netAmountIncludingTax": 5276,
+        "expectedReceiptDate": "-Fallback-scrubbed-YKSiSpiQqB", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-OpClgwFkyWtENZXnMIMCowkanftuNMCodFTiOZqSOWPH",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-IguUdviYiVOYNNqqJtzCxiPTIUCRRZyPlonq",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-RMnbvJfIVTvEmhkYmjefcmmnDOECKidvZmYMUMXwvBNk", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-SWGiJ", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-IguUdviYiVOYNNqqJtzCxiPTIUCRRZyPlonq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Jordan
+        Smith", "valueId": "-Fallback-scrubbed-PqcGOXdimLIKxoidbZeFBKePmdzqKvcdCBQV",
+        "valueCode": "-Fallback-scrubbed-LSZevL", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-DLgyOg"}, {"@odata.etag":
+        "-Fallback-scrubbed-WbZlMYaSmsosEYkIkcHEXUPXwUqfljoGLsvhUnwIzEFB", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-IguUdviYiVOYNNqqJtzCxiPTIUCRRZyPlonq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-PxSsWlJiLwOhaTdgFYPCKnksaVsZznEHItKvpdwvikil", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-IguUdviYiVOYNNqqJtzCxiPTIUCRRZyPlonq", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}, {"@odata.etag":
+        "-Fallback-scrubbed-CTOMxAOtMZqHxSMQioxByeuPOISqakPpwcAhczfQWgSx", "id": "4021174c-e429-f111-8340-00224829d901",
+        "documentId": "-Fallback-scrubbed-mHAMnzsfcWxiYEXiEALbfzczbBYpmuuYzriw", "sequence":
+        1727, "itemId": "-Fallback-scrubbed-DGjXUhPXDmOzvFYiHypUkxBDeVesPVxbdnVP",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-WGVeVl",
+        "description": "-Fallback-scrubbed-opETcakvPlQVjGdYCuBRsVr", "description2":
+        "Alexandra Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 6271, "quantity":
+        1727, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 5705, "netTaxAmount": 1911, "netAmountIncludingTax": 5705,
+        "expectedReceiptDate": "-Fallback-scrubbed-YKSiSpiQqB", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-aOhXdpsJSkeRsANCyvKSdAshMtqrLrmGcGyh", "dimensionSetLines":
+        [{"@odata.etag": "-Fallback-scrubbed-nLnXPWYkvfZDHelAGPBgWuEsxgijyGFyYuVPVnBFGrCs",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-MjDOnwG",
+        "consolidationCode": "Alexandra Thompson", "parentId": "-Fallback-scrubbed-rMVkJYEECjLyvjKUAcNDkTFEcLsufcQyLbVu",
+        "parentType": "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName":
+        "Crystal Wilson", "valueId": "-Fallback-scrubbed-UIilwEuzIILqwUaLfROQfxPgvLdrcJlxttSF",
+        "valueCode": "-Fallback-scrubbed-RVsjMClI", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-RVsjMClI"}, {"@odata.etag":
+        "-Fallback-scrubbed-lXkENZjswKgiCTFWcKdwFXMLkxJomDVnHqpDNwJEjqDw", "id": "1107baae-6e27-f111-8340-00224829d901",
+        "code": "-Fallback-scrubbed-SWGiJ", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-rMVkJYEECjLyvjKUAcNDkTFEcLsufcQyLbVu", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Jordan
+        Smith", "valueId": "-Fallback-scrubbed-PqcGOXdimLIKxoidbZeFBKePmdzqKvcdCBQV",
+        "valueCode": "-Fallback-scrubbed-LSZevL", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-DLgyOg"}, {"@odata.etag":
+        "-Fallback-scrubbed-jZzrosNyNdEZDINqrrTiBNijbqXnDfXEimQkZCLzGTnp", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-rMVkJYEECjLyvjKUAcNDkTFEcLsufcQyLbVu", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Victoria
+        Rogers", "valueId": "-Fallback-scrubbed-VixuTVVFZXwByRgLnSRBsyepyeBWbKigNFFk",
+        "valueCode": "-Fallback-scrubbed-fm", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-JQdQaI"}, {"@odata.etag":
+        "-Fallback-scrubbed-boFCLPXteoUEKBEhfylvObQxRknqCunKwlPTIqkLmSNe", "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-OvXXKHjOEp", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-rMVkJYEECjLyvjKUAcNDkTFEcLsufcQyLbVu", "parentType":
+        "-Fallback-scrubbed-leQTLlwCVxNPDUFYsWkZDjALDCjtbFkpv", "displayName": "Dillon
+        Aguilar", "valueId": "-Fallback-scrubbed-HWfiSkvfSYYjUEjrBJVoNPTezJSoKEGFOZgk",
+        "valueCode": "-Fallback-scrubbed-utX", "valueConsolidationCode": "Alexandra
+        Thompson", "valueDisplayName": "-Fallback-scrubbed-OtBQlVDlNUhcCQ"}]}]}, {"@odata.etag":
+        "-Fallback-scrubbed-ydZGUDIJmkWxVvocMjeWkQSmfcEDPcfwpThsPwjWjzkq", "id": "2cb511ae-654d-f111-bec2-7ced8dce9219",
+        "number": "-Fallback-scrubbed-xauEjZ", "postingDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "invoiceDate": "-Fallback-scrubbed-ANlxkwNwHH", "dueDate": "-Fallback-scrubbed-ANlxkwNwHH",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-xgefPn", "vendorId": "-Fallback-scrubbed-GyLvEQxgGasqOEReDFCaoeaehsCZaQZqvSQg",
+        "vendorNumber": "-Fallback-scrubbed-KJVbu", "vendorName": "-Fallback-scrubbed-OhBAUmUHzpFUtkXfbLoX",
+        "payToName": "-Fallback-scrubbed-OhBAUmUHzpFUtkXfbLoX", "payToContact": "-Fallback-scrubbed-cqDcRTUXKpCJW",
+        "payToVendorId": "-Fallback-scrubbed-GyLvEQxgGasqOEReDFCaoeaehsCZaQZqvSQg",
+        "payToVendorNumber": "-Fallback-scrubbed-KJVbu", "shipToName": "Denise Johnson",
+        "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "-Fallback-scrubbed-oHiygOCJmovtV",
+        "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "-Fallback-scrubbed-BSCyjLe",
+        "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "-Fallback-scrubbed-Yd",
+        "buyFromPostCode": "-Fallback-scrubbed-VBkLn", "shipToAddressLine1": "325
+        Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands Apt.
+        947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "-Fallback-scrubbed-oHiygOCJmovtV", "payToAddressLine2": "Alexandra Thompson",
+        "payToCity": "-Fallback-scrubbed-BSCyjLe", "payToCountry": "-Fallback-scrubbed-PY",
+        "payToState": "-Fallback-scrubbed-Yd", "payToPostCode": "-Fallback-scrubbed-VBkLn",
+        "shortcutDimension1Code": "Alexandra Thompson", "shortcutDimension2Code":
+        "Alexandra Thompson", "currencyId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "currencyCode": "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": true, "totalAmountExcludingTax":
+        1911, "totalTaxAmount": 1911, "totalAmountIncludingTax": 1911, "status": "-Fallback-scrubbed-DCSgY",
+        "lastModifiedDateTime": "2026-05-11T18:17:43.407Z", "dimensionSetLines": [{"@odata.etag":
+        "-Fallback-scrubbed-QggeQCICtZgAPqxPGEFjkVhkCfOtvQybZxyPYTFtYxBj", "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cMSr", "consolidationCode": "Alexandra Thompson",
+        "parentId": "-Fallback-scrubbed-KjtBdHZbNkjFRgYNeQLbISajPqHdWsUJocyT", "parentType":
+        "-Fallback-scrubbed-miGuxZvPXYpbZgfAsJniFP", "displayName": "Victoria Rogers",
+        "valueId": "-Fallback-scrubbed-snjvWJiFtOgehPkdkOMYBgUvLDMXMfjWeqXw", "valueCode":
+        "-Fallback-scrubbed-fw", "valueConsolidationCode": "Alexandra Thompson", "valueDisplayName":
+        "-Fallback-scrubbed-hBOcIaVXispLF"}], "purchaseInvoiceLines": []}, {"@odata.etag":
+        "-Fallback-scrubbed-glnLlkPNVMyLFFKwiixpUPZdCAjynsIckAEfimAYHOGC", "id": "92acaa42-5e4d-f111-a820-0022481ca23d",
+        "number": "-Fallback-scrubbed-xauEjZ", "postingDate": "-Fallback-scrubbed-NYrODLIxyZ",
+        "invoiceDate": "-Fallback-scrubbed-NYrODLIxyZ", "dueDate": "-Fallback-scrubbed-yQWgXWLDkA",
+        "vendorInvoiceNumber": "-Fallback-scrubbed-DajXGD", "vendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "vendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "vendorName": "-Fallback-scrubbed-DRvXteGnHetm",
+        "payToName": "-Fallback-scrubbed-DRvXteGnHetm", "payToContact": "Alexandra
+        Thompson", "payToVendorId": "-Fallback-scrubbed-NXnDcirqedTlBtCQbfsdWsLkpBbTRlVEnRZC",
+        "payToVendorNumber": "-Fallback-scrubbed-AkLNxrRYV", "shipToName": "Denise
+        Johnson", "shipToContact": "Alexandra Thompson", "buyFromAddressLine1": "Alexandra
+        Thompson", "buyFromAddressLine2": "Alexandra Thompson", "buyFromCity": "Alexandra
+        Thompson", "buyFromCountry": "-Fallback-scrubbed-PY", "buyFromState": "Alexandra
+        Thompson", "buyFromPostCode": "Alexandra Thompson", "shipToAddressLine1":
+        "325 Mendez Center Suite 617", "shipToAddressLine2": "02230 Wells Islands
+        Apt. 947", "shipToCity": "Olsenport", "shipToCountry": "-Fallback-scrubbed-PY",
+        "shipToState": "Alexandra Thompson", "shipToPostCode": "22556", "payToAddressLine1":
+        "Alexandra Thompson", "payToAddressLine2": "Alexandra Thompson", "payToCity":
+        "Alexandra Thompson", "payToCountry": "-Fallback-scrubbed-PY", "payToState":
+        "Alexandra Thompson", "payToPostCode": "Alexandra Thompson", "shortcutDimension1Code":
+        "Alexandra Thompson", "shortcutDimension2Code": "Alexandra Thompson", "currencyId":
+        "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "currencyCode":
+        "-Fallback-scrubbed-Aow", "orderId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "orderNumber": "Alexandra Thompson", "purchaser": "Alexandra Thompson", "pricesIncludeTax":
+        true, "discountAmount": 1911, "discountAppliedBeforeTax": false, "totalAmountExcludingTax":
+        4655, "totalTaxAmount": 1911, "totalAmountIncludingTax": 4655, "status": "-Fallback-scrubbed-HwnV",
+        "lastModifiedDateTime": "2026-05-11T18:04:57.1Z", "dimensionSetLines": [],
+        "purchaseInvoiceLines": [{"@odata.etag": "-Fallback-scrubbed-NFIpyLAsQBrxvqwiTvxMrgHIUvigqKFuekWITFoMIVOW",
+        "id": "edddb254-5e4d-f111-a820-0022481ca23d", "documentId": "-Fallback-scrubbed-eRniSllSVWYLMVDFTZPGdPmqlTkbMmqSuyZG",
+        "sequence": 6404, "itemId": "-Fallback-scrubbed-yszAtWTspqfVnZWKhErTJPvPsAXJBMrpjUvX",
+        "accountId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "lineType":
+        "-Fallback-scrubbed-aOnG", "lineObjectNumber": "-Fallback-scrubbed-vWCsol",
+        "description": "-Fallback-scrubbed-qndwOyGiXwL", "description2": "Alexandra
+        Thompson", "unitOfMeasureId": "-Fallback-scrubbed-zcieFeMUaYBAXcvuWNlcvHbuUbFGctMNNkNY",
+        "unitOfMeasureCode": "-Fallback-scrubbed-XCM", "unitCost": 801.49165643213,
+        "quantity": 7954, "discountAmount": 1911, "discountPercent": 1911, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 1911, "taxCode": "-Fallback-scrubbed-ODWhTmomx",
+        "taxPercent": 1911, "totalTaxAmount": 1911, "amountIncludingTax": 1911, "invoiceDiscountAllocation":
+        1911, "netAmount": 4655, "netTaxAmount": 1911, "netAmountIncludingTax": 4655,
+        "expectedReceiptDate": "-Fallback-scrubbed-NYrODLIxyZ", "itemVariantId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm",
+        "locationId": "-Fallback-scrubbed-psVBrdULdswOFcpttYdMgnqzSNXVhCvNBFjm", "dimensionSetLines":
+        []}]}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:25:18 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 980ace5f-4ee4-42ca-9792-56c18a30cf0e
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '104444'
+      mise-correlation-id:
+      - 86d38c7d-ed7f-4a49-9d5c-e917d85fcca4
+      ms-correlation-x:
+      - 7ced6282-1f04-ad74-319a-e354a68a591d
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

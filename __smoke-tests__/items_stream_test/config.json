@@ -1,0 +1,12 @@
+{
+    "client_id": "0d3***",
+    "client_secret": ".-t***",
+    "refresh_token": "1.A***",
+    "access_token": "eyJ***",
+    "expires_in": 1779395750,
+    "redirect_uri": "https://qa.hotglue.xyz/callback",
+    "start_date": "2026-04-01T00:00:00.000Z",
+    "session_state": "003f0cba-b57b-a97e-3ba7-f744b2cab6ea",
+    "environment_name": "Production",
+    "enable_odata_discovery": false
+}

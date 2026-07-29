@@ -1,0 +1,812 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-dNlHgq", "scope": "-Fallback-scrubbed-BZEDJbthQXESRLIDuBDVsFowADQqPCETpASDWbKqLEg",
+        "expires_in": "4029", "ext_expires_in": "-Fallback-scrubbed-BHFA", "expires_on":
+        "-Fallback-scrubbed-fqyERXmWYc", "not_before": "-Fallback-scrubbed-nJbiYHwxDw",
+        "resource": "-Fallback-scrubbed-ZzbgVKxTPhDAdcZRpKnMteRAWGnqVjUaWnzDCqMV",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-nzkym54n-IW50ENf1O_r7Q'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:32:06 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AjZJ2eHFLH1LgudEkFO3j6HoOlVYAQAAAFa98uEOAAAA; expires=Fri, 21-Aug-2026
+        13:32:06 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - NCUS ProdSlices
+      x-ms-request-id:
+      - cf8ec19f-1927-45ff-8f43-c4dc58ec6a00
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-rKWYkoYzAPBablXYAgaFuyArTWqoQaUaebIj",
+        "applicationFamily": "-Fallback-scrubbed-TmSGESrDRBeySMs", "type": "-Fallback-scrubbed-NhurMLq",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Vb", "webServiceUrl":
+        "-Fallback-scrubbed-ZzbgVKxTPhDAdcZRpKnMteRAWGnqVjUaWnzDCqMV", "webClientLoginUrl":
+        "-Fallback-scrubbed-kIYWFbTpLVgRwubaIzuanBaLNVssVjZNqQtC"}, {"aadTenantId":
+        "-Fallback-scrubbed-rKWYkoYzAPBablXYAgaFuyArTWqoQaUaebIj", "applicationFamily":
+        "-Fallback-scrubbed-TmSGESrDRBeySMs", "type": "-Fallback-scrubbed-dpvdcDFZjp",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-qb", "webServiceUrl":
+        "-Fallback-scrubbed-ZzbgVKxTPhDAdcZRpKnMteRAWGnqVjUaWnzDCqMV", "webClientLoginUrl":
+        "-Fallback-scrubbed-kIYWFbTpLVgRwubaIzuanBaLNVssVjZNqQtC"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:32:06 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 89fadad8-cb9d-4e25-84b3-098a821fcd2a
+      ms-correlation-x:
+      - d877d8d2-9246-d4e6-f6c2-06d5b22cec80
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-TchknsXIUnFKDqDJepIfpbbnoPEuxGdMJQrxRLgmgJsvgEjvTwkrFyKnRpFHPXcsNHFfJVVNKLNtRrkrwmnRN",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-hbwPdKfvCiizPbBm", "timestamp": 2854, "name": "CRONUS
+        USA, Inc.", "displayName": "Rachel Edwards", "businessProfileId": "Rachel
+        Edwards", "systemCreatedAt": "-Fallback-scrubbed-swOdeLajVghoPfODZoVYpdds",
+        "systemCreatedBy": "-Fallback-scrubbed-MSCLRyQrLbRnyYCUzIaNyFqXQxcvhSagarQX",
+        "systemModifiedAt": "-Fallback-scrubbed-swOdeLajVghoPfODZoVYpdds", "systemModifiedBy":
+        "-Fallback-scrubbed-MSCLRyQrLbRnyYCUzIaNyFqXQxcvhSagarQX"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:32:07 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 351d04fa-9d2a-4314-9d63-c8cdaf0b773d
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 5d755b50-78a8-4a14-8572-7c9e83470065
+      ms-correlation-x:
+      - 78e57001-9d76-5d0b-1f46-cdaf4c3ae09a
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-uJHIGxXwlMRScIBzrVVtRBlCRlrPXYefYJpoHaavxypqPkbKiuZJmAFORdyXpYEDSLfvWlcLRuYWMrKXpDQTDDvtXrszdJxQWDmHrGzJGMdsoQmKCNSyiEPFOqYigXxuTTlyXuPCfRiTJg",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-HPyEHLYOJxtAeSQkaNajYCzeQntQKjgdeddrEPMKZIoY",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Jacqueline Allen",
+        "addressLine1": "49908 Robert Road", "addressLine2": "08797 Moore Track Apt.
+        007", "city": "West Marthaside", "state": "-Fallback-scrubbed-fV", "country":
+        "-Fallback-scrubbed-qb", "postalCode": "29115", "phoneNumber": "(552)603-0399",
+        "faxNumber": "-Fallback-scrubbed-xBYvkMxnhiDgfZV", "email": "Rachel Edwards",
+        "website": "Rachel Edwards", "taxRegistrationNumber": "Rachel Edwards", "currencyCode":
+        "-Fallback-scrubbed-TDk", "currentFiscalYearStartDate": "-Fallback-scrubbed-cTdUhrAPHn",
+        "industry": "Rachel Edwards", "experience": "-Fallback-scrubbed-qvpvmgzgW",
+        "lastModifiedDateTime": "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink":
+        "-Fallback-scrubbed-JUpEMIJcqBpfvmsyGiQAHOAPbjMTrQddIZPcivQpLXCHlVSeHNQFpsjstmRzwyWHfXtGEnniYSzfSrzLhtEelQEAUNekrHyQrubyGuGUyYJNtxSHDEoLDojHLVCYnOrwISjsUcXbBsmZymfCYaZzFjcidfcvVSUVbmmtNmVlvIMgjvPXnI"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:32:08 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - bb0c2b1c-533e-4215-8913-2197f852e533
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - a8212700-06b4-48e1-8d65-12227f3c62c9
+      ms-correlation-x:
+      - 369f9922-5e38-c65a-c4f7-8e8f70301717
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-rKWYkoYzAPBablXYAgaFuyArTWqoQaUaebIj",
+        "applicationFamily": "-Fallback-scrubbed-TmSGESrDRBeySMs", "type": "-Fallback-scrubbed-NhurMLq",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Vb", "webServiceUrl":
+        "-Fallback-scrubbed-ZzbgVKxTPhDAdcZRpKnMteRAWGnqVjUaWnzDCqMV", "webClientLoginUrl":
+        "-Fallback-scrubbed-kIYWFbTpLVgRwubaIzuanBaLNVssVjZNqQtC"}, {"aadTenantId":
+        "-Fallback-scrubbed-rKWYkoYzAPBablXYAgaFuyArTWqoQaUaebIj", "applicationFamily":
+        "-Fallback-scrubbed-TmSGESrDRBeySMs", "type": "-Fallback-scrubbed-dpvdcDFZjp",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-qb", "webServiceUrl":
+        "-Fallback-scrubbed-ZzbgVKxTPhDAdcZRpKnMteRAWGnqVjUaWnzDCqMV", "webClientLoginUrl":
+        "-Fallback-scrubbed-kIYWFbTpLVgRwubaIzuanBaLNVssVjZNqQtC"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:32:09 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - f365eb65-d95e-4aaa-8582-edfd4d9183d8
+      ms-correlation-x:
+      - f0f14a86-0835-0883-fa16-5dcf07b07b47
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/salesOrders?%24filter=lastModifiedDateTime+gt+2025-01-05T00%3A00%3A00Z&%24expand=salesOrderLines
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-cYWglsnYNOpEHuJgsMVlXKIBMoPxxWfdduqkaQVlmUmZCGAVtHRIfjQcjziEeHELQnISumGXzJYVNFbvzvIUNSJfFqfTEixArCNJNCyZlWslyPdsjqZsOjNnVKlKRAzljEaMHGm",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-cueKfuDyjrQHYoboCiWbBNMnNGJVZmwKpsKSXufdztMl",
+        "id": "0b4a31b7-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-GkcelfSxhKt",
+        "externalDocumentNumber": "Rachel Edwards", "orderDate": "-Fallback-scrubbed-PoavKNDcEA",
+        "postingDate": "-Fallback-scrubbed-PoavKNDcEA", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-WXDSDVdzYwTwJCeRnbvpBDtsJkFafwcpVwXw",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-lLoeXotRnP", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 378181.891374459, "totalTaxAmount": 109959482182.182,
+        "totalAmountIncludingTax": 82476579047.6934, "fullyShipped": false, "status":
+        "-Fallback-scrubbed-MRwao", "lastModifiedDateTime": "2026-02-24T22:53:12.55Z",
+        "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com", "salesOrderLines":
+        [{"@odata.etag": "-Fallback-scrubbed-JkmCAeELxLCJqVOiHTVSaFdIEyKttMeADuTnPksgwvnS",
+        "id": "0d4a31b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-kcthFrRVZTBoorktvBCrGAGWDvIyXGuuEdCM",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-HHvzWvyEAryMBgfXPIHiNgSTYtgvTRSCqZHv",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-MInhVB",
+        "description": "-Fallback-scrubbed-FqYqfGffxgYfKqqlqPiyxspy", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 9633, "unitPrice":
+        203870.424096262, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 378181.891374459, "taxCode": "-Fallback-scrubbed-ijpEbylYb",
+        "taxPercent": -590545562037.645, "totalTaxAmount": 109959482182.182, "amountIncludingTax":
+        82476579047.6934, "invoiceDiscountAllocation": 8003, "netAmount": 378181.891374459,
+        "netTaxAmount": 109959482182.182, "netAmountIncludingTax": 82476579047.6934,
+        "shipmentDate": "-Fallback-scrubbed-MIiuNGYiIc", "shippedQuantity": 8003,
+        "invoicedQuantity": 8003, "invoiceQuantity": 9633, "shipQuantity": 9633, "itemVariantId":
+        "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "locationId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC"}]},
+        {"@odata.etag": "-Fallback-scrubbed-CwOvlAorpWFxCfMaOcymrEXkgwCSKhYzgAMySjUCGEkd",
+        "id": "0e4a31b7-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-VfIOaifAloI",
+        "externalDocumentNumber": "Rachel Edwards", "orderDate": "-Fallback-scrubbed-lFSbZcgZNg",
+        "postingDate": "-Fallback-scrubbed-lFSbZcgZNg", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-WXDSDVdzYwTwJCeRnbvpBDtsJkFafwcpVwXw",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-oRrCJAiKQA", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 99.4224765644473, "totalTaxAmount": -51620227.1466,
+        "totalAmountIncludingTax": -4640728.72633753, "fullyShipped": false, "status":
+        "-Fallback-scrubbed-MRwao", "lastModifiedDateTime": "2026-02-24T22:53:12.743Z",
+        "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com", "salesOrderLines":
+        [{"@odata.etag": "-Fallback-scrubbed-SqmzKqGQqsDlKUlJEvAWprZuudfDMfZMtrAWYpumWcFF",
+        "id": "104a31b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-MSMrERpzWMaZsGhwVvPQYiTOsQQQRbFTSPsx",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-wctFuyNrSQGOQFksbrytpBnynryFhlDnDOUK",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-EfPtfp",
+        "description": "-Fallback-scrubbed-rNSgtRtoxtOVMMMcjpeeTaXkGX", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 6821, "unitPrice":
+        -43051338366985.2, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 6458, "taxCode": "-Fallback-scrubbed-ijpEbylYb",
+        "taxPercent": 5899, "totalTaxAmount": 1647286062.5609, "amountIncludingTax":
+        4647.23534540579, "invoiceDiscountAllocation": 8003, "netAmount": 6458, "netTaxAmount":
+        1647286062.5609, "netAmountIncludingTax": 4647.23534540579, "shipmentDate":
+        "-Fallback-scrubbed-FZPvoVKPsW", "shippedQuantity": 8003, "invoicedQuantity":
+        8003, "invoiceQuantity": 6821, "shipQuantity": 6821, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC"},
+        {"@odata.etag": "-Fallback-scrubbed-sbzEYdsZbQGaXKLfKrYMqZEZGWhcqrDxOZHItLmhMuYD",
+        "id": "114a31b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-MSMrERpzWMaZsGhwVvPQYiTOsQQQRbFTSPsx",
+        "sequence": 5302, "itemId": "-Fallback-scrubbed-NUIWFfyucQVTVYPdvuzOPYpQGGyHuOocHGvg",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-FdQmWB",
+        "description": "-Fallback-scrubbed-RafvzUyWXotMet", "description2": "Rachel
+        Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 9587, "unitPrice":
+        -61437922.3518103, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 2138.80611987758, "taxCode": "-Fallback-scrubbed-ijpEbylYb",
+        "taxPercent": -8.23584075335978, "totalTaxAmount": -7140019376.86623, "amountIncludingTax":
+        23736933402684.5, "invoiceDiscountAllocation": 8003, "netAmount": 2138.80611987758,
+        "netTaxAmount": -7140019376.86623, "netAmountIncludingTax": 23736933402684.5,
+        "shipmentDate": "-Fallback-scrubbed-FZPvoVKPsW", "shippedQuantity": 8003,
+        "invoicedQuantity": 8003, "invoiceQuantity": 9587, "shipQuantity": 9587, "itemVariantId":
+        "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "locationId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC"}]},
+        {"@odata.etag": "-Fallback-scrubbed-wmVzEbdUAuVICuicKGkOQVQxTvtbQdYtaQgxCqEJfFvV",
+        "id": "124a31b7-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-zbuOgvauBCa",
+        "externalDocumentNumber": "Rachel Edwards", "orderDate": "-Fallback-scrubbed-uHzfhbNdUJ",
+        "postingDate": "-Fallback-scrubbed-uHzfhbNdUJ", "customerId": "-Fallback-scrubbed-iLKvzeAewZcrqproQinluQUCnyujDLCLUkcN",
+        "customerNumber": "-Fallback-scrubbed-dhTZr", "customerName": "-Fallback-scrubbed-nvdQvHmrBzBCiYdGXC",
+        "billToName": "-Fallback-scrubbed-nvdQvHmrBzBCiYdGXC", "billToCustomerId":
+        "-Fallback-scrubbed-iLKvzeAewZcrqproQinluQUCnyujDLCLUkcN", "billToCustomerNumber":
+        "-Fallback-scrubbed-dhTZr", "shipToName": "-Fallback-scrubbed-nvdQvHmrBzBCiYdGXC",
+        "shipToContact": "-Fallback-scrubbed-CdQwZTYsWNI", "sellToAddressLine1": "12888
+        Justin Ford Apt. 374", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West David", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState": "Wisconsin",
+        "sellToPostCode": "77443", "billToAddressLine1": "12888 Justin Ford Apt. 374",
+        "billToAddressLine2": "Rachel Edwards", "billToCity": "West David", "billToCountry":
+        "-Fallback-scrubbed-qb", "billToState": "Wisconsin", "billToPostCode": "77443",
+        "shipToAddressLine1": "12888 Justin Ford Apt. 374", "shipToAddressLine2":
+        "Rachel Edwards", "shipToCity": "West David", "shipToCountry": "-Fallback-scrubbed-qb",
+        "shipToState": "Wisconsin", "shipToPostCode": "77443", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-ADQMy",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-qJXqkGhPyRTgBRTzRBKSWIUEdApfEICXRHQi",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-gqcTKVJgeq", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": -8857015.97268, "totalTaxAmount": -1163.34694827094,
+        "totalAmountIncludingTax": 302533286.410806, "fullyShipped": false, "status":
+        "-Fallback-scrubbed-MRwao", "lastModifiedDateTime": "2026-02-24T22:53:12.947Z",
+        "phoneNumber": "Rachel Edwards", "email": "stuartclayton@example.net", "salesOrderLines":
+        [{"@odata.etag": "-Fallback-scrubbed-pTlGvCadoSPUzrhRlfbcpWIKItneWdlYWAWfDHjRvvOT",
+        "id": "144a31b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-TXDPHqIsQsTFxMdjZVQGsRicSNKivLzpGWth",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-cNRKAVFsAhuZMPVbBUlmGWNXHNpnuLXScTVX",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-DNejjr",
+        "description": "-Fallback-scrubbed-KZGcLNJORBTeClGmBEWdYQzY", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 3243, "unitPrice":
+        1432707.47155261, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -8857015.97268, "taxCode": "-Fallback-scrubbed-ijpEbylYb",
+        "taxPercent": 1120, "totalTaxAmount": -1163.34694827094, "amountIncludingTax":
+        302533286.410806, "invoiceDiscountAllocation": 8003, "netAmount": -8857015.97268,
+        "netTaxAmount": -1163.34694827094, "netAmountIncludingTax": 302533286.410806,
+        "shipmentDate": "-Fallback-scrubbed-uHzfhbNdUJ", "shippedQuantity": 8003,
+        "invoicedQuantity": 8003, "invoiceQuantity": 3243, "shipQuantity": 3243, "itemVariantId":
+        "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "locationId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC"}]},
+        {"@odata.etag": "-Fallback-scrubbed-cmvKcenUdpwFSVkTloQZzrsqSYrWFwpdMRFwpHYpvmFA",
+        "id": "154a31b7-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-RvjDcMyffgq",
+        "externalDocumentNumber": "Rachel Edwards", "orderDate": "-Fallback-scrubbed-JKijSWJnSJ",
+        "postingDate": "-Fallback-scrubbed-JKijSWJnSJ", "customerId": "-Fallback-scrubbed-RzpiSXFqGEoIeLKsfLfDFiCnZYwQPGZpkGnI",
+        "customerNumber": "-Fallback-scrubbed-uxDIx", "customerName": "-Fallback-scrubbed-NSQBjcvelUEgIYVA",
+        "billToName": "-Fallback-scrubbed-NSQBjcvelUEgIYVA", "billToCustomerId": "-Fallback-scrubbed-RzpiSXFqGEoIeLKsfLfDFiCnZYwQPGZpkGnI",
+        "billToCustomerNumber": "-Fallback-scrubbed-uxDIx", "shipToName": "-Fallback-scrubbed-NSQBjcvelUEgIYVA",
+        "shipToContact": "-Fallback-scrubbed-sGpkHOGZeLe", "sellToAddressLine1": "1738
+        Wagner Forest Suite 028", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "1738 Wagner Forest Suite 028", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "1738 Wagner Forest Suite 028", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-WXDSDVdzYwTwJCeRnbvpBDtsJkFafwcpVwXw",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ZmReUsePSu", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": -8709398079.515, "totalTaxAmount": 5054173.782311,
+        "totalAmountIncludingTax": 1.83256956090767, "fullyShipped": false, "status":
+        "-Fallback-scrubbed-MRwao", "lastModifiedDateTime": "2026-02-24T22:53:13.177Z",
+        "phoneNumber": "Rachel Edwards", "email": "catherinescott@example.com", "salesOrderLines":
+        [{"@odata.etag": "-Fallback-scrubbed-OtpnbLcJcXwQysJhVPZVrvlfgSsgwzRvcCOqVtxLinBv",
+        "id": "174a31b7-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-nqxoNonJJehFxJEiZtIpKcBzqZzfaeiEmYfO",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-umNPdONrsIESztEtCuxkBYJKZhdCOihEfRpQ",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-jmtSBo",
+        "description": "-Fallback-scrubbed-hIOlfnsWSFhCsKJkFwvKfsTjQT", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 3641, "unitPrice":
+        -43051338366985.2, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": -8709398079.515, "taxCode": "-Fallback-scrubbed-ijpEbylYb",
+        "taxPercent": -7.35381967224689, "totalTaxAmount": 5054173.782311, "amountIncludingTax":
+        1.83256956090767, "invoiceDiscountAllocation": 8003, "netAmount": -8709398079.515,
+        "netTaxAmount": 5054173.782311, "netAmountIncludingTax": 1.83256956090767,
+        "shipmentDate": "-Fallback-scrubbed-JKijSWJnSJ", "shippedQuantity": 8003,
+        "invoicedQuantity": 8003, "invoiceQuantity": 3641, "shipQuantity": 3641, "itemVariantId":
+        "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "locationId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC"}]},
+        {"@odata.etag": "-Fallback-scrubbed-LiTSBJvUBwZxQQRSIoaieEggAvxweomiSNPByWxXybJa",
+        "id": "ab9b2abd-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-fnOpzQXauBv",
+        "externalDocumentNumber": "-Fallback-scrubbed-InG", "orderDate": "-Fallback-scrubbed-npwLQfxGwQ",
+        "postingDate": "-Fallback-scrubbed-npwLQfxGwQ", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ncjdPwprdW", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 9100, "totalTaxAmount": 8003, "totalAmountIncludingTax":
+        9100, "fullyShipped": false, "status": "-Fallback-scrubbed-MRwao", "lastModifiedDateTime":
+        "2026-02-24T22:53:13.333Z", "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com",
+        "salesOrderLines": [{"@odata.etag": "-Fallback-scrubbed-jxByIAwIcCYlWrcdCnflKiAyMaRalnYrsjpdvtQsWAIm",
+        "id": "ad9b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-WGJaxtaDFNkoypXfnQSPSizVpYnArEWXFrkr",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-ThpSyBCuJnTUlYzKuPFxOCpbYCjdcsfozKhr",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-kuKWfKBu",
+        "description": "-Fallback-scrubbed-FmbWoFMnZWdIWtTMdBSGenDibFw", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 6821, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 9100, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": -6532.82144587536,
+        "invoiceDiscountAllocation": 8003, "netAmount": 9100, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 9100, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-rTLwATYmAaxNPyzFQcsqKKPNQXpZyYteUQWd"}]},
+        {"@odata.etag": "-Fallback-scrubbed-RTFdGgxmtInCDizvVrbmsWwKvrGQCmpobQEieRGtIUtA",
+        "id": "ae9b2abd-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-naJXztBxGaZ",
+        "externalDocumentNumber": "-Fallback-scrubbed-hFv", "orderDate": "-Fallback-scrubbed-npwLQfxGwQ",
+        "postingDate": "-Fallback-scrubbed-npwLQfxGwQ", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ncjdPwprdW", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 5428, "totalTaxAmount": 8003, "totalAmountIncludingTax":
+        5428, "fullyShipped": false, "status": "-Fallback-scrubbed-MRwao", "lastModifiedDateTime":
+        "2026-02-24T22:53:13.473Z", "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com",
+        "salesOrderLines": [{"@odata.etag": "-Fallback-scrubbed-ebrMKfhAOeOCQSBbnQWbVoQJixnLABEJdCqyIJbHktBH",
+        "id": "b09b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-uAjfcAKyfeJAjpfhVQxvLJEtaDeovMiDVhTQ",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-CfzMBnYjTxARsTglBbOAPqzbDcPWIkwNKbSc",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-YlTkfCKY",
+        "description": "-Fallback-scrubbed-MdAeKchvIDOIIHQaeMVTnJqosaZkp", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 8084, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 2972, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": -67670.9286569017,
+        "invoiceDiscountAllocation": 8003, "netAmount": 2972, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 2972, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-rTLwATYmAaxNPyzFQcsqKKPNQXpZyYteUQWd"},
+        {"@odata.etag": "-Fallback-scrubbed-eUdiAvjmaAgAPeFJdYFJtBNihdrFnunrLOqArSsiyMhm",
+        "id": "b19b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-uAjfcAKyfeJAjpfhVQxvLJEtaDeovMiDVhTQ",
+        "sequence": 5302, "itemId": "-Fallback-scrubbed-ThpSyBCuJnTUlYzKuPFxOCpbYCjdcsfozKhr",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-kuKWfKBu",
+        "description": "-Fallback-scrubbed-FmbWoFMnZWdIWtTMdBSGenDibFw", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 8084, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 2972, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": -67670.9286569017,
+        "invoiceDiscountAllocation": 8003, "netAmount": 2972, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 2972, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-rTLwATYmAaxNPyzFQcsqKKPNQXpZyYteUQWd"}]},
+        {"@odata.etag": "-Fallback-scrubbed-JLQrZDuAfEOjqNExfmGZOyzFFfBxvhZCuHEKcnkwtGbl",
+        "id": "b29b2abd-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-IqcnvkAaKnV",
+        "externalDocumentNumber": "-Fallback-scrubbed-jpG", "orderDate": "-Fallback-scrubbed-npwLQfxGwQ",
+        "postingDate": "-Fallback-scrubbed-npwLQfxGwQ", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ncjdPwprdW", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 2516, "totalTaxAmount": 8003, "totalAmountIncludingTax":
+        2516, "fullyShipped": false, "status": "-Fallback-scrubbed-MRwao", "lastModifiedDateTime":
+        "2026-02-24T22:53:13.563Z", "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com",
+        "salesOrderLines": [{"@odata.etag": "-Fallback-scrubbed-MBIZYSTAXTNEaffmWbvcnEYcQEXsyGckXhHZayJqKmAe",
+        "id": "b49b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-RyykSbrhTzkRHyQkJNAlzHBctztXDmVRJWjC",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-CfzMBnYjTxARsTglBbOAPqzbDcPWIkwNKbSc",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-YlTkfCKY",
+        "description": "-Fallback-scrubbed-MdAeKchvIDOIIHQaeMVTnJqosaZkp", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 3247, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 2516, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": 9.43254946574257,
+        "invoiceDiscountAllocation": 8003, "netAmount": 2516, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 2516, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-rTLwATYmAaxNPyzFQcsqKKPNQXpZyYteUQWd"}]},
+        {"@odata.etag": "-Fallback-scrubbed-HmSsWdcyDcqXkxvXpoJUuLHrkpcImQwmdlCALxZMzCzG",
+        "id": "b99b2abd-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-UwAUqJbcVxq",
+        "externalDocumentNumber": "-Fallback-scrubbed-wfn", "orderDate": "-Fallback-scrubbed-npwLQfxGwQ",
+        "postingDate": "-Fallback-scrubbed-npwLQfxGwQ", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ncjdPwprdW", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 1138, "totalTaxAmount": 8003, "totalAmountIncludingTax":
+        1138, "fullyShipped": false, "status": "-Fallback-scrubbed-MRwao", "lastModifiedDateTime":
+        "2026-02-24T22:53:13.643Z", "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com",
+        "salesOrderLines": [{"@odata.etag": "-Fallback-scrubbed-nWsDiLLrtZBIMzAdwEeEafIMAipqfniTZSWQeDyDXShV",
+        "id": "bb9b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-bHztdRyUZdttXuzRMvhVJEfcsluxoZnRNbTL",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-CfzMBnYjTxARsTglBbOAPqzbDcPWIkwNKbSc",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-YlTkfCKY",
+        "description": "-Fallback-scrubbed-MdAeKchvIDOIIHQaeMVTnJqosaZkp", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 9288, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 3247, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": 83904066.4407085,
+        "invoiceDiscountAllocation": 8003, "netAmount": 3247, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 3247, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-KGjxTbOmSWspaOHLJpSxeCccInJCvHqdyDEH"},
+        {"@odata.etag": "-Fallback-scrubbed-bkipVvoMHlTsjqfPVDBCvafKByJHUibzjhFATbavJfqj",
+        "id": "bc9b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-bHztdRyUZdttXuzRMvhVJEfcsluxoZnRNbTL",
+        "sequence": 5302, "itemId": "-Fallback-scrubbed-ThpSyBCuJnTUlYzKuPFxOCpbYCjdcsfozKhr",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-kuKWfKBu",
+        "description": "-Fallback-scrubbed-FmbWoFMnZWdIWtTMdBSGenDibFw", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 9288, "unitPrice":
+        7680, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 3247, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": 83904066.4407085,
+        "invoiceDiscountAllocation": 8003, "netAmount": 3247, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 3247, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 8003,
+        "shipQuantity": 8003, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-KGjxTbOmSWspaOHLJpSxeCccInJCvHqdyDEH"}]},
+        {"@odata.etag": "-Fallback-scrubbed-qqezMIOsEZtuAfdMONeLhFKQGUHRmyaTfEWtUREXYBKn",
+        "id": "c99b2abd-7b01-f111-a1fd-7ced8d2674f8", "number": "-Fallback-scrubbed-wCYQiEKppKw",
+        "externalDocumentNumber": "-Fallback-scrubbed-JPQmn", "orderDate": "-Fallback-scrubbed-npwLQfxGwQ",
+        "postingDate": "-Fallback-scrubbed-npwLQfxGwQ", "customerId": "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK",
+        "customerNumber": "-Fallback-scrubbed-ruCGe", "customerName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "billToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN", "billToCustomerId":
+        "-Fallback-scrubbed-ZbbrfWkAUcMrfLlFjnTwPednxmepVjTwXxRK", "billToCustomerNumber":
+        "-Fallback-scrubbed-ruCGe", "shipToName": "-Fallback-scrubbed-JsEqSNCtUXkvIgkZZN",
+        "shipToContact": "-Fallback-scrubbed-TscXBXVJIFlBW", "sellToAddressLine1":
+        "721 Grimes Passage", "sellToAddressLine2": "Rachel Edwards", "sellToCity":
+        "West Marthaside", "sellToCountry": "-Fallback-scrubbed-qb", "sellToState":
+        "-Fallback-scrubbed-fV", "sellToPostCode": "29115", "billToAddressLine1":
+        "721 Grimes Passage", "billToAddressLine2": "Rachel Edwards", "billToCity":
+        "West Marthaside", "billToCountry": "-Fallback-scrubbed-qb", "billToState":
+        "-Fallback-scrubbed-fV", "billToPostCode": "29115", "shipToAddressLine1":
+        "721 Grimes Passage", "shipToAddressLine2": "Rachel Edwards", "shipToCity":
+        "West Marthaside", "shipToCountry": "-Fallback-scrubbed-qb", "shipToState":
+        "-Fallback-scrubbed-fV", "shipToPostCode": "29115", "shortcutDimension1Code":
+        "-Fallback-scrubbed-Chjuh", "shortcutDimension2Code": "-Fallback-scrubbed-EKioh",
+        "currencyId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "currencyCode":
+        "-Fallback-scrubbed-TDk", "pricesIncludeTax": true, "paymentTermsId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "shipmentMethodId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "salesperson": "-Fallback-scrubbed-Je", "partialShipping": false, "requestedDeliveryDate":
+        "-Fallback-scrubbed-ncjdPwprdW", "discountAmount": 8003, "discountAppliedBeforeTax":
+        false, "totalAmountExcludingTax": 9231, "totalTaxAmount": 8003, "totalAmountIncludingTax":
+        9231, "fullyShipped": false, "status": "-Fallback-scrubbed-MRwao", "lastModifiedDateTime":
+        "2026-02-24T22:53:13.74Z", "phoneNumber": "Rachel Edwards", "email": "angelarogers@example.com",
+        "salesOrderLines": [{"@odata.etag": "-Fallback-scrubbed-VepcfSBchUQzbaRagADBMKlnVbFJmbwvnLXjQaoQTPLU",
+        "id": "cb9b2abd-7b01-f111-a1fd-7ced8d2674f8", "documentId": "-Fallback-scrubbed-GpbyTVlHTNVWjBWTvWDYVJVSdIzmNIalUuoz",
+        "sequence": 2782, "itemId": "-Fallback-scrubbed-POSGmEFtoKhEHbzjxrAvEzyGocErifRQXEre",
+        "accountId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC", "lineType":
+        "-Fallback-scrubbed-tpdF", "lineObjectNumber": "-Fallback-scrubbed-LaTTk",
+        "description": "-Fallback-scrubbed-gxMjgNlDvPijWiFEpnHT", "description2":
+        "Rachel Edwards", "unitOfMeasureId": "-Fallback-scrubbed-ugMAXgMZuvXmMxJkHDKiETCbJOjaDjthprvP",
+        "unitOfMeasureCode": "-Fallback-scrubbed-Lqp", "quantity": 9460, "unitPrice":
+        9231, "discountAmount": 8003, "discountPercent": 8003, "discountAppliedBeforeTax":
+        true, "amountExcludingTax": 9231, "taxCode": "-Fallback-scrubbed-YewAbtozay",
+        "taxPercent": 8003, "totalTaxAmount": 8003, "amountIncludingTax": -6117180879633.15,
+        "invoiceDiscountAllocation": 8003, "netAmount": 9231, "netTaxAmount": 8003,
+        "netAmountIncludingTax": 9231, "shipmentDate": "-Fallback-scrubbed-njHbmuOyXd",
+        "shippedQuantity": 8003, "invoicedQuantity": 8003, "invoiceQuantity": 9460,
+        "shipQuantity": 9460, "itemVariantId": "-Fallback-scrubbed-CSqTcTkLUYxwhDgXwGwOhYSCfOhRtdYfwPnC",
+        "locationId": "-Fallback-scrubbed-uQPmGLcDNdRgWcdeoILOOToZTXgMsGlNumrn"}]}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:32:10 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 1279b0cc-c918-4be2-9778-b2ea1ae76aa8
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '26699'
+      mise-correlation-id:
+      - cf0024a8-6989-4da5-a143-4d9307da8bbc
+      ms-correlation-x:
+      - c088cc01-0cac-4cff-8513-9c97efc163e8
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

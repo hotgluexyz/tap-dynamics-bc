@@ -1,0 +1,429 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-nUNrzC", "scope": "-Fallback-scrubbed-GOpBoZgZUYVvQlnrOaaiTPEvQSkLTRVvkWnZtJoaXtG",
+        "expires_in": "4365", "ext_expires_in": "-Fallback-scrubbed-Kivs", "expires_on":
+        "-Fallback-scrubbed-VcIsPlXgbf", "not_before": "-Fallback-scrubbed-xrKdkNoXbO",
+        "resource": "-Fallback-scrubbed-DRIByBPEwUXhHAMfJGGfNleVxrTGaQDtuxQEdbzr",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-tmV76tg7O42l3f6B6Y1BKw'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:30:59 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=AlpF0cR27zRHkdi4OoDWsc_oOlVYAQAAABO98uEOAAAA; expires=Fri, 21-Aug-2026
+        13:31:00 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - NCUS ProdSlices
+      x-ms-request-id:
+      - 9ec9b8ea-fce4-45a5-96ff-11f4a9397300
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-dzqnAFUanutSHyhMoLPozwHLdKcKoamizGyP",
+        "applicationFamily": "-Fallback-scrubbed-WWmphmuTFCrdQTT", "type": "-Fallback-scrubbed-hFYGwAd",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Ze", "webServiceUrl":
+        "-Fallback-scrubbed-DRIByBPEwUXhHAMfJGGfNleVxrTGaQDtuxQEdbzr", "webClientLoginUrl":
+        "-Fallback-scrubbed-miDjZFratMSHFvYYQrsrtINZcerYiNTliPqh"}, {"aadTenantId":
+        "-Fallback-scrubbed-dzqnAFUanutSHyhMoLPozwHLdKcKoamizGyP", "applicationFamily":
+        "-Fallback-scrubbed-WWmphmuTFCrdQTT", "type": "-Fallback-scrubbed-ObyfZiroQz",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-CU", "webServiceUrl":
+        "-Fallback-scrubbed-DRIByBPEwUXhHAMfJGGfNleVxrTGaQDtuxQEdbzr", "webClientLoginUrl":
+        "-Fallback-scrubbed-miDjZFratMSHFvYYQrsrtINZcerYiNTliPqh"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:31:00 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 4ed72b9a-7bf1-4b13-8835-ed4825435c0a
+      ms-correlation-x:
+      - 2e48698a-08d8-2fe8-1b37-b5d063441e16
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-BxiXIwSMuDFBarbriKJZXvFgDBjcuQIwsvWgojHfpKsJSAFaeighWzXSvulrqwadkSthDInAWSNaIhEIbrjvm",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-ctvAGKvDroDmEzCn", "timestamp": 9099, "name": "CRONUS
+        USA, Inc.", "displayName": "Richard Smith", "businessProfileId": "Richard
+        Smith", "systemCreatedAt": "-Fallback-scrubbed-fNybiGulkZDwAtUOdhbUkXcQ",
+        "systemCreatedBy": "-Fallback-scrubbed-ILaZUEDhTPBOEpAwxVGYRrjtvGJdcMKopcYv",
+        "systemModifiedAt": "-Fallback-scrubbed-fNybiGulkZDwAtUOdhbUkXcQ", "systemModifiedBy":
+        "-Fallback-scrubbed-ILaZUEDhTPBOEpAwxVGYRrjtvGJdcMKopcYv"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:31:01 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 62553d81-c0e4-4e47-960f-30d380a75186
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 4efea452-062f-400c-b5a5-7410c05709d2
+      ms-correlation-x:
+      - c0330210-9b17-f14e-a865-52fb76847fe8
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-krOFeqPTtRhUbWFvRkDxgZGjMzSGVwInHzPkbfUXzHTBEiODIlsQBPcMcpgDjtFogzpwtMkrGFGiWkPnhTTsYhHQPSMyieoJUKxMKOZKkWwHidumQDTzgHYzywEUVGGjdKzdGnqoqraAJr",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-MkyKrjOsuaZiYcYqHtJKWtvUpsytmtbDkcNvmsFwawPH",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Donald Burns",
+        "addressLine1": "2085 Adams Avenue Apt. 075", "addressLine2": "43110 Cook
+        Pine", "city": "North Holly", "state": "-Fallback-scrubbed-Pp", "country":
+        "-Fallback-scrubbed-CU", "postalCode": "91798", "phoneNumber": "622-324-6439",
+        "faxNumber": "-Fallback-scrubbed-JttdtGuHgoMjkcA", "email": "Richard Smith",
+        "website": "Richard Smith", "taxRegistrationNumber": "Richard Smith", "currencyCode":
+        "-Fallback-scrubbed-QHB", "currentFiscalYearStartDate": "-Fallback-scrubbed-jmKlRQjqBb",
+        "industry": "Richard Smith", "experience": "-Fallback-scrubbed-jtBRkSgcd",
+        "lastModifiedDateTime": "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink":
+        "-Fallback-scrubbed-XEwUXNEIgLcJmAwZLkeDWdSAGytzabNXajziAqAcHRmUHcADmTjHYWpjqxfvTlCHazZbkWosbdWkmKpZwQqHbuNEHuUDkJojeCxekgiJYlwZeAldnzGPNAyfJDcmyxUzPPujsOYjPEXvpSOzUtQXIRlmDFbfWcSmJakfBjPHXLqsjXxMBJ"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:31:02 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 6ae1a4d0-2561-4a16-8c0c-703e2fed4866
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - 0a989942-840e-4df7-b8f4-6d5b2d616876
+      ms-correlation-x:
+      - 25b9be4d-5d43-c2be-3a67-6578b16c6dcf
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-dzqnAFUanutSHyhMoLPozwHLdKcKoamizGyP",
+        "applicationFamily": "-Fallback-scrubbed-WWmphmuTFCrdQTT", "type": "-Fallback-scrubbed-hFYGwAd",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Ze", "webServiceUrl":
+        "-Fallback-scrubbed-DRIByBPEwUXhHAMfJGGfNleVxrTGaQDtuxQEdbzr", "webClientLoginUrl":
+        "-Fallback-scrubbed-miDjZFratMSHFvYYQrsrtINZcerYiNTliPqh"}, {"aadTenantId":
+        "-Fallback-scrubbed-dzqnAFUanutSHyhMoLPozwHLdKcKoamizGyP", "applicationFamily":
+        "-Fallback-scrubbed-WWmphmuTFCrdQTT", "type": "-Fallback-scrubbed-ObyfZiroQz",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-CU", "webServiceUrl":
+        "-Fallback-scrubbed-DRIByBPEwUXhHAMfJGGfNleVxrTGaQDtuxQEdbzr", "webClientLoginUrl":
+        "-Fallback-scrubbed-miDjZFratMSHFvYYQrsrtINZcerYiNTliPqh"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 13:31:02 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - b68a8a5d-d55e-4c8a-8c2c-987af5a7a818
+      ms-correlation-x:
+      - 9f214c13-dbe2-44c6-e5d5-c90823b0f7fa
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/locations
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-ucxiFBKJsYykNdTqXrRvPEohvrHrKLcdgDVzwvymVGlPNbDuKkOsDdBHAaMQOXoltllbiyMWWMkmZQsrvrsPGHLLpwUrqtzRpibegylVadELSxeEzAIhaVllQjbItMcioGmaU",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-CJIJnciODPnxPyJdELgfXGSQRYuLWfVswpPvztgKLvFC",
+        "id": "8596419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-QsmI",
+        "displayName": "Tyler Sims", "contact": "-Fallback-scrubbed-XCNEVrAeVq", "addressLine1":
+        "15108 Kristin River Suite 723", "addressLine2": "Richard Smith", "city":
+        "North Holly", "state": "-Fallback-scrubbed-Pp", "country": "-Fallback-scrubbed-CU",
+        "postalCode": "91798", "phoneNumber": "Richard Smith", "email": "Richard Smith",
+        "website": "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:15.01Z"},
+        {"@odata.etag": "-Fallback-scrubbed-YtNAiZzOMPmgYtKaXlTNTfvPdLYxieanxvcHIiqMpWTO",
+        "id": "8996419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-PANA",
+        "displayName": "Matthew Schwartz", "contact": "-Fallback-scrubbed-KbldPDEDuDyFY",
+        "addressLine1": "789 Martha Junctions Suite 088", "addressLine2": "Richard
+        Smith", "city": "New Amandafort", "state": "-Fallback-scrubbed-VL", "country":
+        "-Fallback-scrubbed-CU", "postalCode": "71754", "phoneNumber": "Richard Smith",
+        "email": "Richard Smith", "website": "Richard Smith", "lastModifiedDateTime":
+        "2026-02-04T03:43:17.103Z"}, {"@odata.etag": "-Fallback-scrubbed-dYSwtFXoNNygQJdzZiYrfpgEtJLzNbhPeplDufhWHHMJ",
+        "id": "8696419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-ylRnKNKnr",
+        "displayName": "Ellen Barnes", "contact": "Richard Smith", "addressLine1":
+        "Richard Smith", "addressLine2": "Richard Smith", "city": "Richard Smith",
+        "state": "Richard Smith", "country": "Richard Smith", "postalCode": "Richard
+        Smith", "phoneNumber": "Richard Smith", "email": "Richard Smith", "website":
+        "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:15.02Z"}, {"@odata.etag":
+        "-Fallback-scrubbed-FFnsRZIaIFTOmvflgTnSfCrEuiCwvxAwRZMLonkOoTif", "id": "8796419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-cUiuURpi", "displayName": "Sherry Ray", "contact":
+        "Richard Smith", "addressLine1": "Richard Smith", "addressLine2": "Richard
+        Smith", "city": "Richard Smith", "state": "Richard Smith", "country": "Richard
+        Smith", "postalCode": "Richard Smith", "phoneNumber": "Richard Smith", "email":
+        "Richard Smith", "website": "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:15.02Z"},
+        {"@odata.etag": "-Fallback-scrubbed-BLwSPacCbytOUEGavFSkTsRciaEEzTxpbNBJVeIRhqLO",
+        "id": "a7b436ab-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-vNjsjl",
+        "displayName": "Shane Reid", "contact": "Richard Smith", "addressLine1": "Richard
+        Smith", "addressLine2": "Richard Smith", "city": "Richard Smith", "state":
+        "Richard Smith", "country": "Richard Smith", "postalCode": "Richard Smith",
+        "phoneNumber": "Richard Smith", "email": "Richard Smith", "website": "Richard
+        Smith", "lastModifiedDateTime": "2026-02-04T03:43:34.13Z"}, {"@odata.etag":
+        "-Fallback-scrubbed-jsJnjJTLMAgoRORWSLlZSdWrLUPfMHiDMQzZfWdvNPdK", "id": "8896419f-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-PvNQ", "displayName": "David Gates", "contact":
+        "-Fallback-scrubbed-QiqgjUSIyFCRA", "addressLine1": "273 Cody Squares Suite
+        775", "addressLine2": "Richard Smith", "city": "Rodriguezville", "state":
+        "-Fallback-scrubbed-UC", "country": "-Fallback-scrubbed-CU", "postalCode":
+        "93311", "phoneNumber": "Richard Smith", "email": "Richard Smith", "website":
+        "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:15.023Z"}, {"@odata.etag":
+        "-Fallback-scrubbed-lEEuLbbKMKStXdlVxKeOwcuLkkqFwZATuDAHGweiTOUn", "id": "a9b436ab-7b01-f111-a1fd-7ced8d2674f8",
+        "code": "-Fallback-scrubbed-XBCDv", "displayName": "Paul Scott", "contact":
+        "Richard Smith", "addressLine1": "Richard Smith", "addressLine2": "Richard
+        Smith", "city": "Richard Smith", "state": "Richard Smith", "country": "Richard
+        Smith", "postalCode": "Richard Smith", "phoneNumber": "Richard Smith", "email":
+        "Richard Smith", "website": "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:34.713Z"},
+        {"@odata.etag": "-Fallback-scrubbed-qGuvYqRcpUrUPnBvalbcsLPCWwEvlsDWAeCOFYtuBWiC",
+        "id": "a8b436ab-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-KQoKMq",
+        "displayName": "Christopher Wang", "contact": "Richard Smith", "addressLine1":
+        "Richard Smith", "addressLine2": "Richard Smith", "city": "Richard Smith",
+        "state": "Richard Smith", "country": "Richard Smith", "postalCode": "Richard
+        Smith", "phoneNumber": "Richard Smith", "email": "Richard Smith", "website":
+        "Richard Smith", "lastModifiedDateTime": "2026-02-04T03:43:34.157Z"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 13:31:03 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - b2b0b601-b778-42a5-b866-41be71c5c7d7
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '3087'
+      mise-correlation-id:
+      - 8195e9e8-756d-4a3c-9d53-266844af992f
+      ms-correlation-x:
+      - 0a987479-3748-ec8f-4759-531efefcda0f
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

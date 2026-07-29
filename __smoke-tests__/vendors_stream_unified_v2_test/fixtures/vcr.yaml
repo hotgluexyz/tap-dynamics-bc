@@ -1,0 +1,863 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-ZnDhJr", "scope": "-Fallback-scrubbed-wYcocSKeevAJYasuQhqSRFhOkBjHIKZFpUDNLzYxtwv",
+        "expires_in": "3981", "ext_expires_in": "-Fallback-scrubbed-cuCh", "expires_on":
+        "-Fallback-scrubbed-bqNJeGLgjh", "not_before": "-Fallback-scrubbed-rXrNaZOcvl",
+        "resource": "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-7wqpfCXU69Q9sZgfxFiYYg'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:59 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=ApcdPvl0B8NDhXFOlENybLjoOlVYAQAAAG_K8uEOAAAA; expires=Fri, 21-Aug-2026
+        14:27:59 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - NCUS ProdSlices
+      x-ms-request-id:
+      - d04fb4d8-4739-4600-8239-dcf268fe4f00
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL",
+        "applicationFamily": "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-tJRsAxr",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-GE", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}, {"aadTenantId":
+        "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL", "applicationFamily":
+        "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-urJZEryZLU",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-kX", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:27:59 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - bc5eb3e9-4442-4004-96e9-ffe9a5bb5ae3
+      ms-correlation-x:
+      - 05220466-942d-57ae-0204-a6d8ff91edf7
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-pLvoTSJKzLPGcVAdoHgamgjstWFYAIqewKElPDmedhmcuepLpwpCeAonqyxZpoPCzEejtRKRzvMaOpKfHClDv",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-umVxtAqftZXtXrwO", "timestamp": 9752, "name": "CRONUS
+        USA, Inc.", "displayName": "Gary Meadows", "businessProfileId": "Gary Meadows",
+        "systemCreatedAt": "-Fallback-scrubbed-fEFOcItWfGjJaVcjVmCCjppu", "systemCreatedBy":
+        "-Fallback-scrubbed-CdfTQrWlvCeQsOQjXiKmcRmjUaYNCubPQAck", "systemModifiedAt":
+        "-Fallback-scrubbed-fEFOcItWfGjJaVcjVmCCjppu", "systemModifiedBy": "-Fallback-scrubbed-CdfTQrWlvCeQsOQjXiKmcRmjUaYNCubPQAck"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:27:59 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 4e124a83-c9a2-460d-86ea-009b357650c1
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - 36ee61fe-e1a2-46d0-b196-d865e871ceba
+      ms-correlation-x:
+      - d36c489d-c88d-c682-4d1f-d9daf565273b
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-KmrWMtjJmVOFmFZGOdwSnSRQxmtUpvhmdcZQAQGoHQZWEMENjcjfjsVTFPdQRDFEsikNhiKtUNAoFLYCxgATTAbBFyHNbfuHoJWgLzgukDXExvENsqabRSqjZZwuyniQZhGfUoSAmZLFqd",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-EbbUgOKrWQpoguGXXoNGOkcjmtHnihIvzwqpSKofPkQS",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Diana Barry",
+        "addressLine1": "163 Crosby Dam", "addressLine2": "7158 Dustin Manor Suite
+        342", "city": "Thompsonmouth", "state": "-Fallback-scrubbed-qz", "country":
+        "-Fallback-scrubbed-kX", "postalCode": "96817", "phoneNumber": "(693)786-1529x531",
+        "faxNumber": "-Fallback-scrubbed-ALSDynvsKLJkFRt", "email": "Gary Meadows",
+        "website": "Gary Meadows", "taxRegistrationNumber": "Gary Meadows", "currencyCode":
+        "-Fallback-scrubbed-PGQ", "currentFiscalYearStartDate": "-Fallback-scrubbed-pPTbHmsbzE",
+        "industry": "Gary Meadows", "experience": "-Fallback-scrubbed-QawmpcGzN",
+        "lastModifiedDateTime": "2026-02-04T03:43:12.517Z", "picture@odata.mediaReadLink":
+        "-Fallback-scrubbed-bWKFvTIlaPeUYSFtHyQOXHBWKrBOdIBSQUXNBBpfBpBKZIiILkPRgrmGyLPRnXBnvsANHMLYNguscCxKtKUlwZPqSHxbWnTmPAquPMlkdHsNmGGEQWsRbEWpUaMeFPHoNkXgroTCbwzsdANPiGQbRwcZINuZHETgDJHRNRNZjkiTRIgKDq"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:28:01 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 2fcc8c24-bdef-4449-ac9b-58fcf12a39e5
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - cad73155-fb56-43cd-9fe5-45dc3fa4ab31
+      ms-correlation-x:
+      - 7ac423ae-4e15-ae84-bdf5-ccd7f8aa2b0b
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL",
+        "applicationFamily": "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-tJRsAxr",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-GE", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}, {"aadTenantId":
+        "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL", "applicationFamily":
+        "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-urJZEryZLU",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-kX", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:28:00 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - e041be77-24ad-444b-b63b-7079267914cd
+      ms-correlation-x:
+      - 199d160c-efc4-0b72-a885-1073d90b8164
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/vendors?%24filter=lastModifiedDateTime+gt+2026-06-01T00%3A00%3A00Z&%24expand=defaultDimensions
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-FLDlPIAveOpNDafJeneNKMoPKnkFywtWaHLXMsRSdVbVUnSQDQUXzBJwtgHlwDMIlUTwDUDBzaoqIUmzuNeruaMYuXyQVCGELGsYwtLqtucwhLIEjUYzwyqrHZNkQvnZpCy",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-zYPSzCdwuvQPcewYWrVjPbhVHOOyiAgjjQzFbCYvZXhi",
+        "id": "7253cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-GawQIm",
+        "displayName": "Jerome Butler", "addressLine1": "562 Erickson View Suite 419",
+        "addressLine2": "Gary Meadows", "city": "South Gina", "state": "-Fallback-scrubbed-Rz",
+        "country": "-Fallback-scrubbed-kX", "postalCode": "66063", "phoneNumber":
+        "Gary Meadows", "email": "Gary Meadows", "website": "Gary Meadows", "taxRegistrationNumber":
+        "Gary Meadows", "currencyId": "-Fallback-scrubbed-ysQgWKzwFoBdbNrQLjzZnhDapgmLnTNgQnYB",
+        "currencyCode": "-Fallback-scrubbed-PGQ", "irs1099Code": "Gary Meadows", "paymentTermsId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "paymentMethodId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "taxLiable": true,
+        "blocked": "-Fallback-scrubbed-qzprIZE", "balance": 5461, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.397Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-qZqLocbbQGfujptJVrnOWvFVRzoNSBYgyUiznDQtotPf",
+        "id": "7553cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-KryMpA",
+        "displayName": "Nicholas Hood", "addressLine1": "562 Erickson View Suite 419",
+        "addressLine2": "Gary Meadows", "city": "South Gina", "state": "-Fallback-scrubbed-Rz",
+        "country": "-Fallback-scrubbed-kX", "postalCode": "66063", "phoneNumber":
+        "Gary Meadows", "email": "Gary Meadows", "website": "Gary Meadows", "taxRegistrationNumber":
+        "Gary Meadows", "currencyId": "-Fallback-scrubbed-ysQgWKzwFoBdbNrQLjzZnhDapgmLnTNgQnYB",
+        "currencyCode": "-Fallback-scrubbed-PGQ", "irs1099Code": "Gary Meadows", "paymentTermsId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "paymentMethodId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "taxLiable": true,
+        "blocked": "-Fallback-scrubbed-qzprIZE", "balance": 5461, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.59Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-DFAEzIqSanryuxZCTgnYWhcSygBnRSfVgSVjVoLOMFXx",
+        "id": "7853cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-DRFJSI",
+        "displayName": "Jon Klein", "addressLine1": "562 Erickson View Suite 419",
+        "addressLine2": "Gary Meadows", "city": "South Gina", "state": "-Fallback-scrubbed-Rz",
+        "country": "-Fallback-scrubbed-kX", "postalCode": "66063", "phoneNumber":
+        "Gary Meadows", "email": "Gary Meadows", "website": "Gary Meadows", "taxRegistrationNumber":
+        "Gary Meadows", "currencyId": "-Fallback-scrubbed-DHthUnvRkOUKAuzGivKHQYCNUAWUGLrqvHKM",
+        "currencyCode": "-Fallback-scrubbed-vDi", "irs1099Code": "Gary Meadows", "paymentTermsId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "paymentMethodId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "taxLiable": true,
+        "blocked": "-Fallback-scrubbed-qzprIZE", "balance": 5461, "lastModifiedDateTime":
+        "2026-07-15T13:57:19.887Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-gOflrRFqnnxnOshppBuTCuqsEwSsXFzGPfWLSNVElhMg",
+        "id": "7b53cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-SufdJF",
+        "displayName": "Arthur Flores", "addressLine1": "562 Erickson View Suite 419",
+        "addressLine2": "Gary Meadows", "city": "South Gina", "state": "-Fallback-scrubbed-Rz",
+        "country": "-Fallback-scrubbed-kX", "postalCode": "66063", "phoneNumber":
+        "Gary Meadows", "email": "Gary Meadows", "website": "Gary Meadows", "taxRegistrationNumber":
+        "Gary Meadows", "currencyId": "-Fallback-scrubbed-FZaiONGoERycNQlZxpMomjfrJYsCouQmgqwT",
+        "currencyCode": "-Fallback-scrubbed-qDS", "irs1099Code": "Gary Meadows", "paymentTermsId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "paymentMethodId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "taxLiable": true,
+        "blocked": "-Fallback-scrubbed-qzprIZE", "balance": 5461, "lastModifiedDateTime":
+        "2026-07-15T13:57:20.093Z", "defaultDimensions": []}, {"@odata.etag": "-Fallback-scrubbed-YGxJFHHaGrnJwBGvhryUkrsNISujNgYBwRyxRuBLUUjs",
+        "id": "7e53cc12-5580-f111-8070-7c1e52167ef6", "number": "-Fallback-scrubbed-oTddSe",
+        "displayName": "John Brennan Jr.", "addressLine1": "562 Erickson View Suite
+        419", "addressLine2": "Gary Meadows", "city": "South Gina", "state": "-Fallback-scrubbed-Rz",
+        "country": "-Fallback-scrubbed-kX", "postalCode": "66063", "phoneNumber":
+        "Gary Meadows", "email": "Gary Meadows", "website": "Gary Meadows", "taxRegistrationNumber":
+        "Gary Meadows", "currencyId": "-Fallback-scrubbed-JvUaJSBZRrtelbxxnpqkFKsxuFROmLhlhxyA",
+        "currencyCode": "-Fallback-scrubbed-Zzg", "irs1099Code": "Gary Meadows", "paymentTermsId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "paymentMethodId":
+        "-Fallback-scrubbed-rnBWwHwOqAJsUCEtsomcnETMVXeaSHzGWNoc", "taxLiable": true,
+        "blocked": "-Fallback-scrubbed-qzprIZE", "balance": 5461, "lastModifiedDateTime":
+        "2026-07-15T13:57:20.357Z", "defaultDimensions": []}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:28:02 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 91b3002b-5293-4e12-a3e1-f3c789c7d948
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '3514'
+      mise-correlation-id:
+      - bb8f1c32-687d-4b2f-9fb4-c417f297e528
+      ms-correlation-x:
+      - 48fd303a-b192-f34a-0272-90b49f2d1434
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL",
+        "applicationFamily": "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-tJRsAxr",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-GE", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}, {"aadTenantId":
+        "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL", "applicationFamily":
+        "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-urJZEryZLU",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-kX", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:28:02 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 8212926e-156d-4ed6-ae5c-60fa446bb110
+      ms-correlation-x:
+      - f79e3c7c-28c2-578f-6a8e-21d2c8934a14
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/microsoft/reportsFinance/beta/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/dimensionValues
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-kdLAXTXxCamUqdXeDxEgWqzYiuMFsAGzYQGBTMqVrXLOPTaMkdYpXxEiAFmneZlAZMKevuWlxeykeMbklgLAJOgFERSRnfKyTEfncUZgTmEuadGvojbjNThzwQPiafGZCeAihxANCJzfZKCTXMLpnmwskeFldheCcGdN",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-HTkJhmuivzihQopnKgvtrmPvMrlrEQOYIfQxyVvrpNue",
+        "id": "0f91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-tM", "dimensionValueName": "-Fallback-scrubbed-sDqcbZ",
+        "dimensionValueId": 5791, "dimensionValueType": "-Fallback-scrubbed-ikaJlxJMoSD",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.703Z"},
+        {"@odata.etag": "-Fallback-scrubbed-lJtccVVkNamSesVylDVUSNeWAguLMFIRljCTOKftjmBw",
+        "id": "1091419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-rc", "dimensionValueName": "-Fallback-scrubbed-yOXgLccPZoJM",
+        "dimensionValueId": 3505, "dimensionValueType": "-Fallback-scrubbed-ikaJlxJMoSD",
+        "blocked": true, "indentation": 5791, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-NdKTlyoEyusyuLWzJqVCFQlXwziXbmtjaccGlmgAwkzw",
+        "id": "1191419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-mX", "dimensionValueName": "-Fallback-scrubbed-FtclggzmDizXMlLyH",
+        "dimensionValueId": 9620, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 3505, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-uCwunziTsMEhxNGHRBhQcTwhUKZdFriVskdLAMSVMXFK",
+        "id": "1291419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-ZG", "dimensionValueName": "-Fallback-scrubbed-XAbUSJfmCXkovGRMbHPCM",
+        "dimensionValueId": 484, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 3505, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-KnnUFptwRLHEWBIgwViaJnjDjbOeujgbckpfLajmHgAT",
+        "id": "1391419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-xp", "dimensionValueName": "-Fallback-scrubbed-EtfqONTVIjXNmtKBjpR",
+        "dimensionValueId": 736, "dimensionValueType": "-Fallback-scrubbed-cNMYJnwSq",
+        "blocked": true, "indentation": 5791, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-DDQOyYcxAcPaFMApVbpESHAXHBsOGTnlnMqbGuaTxobB",
+        "id": "1491419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-Xz", "dimensionValueName": "-Fallback-scrubbed-GXRnaUzfbUqO",
+        "dimensionValueId": 5742, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5791, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.757Z"},
+        {"@odata.etag": "-Fallback-scrubbed-XPjEuIyUFrkbuFErWxOVvvgaTdyuMnZIhgoicWTVUEER",
+        "id": "1591419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-AF", "dimensionValueName": "-Fallback-scrubbed-jyNLXcvYlICXV",
+        "dimensionValueId": 2338, "dimensionValueType": "-Fallback-scrubbed-cNMYJnwSq",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.717Z"},
+        {"@odata.etag": "-Fallback-scrubbed-mSiecfuAiGQGqiGixFjcRsBKWRPQEBEsUoqgzHTzpumu",
+        "id": "1691419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-kL", "dimensionValueName": "-Fallback-scrubbed-Amuxiyi",
+        "dimensionValueId": 6891, "dimensionValueType": "-Fallback-scrubbed-ikaJlxJMoSD",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.717Z"},
+        {"@odata.etag": "-Fallback-scrubbed-QpdUPemLKgnCMdmKJfxTJOqGDfZyodrQpmhqopRqVnUQ",
+        "id": "1791419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-JM", "dimensionValueName": "-Fallback-scrubbed-tPlthVJKAFhQa",
+        "dimensionValueId": 5750, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5791, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.76Z"},
+        {"@odata.etag": "-Fallback-scrubbed-yQPZTGCXigXPROaFqRpyGvZWNyXGoDfdqOvmQwLgenrj",
+        "id": "1891419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-UE", "dimensionValueName": "-Fallback-scrubbed-VNbEGTHslFMuU",
+        "dimensionValueId": 8215, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5791, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.76Z"},
+        {"@odata.etag": "-Fallback-scrubbed-sITEIyncSyyXrNJMkWypAYXODKURjOZkdHVWEJwcEIKg",
+        "id": "1991419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-scBv",
+        "dimensionValueCode": "-Fallback-scrubbed-IE", "dimensionValueName": "-Fallback-scrubbed-LSkXBNbjbbmjfj",
+        "dimensionValueId": 7004, "dimensionValueType": "-Fallback-scrubbed-cNMYJnwSq",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-EFVdaZygLlQNLkdwrqtiXUvquJAIZVXEVdkaqzVpCDyV",
+        "id": "1a91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nMNplQNFKlxrR",
+        "dimensionValueCode": "-Fallback-scrubbed-rKJZ", "dimensionValueName": "-Fallback-scrubbed-yOYl",
+        "dimensionValueId": 2679, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-nNraqjovjtPCMJGsojThvgorhmOmHmJKjaNcaRNcMmjN",
+        "id": "1b91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nMNplQNFKlxrR",
+        "dimensionValueCode": "-Fallback-scrubbed-pBFugSUzLF", "dimensionValueName":
+        "-Fallback-scrubbed-uNCwiGmELf", "dimensionValueId": 826, "dimensionValueType":
+        "-Fallback-scrubbed-AGTkGOqL", "blocked": true, "indentation": 5461, "consolidationCode":
+        "Gary Meadows", "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.72Z"},
+        {"@odata.etag": "-Fallback-scrubbed-tGWiEubYByDHGCWQtzJKkEWxyMzqlzUeLiBUavcqJwOF",
+        "id": "1c91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-nMNplQNFKlxrR",
+        "dimensionValueCode": "-Fallback-scrubbed-rgoZoq", "dimensionValueName": "-Fallback-scrubbed-OSDLtS",
+        "dimensionValueId": 1629, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-VyWKYrVSZicbYrtFtUQkGCGNViXkXTPfDwjEaVdZETNN",
+        "id": "8960a4b5-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-RnySN",
+        "dimensionValueCode": "-Fallback-scrubbed-fsjSLc", "dimensionValueName": "-Fallback-scrubbed-ZoWASx",
+        "dimensionValueId": 2887, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T17:18:01.603Z"},
+        {"@odata.etag": "-Fallback-scrubbed-ZikwoaOSrlXMucCgExUdIRTXdjldmXQVOREzjZzahRUd",
+        "id": "0ea99cbb-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-RnySN",
+        "dimensionValueCode": "-Fallback-scrubbed-kEoLKK", "dimensionValueName": "-Fallback-scrubbed-DzMxwy",
+        "dimensionValueId": 3803, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T17:18:06.847Z"},
+        {"@odata.etag": "-Fallback-scrubbed-nGOPYsTCEzudXuJpwKBczewsYONXjgAxXRKOQLThpvxK",
+        "id": "b43c8dc7-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-RnySN",
+        "dimensionValueCode": "-Fallback-scrubbed-OgcENT", "dimensionValueName": "-Fallback-scrubbed-LvFZSY",
+        "dimensionValueId": 3699, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T17:18:13.21Z"},
+        {"@odata.etag": "-Fallback-scrubbed-AKXdXEalpeLkQlXbORNsLGNbdoubHFkpaySzdOrCzcrZ",
+        "id": "1d91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fWXNukwqBIBqJ",
+        "dimensionValueCode": "-Fallback-scrubbed-RJaYu", "dimensionValueName": "-Fallback-scrubbed-HrKerjeOgRAsix",
+        "dimensionValueId": 4114, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 3505, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-AOasfMdUsYlukvvexWGTiAMUDwOfbZVacWfVhsAdZegg",
+        "id": "1e91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fWXNukwqBIBqJ",
+        "dimensionValueCode": "-Fallback-scrubbed-yGmCNu", "dimensionValueName": "-Fallback-scrubbed-LqWlBaSuhUlXABO",
+        "dimensionValueId": 8652, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 3505, "lastModifiedDateTime": "2026-02-04T03:43:10.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-hbmQNbEzyGOnDaEbOOsrTsGaAzquqJrZqBKVlKvVZrhW",
+        "id": "1f91419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fWXNukwqBIBqJ",
+        "dimensionValueCode": "-Fallback-scrubbed-BnrTC", "dimensionValueName": "-Fallback-scrubbed-yIhJGjZrSiwhEs",
+        "dimensionValueId": 4842, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 3505, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-lPwKERSuLBjJkqDtXLJLPPuYhghgEznmeKzFgZxFnZze",
+        "id": "2091419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fYedSybCmX",
+        "dimensionValueCode": "-Fallback-scrubbed-MVJ", "dimensionValueName": "-Fallback-scrubbed-hDTsFaZtzJHsMQ",
+        "dimensionValueId": 6598, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5791, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-IIAvKhUGEJXPLmATdQiyGZUssrOgnNcnfxJAAveLfVtC",
+        "id": "2191419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fYedSybCmX",
+        "dimensionValueCode": "-Fallback-scrubbed-aszJ", "dimensionValueName": "-Fallback-scrubbed-eGdPVZzUCP",
+        "dimensionValueId": 1056, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5791, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-caILSTtklMRPyxaXphFKCSLngHuVyKpFTVXFrnVjVXFB",
+        "id": "2291419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-fYedSybCmX",
+        "dimensionValueCode": "-Fallback-scrubbed-OHwmW", "dimensionValueName": "-Fallback-scrubbed-WPXFd",
+        "dimensionValueId": 696, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5791, "lastModifiedDateTime": "2026-02-04T03:43:10.727Z"},
+        {"@odata.etag": "-Fallback-scrubbed-ATaCaTeLXbzYITXxDuzUIwwKXxGFZJDgEGXPHNyhqxtT",
+        "id": "a240f473-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-rLjzJVb",
+        "dimensionValueCode": "-Fallback-scrubbed-dFFfbqSB", "dimensionValueName":
+        "-Fallback-scrubbed-dFFfbqSB", "dimensionValueId": 3095, "dimensionValueType":
+        "-Fallback-scrubbed-AGTkGOqL", "blocked": true, "indentation": 5461, "consolidationCode":
+        "Gary Meadows", "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T12:52:38.473Z"},
+        {"@odata.etag": "-Fallback-scrubbed-AANyrOVbgDrNqPEGkBVKOUjGsTQCIuaaMqcQLhfxYDJw",
+        "id": "42d1e47f-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-rLjzJVb",
+        "dimensionValueCode": "-Fallback-scrubbed-KzVcPnra", "dimensionValueName":
+        "-Fallback-scrubbed-KzVcPnra", "dimensionValueId": 7973, "dimensionValueType":
+        "-Fallback-scrubbed-AGTkGOqL", "blocked": true, "indentation": 5461, "consolidationCode":
+        "Gary Meadows", "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T12:52:44.723Z"},
+        {"@odata.etag": "-Fallback-scrubbed-GCawhBxVQzXFOtofzsIDxlgprsoSPrSRezHLjntZquzn",
+        "id": "4b1bdd85-1029-f111-8340-000d3a11d3d8", "dimensionCode": "-Fallback-scrubbed-rLjzJVb",
+        "dimensionValueCode": "-Fallback-scrubbed-xfEENpbp", "dimensionValueName":
+        "-Fallback-scrubbed-xfEENpbp", "dimensionValueId": 5605, "dimensionValueType":
+        "-Fallback-scrubbed-AGTkGOqL", "blocked": true, "indentation": 5461, "consolidationCode":
+        "Gary Meadows", "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-03-26T12:52:51.307Z"},
+        {"@odata.etag": "-Fallback-scrubbed-qNOioJlaNnweLsQtQZmfaNZUhFOztpjqXDpEFmEDEZmf",
+        "id": "1b96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JNUsTkhdJ",
+        "dimensionValueCode": "-Fallback-scrubbed-pQ", "dimensionValueName": "-Fallback-scrubbed-KfKljEQefyp",
+        "dimensionValueId": 3877, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-lFmZArwvWteTMFBFAqJTUiaHNWbbUeBupobeMiudDfpU",
+        "id": "1c96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JNUsTkhdJ",
+        "dimensionValueCode": "-Fallback-scrubbed-wR", "dimensionValueName": "-Fallback-scrubbed-IQzzVYPHkblkLjsdm",
+        "dimensionValueId": 8194, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-tDMqQppHWFMhxdsFVwkeSNCBQRspciEeZajLmdscZWca",
+        "id": "1d96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-JNUsTkhdJ",
+        "dimensionValueCode": "-Fallback-scrubbed-Hu", "dimensionValueName": "-Fallback-scrubbed-UsYTooUiidz",
+        "dimensionValueId": 966, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.877Z"},
+        {"@odata.etag": "-Fallback-scrubbed-zWzWpZHrpKDLgwSXNxzbcevoWGnSWHsyMwSxJMuhIRil",
+        "id": "2391419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tAJrVTCweIfjK",
+        "dimensionValueCode": "-Fallback-scrubbed-KNfgSE", "dimensionValueName": "-Fallback-scrubbed-wREKfK",
+        "dimensionValueId": 5737, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.73Z"},
+        {"@odata.etag": "-Fallback-scrubbed-QNbTmssGMebzOcgjuFfyaGDCNdRvnaddEmvpuMThiXwd",
+        "id": "2491419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-tAJrVTCweIfjK",
+        "dimensionValueCode": "-Fallback-scrubbed-gygGeN", "dimensionValueName": "-Fallback-scrubbed-iVEEHy",
+        "dimensionValueId": 5398, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:10.73Z"},
+        {"@odata.etag": "-Fallback-scrubbed-FhtlhCLzMcDJxdpCrKwRTZnKRfnvJqIyljkFDGyzvyiM",
+        "id": "1e96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-EwOSbEKkdyO",
+        "dimensionValueCode": "-Fallback-scrubbed-Jl", "dimensionValueName": "-Fallback-scrubbed-YseFsHswv",
+        "dimensionValueId": 5183, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"},
+        {"@odata.etag": "-Fallback-scrubbed-lzICwbEmoOZwNBZmKXszBzYdFAGlUmtKKwMotGTNMZWa",
+        "id": "1f96419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-EwOSbEKkdyO",
+        "dimensionValueCode": "-Fallback-scrubbed-qH", "dimensionValueName": "-Fallback-scrubbed-hLtCyfgvthWqQ",
+        "dimensionValueId": 3398, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"},
+        {"@odata.etag": "-Fallback-scrubbed-cmkZMvQvDdPzpZyGCQbJLhccthzpCJkKQhJZhIUcsMFX",
+        "id": "2096419f-7b01-f111-a1fd-7ced8d2674f8", "dimensionCode": "-Fallback-scrubbed-EwOSbEKkdyO",
+        "dimensionValueCode": "-Fallback-scrubbed-eP", "dimensionValueName": "-Fallback-scrubbed-WTEWIgUtQi",
+        "dimensionValueId": 6277, "dimensionValueType": "-Fallback-scrubbed-AGTkGOqL",
+        "blocked": true, "indentation": 5461, "consolidationCode": "Gary Meadows",
+        "globalDimensionNumber": 5461, "lastModifiedDateTime": "2026-02-04T03:43:12.88Z"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:28:02 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - c2bfbc98-fde5-4f61-b910-523507bc375b
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '13235'
+      mise-correlation-id:
+      - 8cecb5e7-8f92-42a8-842f-dce1fef6a08a
+      ms-correlation-x:
+      - dfb8cddb-9994-b94d-ec91-195d63479130
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL",
+        "applicationFamily": "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-tJRsAxr",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-GE", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}, {"aadTenantId":
+        "-Fallback-scrubbed-TLXYwoUMvxSlyRJVGMCxlJmmKXzWLWjVLInL", "applicationFamily":
+        "-Fallback-scrubbed-jGUNMUCDhCMAKvY", "type": "-Fallback-scrubbed-urJZEryZLU",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-kX", "webServiceUrl":
+        "-Fallback-scrubbed-XmVIyLmBOKYxVIpPzpapBVEitBcHYGYCopwGTjJu", "webClientLoginUrl":
+        "-Fallback-scrubbed-TuZPbplVhPueBNdCuuNfoIcYdKvudmYzbzUB"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jul 2026 14:28:03 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - ece72061-40b7-4ccc-b3ab-3c92a2c53e02
+      ms-correlation-x:
+      - 9fbab2ef-bed7-2825-5385-e4302bcc03fd
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/currencies?%24filter=lastModifiedDateTime+gt+2026-06-01T00%3A00%3A00Z
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-essqNqjpZsAoQKPdAeISqoPZJrXNsCdISloNHfApBdhMhqmPEzUPpaUQjvxqQPrnmOTHHpypUNhhEcKSFcbMSqHqaWEREJqBQXZCQDOznYuLievCFHzWdiPxQHxLuWuXAQTqeH",
+        "value": []}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Wed, 22 Jul 2026 14:28:04 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 81c3eae5-5e3b-41db-8970-38e3e9a60958
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '166'
+      mise-correlation-id:
+      - 7cdc6cf3-37ee-4e81-b1f9-e5fed8e6b0e9
+      ms-correlation-x:
+      - b1ca4a7d-cc45-3ee5-121c-fc182b565768
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

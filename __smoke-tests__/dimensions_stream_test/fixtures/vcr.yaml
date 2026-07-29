@@ -1,0 +1,401 @@
+interactions:
+- request:
+    body: redirect_uri=https%3A%2F%2Fqa.hotglue.xyz%2Fcallback&grant_type=refresh_token
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1749'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.33.1
+    method: POST
+    uri: https://login.microsoftonline.com/common/oauth2/token
+  response:
+    body:
+      string: '{"token_type": "-Fallback-scrubbed-lHuDnx", "scope": "-Fallback-scrubbed-YzcpqYrwAPTyvTZdIzSlcSoupEnFSFZgmqtArtgpfiC",
+        "expires_in": "5209", "ext_expires_in": "-Fallback-scrubbed-lkLW", "expires_on":
+        "-Fallback-scrubbed-jVpIcpMiFT", "not_before": "-Fallback-scrubbed-fSfDiGDdCz",
+        "resource": "-Fallback-scrubbed-bqOOQzCPeOnMFZPuhJCoBCfiSkcPNvTLXOWkCkOM",
+        "access_token": "eyJ***", "refresh_token": "1.A***"}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache
+      Content-Length:
+      - '407'
+      Content-Security-Policy-Report-Only:
+      - object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-zFcX6DZrycFUbybF_omtZg'
+        'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net
+        https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com
+        https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net
+        https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com
+        https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:29 GMT
+      Expires:
+      - '-1'
+      P3P:
+      - CP="DSP CUR OTPi IND OTRi ONL FIN"
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - fpc=Apf34bAwk0pBms9P_KGKm6noOlVYAQAAAOHR8eEOAAAA; expires=Thu, 20-Aug-2026
+        20:47:29 GMT; path=/; secure; HttpOnly; SameSite=None
+      - x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly
+      - stsservicecookie=estsfd; path=/; secure; samesite=none; httponly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - '0'
+      x-ms-clientdata:
+      - e|||microsoftonline.com|none
+      x-ms-ests-server:
+      - 2.1.24860.5 - NCUS ProdSlices
+      x-ms-request-id:
+      - 4e3ac89e-72fe-4566-86d6-6707de725000
+      x-ms-srs:
+      - 1.P
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-nrjoQQrFnYlSNubyXgfpknLxYQjNgfKShTzo",
+        "applicationFamily": "-Fallback-scrubbed-giFohVCzZNYUaOL", "type": "-Fallback-scrubbed-uSfmfxB",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Db", "webServiceUrl":
+        "-Fallback-scrubbed-bqOOQzCPeOnMFZPuhJCoBCfiSkcPNvTLXOWkCkOM", "webClientLoginUrl":
+        "-Fallback-scrubbed-qrvLHLPfsjtXWfOGPPZUddYukshZJBavYKhS"}, {"aadTenantId":
+        "-Fallback-scrubbed-nrjoQQrFnYlSNubyXgfpknLxYQjNgfKShTzo", "applicationFamily":
+        "-Fallback-scrubbed-giFohVCzZNYUaOL", "type": "-Fallback-scrubbed-HZxOSXQflM",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-eg", "webServiceUrl":
+        "-Fallback-scrubbed-bqOOQzCPeOnMFZPuhJCoBCfiSkcPNvTLXOWkCkOM", "webClientLoginUrl":
+        "-Fallback-scrubbed-qrvLHLPfsjtXWfOGPPZUddYukshZJBavYKhS"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:29 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - ac1291de-4407-4337-bf9d-7f0c484e2f6b
+      ms-correlation-x:
+      - 4eed545b-3d26-45b9-832d-0be46e92834d
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-fBvYUzbFhUdjEGyvjtidojwBMZbeQIsiBylwSQrNmiXLbVBCjpyWDdDsSoDxzryeQvbgONXhNbOpwHvIFfola",
+        "value": [{"id": "2cd06086-7b01-f111-a1fd-7ced8d2674f8", "systemVersion":
+        "-Fallback-scrubbed-rugcaeTFNnrGbLvV", "timestamp": 4355, "name": "CRONUS
+        USA, Inc.", "displayName": "Brian Schmidt", "businessProfileId": "Brian Schmidt",
+        "systemCreatedAt": "-Fallback-scrubbed-kxufDPQbwrnmOrISiwEWXWFi", "systemCreatedBy":
+        "-Fallback-scrubbed-QDnCJGTmfFqEZqSpMVblPmRpjjYdpGcQIqRA", "systemModifiedAt":
+        "-Fallback-scrubbed-kxufDPQbwrnmOrISiwEWXWFi", "systemModifiedBy": "-Fallback-scrubbed-QDnCJGTmfFqEZqSpMVblPmRpjjYdpGcQIqRA"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:30 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 97854ad7-a679-4873-9d64-6c207b413481
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '486'
+      mise-correlation-id:
+      - d2848387-5d45-4c6c-90a2-b81f0c12e5d7
+      ms-correlation-x:
+      - d4245399-d0f7-73db-8329-29822626f2d3
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/companyInformation
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-pEBbflrkvawWRduKHsWGMTCfgaHMDVPtYlhhbeCePFsmKvOSVcMxTyQiAYopYLOQluafKMXdPkvkjKeIMvWXAYXgMZAhhUhOIArVVqzCRFCPKpaqbByVVSkBnCInlvMjCzjRmLiReWSPwV",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-EogkeZpAVNYgjDnHkwzjBXlNXNXwTNscOWqhlKilRFWZ",
+        "id": "d43f5193-7b01-f111-a1fd-7ced8d2674f8", "displayName": "Richard Jones",
+        "addressLine1": "07330 Graves Lock", "addressLine2": "703 Fox Dam", "city":
+        "Reedchester", "state": "-Fallback-scrubbed-vX", "country": "-Fallback-scrubbed-eg",
+        "postalCode": "16869", "phoneNumber": "(509)931-7698x521", "faxNumber": "-Fallback-scrubbed-PWCBhvwfIqRgDGy",
+        "email": "Brian Schmidt", "website": "Brian Schmidt", "taxRegistrationNumber":
+        "Brian Schmidt", "currencyCode": "-Fallback-scrubbed-URh", "currentFiscalYearStartDate":
+        "-Fallback-scrubbed-RFlajyxfkN", "industry": "Brian Schmidt", "experience":
+        "-Fallback-scrubbed-ENoLjoaep", "lastModifiedDateTime": "2026-02-04T03:43:12.517Z",
+        "picture@odata.mediaReadLink": "-Fallback-scrubbed-XTctWAZIABLGdMsDpaOvvzJeufizRVMeHsdKvBkXwszsstYqPquKnOjbHtMOnrsZwnmxPsvNcSGTswkWAeYZaHbxXevNSKIvTgvJfFvXtfNUbPGPJUADXKajnrpXhLIJdEsvoHVYejEyEpClBqZQxoilFfkZUyXMTkVIVWXYJTVDiNkpFz"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:31 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 6de8a7d3-5390-417d-b9a9-55fc19258b92
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '938'
+      mise-correlation-id:
+      - beee7cea-2371-49d2-8bcc-a261cd2986a9
+      ms-correlation-x:
+      - 8c62275c-52e3-2099-aa96-c6e892e53e42
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/environments/v1.1
+  response:
+    body:
+      string: '{"value": [{"aadTenantId": "-Fallback-scrubbed-nrjoQQrFnYlSNubyXgfpknLxYQjNgfKShTzo",
+        "applicationFamily": "-Fallback-scrubbed-giFohVCzZNYUaOL", "type": "-Fallback-scrubbed-uSfmfxB",
+        "name": "SandboxSpain", "countryCode": "-Fallback-scrubbed-Db", "webServiceUrl":
+        "-Fallback-scrubbed-bqOOQzCPeOnMFZPuhJCoBCfiSkcPNvTLXOWkCkOM", "webClientLoginUrl":
+        "-Fallback-scrubbed-qrvLHLPfsjtXWfOGPPZUddYukshZJBavYKhS"}, {"aadTenantId":
+        "-Fallback-scrubbed-nrjoQQrFnYlSNubyXgfpknLxYQjNgfKShTzo", "applicationFamily":
+        "-Fallback-scrubbed-giFohVCzZNYUaOL", "type": "-Fallback-scrubbed-HZxOSXQflM",
+        "name": "Production", "countryCode": "-Fallback-scrubbed-eg", "webServiceUrl":
+        "-Fallback-scrubbed-bqOOQzCPeOnMFZPuhJCoBCfiSkcPNvTLXOWkCkOM", "webClientLoginUrl":
+        "-Fallback-scrubbed-qrvLHLPfsjtXWfOGPPZUddYukshZJBavYKhS"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ms-correlation-x
+      Content-Length:
+      - '806'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jul 2026 20:47:31 GMT
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      api-supported-versions:
+      - 1.0, 1.1, 1.2
+      mise-correlation-id:
+      - 412fc0bc-b868-46f1-917e-705c60fa5dd5
+      ms-correlation-x:
+      - c0b87013-06f7-8c92-ca4d-7adeb53fbd17
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      If-Match:
+      - '*'
+      Prefer:
+      - odata.maxpagesize=5000
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/companies(2cd06086-7b01-f111-a1fd-7ced8d2674f8)/dimensions
+  response:
+    body:
+      string: '{"@odata.context": "-Fallback-scrubbed-NNeWKXpwXruzeWkZwrZucHQJtwAqWhQhNBRrXCMVHuLVQjUnmCkxCgkaXKKsvvCNvNIiaNXOacEYHrldNDVtPYMRdbiIbfklPRaCZzZjMRXtwcHmtEeQCyqeBKNRKjZRWPfdqO",
+        "value": [{"@odata.etag": "-Fallback-scrubbed-QurjgmdkUOaNxBuEgSUQeDLFOBKicsVEhkEBvaXaXZFJ",
+        "id": "0a91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-HuCm",
+        "displayName": "Heather Miller", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:10.617Z"}, {"@odata.etag": "-Fallback-scrubbed-pPaABdXMTQTLCWdqpcBJcLztRJPMAHbgiydqxeglZEGh",
+        "id": "0b91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-gmkLkztaXMIoG",
+        "displayName": "Carol Herrera", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:10.62Z"}, {"@odata.etag": "-Fallback-scrubbed-tVyIkmbEUjaPxYyelbKvXoGkEPwgxPRZkGMBxiyumbpR",
+        "id": "1107baae-6e27-f111-8340-00224829d901", "code": "-Fallback-scrubbed-niWqo",
+        "displayName": "James Andersen", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-03-24T10:46:37.89Z"}, {"@odata.etag": "-Fallback-scrubbed-qIKhLXsxDrjYaixgtKJVDXRvIPxwUElDJqMMsgRmUzBK",
+        "id": "0c91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-oLaxIVfAYhjgq",
+        "displayName": "Devin Stevens", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:10.62Z"}, {"@odata.etag": "-Fallback-scrubbed-hjlQQSOQxgojDDXoHilSfjtMPBLwJwKzVCNUFskrMiWP",
+        "id": "0d91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-LkasibYnLr",
+        "displayName": "Martha Garcia", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:10.62Z"}, {"@odata.etag": "-Fallback-scrubbed-nLwMuskbIbDWDXInaYjSzNYBYCJkVnSJpMzUqEdpmbon",
+        "id": "860c5c21-0f29-f111-8340-000d3a11d3d8", "code": "-Fallback-scrubbed-siLFDiF",
+        "displayName": "Hannah Wall", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-03-26T12:27:20.957Z"}, {"@odata.etag": "-Fallback-scrubbed-DaZwPeDThOFeSCKVhvditTYxNTNGqZYIVgdDAjYZNWgq",
+        "id": "aef44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-OZObVPRZj",
+        "displayName": "Tracy King", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:06.133Z"}, {"@odata.etag": "-Fallback-scrubbed-lmyBKZixFEdmXMQbUTtwbtrpxXCbPnIKMmMvBwLGDpoS",
+        "id": "0e91419f-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-XwDRFaUgaJhYD",
+        "displayName": "Adam Lindsey", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:10.623Z"}, {"@odata.etag": "-Fallback-scrubbed-jjilSnnGQLWiNlDAmBojpwYXqwNCMEVdlEjhAytyoezT",
+        "id": "aff44a99-7b01-f111-a1fd-7ced8d2674f8", "code": "-Fallback-scrubbed-VVTvcphLyOp",
+        "displayName": "Ashley Gomez", "consolidationCode": "Brian Schmidt", "lastModifiedDateTime":
+        "2026-02-04T03:43:06.137Z"}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Authorization
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Date, Content-Length, Server, OData-Version
+      - ms-correlation-x
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true
+      Date:
+      - Tue, 21 Jul 2026 20:47:33 GMT
+      OData-Version:
+      - '4.0'
+      Preference-Applied:
+      - odata.maxpagesize
+      Request-Id:
+      - 61028844-8640-411b-919a-551803a2ea4a
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      content-length:
+      - '2215'
+      mise-correlation-id:
+      - fbc123e2-6098-4fb0-a056-a6d8f13c9d1d
+      ms-correlation-x:
+      - 36efedb1-2cf8-8e91-747b-d19caf31cfdb
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
