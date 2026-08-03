@@ -1243,21 +1243,63 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
     and objectID = 29
     You can do this in Web Services Modal in Dynamics BC
     """
-    
+
     name = "vendor_ledger_entries"
     path = "/Company('{company_name}')/VendorLedgerEntries"
     primary_keys = ["Document_No", "company_id"]
     parent_stream_type = GeneralLedgerEntriesIncrementalStream
+
+    # Applying a payment/refund/credit memo to an invoice updates the invoice's
+    # own Remaining_Amount in BC without necessarily posting a new GL entry
+    # under the invoice's own Document_No - only the "applying" side's GL
+    # entries get touched. So the Document_No filter below (keyed off whichever
+    # GL entry triggered this sync) can miss the invoice's updated balance
+    # entirely. Once we find ANY vendor ledger entry for the triggering
+    # Document_No, we also re-fetch that vendor's entries by Vendor_No, so
+    # sibling entries closed by the same application are captured too.
+    synced_vendor_nos = set()
 
     def get_url_params(
         self, context: Optional[dict], next_page_token
     ):
         """Return a dictionary of values to be used in URL parameterization."""
         params = super().get_url_params(context, next_page_token)
-        # Only replace single quotes that are not already doubled
-        escaped_gl_doc_no = re.sub(r"(?<!')'(?!')", "''", context['gl_doc_no'])
-        params.update({"$filter": f"Document_No eq '{escaped_gl_doc_no}'"})
+        vendor_no_filter = getattr(self, "_vendor_no_filter", None)
+        if vendor_no_filter is not None:
+            escaped_vendor_no = re.sub(r"(?<!')'(?!')", "''", vendor_no_filter)
+            params.update({"$filter": f"Vendor_No eq '{escaped_vendor_no}'"})
+        else:
+            # Only replace single quotes that are not already doubled
+            escaped_gl_doc_no = re.sub(r"(?<!')'(?!')", "''", context['gl_doc_no'])
+            params.update({"$filter": f"Document_No eq '{escaped_gl_doc_no}'"})
         return params
+
+    def request_records(self, context: Optional[dict]):
+        self._vendor_no_filter = None
+        seen_keys = set()
+        vendor_nos_to_expand = set()
+
+        for record in super().request_records(context):
+            seen_keys.add((record.get("Entry_No"), record.get("company_id")))
+            vendor_no = record.get("Vendor_No")
+            if vendor_no:
+                vendor_key = (context["company_id"], vendor_no)
+                if vendor_key not in self.synced_vendor_nos:
+                    vendor_nos_to_expand.add(vendor_no)
+            yield record
+
+        try:
+            for vendor_no in vendor_nos_to_expand:
+                self.synced_vendor_nos.add((context["company_id"], vendor_no))
+                self._vendor_no_filter = vendor_no
+                for record in super().request_records(context):
+                    key = (record.get("Entry_No"), record.get("company_id"))
+                    if key in seen_keys:
+                        continue
+                    seen_keys.add(key)
+                    yield record
+        finally:
+            self._vendor_no_filter = None
 
     schema = th.PropertiesList(
         th.Property("Entry_No", th.IntegerType),
