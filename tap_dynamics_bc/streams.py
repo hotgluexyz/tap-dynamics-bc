@@ -856,31 +856,17 @@ class _PostingDateWindowMixin:
 
         if getattr(self, "expand", None):
             params["$expand"] = self.expand
+        params["$top"] = self.page_size
         if next_page_token:
-            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
-            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
+            params["$skip"] = next_page_token
         return params
 
 
-class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, dynamicsBcStream):
+class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAnalyticsStream):
     """Base stream for microsoft/analytics general ledger entry entities."""
 
     replication_key = "postingDate"
     parent_stream_type = CompaniesStream
-
-    @property
-    def url_base(self) -> str:
-        """Return the Analytics API URL root."""
-        url_template = (
-            "https://api.businesscentral.dynamics.com/v2.0/{}/api/microsoft/analytics/v1.0"
-        )
-        env_name = self.config.get("environment_name", "production")
-        if "?" in env_name:
-            env_name = env_name.split("?")
-            if isinstance(env_name, list):
-                env_name = env_name[0]
-        self.validate_env(env_name)
-        return url_template.format(env_name)
 
 
 class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
