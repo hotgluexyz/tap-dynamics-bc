@@ -18,6 +18,8 @@ from singer import StateMessage
 class dynamicsBcStream(RESTStream):
     """dynamics-bc stream class."""
     envs_list = None
+    page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
+    timeout = 600 # 10 minutes (same as Dynamics BC API)
 
     def get_environment(self):
         env_name = self.config.get("environment_name", "production")
@@ -71,7 +73,10 @@ class dynamicsBcStream(RESTStream):
     @property
     def http_headers(self) -> dict:
         """Return the http headers needed."""
-        headers = {}
+        headers = {
+            "If-Match": "*",
+            "Prefer": f"odata.maxpagesize={self.page_size}"
+        }
         if "user_agent" in self.config:
             headers["User-Agent"] = self.config.get("user_agent")
         return headers
@@ -152,6 +157,12 @@ class dynamicsBcStream(RESTStream):
         if response.status_code in [401]:
             msg = (
                 f"{response.status_code} Server Error: "
+                f"{response.reason} for path: {self.path} with response {response.text}"
+            )
+            raise RetriableAPIError(msg)
+        elif response.status_code == 429:
+            msg = (
+                f"{response.status_code} Too Many Requests: "
                 f"{response.reason} for path: {self.path} with response {response.text}"
             )
             raise RetriableAPIError(msg)
