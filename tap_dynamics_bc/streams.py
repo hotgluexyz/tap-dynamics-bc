@@ -6,6 +6,9 @@ from urllib.parse import urlencode
 import requests
 from singer_sdk import typing as th
 from singer_sdk.exceptions import FatalAPIError
+from dateutil.relativedelta import relativedelta
+import datetime
+import pendulum
 
 from tap_dynamics_bc.client import dynamicsBcStream, DynamicsBCODataStream, DynamicsBCAnalyticsStream
 
@@ -815,6 +818,106 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
                     child_stream.sync(context=child_context)
                     self.synced_doc_nos.add(child_context["gl_doc_no"])
 
+
+class _PostingDateWindowMixin:
+    """Shared initial-sync vs rolling-window filter for postingDate streams."""
+
+    def _is_initial_sync(self, context: dict) -> bool:
+        bookmark_date = self.get_starting_timestamp(context)
+        configured_start = pendulum.parse(self.config.get("start_date"))
+        return bookmark_date == configured_start
+
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        """Return a dictionary of values to be used in URL parameterization."""
+        params: dict = {}
+        report_periods = self.config.get("report_periods", 3)
+
+        if not self._is_initial_sync(context):
+            today = datetime.date.today()
+            beginning_of_month = today.replace(day=1)
+            beginning_of_month = datetime.datetime.combine(
+                beginning_of_month, datetime.datetime.min.time()
+            )
+            date = (
+                beginning_of_month - relativedelta(months=report_periods - 1)
+            ).strftime("%Y-%m-%dT%H:%M:%SZ")
+            self.logger.info(
+                f"Not initial sync, fetching GL entries for last {report_periods} "
+                f"months, starting from {date}"
+            )
+            params["$filter"] = f"{self.replication_key} gt {date}"
+        else:
+            self.logger.info("Initial sync, fetching GL entries for all time")
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+
+        if getattr(self, "expand", None):
+            params["$expand"] = self.expand
+        params["$top"] = self.page_size
+        if next_page_token:
+            params["$skip"] = next_page_token
+        return params
+
+
+class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAnalyticsStream):
+    """Base stream for microsoft/analytics general ledger entry entities."""
+
+    replication_key = "postingDate"
+    parent_stream_type = CompaniesStream
+
+
+class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
+    """Balance sheet G/L entries from the Analytics API."""
+
+    name = "balance_sheet_general_ledger_entries"
+    path = "/companies({company_id})/balanceSheetGeneralLedgerEntries"
+    primary_keys = ["entryNo", "company_id"]
+
+    schema = th.PropertiesList(
+        th.Property("incomeBalance", th.StringType),
+        th.Property("glAccountNo", th.StringType),
+        th.Property("postingDate", th.DateTimeType),
+        th.Property("amount", th.NumberType),
+        th.Property("dimensionSetID", th.IntegerType),
+        th.Property("sourceCode", th.StringType),
+        th.Property("entryNo", th.IntegerType),
+        th.Property("systemModifiedAt", th.DateTimeType),
+        th.Property("description", th.StringType),
+        th.Property("sourceType", th.StringType),
+        th.Property("sourceNo", th.StringType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+
+class IncomeStatementGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
+    """Income statement G/L entries from the Analytics API."""
+
+    name = "income_statement_general_ledger_entries"
+    path = "/companies({company_id})/incomeStatementGeneralLedgerEntries"
+    primary_keys = ["entryNo", "company_id"]
+
+    schema = th.PropertiesList(
+        th.Property("incomeBalance", th.StringType),
+        th.Property("accountNo", th.StringType),
+        th.Property("postingDate", th.DateTimeType),
+        th.Property("amount", th.NumberType),
+        th.Property("dimensionSetID", th.IntegerType),
+        th.Property("sourceCode", th.StringType),
+        th.Property("entryNo", th.IntegerType),
+        th.Property("systemModifiedAt", th.DateTimeType),
+        th.Property("description", th.StringType),
+        th.Property("sourceType", th.StringType),
+        th.Property("sourceNo", th.StringType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
+
 class GLEntriesDimensionsStream(dynamicsBcStream):
     """Define custom stream."""
 
@@ -994,7 +1097,6 @@ class PaymentTermsStream(dynamicsBcStream):
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType),
     ).to_dict()
-
 
 class VendorLedgerEntriesStream(DynamicsBCODataStream):
     """Define custom stream."""
