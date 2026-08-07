@@ -160,6 +160,12 @@ class dynamicsBcStream(RESTStream):
                 f"{response.reason} for path: {self.path} with response {response.text}"
             )
             raise RetriableAPIError(msg)
+        elif response.status_code == 429:
+            msg = (
+                f"{response.status_code} Too Many Requests: "
+                f"{response.reason} for path: {self.path} with response {response.text}"
+            )
+            raise RetriableAPIError(msg)
         elif response.status_code == 400 and "Please try again later." in response.text:
             msg = (
                 f"{response.status_code} Server Error: "
