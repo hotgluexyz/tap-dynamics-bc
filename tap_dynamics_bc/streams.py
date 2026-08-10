@@ -934,6 +934,21 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         decorated_request = self.request_decorator(self._request)
         response = decorated_request(prepared_request, {})
         return response
+    
+    def make_request(self, context, next_page_token):
+        """Make request with fallback logic for dimension expansion failures."""        
+        try:
+            prepared_request = self.prepare_request(
+                context, next_page_token=next_page_token
+            )
+            resp = self._request(prepared_request, context)
+            return resp
+        except FatalAPIError as e:
+            if "Dimension Value does not exist" in str(e):
+                return self._handle_dimension_failure(e, prepared_request)
+            else:
+                # Re-raise the error if it's not dimension-related
+                raise
 
     def _handle_dimension_failure(self, error, prepared_request):
         """Handle dimension expansion failure by fetching data in batches."""
