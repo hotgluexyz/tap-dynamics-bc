@@ -319,10 +319,14 @@ class DynamicsBCAnalyticsStream(dynamicsBcStream):
         self, response: requests.Response, previous_token: Optional[Any]
     ) -> Optional[Any]:
         """Return a token for identifying next page or None if no more pages."""
-        if not response.json().get("value", []):
+        records = response.json().get("value", [])
+        if not records:
             return None
         previous_token = previous_token or 0
-        return previous_token + self.page_size
+        next_skip = previous_token + len(records)
+        if len(records) < self.page_size:
+            return None
+        return next_skip
 
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
