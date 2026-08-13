@@ -27,16 +27,20 @@ class dynamicsBcStream(RESTStream):
     page_size = 5000 # 20,000 is the Dynamics BC maximum and default size
     timeout = 600 # 10 minutes (same as Dynamics BC API)
 
-    @cached_property
-    def url_base(self) -> str:
-        """Return the API URL root, configurable via tap settings."""
-        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
+    def get_environment(self):
         env_name = self.config.get("environment_name", "production")
         if "?" in env_name:
             env_name = env_name.split("?")
             if isinstance(env_name,list):
                 env_name = env_name[0]
-        self.validate_env(env_name)        
+        self.validate_env(env_name)
+        return env_name    
+
+    @cached_property
+    def url_base(self) -> str:
+        """Return the API URL root, configurable via tap settings."""
+        url_template = "https://api.businesscentral.dynamics.com/v2.0/{}/api/v2.0"
+        env_name = self.get_environment()      
         return url_template.format(env_name)
 
     records_jsonpath = "$.value[*]"
@@ -206,6 +210,12 @@ class dynamicsBcStream(RESTStream):
                 f"{response.reason} for path: {self.path} with response {response.text}"
             )
             raise RetriableAPIError(msg)
+        elif response.status_code == 429:
+            msg = (
+                f"{response.status_code} Too Many Requests: "
+                f"{response.reason} for path: {self.path} with response {response.text}"
+            )
+            raise RetriableAPIError(msg)
         elif response.status_code == 400 and "Please try again later." in response.text:
             msg = (
                 f"{response.status_code} Server Error: "
@@ -270,6 +280,12 @@ class DynamicsBCODataStream(dynamicsBcStream):
         """
         state = self.get_context_state(context)
         return not state.get("replication_key_value")
+    
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        # Header records appear with empty values and should be skipped
+        if all(value == '' for k, value in row.items() if k != '@odata.etag'):
+            return None
+        return super().post_process(row, context)
 
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
@@ -287,9 +303,42 @@ class DynamicsBCODataStream(dynamicsBcStream):
                     f"({self.replication_key} eq {BC_DEFAULT_MODIFIED_SENTINEL})"
                 )
         return params
+    
+class DynamicsBCAnalyticsStream(dynamicsBcStream):
+    """Dynamics BC Analytics stream class."""
 
-    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
-        # Header records appear with empty values and should be skipped
-        if all(value == '' for k, value in row.items() if k != '@odata.etag'):
+    page_size = 1000
+
+    @cached_property
+    def url_base(self):
+        environment = self.get_environment()
+        return f"https://api.businesscentral.dynamics.com/v2.0/{environment}/api/microsoft/analytics/v1.0"
+    
+
+    def get_next_page_token(
+        self, response: requests.Response, previous_token: Optional[Any]
+    ) -> Optional[Any]:
+        """Return a token for identifying next page or None if no more pages."""
+        records = response.json().get("value", [])
+        if not records:
             return None
-        return super().post_process(row, context)
+        previous_token = previous_token or 0
+        next_skip = previous_token + len(records)
+        if len(records) < self.page_size:
+            return None
+        return next_skip
+
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        """Return a dictionary of values to be used in URL parameterization."""
+        params: dict = {}
+        params["$top"] = self.page_size
+        if self.replication_key:
+            start_date = self.get_starting_timestamp(context)
+            if start_date:
+                date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params["$filter"] = f"{self.replication_key} gt {date}"
+        if next_page_token:
+            params["$skip"] = next_page_token
+        return params

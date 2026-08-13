@@ -11,6 +11,7 @@ from tap_dynamics_bc.client import (
     BC_DEFAULT_MODIFIED_SENTINEL,
     dynamicsBcStream,
     DynamicsBCODataStream,
+    DynamicsBCAnalyticsStream,
 )
 from dateutil.relativedelta import relativedelta
 import pendulum
@@ -933,7 +934,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         decorated_request = self.request_decorator(self._request)
         response = decorated_request(prepared_request, {})
         return response
-
+    
     def make_request(self, context, next_page_token):
         """Make request with fallback logic for dimension expansion failures."""        
         try:
@@ -1106,31 +1107,17 @@ class _PostingDateWindowMixin:
 
         if getattr(self, "expand", None):
             params["$expand"] = self.expand
+        params["$top"] = self.page_size
         if next_page_token:
-            params["aid"] = next_page_token.split("aid=")[-1].split("&")[0]
-            params["$skiptoken"] = next_page_token.split("$skiptoken=")[-1]
+            params["$skip"] = next_page_token
         return params
 
 
-class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, dynamicsBcStream):
+class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAnalyticsStream):
     """Base stream for microsoft/analytics general ledger entry entities."""
 
     replication_key = "postingDate"
     parent_stream_type = CompaniesStream
-
-    @property
-    def url_base(self) -> str:
-        """Return the Analytics API URL root."""
-        url_template = (
-            "https://api.businesscentral.dynamics.com/v2.0/{}/api/microsoft/analytics/v1.0"
-        )
-        env_name = self.config.get("environment_name", "production")
-        if "?" in env_name:
-            env_name = env_name.split("?")
-            if isinstance(env_name, list):
-                env_name = env_name[0]
-        self.validate_env(env_name)
-        return url_template.format(env_name)
 
 
 class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
@@ -1415,4 +1402,29 @@ class VendorLedgerEntriesStream(DynamicsBCODataStream):
         th.Property("AuxiliaryIndex1", th.StringType),
         th.Property("company_id", th.StringType),
         th.Property("company_name", th.StringType)
+    ).to_dict()
+
+
+class ClosingGeneralLedgerEntriesStream(DynamicsBCAnalyticsStream):
+
+    name = "closing_general_ledger_entries"
+    path = "/companies({company_id})/closingGeneralLedgerEntries"
+    primary_keys = ["entryNo", "glAccountNo", "company_id"]
+    replication_key = "systemModifiedAt"
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("entryNo", th.IntegerType),
+        th.Property("postingDate", th.DateType),
+        th.Property("glAccountNo", th.StringType),
+        th.Property("description", th.StringType),
+        th.Property("amount", th.NumberType),
+        th.Property("dimensionSetID", th.IntegerType),
+        th.Property("sourceCode", th.StringType),
+        th.Property("sourceType", th.StringType),
+        th.Property("sourceNo", th.StringType),
+        th.Property("incomeBalance", th.StringType),
+        th.Property("systemModifiedAt", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
     ).to_dict()
