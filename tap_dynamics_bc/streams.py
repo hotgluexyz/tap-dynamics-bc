@@ -952,16 +952,17 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
 
     def _handle_dimension_failure(self, error, prepared_request):
         """Handle dimension expansion failure by fetching data in batches."""
+        batch_size = 100
         self.logger.warning(
             f"Dimension expansion failed for {self.name}: {str(error)}. "
-            "Now trying to fetch GL entries in batches of 200."
+            f"Now trying to fetch GL entries in batches of {batch_size}."
         )
         
         base_url = prepared_request.url.split('?')[0]
         gl_ids_resp = self._fetch_gl_ids(prepared_request)
         gl_ids = [_gl_id["id"] for _gl_id in gl_ids_resp.json()["value"]]
         
-        all_gls = self._fetch_gl_entries_in_batches(base_url, gl_ids)
+        all_gls = self._fetch_gl_entries_in_batches(base_url, gl_ids, batch_size)
         return self._create_enriched_response(gl_ids_resp, all_gls)
 
     def _fetch_gl_ids(self, prepared_request):
@@ -969,7 +970,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
         ids_url = prepared_request.url.replace('expand=dimensionSetLines', 'select=id')
         return self._call_api(ids_url)
 
-    def _fetch_gl_entries_in_batches(self, base_url, gl_ids, batch_size=200):
+    def _fetch_gl_entries_in_batches(self, base_url, gl_ids, batch_size=100):
         """Fetch GL entries with dimensions in batches."""
         all_gls = []
         
@@ -1005,7 +1006,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             return gl_entries
         except Exception as e:
             self.logger.warning(f"Failed to fetch GL entries for batch {batch_index}: {str(e)}")
-            return []
+            raise 
 
     def _fetch_individual_dimensions(self, base_url, gl_entry_id):
         """Fetch dimensions for a single GL entry."""
@@ -1014,7 +1015,7 @@ class GeneralLedgerEntriesStream(dynamicsBcStream):
             return dimensions_resp.json()["value"]
         except Exception as e:
             self.logger.warning(f"Failed to fetch dimensions for GL entry {gl_entry_id}: {str(e)}")
-            return []
+            raise
 
     def _create_enriched_response(self, original_response, enriched_data):
         """Create a response object with enriched GL entries data."""
