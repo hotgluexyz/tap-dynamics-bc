@@ -2,7 +2,7 @@
 
 import json
 from typing import Optional, cast, Any, Dict
-from urllib.parse import urlencode
+from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 import requests
 from hotglue_singer_sdk import typing as th
 from hotglue_singer_sdk.exceptions import FatalAPIError
@@ -174,7 +174,207 @@ class ItemsStream(dynamicsBcStream):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
-class SalesInvoicesStream(dynamicsBcStream):
+class _InvoiceDimensionExpansionMixin:
+    """Fallback when $expand=dimensionSetLines fails on invoice document streams."""
+
+    lines_property: str
+
+    _DIMENSION_EXPANSION_ERROR_MARKERS = (
+        "Dimension Value does not exist",
+        "Parent with ID",
+    )
+
+    def _is_dimension_expansion_error(self, error: Exception) -> bool:
+        message = str(error)
+        return any(marker in message for marker in self._DIMENSION_EXPANSION_ERROR_MARKERS)
+
+    def _call_api(self, url):
+        headers = self.http_headers
+        if self.authenticator:
+            headers.update(self.authenticator.auth_headers or {})
+
+        prepared_request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method="GET",
+                    url=url,
+                    headers=headers,
+                ),
+            ),
+        )
+        decorated_request = self.request_decorator(self._request)
+        return decorated_request(prepared_request, {})
+
+    def _make_request_with_dimension_fallback(self, context, next_page_token):
+        try:
+            prepared_request = self.prepare_request(
+                context, next_page_token=next_page_token
+            )
+            return self._request(prepared_request, context)
+        except FatalAPIError as error:
+            if self._is_dimension_expansion_error(error):
+                return self._handle_dimension_failure(error, prepared_request)
+            raise
+
+    def _handle_dimension_failure(self, error, prepared_request):
+        """Handle dimension expansion failure by fetching invoices in batches."""
+        self.logger.warning(
+            "Dimension expansion failed for %s: %s. "
+            "Now trying to fetch records in batches of 200.",
+            self.name,
+            error,
+        )
+
+        base_url = prepared_request.url.split("?")[0]
+        ids_resp = self._fetch_record_ids(prepared_request)
+        record_ids = [record["id"] for record in ids_resp.json()["value"]]
+        enriched_records = self._fetch_records_in_batches(base_url, record_ids)
+        return self._create_enriched_response(ids_resp, enriched_records)
+
+    def _fetch_record_ids(self, prepared_request):
+        """Fetch only record IDs to minimize data transfer."""
+        parsed = urlparse(prepared_request.url)
+        params = parse_qs(parsed.query, keep_blank_values=True)
+        params.pop("$expand", None)
+        params["$select"] = ["id"]
+        ids_url = urlunparse(parsed._replace(query=urlencode(params, doseq=True)))
+        return self._call_api(ids_url)
+
+    def _fetch_records_in_batches(self, base_url, record_ids, batch_size=200):
+        all_records = []
+
+        for index in range(0, len(record_ids), batch_size):
+            batch = record_ids[index : index + batch_size]
+            batch_records = self._fetch_batch_with_dimensions(
+                base_url, batch, index, len(record_ids)
+            )
+            all_records.extend(batch_records)
+
+        return all_records
+
+    def _fetch_batch_with_dimensions(self, base_url, batch_ids, batch_index, total_ids):
+        """Attempt to fetch a batch of invoices with full dimension expansion."""
+        filter_clause = " or ".join([f"id eq {record_id}" for record_id in batch_ids])
+        batch_url = f"{base_url}?{urlencode({'$filter': filter_clause, '$expand': self.expand})}"
+
+        try:
+            batch_resp = self._call_api(batch_url)
+            self.logger.info(
+                "Batch %s of %s fetched successfully for %s",
+                batch_index,
+                total_ids,
+                self.name,
+            )
+            return batch_resp.json()["value"]
+        except Exception as error:
+            self.logger.warning(
+                "Failed to fetch batch with dimensions for %s: %s",
+                self.name,
+                error,
+            )
+            return self._fetch_batch_without_dimensions(
+                base_url, batch_ids, filter_clause, batch_index
+            )
+
+    def _lines_with_dimensions_expand(self) -> str:
+        return f"{self.lines_property}($expand=dimensionSetLines)"
+
+    def _fetch_batch_without_dimensions(
+        self, base_url, batch_ids, filter_clause, batch_index
+    ):
+        """Fallback: fetch lines with dimensions, then enrich header dimensions."""
+        lines_expand = self._lines_with_dimensions_expand()
+        try:
+            records_resp = self._call_api(
+                f"{base_url}?{urlencode({'$filter': filter_clause, '$expand': lines_expand})}"
+            )
+            records = records_resp.json()["value"]
+        except Exception as error:
+            self.logger.warning(
+                "Failed to fetch batch with lines and dimensions for %s: %s",
+                self.name,
+                error,
+            )
+            try:
+                records_resp = self._call_api(
+                    f"{base_url}?{urlencode({'$filter': filter_clause})}"
+                )
+                records = records_resp.json()["value"]
+                for record in records:
+                    record[self.lines_property] = self._fetch_lines(base_url, record["id"])
+            except Exception as inner_error:
+                self.logger.warning(
+                    "Failed to fetch records for batch %s of %s: %s",
+                    batch_index,
+                    self.name,
+                    inner_error,
+                )
+                return []
+
+        for record in records:
+            self._enrich_record_dimensions(base_url, record)
+
+        return records
+
+    def _enrich_record_dimensions(self, base_url, record):
+        record["dimensionSetLines"] = self._fetch_header_dimensions(
+            base_url, record["id"]
+        )
+
+    def _fetch_lines(self, base_url, record_id):
+        lines_expand = self._lines_with_dimensions_expand()
+        try:
+            record_resp = self._call_api(
+                f"{base_url}({record_id})?{urlencode({'$expand': lines_expand})}"
+            )
+            return record_resp.json().get(self.lines_property, [])
+        except Exception as error:
+            self.logger.warning(
+                "Failed to fetch %s with dimensions for %s record %s: %s",
+                self.lines_property,
+                self.name,
+                record_id,
+                error,
+            )
+            try:
+                lines_resp = self._call_api(
+                    f"{base_url}({record_id})/{self.lines_property}"
+                )
+                return lines_resp.json()["value"]
+            except Exception as fallback_error:
+                self.logger.warning(
+                    "Failed to fetch %s for %s record %s: %s",
+                    self.lines_property,
+                    self.name,
+                    record_id,
+                    fallback_error,
+                )
+                return []
+
+    def _fetch_header_dimensions(self, base_url, record_id):
+        try:
+            dimensions_resp = self._call_api(
+                f"{base_url}({record_id})/dimensionSetLines"
+            )
+            return dimensions_resp.json()["value"]
+        except Exception as error:
+            self.logger.warning(
+                "Failed to fetch header dimensions for %s record %s: %s",
+                self.name,
+                record_id,
+                error,
+            )
+            return []
+
+    def _create_enriched_response(self, original_response, enriched_data):
+        data = original_response.json()
+        data["value"] = enriched_data
+        original_response._content = json.dumps(data).encode()
+        return original_response
+
+
+class SalesInvoicesStream(_InvoiceDimensionExpansionMixin, dynamicsBcStream):
     """Define custom stream."""
 
     name = "sales_invoices"
@@ -183,6 +383,7 @@ class SalesInvoicesStream(dynamicsBcStream):
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
     expand = "dimensionSetLines, salesInvoiceLines($expand=dimensionSetLines)"
+    lines_property = "salesInvoiceLines"
     page_size = 1000
     _default_page_size = 1000
 
@@ -195,7 +396,15 @@ class SalesInvoicesStream(dynamicsBcStream):
         # Reset page size on each company's first page (one stream instance, many companies).
         if next_page_token is None:
             self.page_size = self._default_page_size
-        return self.make_request_with_adaptive_page_size(context, next_page_token)
+        try:
+            return self.make_request_with_adaptive_page_size(context, next_page_token)
+        except FatalAPIError as error:
+            if self._is_dimension_expansion_error(error):
+                prepared_request = self.prepare_request(
+                    context, next_page_token=next_page_token
+                )
+                return self._handle_dimension_failure(error, prepared_request)
+            raise
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -459,7 +668,7 @@ class SalesCreditStream(dynamicsBcStream):
         return {"company_id": context["company_id"], "company_name": context["company_name"]}
 
 
-class PurchaseInvoicesStream(dynamicsBcStream):
+class PurchaseInvoicesStream(_InvoiceDimensionExpansionMixin, dynamicsBcStream):
     """Define custom stream."""
 
     name = "purchase_invoices"
@@ -468,7 +677,11 @@ class PurchaseInvoicesStream(dynamicsBcStream):
     replication_key = "lastModifiedDateTime"
     parent_stream_type = CompaniesStream
     expand = "purchaseInvoiceLines, dimensionSetLines, purchaseInvoiceLines($expand=dimensionSetLines)"
+    lines_property = "purchaseInvoiceLines"
     page_size = 1000
+
+    def make_request(self, context, next_page_token):
+        return self._make_request_with_dimension_fallback(context, next_page_token)
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
