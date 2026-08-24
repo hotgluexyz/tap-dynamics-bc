@@ -1561,6 +1561,26 @@ class PaymentTermsStream(dynamicsBcStream):
         th.Property("company_name", th.StringType),
     ).to_dict()
 
+class AccountingPeriodsStream(dynamicsBcStream):
+    """Define custom stream for accounting periods."""
+    name = "accounting_periods"
+    path = "/companies({company_id})/accountingPeriods"
+    primary_keys = ["id"]
+    replication_key = None
+    parent_stream_type = CompaniesStream
+
+    schema = th.PropertiesList(
+        th.Property("id", th.StringType),
+        th.Property("startingDate", th.DateType),
+        th.Property("name", th.StringType),
+        th.Property("newFiscalYear", th.BooleanType),
+        th.Property("closed", th.BooleanType),
+        th.Property("dateLocked", th.BooleanType),
+        th.Property("lastModifiedDateTime", th.DateTimeType),
+        th.Property("company_id", th.StringType),
+        th.Property("company_name", th.StringType),
+    ).to_dict()
+
 class VendorLedgerEntriesStream(DynamicsBCODataStream):
     """Define custom stream."""
 
