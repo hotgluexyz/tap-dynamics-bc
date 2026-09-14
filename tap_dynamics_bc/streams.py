@@ -1332,6 +1332,32 @@ class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAna
     replication_key = "postingDate"
     parent_stream_type = CompaniesStream
 
+    def _entry_primary_key(self, row: dict) -> tuple:
+        return (row.get("entryNo"), row.get("company_id"))
+
+    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
+        row = super().post_process(row, context)
+        if row is None:
+            return None
+
+        seen_keys = getattr(self, "_seen_entry_keys", None)
+        if seen_keys is None:
+            seen_keys = set()
+            self._seen_entry_keys = seen_keys
+
+        key = self._entry_primary_key(row)
+        if key in seen_keys:
+            self.logger.warning(
+                "Skipping duplicate %s record for entryNo=%s, company_id=%s",
+                self.name,
+                key[0],
+                key[1],
+            )
+            return None
+
+        seen_keys.add(key)
+        return row
+
 
 class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
     """Balance sheet G/L entries from the Analytics API."""
