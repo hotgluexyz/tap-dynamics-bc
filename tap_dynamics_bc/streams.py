@@ -1327,10 +1327,17 @@ class _PostingDateWindowMixin:
 
 
 class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAnalyticsStream):
-    """Base stream for microsoft/analytics general ledger entry entities."""
 
     replication_key = "postingDate"
     parent_stream_type = CompaniesStream
+    analytics_orderby = "entryNo asc"
+
+    def get_url_params(
+        self, context: Optional[dict], next_page_token: Optional[Any]
+    ) -> Dict[str, Any]:
+        params = super().get_url_params(context, next_page_token)
+        params["$orderby"] = self.analytics_orderby
+        return params
 
 
 class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
