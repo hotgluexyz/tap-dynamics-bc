@@ -1327,13 +1327,6 @@ class _PostingDateWindowMixin:
 
 
 class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAnalyticsStream):
-    """Base stream for microsoft/analytics general ledger entry entities.
-
-    Analytics query endpoints reject multi-field ``$orderby`` (and
-    ``postingDate`` in ``$orderby``), but accept a single ``entryNo asc`` sort
-    for stable ``$skip`` pagination. Duplicate rows are still filtered in
-    ``post_process`` by ``(entryNo, company_id)``.
-    """
 
     replication_key = "postingDate"
     parent_stream_type = CompaniesStream
@@ -1345,32 +1338,6 @@ class AnalyticsGeneralLedgerEntriesStream(_PostingDateWindowMixin, DynamicsBCAna
         params = super().get_url_params(context, next_page_token)
         params["$orderby"] = self.analytics_orderby
         return params
-
-    def _entry_primary_key(self, row: dict) -> tuple:
-        return (row.get("entryNo"), row.get("company_id"))
-
-    def post_process(self, row: dict, context: Optional[dict] = None) -> Optional[dict]:
-        row = super().post_process(row, context)
-        if row is None:
-            return None
-
-        seen_keys = getattr(self, "_seen_entry_keys", None)
-        if seen_keys is None:
-            seen_keys = set()
-            self._seen_entry_keys = seen_keys
-
-        key = self._entry_primary_key(row)
-        if key in seen_keys:
-            self.logger.warning(
-                "Skipping duplicate %s record for entryNo=%s, company_id=%s",
-                self.name,
-                key[0],
-                key[1],
-            )
-            return None
-
-        seen_keys.add(key)
-        return row
 
 
 class BalanceSheetGeneralLedgerEntriesStream(AnalyticsGeneralLedgerEntriesStream):
