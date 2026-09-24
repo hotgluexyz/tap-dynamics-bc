@@ -64,9 +64,38 @@ STREAM_TYPES = [
     ClosingGeneralLedgerEntriesStream,
 ]
 
+# DISPLAY list for the connector landing page, not a support contract.
+# Sourced from __smoke-tests__/sales_invoices_stream_with_expanded_dimensions_test/catalog-selected.json.
+# Runtime discovery remains authoritative; this list is not validated against it.
+COMMON_DYNAMICS_BC_OBJECTS = [
+    "accounts",
+    "companies",
+    "company_information",
+    "currencies",
+    "customers",
+    "dimension_values",
+    "dimensions",
+    "general_ledger_entries",
+    "general_ledger_entries_incremental",
+    "gl_entries_dimensions",
+    "items",
+    "locations",
+    "payment_terms",
+    "purchase_invoices",
+    "sales_invoices",
+    "sales_orders",
+    "vendor_ledger_entries",
+    "vendor_payment_journals",
+    "vendor_purchases",
+    "vendors",
+]
+
 
 class TapdynamicsBc(Tap):
     """dynamics-bc tap class."""
+
+    dynamic_catalog = True
+    static_stream_names = COMMON_DYNAMICS_BC_OBJECTS
 
     def __init__(
         self,
