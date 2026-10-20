@@ -37,6 +37,30 @@ class CompaniesStream(dynamicsBcStream):
         th.Property("systemModifiedBy", th.StringType),
     ).to_dict()
 
+    def get_estimated_record_count(self) -> Optional[int]:
+        """Return the OData total for the root companies stream when available."""
+        headers = self.http_headers
+        headers.update(self.authenticator.auth_headers or {})
+        prepared_request = cast(
+            requests.PreparedRequest,
+            self.requests_session.prepare_request(
+                requests.Request(
+                    method="GET",
+                    url=f"{self.url_base}{self.path}",
+                    params={"$count": "true", "$top": 1},
+                    headers=headers,
+                ),
+            ),
+        )
+
+        try:
+            response = self.request_decorator(self._request)(prepared_request, None)
+            return int(response.json()["@odata.count"])
+        except Exception as error:
+            self.logger.warning(
+                "Could not estimate record count for %s: %s", self.name, error
+            )
+            return None
 
     def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
         """Return a context dictionary for child streams."""
