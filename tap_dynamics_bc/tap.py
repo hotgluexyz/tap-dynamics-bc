@@ -33,6 +33,7 @@ from tap_dynamics_bc.streams import (
     VendorPaymentJournalsStream,
     PaymentTermsStream,
     VendorLedgerEntriesStream,
+    DetailedVendorLedgerEntriesStream,
     ClosingGeneralLedgerEntriesStream,
 )
 
@@ -59,8 +60,9 @@ STREAM_TYPES = [
     CurrenciesStream,
     VendorPaymentJournalsStream,
     PaymentTermsStream,
-    AccountingPeriodsStream,
     VendorLedgerEntriesStream,
+    DetailedVendorLedgerEntriesStream,
+    AccountingPeriodsStream,
     ClosingGeneralLedgerEntriesStream,
 ]
 

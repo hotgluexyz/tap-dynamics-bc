@@ -31,7 +31,7 @@ class dynamicsBcStream(RESTStream):
         env_name = self.config.get("environment_name", "production")
         if "?" in env_name:
             env_name = env_name.split("?")
-            if isinstance(env_name,list):
+            if isinstance(env_name, list):
                 env_name = env_name[0]
         self.validate_env(env_name)
         return env_name    
@@ -85,7 +85,6 @@ class dynamicsBcStream(RESTStream):
     def http_headers(self) -> dict:
         """Return the http headers needed."""
         headers = {
-            "If-Match": "*",
             "Prefer": f"odata.maxpagesize={self.page_size}"
         }
         
@@ -261,9 +260,13 @@ class DynamicsBCODataStream(dynamicsBcStream):
     @cached_property
     def url_base(self):
         environments = self.get_environments_list()['value']
-        chosen_environment = next((env for env in environments if env['name'] == self.config.get('environment_name', 'Production')), None)
+        env_name = self.config.get('environment_name', 'Production')
+        chosen_environment = next((env for env in environments if env['name'].lower() == env_name.lower()), None)
+        if not chosen_environment and " (" in env_name:
+            env_name_stripped = env_name.split(" (")[0].strip()
+            chosen_environment = next((env for env in environments if env['name'].lower() == env_name_stripped.lower()), None)
         if not chosen_environment:
-            raise Exception("No environment with name: " + self.config.get('environment_name', 'Production'))
+            raise Exception("No environment with name: " + env_name)
         return f"https://api.businesscentral.dynamics.com/v2.0/{chosen_environment['aadTenantId']}/{chosen_environment['name']}/ODataV4"
 
     def _is_initial_sync(self, context: Optional[dict]) -> bool:
